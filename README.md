@@ -4,6 +4,7 @@ This is a working document.
 
 Helpful documents in this repo:
 
+- [Dashboard rough sketch](graphics/20200318_covid_roughsketch.jpg)
 - [County demographics and COVID-19 risk analysis dataset](data/national-cnty-covid19-risk-analysis.csv)
 - [County demographics and COVID-19 risk analysis data dictionary](data/data-dictionary.txt)
 - [County demographics and COVID-19 risk analysis script](code/create-cnty-demo-disease.ipynb)
