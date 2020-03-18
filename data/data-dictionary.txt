@@ -1,0 +1,49 @@
+**Data dictionary for national-cnty-covid19-risk-analysis.csv**
+
+If you have any questions, please contact Alexandra Kanik @act_rational.
+
+geoid - census geoid for county shape
+state_fips - state FIPS code
+cnty_name - county name
+population - county population, 2018 ACS 5-yr
+perc_62plus - county population aged 62 or more, 2018 ACS 5-yr
+cvd_rate - cardiovascular disease mortality rate, deaths per 100,000 population, 2014
+crd_rate - chronic respiratory disease mortality rate, deaths per 100,000 population, 2014
+diabetes_rate - percentage of adults age 20+ who report a previous diabetes diagnosis and/or have high FPG/A1C* (age-standardized)
+us_diabetes_q - diabetes quartile, out of all US counties
+us_cvd_q - cardiovascular quartile, out of all US counties
+us_crd_q - chronic resp. quartile, out of all US counties
+us_62plus_q - population 62+ quartile, out of all US counties
+us_q_total - sum of all quartile measures
+cvd_chg_1980_2014 - change in cardiovascular disease mortality rate, 1980 - 2014
+crd_chg_1980_2014 - change in chronic resp. disease mortality rate, 1980 - 2014
+perc_65plus - percentage of population 65 years and older, 2018 ACS 5-yr
+perc_85plus - percentage of population 85 years and older, 2018 ACS 5-yr
+pop_62plus - count of population 62 years and older, 2018 ACS 5-yr
+pop_65plus - count of population 65 years and older, 2018 ACS 5-yr
+pop_85plus - count of population 85 years and older, 2018 ACS 5-yr
+perc_under5 - percentage of population under 5 years, 2018 ACS 5-yr
+perc_5to9 - percentage of population 5-9 years old, 2018 ACS 5-yr
+perc_10to14 - percentage of population 10-14 years old, 2018 ACS 5-yr
+perc_15to19 - percentage of population 15-19 years old, 2018 ACS 5-yr
+perc_20to24 - percentage of population 20-24 years old, 2018 ACS 5-yr
+perc_25to34 - percentage of population 25-34 years old, 2018 ACS 5-yr
+perc_35to44 - percentage of population 35-44 years old, 2018 ACS 5-yr
+perc_45to54 - percentage of population 45-54 years old, 2018 ACS 5-yr
+perc_55to59 - percentage of population 55-59 years old, 2018 ACS 5-yr
+perc_60to64 - percentage of population 60-64 years old, 2018 ACS 5-yr
+perc_65to74 - percentage of population 65-74 years old, 2018 ACS 5-yr
+perc_75to84 - percentage of population 75-84 years old, 2018 ACS 5-yr
+pop_under5 - count of population under 5 years, 2018 ACS 5-yr
+pop_5to9 - count of population 5-9 years old, 2018 ACS 5-yr
+pop_10to14 - count of population 10-14 years old, 2018 ACS 5-yr
+pop_15to19 - count of population 15-19 years old, 2018 ACS 5-yr
+pop_20to24 - count of population 20-24 years old, 2018 ACS 5-yr
+pop_25to34 - count of population 25-34 years old, 2018 ACS 5-yr
+pop_35to44 - count of population 35-44 years old, 2018 ACS 5-yr
+pop_45to54 - count of population 45-54 years old, 2018 ACS 5-yr
+pop_55to59 - count of population 55-59 years old, 2018 ACS 5-yr
+pop_60to64 - count of population 60-64 years old, 2018 ACS 5-yr
+pop_65to74 - count of population 65-74 years old, 2018 ACS 5-yr
+pop_75to84 - count of population 75-84 years old, 2018 ACS 5-yr
+median_age - median age of county, 2018 ACS 5-yr
