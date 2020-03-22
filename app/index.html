@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -63,7 +63,10 @@
       "description": "EXPLORE: The Ohio Valley ReSource used data on protected water areas to build this tool showing some of the coal mines and gas wells within the watersheds providing West Virginians drinking water."
     }
     </script>
+    <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/skeleton.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    
     <style> /* set the CSS */
       body { font: 12px Arial;}
       path { 
@@ -82,27 +85,87 @@
     
   </head>
   <body>
-    <div id="container">
-      <div id="container-top">
+    <div id="container" class="container">
+      <div id="container-top" class="row">
         <h1>Kentucky COVID-19 Case Tracker</h1>
         <div class="lead" id="intro">
           <p>BlargLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
         </div>
+        <div id="state-stats" class="stat-row row">
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>State</th>
+                <th>Total tests performed</th>
+                <th>Total positive cases</th>
+                <th>Total deaths</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kentucky</td>
+                <td>10,245</td>
+                <td>1,398</td>
+                <td>12</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- END STATE-STATS -->
         
-        <select id="state-select"></select>
-      </div>
+        <select id="county-select" class="row">
+          <option>Select a county...</option>
+        </select>
+        
+      </div><!-- END CONTAINER-TOP -->
+      
+      <div id="stats" class="row">
+        
+        <div id="cnty-cases" class="stat-row row">
+          <div id="cases-chart" class="chart one-half column">
+            <img src="assets/chart-example.png" alt="county covid-19 case count overtime" />
+          </div>
+          <div id="cases-text" class="text one-half column">
+            <h5>Positive cases</strong></h5>
+            <p>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate.</p>
+          </div>
+        </div>
+        
+        <div id="cnty-deaths" class="stat-row row">
+          <div id="cases-chart" class="chart one-half column">
+            <img src="assets/chart-example.png" alt="county covid-19 case count overtime" />
+          </div>
+          <div id="cases-text" class="text one-half column">
+            <h5>Deaths</strong></h5>
+            <p>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate.</p>
+          </div>
+        </div>
+      </div><!-- END STATS -->
+      
+      <div id="data-notes" class="row">
+        <div id="data-sources">
+          <p>Sources: xxxxxx; xxxxxx; xxxxxx</p>
+        </div>
+        <div id="data-disclaimers">
+          <p>CB's Nuts Peanut Butter is produced in Washington State from peanuts grown in Texas. Aside from using the best peanuts in the world, our slow barrel roasting process is what sets us apart and gives our PB its rich roasted taste that's unlike any other brand on the market. Its also this roasting technique, along with our Creamunchy grind that limits annoying oil separation in the jar.</p>
+        </div>
+      </div><!-- END DATA-NOTES -->
     </div>
     
     <script>
+      var state_fips = '21';
+      var include_state_testing = false;
+      
+      //populate state stats
+      
+      
+      
+      //populate county select list
       d3.json("assets/data/cnty-fips.json", function(error, data) {
-        
         if (error) {
           return console.warn(error);
         }
-        
-        var counties = Object.values(data['06']).sort();
-        
-        var dropdown = d3.select('#state-select');
+        var counties = Object.values(data[state_fips]).sort();
+        var dropdown = d3.select('#county-select');
                           
         dropdown.selectAll('option')
             .data(counties)

@@ -15,7 +15,7 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
-body {
+/*body {
   padding: 0;
   margin: 0;
   touch-action: manipulation;
@@ -28,13 +28,47 @@ h1 {
   color: #000;
 }
 
-#container {
+#container{
   max-width:1200px;
   margin:0 auto;
+  padding:20px;
+}
+
+#container-top {
+  max-width:800px;
+  margin:0 auto;
+}*/
+
+.row{
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+.row img{
+  max-width: 100%;
 }
 
 .lead{
+  font-size: 1.5em;
+  line-height: 1.3em;
+  font-weight: 200;
+}
+
+.row .text{
+  margin-top:2em;
   font-size: 1.25em;
+  line-height: 1.35em;
+}
+
+h5{
+  font-size: 1.25em;
+  font-weight: 800;
+  margin-bottom:.125rem;
+}
+
+#data-notes{
+  font-size: 1em;
+  font-style: italic;
 }
 
 
