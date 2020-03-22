@@ -7,181 +7,7 @@
 /*
  * Colors
  */
-body {
-  font-family: "Helvetica Neue", sans-serif;
-}
-#map {
-  width: 100%;
-  height: 500px;
-}
-#mapTop,
-#intro,
-h1 {
-  margin: 0 20px;
-}
-/*.map-overlay {
-  position: absolute;
-  bottom: 140px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.8);
-  margin-right: 50px;
-  font-family: Arial, sans-serif;
-  overflow: auto;
-  border-radius: 3px;
-}*/
-#legend {
-  padding: 10px;
-  line-height: 18px;
-  width: 100%;
-}
-#legend div {
-  display: inline-block;
-  padding-right: 20px;
-}
-.legend-key {
-  display: inline-block;
-  border-radius: 20%;
-  width: 10px;
-  height: 10px;
-  margin-right: 5px;
-}
-.marker {
-  background-image: url('https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-h1 {
-  color: #00000;
-}
-.lead {
-  width: 80%;
-  margin: .5em auto;
-  font-size: 1.5em;
-  font-weight: 200;
-  line-height: 1.5em;
-}
-#info {
-  padding: .5em;
-  text-align: center;
-}
-input[type=text] {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  line-height: 2.5em;
-  width: 100%;
-}
-#addressForm button {
-  margin: 5px 0;
-  padding: 10px 0;
-  display: block;
-  width: 100%;
-  font-weight: 600;
-  font-size: 1em;
-}
-#addressForm button#public {
-  background: #487ba1;
-  color: #ffffff;
-}
-#addressForm button#well {
-  background: #74A4C1;
-  color: #ffffff;
-}
-ul li {
-  list-style: none;
-  background: #487ba1;
-  color: #ffffff;
-  margin: 5px auto;
-  padding: 10px 0;
-  font-weight: 600;
-  font-size: 1em;
-}
-ul li a {
-  color: #ffffff;
-}
-.list {
-  background: #f1f1f1;
-  padding: .75em 0 1em 0;
-  margin: .5em 0;
-  display: block;
-  width: 100%;
-  text-align: center;
-  vertical-align: top;
-}
-.list label {
-  width: 100%;
-  margin-bottom: 1em;
-  font-size: .75em;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-#pwsInfo {
-  padding-top: 20px;
-}
-.list label:first-child {
-  border-bottom: #000000 1px solid;
-}
-#submitAddress,
-#findLocation {
-  display: inline-block;
-}
-#source {
-  position: relative;
-  font-style: italic;
-  color: #666666;
-  font-size: 1em;
-  padding: 20px;
-}
-.instruction {
-  font-style: italic;
-  /*font-size: .75em;*/
-  padding-top: 10px;
-  text-align: center;
-  width: 65%;
-  margin: 0 auto;
-  color: #666666;
-}
-.row {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-h4 {
-  text-align: center;
-}
-@media only screen and (min-width: 600px) {
-  #mapTop,
-  #intro,
-  h1 {
-    max-width: 750px;
-    margin: 0 auto;
-  }
-  #addressForm button {
-    display: inline-block;
-    width: 49.7%;
-  }
-  #addressForm #refresh {
-    display: block;
-    text-align: center;
-    margin: 5px auto;
-  }
-  .list label {
-    width: 100%;
-    margin-bottom: 1em;
-    font-size: .75em;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-  .list p {
-    text-align: left;
-  }
-  #pwsInfo {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -194,13 +20,24 @@ body {
   margin: 0;
   touch-action: manipulation;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-size: 14px;
+  font-size: 1em;
   line-height: 1.4;
 }
 h1 {
   font-size: 26px;
   color: #000;
 }
+
+#container {
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.lead{
+  font-size: 1.25em;
+}
+
+
 a,
 a:visited {
   color: #4774CC;

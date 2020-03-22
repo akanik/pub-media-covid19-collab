@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -64,20 +64,120 @@
     }
     </script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style> /* set the CSS */
+      body { font: 12px Arial;}
+      path { 
+          stroke: steelblue;
+          stroke-width: 2;
+          fill: none;
+      }
+      .axis path,
+      .axis line {
+          fill: none;
+          stroke: grey;
+          stroke-width: 1;
+          shape-rendering: crispEdges;
+      }
+    </style>
     
   </head>
   <body>
-    <h1>Kentucky COVID-19 Case Tracker</h1>
-    <div class="lead" id="intro">
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+    <div id="container">
+      <div id="container-top">
+        <h1>Kentucky COVID-19 Case Tracker</h1>
+        <div class="lead" id="intro">
+          <p>BlargLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+        </div>
+        
+        <select id="state-select"></select>
+      </div>
     </div>
-  
-    
-    
     
     <script>
+      d3.json("assets/data/cnty-fips.json", function(error, data) {
         
-            
+        if (error) {
+          return console.warn(error);
+        }
+        
+        var counties = Object.values(data['06']).sort();
+        
+        var dropdown = d3.select('#state-select');
+                          
+        dropdown.selectAll('option')
+            .data(counties)
+          .enter().append('option')
+            .attr('value', function(d) {
+              return d;
+              //console.log(d);
+            })
+            .text(function(d) {
+                return d;
+            });
+      });
+      
+    </script>
+    <script>
+    //  window.onload=function(){
+    //    d3.json("assets/data/cnty-fips.json", function(error, data) {
+    //      console.log(data);
+    //      if (error) {
+    //          return console.warn(error);
+    //      }
+    //      d3.select("select")
+    //        .selectAll("option")
+    //        .data(data)
+    //        .enter()
+    //        .append("option")
+    //        .attr('value', function(d) {
+    //          return d.values();
+    //          //console.log(d);
+    //        })
+    //        .text(function(d) {
+    //            return d.keys();
+    //        });
+    //    });
+    //  }//]]>
+        
+        
+        
+        
+        
+      //  var stateSelect = d3.select("#state-select");
+      //  
+      //  var stateCounties = cnty_fips['06'];        
+      //
+      //  //we have select all options tags from inside select tag (which there are 0 atm)
+      //  //and assigned data as to be the base of modelling that selection.
+      //  var stateOptions = stateSelect.selectAll('option')
+      //    .data(stateCounties);
+      //    
+      //  console.log(stateOptions);
+      //
+      //  //d3 sees we have less elements (0) than the data (2), so we are tasked to create
+      //  //these missing inside the `options.enter` pseudo selection.
+      //  //if we had some elements from before, they would be reused, and we could access their
+      //  //selection with just `options`
+      //  stateOptions.enter()
+      //    .append('option')
+      //    .attr('value', function(d) {
+      //      return d.values();
+      //      //console.log(d);
+      //    })
+      //    .text(function(d) {
+      //      return d.values();
+      //      //console.log(d);
+      //    });
+      //  });
+      //
+      //d3.select("#state-select")
+      //  .append("select")
+      //  .append("option")
+      //  .attr("value", "---")
+      //  .text("---");
+      
+      
+      
       //const pymChild = new pym.Child({ polling: 100 });
       //  
       ////////////// THIS IS ALL AUTO GEOLOCATOR CODE. WE CAN'T USE IT UNTIL WE UPGRADE SERVER TO HTTPS
@@ -134,7 +234,6 @@
       //}
         ////////////// END AUTO GEOLOCATON
     </script>
-    </div>
     
     <script src="app.js" async></script>
     <!-- Google Analytics -->
