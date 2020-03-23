@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -124,7 +124,7 @@
         
         <div id="cnty-cases" class="stat-row row">
           <div id="cases-chart" class="chart one-half column">
-            <img src="assets/chart-example.png" alt="county covid-19 case count overtime" />
+            <!--<img src="assets/chart-example.png" alt="county covid-19 case count overtime" />-->
           </div>
           <div id="cases-text" class="text one-half column">
             <h5>Positive cases</strong></h5>
@@ -162,6 +162,7 @@
     </div>
     
     <script>
+      var data_file = 'assets/data/2020-03-22-California-export.csv';
       var state_fips = '21';
       var include_state_testing = false;
       
@@ -187,6 +188,103 @@
             .text(function(d) {
                 return d;
             });
+      });
+      
+      // Set the dimensions of the canvas / graph
+      var	margin = {top: 30, right: 20, bottom: 30, left: 50},
+      	width = 600 - margin.left - margin.right,
+      	height = 270 - margin.top - margin.bottom;
+       
+      // Parse the date / time
+      var	parseDate = d3.time.format("%Y-%m-%d").parse;
+       
+      // Set the ranges
+      var	x = d3.time.scale().range([0, width]);
+      var	y = d3.scale.linear().range([height, 0]);
+       
+      // Define the axes
+      var	xAxis = d3.svg.axis().scale(x)
+      	.orient("bottom").ticks(5);
+       
+      var	yAxis = d3.svg.axis().scale(y)
+      	.orient("left").ticks(5);
+          
+      // Adds the svg canvas
+      var	svg = d3.select("#cases-chart")
+      	.append("svg")
+      		.attr("width", width + margin.left + margin.right)
+      		.attr("height", height + margin.top + margin.bottom)
+      	.append("g")
+      		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+       
+      // Get the data
+      d3.csv(data_file, function(error, data) {
+        //console.log(data);
+      	data.forEach(function(d) {
+      		d.date = parseDate(d.date);
+      		d.POSITIVE = +d.POSITIVE;
+      	});
+      	
+      	// Define the line
+        var	valueline = d3.svg.line()
+        	.x(function(d) { return x(d.date); })
+        	.y(function(d) { return y(d.value); });
+      	
+      	//http://bl.ocks.org/phoebebright/raw/3176159/
+      	var groupByDate = d3.nest()
+          .key(function(d) { return d.date; })    // Groups on day
+          .rollup(function(cases) { return d3.sum(cases, function(d) {return parseFloat(d.POSITIVE);}) })     // Counts how many records are in each date group
+          .entries(data)   // Passes in the current tweet list for grouping and counting
+             	
+      	//http://learnjsdata.com/iterate_data.html
+      	var dateLookup = groupByDate.reduce(function(lookup, date){ 
+        	lookup[date.key] = date.values;
+        	return lookup;
+        }, {})
+        
+              	
+      	var cumulativeByDate = function(){
+          // Start the running count at zero.
+          var runningCount = 0;
+          // Loop through all the dates in the current filtered Tweet list
+          return groupByDate.map(function(d){
+            // Use the lookup and the date formatter to pull the count for each day.
+            var dateCount = dateLookup[d.key] ? dateLookup[d.key] : 0;  // <-- If it isn't in the lookup, set it to zero.
+            
+            // Add each day's tally to the running count
+            runningCount += dateCount;
+            // Return a new datum for this date with the cumulative tally instead of that day's count.
+            return {date: parseDate(d.key), value: runningCount};
+          });
+        }
+        
+        console.log(cumulativeByDate(dateLookup));
+              
+      	// Scale the range of the data
+      	x.domain(d3.extent(data, function(d) { return d.date; }));
+      	y.domain([0, d3.sum(data, function(d) {return parseFloat(d.POSITIVE);})]);
+       
+      	// Add the valueline path.
+      	svg.append("path")	
+      	  .datum(cumulativeByDate)
+      		.attr("class", "line")
+      		.attr("stroke-width", 5)
+          .attr("stroke", "black")
+      		.attr("d", valueline);
+       
+      	// Add the X Axis
+      	svg.append("g")		
+      		.attr("class", "x axis")
+      		.attr("transform", "translate(0," + height + ")")
+      		.call(xAxis);
+       
+      	// Add the Y Axis
+      	svg.append("g")		
+      		.attr("class", "y axis")
+      		.call(yAxis);
+      		
+        
+       
       });
       
     </script>
