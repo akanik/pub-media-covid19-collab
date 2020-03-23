@@ -220,16 +220,11 @@
       // Get the data
       d3.csv(data_file, function(error, data) {
         //console.log(data);
-      	data.forEach(function(d) {
-      		d.date = parseDate(d.date);
-      		d.POSITIVE = +d.POSITIVE;
-      	});
-      	
-      	// Define the line
-        var	valueline = d3.svg.line()
-        	.x(function(d) { return x(d.date); })
-        	.y(function(d) { return y(d.value); });
-      	
+      	//data.forEach(function(d) {
+      	//	d.date = parseDate(d.date);
+      	//	d.POSITIVE = +d.POSITIVE;
+      	//});
+      	      	
       	//http://bl.ocks.org/phoebebright/raw/3176159/
       	var groupByDate = d3.nest()
           .key(function(d) { return d.date; })    // Groups on day
@@ -242,7 +237,6 @@
         	return lookup;
         }, {})
         
-              	
       	var cumulativeByDate = function(){
           // Start the running count at zero.
           var runningCount = 0;
@@ -254,19 +248,25 @@
             // Add each day's tally to the running count
             runningCount += dateCount;
             // Return a new datum for this date with the cumulative tally instead of that day's count.
-            return {date: parseDate(d.key), value: runningCount};
+            return {date: d.key, value: runningCount};
           });
         }
         
-        console.log(cumulativeByDate(dateLookup));
+        var formatedData = cumulativeByDate();
+        console.log(formatedData);
+        
+        // Define the line
+        var	valueline = d3.svg.line()
+        	.x(function(d) { return x(parseDate(d.date)); })
+        	.y(function(d) { return y(parseFloat(d.value)); });
               
       	// Scale the range of the data
-      	x.domain(d3.extent(data, function(d) { return d.date; }));
-      	y.domain([0, d3.sum(data, function(d) {return parseFloat(d.POSITIVE);})]);
+      	x.domain(d3.extent(formatedData, function(d) { return parseDate(d.date); }));
+      	y.domain([0, d3.max(formatedData, function(d) {return d.value;})]);
        
       	// Add the valueline path.
       	svg.append("path")	
-      	  .datum(cumulativeByDate)
+      	  .datum(formatedData)
       		.attr("class", "line")
       		.attr("stroke-width", 5)
           .attr("stroke", "black")
