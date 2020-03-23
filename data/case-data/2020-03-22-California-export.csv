@@ -1,0 +1,113 @@
+province,fips,city,date_confirm_clean,POSITIVE
+California,001,Alameda County,2020-03-01,1
+California,001,Alameda County,2020-03-06,1
+California,001,Alameda County,2020-03-10,1
+California,001,Alameda County,2020-03-12,2
+California,001,Alameda County,2020-03-15,11
+California,001,Alameda County,2020-03-16,3
+California,009,Calaveras County,2020-03-10,2
+California,013,Contra Costa County,2020-03-03,1
+California,013,Contra Costa County,2020-03-06,6
+California,013,Contra Costa County,2020-03-08,5
+California,013,Contra Costa County,2020-03-12,4
+California,013,Contra Costa County,2020-03-14,13
+California,013,Contra Costa County,2020-03-16,5
+California,019,Fresno County,2020-03-10,2
+California,023,Humboldt County,2020-02-20,1
+California,025,Imperial County,2020-03-12,2
+California,037,Los Angeles County,2020-03-06,2
+California,037,Los Angeles County,2020-03-07,1
+California,037,Los Angeles County,2020-03-11,8
+California,037,Los Angeles County,2020-03-12,7
+California,037,Los Angeles County,2020-03-13,8
+California,037,Los Angeles County,2020-03-14,13
+California,037,Los Angeles County,2020-03-15,16
+California,039,Madera County,2020-03-07,1
+California,041,Marin County,2020-03-09,1
+California,041,Marin County,2020-03-13,2
+California,041,Marin County,2020-03-14,2
+California,041,Marin County,2020-03-15,4
+California,057,Nevada County,2020-03-16,1
+California,059,Orange County,2020-01-26,1
+California,059,Orange County,2020-03-03,2
+California,059,Orange County,2020-03-08,1
+California,059,Orange County,2020-03-13,2
+California,059,Orange County,2020-03-14,3
+California,059,Orange County,2020-03-15,4
+California,061,Placer County,2020-03-02,1
+California,061,Placer County,2020-03-03,1
+California,061,Placer County,2020-03-06,3
+California,061,Placer County,2020-03-08,2
+California,065,Riverside County,2020-03-08,1
+California,065,Riverside County,2020-03-09,3
+California,065,Riverside County,2020-03-11,1
+California,065,Riverside County,2020-03-13,3
+California,067,Sacramento County,2020-02-21,1
+California,067,Sacramento County,2020-03-09,4
+California,067,Sacramento County,2020-03-10,5
+California,067,Sacramento County,2020-03-12,6
+California,067,Sacramento County,2020-03-14,12
+California,069,San Benito County,2020-02-02,2
+California,069,San Benito County,2020-03-13,1
+California,069,San Benito County,2020-03-14,1
+California,071,San Bernardino County,2020-03-15,1
+California,073,San Diego County,2020-02-11,1
+California,073,San Diego County,2020-02-12,1
+California,073,San Diego County,2020-03-08,1
+California,073,San Diego County,2020-03-09,1
+California,073,San Diego County,2020-03-13,3
+California,073,San Diego County,2020-03-14,8
+California,073,San Diego County,2020-03-15,23
+California,073,San Diego County,2020-03-16,16
+California,075,San Francisco County,2020-03-12,4
+California,075,San Francisco County,2020-03-14,10
+California,077,San Joaquin County,2020-03-10,1
+California,079,San Luis Obispo County,2020-03-14,1
+California,079,San Luis Obispo County,2020-03-15,1
+California,079,San Luis Obispo County,2020-03-16,1
+California,081,San Mateo County,2020-03-02,1
+California,081,San Mateo County,2020-03-09,7
+California,081,San Mateo County,2020-03-11,7
+California,081,San Mateo County,2020-03-12,5
+California,081,San Mateo County,2020-03-13,5
+California,081,San Mateo County,2020-03-14,1
+California,081,San Mateo County,2020-03-16,9
+California,083,Santa Barbara County,2020-03-15,1
+California,085,Santa Clara County,2020-02-01,1
+California,085,Santa Clara County,2020-02-02,1
+California,085,Santa Clara County,2020-02-28,1
+California,085,Santa Clara County,2020-02-29,1
+California,085,Santa Clara County,2020-03-01,3
+California,085,Santa Clara County,2020-03-02,1
+California,085,Santa Clara County,2020-03-03,2
+California,085,Santa Clara County,2020-03-04,3
+California,085,Santa Clara County,2020-03-05,6
+California,085,Santa Clara County,2020-03-06,4
+California,085,Santa Clara County,2020-03-07,8
+California,085,Santa Clara County,2020-03-08,5
+California,085,Santa Clara County,2020-03-09,6
+California,085,Santa Clara County,2020-03-10,2
+California,085,Santa Clara County,2020-03-11,1
+California,085,Santa Clara County,2020-03-12,18
+California,085,Santa Clara County,2020-03-14,25
+California,085,Santa Clara County,2020-03-15,23
+California,087,Santa Cruz County,2020-03-07,1
+California,087,Santa Cruz County,2020-03-09,1
+California,087,Santa Cruz County,2020-03-11,2
+California,087,Santa Cruz County,2020-03-16,5
+California,089,Shasta County,2020-03-08,1
+California,095,Solano County,2020-02-06,1
+California,095,Solano County,2020-03-01,1
+California,095,Solano County,2020-03-06,1
+California,095,Solano County,2020-03-10,3
+California,097,Sonoma County,2020-03-02,1
+California,097,Sonoma County,2020-03-06,2
+California,099,Stanislaus County,2020-03-11,2
+California,099,Stanislaus County,2020-03-16,1
+California,107,Tulare County,2020-03-11,1
+California,107,Tulare County,2020-03-13,1
+California,107,Tulare County,2020-03-16,1
+California,111,Ventura County,2020-03-06,1
+California,111,Ventura County,2020-03-11,1
+California,111,Ventura County,2020-03-13,3
+California,113,Yolo County,2020-03-06,2
