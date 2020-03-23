@@ -1,0 +1,86 @@
+/*
+ * Media queries
+ */
+/*
+ * Fonts
+ */
+/*
+ * Colors
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+/*body {
+  padding: 0;
+  margin: 0;
+  touch-action: manipulation;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+}
+h1 {
+  font-size: 26px;
+  color: #000;
+}
+
+#container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:20px;
+}
+
+#container-top {
+  max-width:800px;
+  margin:0 auto;
+}*/
+
+.row{
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+.row img{
+  max-width: 100%;
+}
+
+.lead{
+  font-size: 1.5em;
+  line-height: 1.3em;
+  font-weight: 200;
+}
+
+.row .text{
+  margin-top:2em;
+  font-size: 1.25em;
+  line-height: 1.35em;
+}
+
+h5{
+  font-size: 1.25em;
+  font-weight: 800;
+  margin-bottom:.125rem;
+}
+
+#data-notes{
+  font-size: 1em;
+  font-style: italic;
+}
+
+
+a,
+a:visited {
+  color: #4774CC;
+}
+a:hover,
+a:active,
+a:focus {
+  color: #bccae5;
+}
+img:not([alt]) {
+  outline: 3px solid red;
+}
