@@ -60,7 +60,7 @@
           "height": 296
         }
       },
-      "description": "EXPLORE: The Ohio Valley ReSource used data on protected water areas to build this tool showing some of the coal mines and gas wells within the watersheds providing West Virginians drinking water."
+      "description": "EXPLORE: This dashboard provides a localized look at confirmed cases of and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population."
     }
     </script>
     <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/normalize.css">
@@ -89,7 +89,7 @@
       <div id="container-top" class="row">
         <h1>California COVID-19 Case Tracker</h1>
         <div class="lead" id="intro">
-          <p>This dashboard provides a localized look at confirmed cases of and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population. Select your state and county below to see your local numbers.</p>
+          <p>This dashboard provides a localized look at confirmed cases of and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population. Select your county below to see your local numbers.</p>
         </div>
         
         <select id="county-select" class="row">
@@ -100,30 +100,17 @@
       
       <div id="stats" class="row">
         
-        <div id="cnty-cases" class="stat-row row">
-          <div id="cases-chart" class="chart one-half column">
-            <!--<img src="assets/chart-example.png" alt="county covid-19 case count overtime" />-->
-          </div>
-          <div id="cases-text" class="text one-half column">
-            <h5>Positive cases</strong></h5>
-          </div>
+        <div id="chart-text" class="row">
+          <div id="cases-text" class="text one-half column"></div>
+          <div id="deaths-text" class="text one-half column"></div>
         </div>
         
-        <div id="cnty-deaths" class="stat-row row">
-          <div id="deaths-chart" class="chart one-half column">
-            <!--<img src="assets/chart-example.png" alt="county covid-19 case count overtime" />-->
-          </div>
-          <div id="deaths-text" class="text one-half column">
-            <h5>Deaths</strong></h5>
-          </div>
+        <div id="charts" class="row">
+          <div id="cases-chart" class="chart one-half column"></div>
+          <div id="deaths-chart" class="chart one-half column"></div>
         </div>
-        <div id="cnty-demo" class="stat-row row">
-          <div class="text">
-            <h5>County vulnerable population information</strong></h5>
-            <p><strong>Adair County, Kentucky</strong> has a population of <strong>19,241 people</strong>. <strong>21.9%</strong> of them are 62 years or older. They have a cardiovascular disease death rate of <strong>341.77 per 100,000</strong> people and a chronic respiratory disease death rate of <strong>65.02 per 100,000</strong> people. <strong>15.69%</strong> of the population 20 years and older have diabetes.</p>
-            <p><em>*Cardiovascular disease, chronic respiratory disease and diabetes are all known complications to covid-19.</em></p>
-          </div>
-        </div>
+        
+        <div id="cnty-pop" class="stat-row row"></div>
         
       </div><!-- END STATS -->
       
@@ -150,6 +137,15 @@
       
       var dropdown = d3.select('#county-select');
       var stateStats = d3.select('#state-stats').append('p');
+      
+      var formatComma = d3.format(","),
+          formatDecimal = d3.format(".1f"), 
+          formatDecimalComma = d3.format(",.2f"),
+          formatSuffix = d3.format("s"),
+          formatSuffixDecimal1 = d3.format(".1s"),
+          formatSuffixDecimal2 = d3.format(".2s"),
+          formatMoney = function(d) { return "$" + formatDecimalComma(d); },
+          formatPercent = d3.format(",.2%");
       
       
       
@@ -248,29 +244,57 @@
             return Object.values(caseDateLookup);
           }
           
-          function updateText(caseDateLookup,region_name){
+          function updatePopText(region_data){
+            var cntyName = region_data['cnty_name'];
+            var popText = 'Experts say that some groups are more at risk if they contract COVID-19,'+
+                          'for instance, seniors or people who suffer from diabetes, chronic respiratory'+
+                          ' disease or cardiovascular disease. Here’s a breakdown of how many people in <strong>'+
+                          cntyName + '</strong> are part of these vulnerable groups.'
+
+            //// Add text to case text block
+            //var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
+            //var totalCaseText = 'There have been '+ formatComma(totalCases) +' confirmed cases of COVID-19 in <strong>'+
+            //                    region_name +'</strong>.';
+            var casesText = d3.select('#cnty-pop')
+              .html('<h5>County vulnerable population information</h5>')
+              .append('p')
+              .html(popText);
+            //  
+            //// Add text to death text block
+            //var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
+            //var totalDeathText = 'There have been '+ formatComma(totalDeaths) +
+            //                    ' reported deaths related to COVID-19 in <strong>'+
+            //                    region_name + '</strong>.';
+            //var deathText = d3.select('#deaths-text')
+            //  .html('<h5>Deaths</h5>')
+            //  .append('p')
+            //  .html(totalDeathText);
+          }
+          
+          function updateChartText(caseDateLookup,region_name){
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
-            var totalCaseText = 'There have been '+totalCases+' confirmed cases of COVID-19 in '+region_name+'.';
+            var totalCaseText = 'There have been '+ formatComma(totalCases) +' confirmed cases of COVID-19 in <strong>'+
+                                region_name +'</strong>.';
             var casesText = d3.select('#cases-text')
-              .html('<h5>Positive cases</strong></h5>')
+              .html('<h5>Positive cases</h5>')
               .append('p')
-              .append("text")
-              .text(totalCaseText);
+              .html(totalCaseText);
               
             // Add text to death text block
             var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
-            var totalDeathText = 'There have been '+totalDeaths+' reported deaths related to COVID-19 in '+region_name+'.';
+            var totalDeathText = 'There have been '+ formatComma(totalDeaths) +
+                                ' reported deaths related to COVID-19 in <strong>'+
+                                region_name + '</strong>.';
             var deathText = d3.select('#deaths-text')
-              .html('<h5>Deaths</strong></h5>')
+              .html('<h5>Deaths</h5>')
               .append('p')
-              .append("text")
-              .text(totalDeathText);
+              .html(totalDeathText);
           }
           
           function updateCharts(caseDateLookup,region_name) {
             
-            updateText(caseDateLookup,region_name);
+            updateChartText(caseDateLookup,region_name);
             
             // First update the cases y-axis domain to match data
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
@@ -303,7 +327,7 @@
           
           function createCharts(caseDateLookup,region_name){
             
-            updateText(caseDateLookup,region_name);         
+            updateChartText(caseDateLookup,region_name);         
                         
           	// Scale the range of the case data
           	xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
@@ -350,14 +374,21 @@
           }//END getSelectionTotals
           
           
-          function filterCntyData(cnty_fips){
+          function filterCntyPop(cnty_fips){
+            var cntyFilter = cnty_data.filter( function(d){
+              return d['cnty_fips'] == cnty_fips
+            });
+            return cntyFilter;
+          }
+          
+          function filterCntyCases(cnty_fips){
             var cntyFilter = case_data.filter( function(d){
               return d['fips'] == cnty_fips
             });
             return cntyFilter;
           }
           
-          function filterStateData(state_fips){
+          function filterStateCases(state_fips){
             var stateFilter = fips_data.filter( function(d){
               return d['state_fips'] == state_fips
             });
@@ -365,8 +396,8 @@
           }
           
           //COUNTY STUFF
-          var cnty_data = filterStateData(state_fips);
-          console.log(cnty_data);
+          var cnty_data = filterStateCases(state_fips);
+          
           dropdown.selectAll('option')
               .data(cnty_data)
             .enter().append('option')
@@ -381,8 +412,12 @@
               county_selection = d3.select(this).property('value');
               county_name = d3.select('#county-select option:checked').text();
               
-              var newData = filterCntyData(county_selection);
-              caseDateLookup = formatCaseData(newData);
+              var cntyPopData = filterCntyPop(county_selection);
+              var cntyPop = cntyPopData['population'];
+              updatePopText(cntyPopData[0]);
+              
+              var filtered_cases = filterCntyCases(county_selection);
+              caseDateLookup = formatCaseData(filtered_cases);
               updateCharts(caseDateLookup,county_name);
             });
             
