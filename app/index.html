@@ -193,6 +193,15 @@
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
           		
+          var yCasesAxisForUpdate = svgCases.append("g")
+            .attr("class", "y axis")
+            .call(yCaseAxis);
+            
+          // Define the case line
+          var caseValueline = d3.svg.line()
+            	.x(function(d) { return xCases(d.date); })
+            	.y(function(d) { return yCases(parseFloat(d.cases)); });
+          		
     
           // Set the death ranges
           var	xDeaths = d3.time.scale().range([0, width]);
@@ -212,10 +221,19 @@
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
           		
+          var yDeathAxisForUpdate = svgDeaths.append("g")
+            .attr("class", "y axis")
+            .call(yDeathAxis);
+            
+          // Define deaths line
+          var	deathValueline = d3.svg.line()
+          	.x(function(d) { return xDeaths(d.date); })
+          	.y(function(d) { return yDeaths(parseFloat(d.deaths)); });
+          		
             
           ////////////DATA FORMATING FUNCTIONS///////////////// 	 
           
-          function getStateTotals(data){
+          function formatCaseData(data){
             var stateDataByDate = d3.nest()
               .key(function(d) {return d.date;})
               .rollup(function(d) {
@@ -237,36 +255,74 @@
             return Object.values(caseDateLookup);
           }
           
-          function getSelectionTotals(selectionData,region_name){
-           
-            var caseDateLookup = getStateTotals(selectionData);
-            
-            ////////////CASE DEFINITIONS/////////////////
+          function updateText(caseDateLookup,region_name){
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
             var totalCaseText = 'There have been '+totalCases+' confirmed cases of COVID-19 in '+region_name+'.';
             var casesText = d3.select('#cases-text')
-              .html('<h5>Deaths</strong></h5>')
+              .html('<h5>Positive cases</strong></h5>')
               .append('p')
               .append("text")
               .text(totalCaseText);
+              
+            // Add text to death text block
+            var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
+            var totalDeathText = 'There have been '+totalDeaths+' reported deaths related to COVID-19 in '+region_name+'.';
+            var deathText = d3.select('#deaths-text')
+              .html('<h5>Deaths</strong></h5>')
+              .append('p')
+              .append("text")
+              .text(totalDeathText);
+          }
+          
+          function updateCharts(caseDateLookup,region_name) {
             
-            // Define the case line
-            var	caseValueline = d3.svg.line()
-            	.x(function(d) { return xCases(d.date); })
-            	.y(function(d) { return yCases(parseFloat(d.cases)); });
+            updateText(caseDateLookup,region_name);
             
+            // First update the cases y-axis domain to match data
+            yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
+            yCasesAxisForUpdate.call(yCases);
+
+            svgCases.select(".line")   // change the line
+              .transition()
+              .duration(750)
+              .attr("d", caseValueline(caseDateLookup));
+              
+            svgCases.select(".y.axis") // change the y axis
+              .transition()
+              .duration(750)
+              .call(yCaseAxis);
+              
+
+              
+            // First update the deaths y-axis domain to match data
+            yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
+            yDeathAxisForUpdate.call(yDeaths);
+
+            svgDeaths.select(".line")   // change the line
+              .transition()
+              .duration(750)
+              .attr("d", deathValueline(caseDateLookup));
+              
+            svgDeaths.select(".y.axis") // change the y axis
+              .transition()
+              .duration(750)
+              .call(yDeathAxis);
+          };
+          
+          function createCharts(caseDateLookup,region_name){
+            
+            updateText(caseDateLookup,region_name);         
+                        
           	// Scale the range of the case data
           	xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
           	yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
           	       
-          	// Add the valueline path to svgCases.
-          	//var	svgCases = d3.select("#cases-chart");
-          	
+          	// Add the valueline path to svgCases.          	
           	svgCases.append("path")
           	  .datum(caseDateLookup)
           		.attr("class", "line")
-          		.attr("d", caseValueline);
+          		.attr("d", caseValueline(caseDateLookup));
            
           	// Add the case X Axis
           	svgCases.append("g")		
@@ -278,23 +334,7 @@
           	svgCases.append("g")		
           		.attr("class", "y axis")
           		.call(yCaseAxis);
-                  		
             
-            
-            ////////////DEATH DEFINITIONS/////////////////
-            // Add text to death text block
-            var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
-            var totalDeathText = 'There have been '+totalDeaths+' reported deaths related to COVID-19 in '+region_name+'.';
-            var deathText = d3.select('#deaths-text')
-              .html('<h5>Deaths</strong></h5>')
-              .append('p')
-              .append("text")
-              .text(totalDeathText);
-                
-            // Define deaths line
-            var	deathValueline = d3.svg.line()
-            	.x(function(d) { return xDeaths(d.date); })
-            	.y(function(d) { return yDeaths(parseFloat(d.deaths)); });
             	
             // Scale the range of the death data
           	xDeaths.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
@@ -304,7 +344,7 @@
           	svgDeaths.append("path")	
           	  .datum(caseDateLookup)
           		.attr("class", "line")
-          		.attr("d", deathValueline);
+          		.attr("d", deathValueline(caseDateLookup));
            
           	// Add the death X Axis
           	svgDeaths.append("g")		
@@ -334,7 +374,6 @@
           }
           
           //COUNTY STUFF
-          //var counties = Object.values(fips_data[state_fips]).sort();
           var cnty_data = filterStateData(state_fips);
           console.log(cnty_data);
           dropdown.selectAll('option')
@@ -350,14 +389,14 @@
               data_level = 'county';
               county_selection = d3.select(this).property('value');
               county_name = d3.select('#county-select option:checked').text();
-              //stateStats.html('')
-              //  .append("text")
-              //  .text(county_selection);
+              
               var newData = filterCntyData(county_selection);
-              getSelectionTotals(newData,county_name);
+              caseDateLookup = formatCaseData(newData);
+              updateCharts(caseDateLookup,county_name);
             });
-          
-          getSelectionTotals(case_data,state_name);
+            
+          var caseDateLookup = formatCaseData(case_data);
+          createCharts(caseDateLookup,state_name);
           
         });
       });
