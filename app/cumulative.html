@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>COVID-19 County Tracker</title>
+    <title>Interactive: Coal & Gas Extraction Near WV Water Sources</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="152x152" href="https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-152-precomposed.png" />
@@ -87,9 +87,9 @@
   <body>
     <div id="container" class="container">
       <div id="container-top" class="row">
-        <h1>California COVID-19 Case Tracker</h1>
+        <h1>Kentucky COVID-19 Case Tracker</h1>
         <div class="lead" id="intro">
-          <p>This dashboard provides a localized look at confirmed cases of and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population. Select your state and county below to see your local numbers.</p>
+          <p>BlargLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
         </div>
         
         <select id="county-select" class="row">
@@ -97,7 +97,24 @@
         </select>
         
         <div id="state-stats" class="stat-row row">
-          
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>State</th>
+                <th>Total tests performed</th>
+                <th>Total positive cases</th>
+                <th>Total deaths</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kentucky</td>
+                <td>10,245</td>
+                <td>1,398</td>
+                <td>12</td>
+              </tr>
+            </tbody>
+          </table>
         </div><!-- END STATE-STATS -->
         
         
@@ -111,6 +128,7 @@
           </div>
           <div id="cases-text" class="text one-half column">
             <h5>Positive cases</strong></h5>
+            <p>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate.</p>
           </div>
         </div>
         
@@ -118,8 +136,9 @@
           <div id="deaths-chart" class="chart one-half column">
             <!--<img src="assets/chart-example.png" alt="county covid-19 case count overtime" />-->
           </div>
-          <div id="deaths-text" class="text one-half column">
+          <div id="cases-text" class="text one-half column">
             <h5>Deaths</strong></h5>
+            <p>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate.</p>
           </div>
         </div>
         <div id="cnty-demo" class="stat-row row">
@@ -143,200 +162,192 @@
     </div>
     
     <script>
-      var cases_file = 'assets/data/2020-03-25-California-export.csv';
+      var data_file = 'assets/data/2020-03-22-California-export.csv';
       var state_fips = '06';
-      var state_name = 'California';
       var include_state_testing = false;
-      var data_level = 'state';
+      
       //populate state stats
       
       
       
-      //ADD COUNTY DATA
-      d3.json("assets/data/cnty-fips.json", function(fips_error, fips_data) {
-        if (fips_error) {
-          return console.warn(fips_error);
+      //populate county select list
+      d3.json("assets/data/cnty-fips.json", function(error, data) {
+        if (error) {
+          return console.warn(error);
         }
-        //ADD CASE DATA
-        d3.csv(cases_file, function(case_error, case_data) {
-          if (case_error) {
-            return console.warn(case_error);
-          }
-          var counties = Object.values(fips_data[state_fips]).sort();
-          var dropdown = d3.select('#county-select');
-          var stateStats = d3.select('#state-stats').append('p');
-          
-          //COUNTY STUFF    
-          dropdown.selectAll('option')
-              .data(counties)
-            .enter().append('option')
-              .attr('value', function(d) {
-                return d;
-              })
-              .text(function(d) {
-                  return d;
-              });
-            dropdown.on('change',function(){
-              var selectedCounty = d3.select(this).property('value');
-              stateStats.html('')
-                .append("text")
-                .text(selectedCounty);
-              data_level = 'county'
+        var counties = Object.values(data[state_fips]).sort();
+        var dropdown = d3.select('#county-select');
+                          
+        dropdown.selectAll('option')
+            .data(counties)
+          .enter().append('option')
+            .attr('value', function(d) {
+              return d;
+              //console.log(d);
             })
+            .text(function(d) {
+                return d;
+            });
+      });
+      
+      var elWidth = document.getElementById("cases-chart").offsetWidth;
+      
+      // Set the dimensions of the canvas / graph
+      var	margin = {top: 30, right: 20, bottom: 30, left: 50},
+      	width = elWidth - margin.left - margin.right,
+      	height = 270 - margin.top - margin.bottom;
+       
+      // Parse the date / time
+      var	parseDate = d3.time.format("%Y-%m-%d").parse;
+       
+      // Set the case ranges
+      var	xCases = d3.time.scale().range([0, width]);
+      var	yCases = d3.scale.linear().range([height, 0]);
+      
+      // Define the case axes
+      var	xCaseAxis = d3.svg.axis().scale(xCases)
+      	.orient("bottom").ticks(5);
+      var	yCaseAxis = d3.svg.axis().scale(yCases)
+      	.orient("left").ticks(5);
+      	
+      // Adds the svg cases
+      var	svgCases = d3.select("#cases-chart")
+      	.append("svg")
+      		.attr("width", width + margin.left + margin.right)
+      		.attr("height", height + margin.top + margin.bottom)
+      	.append("g")
+      		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      		
+      		
+      	
+      // Set the death ranges
+      var	xDeaths = d3.time.scale().range([0, width]);
+      var	yDeaths = d3.scale.linear().range([height, 0]);
+      
+      // Define the death axes
+      var	xDeathAxis = d3.svg.axis().scale(xDeaths)
+      	.orient("bottom").ticks(5);
+      var	yDeathAxis = d3.svg.axis().scale(yDeaths)
+      	.orient("left").ticks(5);
+      		
+      // Adds the svg cases
+      var	svgDeaths = d3.select("#deaths-chart")
+      	.append("svg")
+      		.attr("width", width + margin.left + margin.right)
+      		.attr("height", height + margin.top + margin.bottom)
+      	.append("g")
+      		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      		
+      		
+       
+      // Get the data
+      d3.csv(data_file, function(error, data) {
+      	      	
+      	//http://bl.ocks.org/phoebebright/raw/3176159/
+      	var casesByDate = d3.nest()
+          .key(function(d) { return d.date; })    // Groups on day
+          .rollup(function(cases) { return d3.sum(cases, function(d) {return parseFloat(d.cases);}) })     // Counts how many records are in each date group
+          .entries(data)   // Passes in the current tweet list for grouping and counting
+        console.log(casesByDate);  
+        
+        //http://learnjsdata.com/iterate_data.html
+      	var caseDateLookup = casesByDate.reduce(function(lookup, date){ 
+        	lookup[date.key] = date.values;
+        	return lookup;
+        }, {})
+        
+          
+      	var deathsByDate = d3.nest()
+          .key(function(d) { return d.date; })    // Groups on day
+          .rollup(function(deaths) { return d3.sum(deaths, function(d) {return parseFloat(d.deaths);}) })     // Counts how many records are in each date group
+          .entries(data)   // Passes in the current tweet list for grouping and counting
+             	
+      	var deathDateLookup = deathsByDate.reduce(function(lookup, date){ 
+        	lookup[date.key] = date.values;
+        	return lookup;
+        }, {})
+        
+        
+      	function cumulativeByDate(df,lookup){
+          // Start the running count at zero.
+          var runningCount = 0;
+          console.log(df);
+          // Loop through all the dates in the current df
+          return df.map(function(d){
+            // Use the lookup and the date formatter to pull the count for each day.
+            var dateCount = lookup[d.key] ? lookup[d.key] : 0;  // <-- If it isn't in the lookup, set it to zero.
             
-            
-          //BEGIN CHART STUFF
-          var elWidth = document.getElementById("cases-chart").offsetWidth;
-          
-          // Set the dimensions of the canvas / graph
-          var	margin = {top: 30, right: 20, bottom: 30, left: 50},
-          	width = elWidth - margin.left - margin.right,
-          	height = 270 - margin.top - margin.bottom;
-           
-          // Parse the date / time
-          var	parseDate = d3.time.format("%Y-%m-%d").parse;
-           
-          // Set the case ranges
-          var	xCases = d3.time.scale().range([0, width]);
-          var	yCases = d3.scale.linear().range([height, 0]);
-          
-          // Define the case axes
-          var	xCaseAxis = d3.svg.axis().scale(xCases)
-          	.orient("bottom").ticks(5);
-          var	yCaseAxis = d3.svg.axis().scale(yCases)
-          	.orient("left").ticks(5);
-          	
-          // Adds the svg cases
-          var	svgCases = d3.select("#cases-chart")
-          	.append("svg")
-          		.attr("width", width + margin.left + margin.right)
-          		.attr("height", height + margin.top + margin.bottom)
-          	.append("g")
-          		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-          		
-          		
-          	
-          // Set the death ranges
-          var	xDeaths = d3.time.scale().range([0, width]);
-          var	yDeaths = d3.scale.linear().range([height, 0]);
-          
-          // Define the death axes
-          var	xDeathAxis = d3.svg.axis().scale(xDeaths)
-          	.orient("bottom").ticks(5);
-          var	yDeathAxis = d3.svg.axis().scale(yDeaths)
-          	.orient("left").ticks(5);
-          		
-          // Adds the svg cases
-          var	svgDeaths = d3.select("#deaths-chart")
-          	.append("svg")
-          		.attr("width", width + margin.left + margin.right)
-          		.attr("height", height + margin.top + margin.bottom)
-          	.append("g")
-          		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-          		
-          		
-           
-          
-            
-          ////////////DATA FORMATING FUNCTIONS///////////////// 	 
-          //
-          
-          function getStateTotals(data){
-            var stateDataByDate = d3.nest()
-              .key(function(d) {return d.date;})
-              .rollup(function(d) {
-                return {
-                    cases: d3.sum(d, function(e) { return parseFloat(e.cases); }),
-                    deaths: d3.sum(d, function(e) { return parseFloat(e.deaths); })
-                };
-              })
-              .entries(data);
-            
-            var caseDateLookup = {};
-            for(i=0;i<stateDataByDate.length;i++){
-              dict = {}
-              dict['date'] = parseDate(stateDataByDate[i].key);
-              dict['cases'] = stateDataByDate[i].values.cases;
-              dict['deaths'] = stateDataByDate[i].values.deaths;
-              caseDateLookup[i] = dict;
-            }
-            return Object.values(caseDateLookup);
-          }
-        	          
-          var caseDateLookup = getStateTotals(case_data);
-          
-          ////////////CASE DEFINITIONS/////////////////
-          // Add text to case text block
-          var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
-          var totalCaseText = 'There have been '+totalCases+' confirmed cases of COVID-19 in '+state_name+'.';
-          var casesText = d3.select('#cases-text')
-            .append('p')
-            .append("text")
-            .text(totalCaseText);
-          
-          // Define the case line
-          var	caseValueline = d3.svg.line()
-          	.x(function(d) { return xCases(d.date); })
-          	.y(function(d) { return yCases(parseFloat(d.cases)); });
-          
-        	// Scale the range of the case data
-        	xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
-        	yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
-        	       
-        	// Add the valueline path to svgCases.
-        	svgCases.append("path")	
-        	  .datum(caseDateLookup)
-        		.attr("class", "line")
-        		.attr("d", caseValueline);
-         
-        	// Add the case X Axis
-        	svgCases.append("g")		
-        		.attr("class", "x axis")
-        		.attr("transform", "translate(0," + height + ")")
-        		.call(xCaseAxis);
-         
-        	// Add the case Y Axis
-        	svgCases.append("g")		
-        		.attr("class", "y axis")
-        		.call(yCaseAxis);
-        		
-          
-          
-          ////////////DEATH DEFINITIONS/////////////////
-          // Add text to death text block
-          var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
-          var totalDeathText = 'There have been '+totalDeaths+' reported deaths related to COVID-19 in '+state_name+'.';
-          var deathText = d3.select('#deaths-text')
-            .append('p')
-            .append("text")
-            .text(totalDeathText);
-              
-          // Define deaths line
-          var	deathValueline = d3.svg.line()
-          	.x(function(d) { return xDeaths(d.date); })
-          	.y(function(d) { return yDeaths(parseFloat(d.deaths)); });
-          	
-          // Scale the range of the death data
-        	xDeaths.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
-        	yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
+            // Add each day's tally to the running count
+            runningCount += dateCount;
+            // Return a new datum for this date with the cumulative tally instead of that day's count.
+            return {date: d.key, value: runningCount};
+          });
+        }
+        
+        
+        var casesData = cumulativeByDate(casesByDate,caseDateLookup);
+        var deathData = cumulativeByDate(deathsByDate,deathDateLookup);
+        
+        
+        // Define the line
+        var	caseValueline = d3.svg.line()
+        	.x(function(d) { return xCases(parseDate(d.date)); })
+        	.y(function(d) { return yCases(parseFloat(d.value)); });
+        
+      	// Scale the range of the case data
+      	xCases.domain(d3.extent(casesData, function(d) { return parseDate(d.date); }));
+      	yCases.domain([0, d3.max(casesData, function(d) {return d.value;})]);
+       
+      	// Add the valueline path to svgCases.
+      	svgCases.append("path")	
+      	  .datum(casesData)
+      		.attr("class", "line")
+      		.attr("stroke-width", 5)
+          .attr("stroke", "black")
+      		.attr("d", caseValueline);
+       
+      	// Add the X Axis
+      	svgCases.append("g")		
+      		.attr("class", "x axis")
+      		.attr("transform", "translate(0," + height + ")")
+      		.call(xCaseAxis);
+       
+      	// Add the Y Axis
+      	svgCases.append("g")		
+      		.attr("class", "y axis")
+      		.call(yCaseAxis);
+      		
+        
+        // Define the line
+        var	deathValueline = d3.svg.line()
+        	.x(function(d) { return xDeaths(parseDate(d.date)); })
+        	.y(function(d) { return yDeaths(parseFloat(d.value)); });
         	
-          // Add the valueline path to svgDeaths.
-        	svgDeaths.append("path")	
-        	  .datum(caseDateLookup)
-        		.attr("class", "line")
-        		.attr("d", deathValueline);
-         
-        	// Add the death X Axis
-        	svgDeaths.append("g")		
-        		.attr("class", "x axis")
-        		.attr("transform", "translate(0," + height + ")")
-        		.call(xDeathAxis);
-         
-        	// Add the death Y Axis
-        	svgDeaths.append("g")		
-        		.attr("class", "y axis")
-        		.call(yDeathAxis);
-        });
+        // Scale the range of the death data
+      	xDeaths.domain(d3.extent(deathData, function(d) { return parseDate(d.date); }));
+      	yDeaths.domain([0, d3.max(deathData, function(d) {return d.value;})]);
+      	
+        // Add the valueline path to svgDeaths.
+      	svgDeaths.append("path")	
+      	  .datum(deathData)
+      		.attr("class", "line")
+      		.attr("stroke-width", 5)
+          .attr("stroke", "black")
+      		.attr("d", deathValueline);
+       
+      	// Add the X Axis
+      	svgDeaths.append("g")		
+      		.attr("class", "x axis")
+      		.attr("transform", "translate(0," + height + ")")
+      		.call(xDeathAxis);
+       
+      	// Add the Y Axis
+      	svgDeaths.append("g")		
+      		.attr("class", "y axis")
+      		.call(yDeathAxis);
+      		
+        
+       
       });
       
     </script>
