@@ -192,10 +192,6 @@
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-          		
-          var yCasesAxisForUpdate = svgCases.append("g")
-            .attr("class", "y axis")
-            .call(yCaseAxis);
             
           // Define the case line
           var caseValueline = d3.svg.line()
@@ -221,9 +217,6 @@
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
           		
-          var yDeathAxisForUpdate = svgDeaths.append("g")
-            .attr("class", "y axis")
-            .call(yDeathAxis);
             
           // Define deaths line
           var	deathValueline = d3.svg.line()
@@ -281,7 +274,6 @@
             
             // First update the cases y-axis domain to match data
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
-            yCasesAxisForUpdate.call(yCases);
 
             svgCases.select(".line")   // change the line
               .transition()
@@ -297,7 +289,6 @@
               
             // First update the deaths y-axis domain to match data
             yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
-            yDeathAxisForUpdate.call(yDeaths);
 
             svgDeaths.select(".line")   // change the line
               .transition()
