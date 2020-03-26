@@ -1,0 +1,3771 @@
+date,fips,county,cases,deaths,local_pub_health_url
+2020-01-21,06091,Sierra County,0.0,0.0,0
+2020-01-21,06067,Sacramento County,0.0,0.0,0
+2020-01-21,06083,Santa Barbara County,0.0,0.0,0
+2020-01-21,06009,Calaveras County,0.0,0.0,0
+2020-01-21,06111,Ventura County,0.0,0.0,0
+2020-01-21,06037,Los Angeles County,0.0,0.0,0
+2020-01-21,06097,Sonoma County,0.0,0.0,0
+2020-01-21,06031,Kings County,0.0,0.0,0
+2020-01-21,06073,San Diego County,0.0,0.0,0
+2020-01-21,06061,Placer County,0.0,0.0,0
+2020-01-21,06075,San Francisco County,0.0,0.0,0
+2020-01-21,06041,Marin County,0.0,0.0,0
+2020-01-21,06043,Mariposa County,0.0,0.0,0
+2020-01-21,06035,Lassen County,0.0,0.0,0
+2020-01-21,06055,Napa County,0.0,0.0,0
+2020-01-21,06089,Shasta County,0.0,0.0,0
+2020-01-21,06053,Monterey County,0.0,0.0,0
+2020-01-21,06105,Trinity County,0.0,0.0,0
+2020-01-21,06045,Mendocino County,0.0,0.0,0
+2020-01-21,06027,Inyo County,0.0,0.0,0
+2020-01-21,06051,Mono County,0.0,0.0,0
+2020-01-21,06109,Tuolumne County,0.0,0.0,0
+2020-01-21,06095,Solano County,0.0,0.0,0
+2020-01-21,06071,San Bernardino County,0.0,0.0,0
+2020-01-21,06013,Contra Costa County,0.0,0.0,0
+2020-01-21,06003,Alpine County,0.0,0.0,0
+2020-01-21,06017,El Dorado County,0.0,0.0,0
+2020-01-21,06113,Yolo County,0.0,0.0,0
+2020-01-21,06115,Yuba County,0.0,0.0,0
+2020-01-21,06069,San Benito County,0.0,0.0,0
+2020-01-21,06023,Humboldt County,0.0,0.0,0
+2020-01-21,06065,Riverside County,0.0,0.0,0
+2020-01-21,06029,Kern County,0.0,0.0,0
+2020-01-21,06011,Colusa County,0.0,0.0,0
+2020-01-21,06015,Del Norte County,0.0,0.0,0
+2020-01-21,06049,Modoc County,0.0,0.0,0
+2020-01-21,06019,Fresno County,0.0,0.0,0
+2020-01-21,06039,Madera County,0.0,0.0,0
+2020-01-21,06085,Santa Clara County,0.0,0.0,0
+2020-01-21,06103,Tehama County,0.0,0.0,0
+2020-01-21,06077,San Joaquin County,0.0,0.0,0
+2020-01-21,06001,Alameda County,0.0,0.0,0
+2020-01-21,06057,Nevada County,0.0,0.0,0
+2020-01-21,06007,Butte County,0.0,0.0,0
+2020-01-21,06047,Merced County,0.0,0.0,0
+2020-01-21,06107,Tulare County,0.0,0.0,0
+2020-01-21,06099,Stanislaus County,0.0,0.0,0
+2020-01-21,06059,Orange County,0.0,0.0,0
+2020-01-21,06025,Imperial County,0.0,0.0,0
+2020-01-21,06101,Sutter County,0.0,0.0,0
+2020-01-21,06005,Amador County,0.0,0.0,0
+2020-01-21,06033,Lake County,0.0,0.0,0
+2020-01-21,06063,Plumas County,0.0,0.0,0
+2020-01-21,06081,San Mateo County,0.0,0.0,0
+2020-01-21,06093,Siskiyou County,0.0,0.0,0
+2020-01-21,06087,Santa Cruz County,0.0,0.0,0
+2020-01-21,06021,Glenn County,0.0,0.0,0
+2020-01-21,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-22,06091,Sierra County,0.0,0.0,0
+2020-01-22,06067,Sacramento County,0.0,0.0,0
+2020-01-22,06083,Santa Barbara County,0.0,0.0,0
+2020-01-22,06009,Calaveras County,0.0,0.0,0
+2020-01-22,06111,Ventura County,0.0,0.0,0
+2020-01-22,06037,Los Angeles County,0.0,0.0,0
+2020-01-22,06097,Sonoma County,0.0,0.0,0
+2020-01-22,06031,Kings County,0.0,0.0,0
+2020-01-22,06073,San Diego County,0.0,0.0,0
+2020-01-22,06061,Placer County,0.0,0.0,0
+2020-01-22,06075,San Francisco County,0.0,0.0,0
+2020-01-22,06041,Marin County,0.0,0.0,0
+2020-01-22,06043,Mariposa County,0.0,0.0,0
+2020-01-22,06035,Lassen County,0.0,0.0,0
+2020-01-22,06055,Napa County,0.0,0.0,0
+2020-01-22,06089,Shasta County,0.0,0.0,0
+2020-01-22,06053,Monterey County,0.0,0.0,0
+2020-01-22,06105,Trinity County,0.0,0.0,0
+2020-01-22,06045,Mendocino County,0.0,0.0,0
+2020-01-22,06027,Inyo County,0.0,0.0,0
+2020-01-22,06051,Mono County,0.0,0.0,0
+2020-01-22,06109,Tuolumne County,0.0,0.0,0
+2020-01-22,06095,Solano County,0.0,0.0,0
+2020-01-22,06071,San Bernardino County,0.0,0.0,0
+2020-01-22,06013,Contra Costa County,0.0,0.0,0
+2020-01-22,06003,Alpine County,0.0,0.0,0
+2020-01-22,06017,El Dorado County,0.0,0.0,0
+2020-01-22,06113,Yolo County,0.0,0.0,0
+2020-01-22,06115,Yuba County,0.0,0.0,0
+2020-01-22,06069,San Benito County,0.0,0.0,0
+2020-01-22,06023,Humboldt County,0.0,0.0,0
+2020-01-22,06065,Riverside County,0.0,0.0,0
+2020-01-22,06029,Kern County,0.0,0.0,0
+2020-01-22,06011,Colusa County,0.0,0.0,0
+2020-01-22,06015,Del Norte County,0.0,0.0,0
+2020-01-22,06049,Modoc County,0.0,0.0,0
+2020-01-22,06019,Fresno County,0.0,0.0,0
+2020-01-22,06039,Madera County,0.0,0.0,0
+2020-01-22,06085,Santa Clara County,0.0,0.0,0
+2020-01-22,06103,Tehama County,0.0,0.0,0
+2020-01-22,06077,San Joaquin County,0.0,0.0,0
+2020-01-22,06001,Alameda County,0.0,0.0,0
+2020-01-22,06057,Nevada County,0.0,0.0,0
+2020-01-22,06007,Butte County,0.0,0.0,0
+2020-01-22,06047,Merced County,0.0,0.0,0
+2020-01-22,06107,Tulare County,0.0,0.0,0
+2020-01-22,06099,Stanislaus County,0.0,0.0,0
+2020-01-22,06059,Orange County,0.0,0.0,0
+2020-01-22,06025,Imperial County,0.0,0.0,0
+2020-01-22,06101,Sutter County,0.0,0.0,0
+2020-01-22,06005,Amador County,0.0,0.0,0
+2020-01-22,06033,Lake County,0.0,0.0,0
+2020-01-22,06063,Plumas County,0.0,0.0,0
+2020-01-22,06081,San Mateo County,0.0,0.0,0
+2020-01-22,06093,Siskiyou County,0.0,0.0,0
+2020-01-22,06087,Santa Cruz County,0.0,0.0,0
+2020-01-22,06021,Glenn County,0.0,0.0,0
+2020-01-22,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-23,06091,Sierra County,0.0,0.0,0
+2020-01-23,06067,Sacramento County,0.0,0.0,0
+2020-01-23,06083,Santa Barbara County,0.0,0.0,0
+2020-01-23,06009,Calaveras County,0.0,0.0,0
+2020-01-23,06111,Ventura County,0.0,0.0,0
+2020-01-23,06037,Los Angeles County,0.0,0.0,0
+2020-01-23,06097,Sonoma County,0.0,0.0,0
+2020-01-23,06031,Kings County,0.0,0.0,0
+2020-01-23,06073,San Diego County,0.0,0.0,0
+2020-01-23,06061,Placer County,0.0,0.0,0
+2020-01-23,06075,San Francisco County,0.0,0.0,0
+2020-01-23,06041,Marin County,0.0,0.0,0
+2020-01-23,06043,Mariposa County,0.0,0.0,0
+2020-01-23,06035,Lassen County,0.0,0.0,0
+2020-01-23,06055,Napa County,0.0,0.0,0
+2020-01-23,06089,Shasta County,0.0,0.0,0
+2020-01-23,06053,Monterey County,0.0,0.0,0
+2020-01-23,06105,Trinity County,0.0,0.0,0
+2020-01-23,06045,Mendocino County,0.0,0.0,0
+2020-01-23,06027,Inyo County,0.0,0.0,0
+2020-01-23,06051,Mono County,0.0,0.0,0
+2020-01-23,06109,Tuolumne County,0.0,0.0,0
+2020-01-23,06095,Solano County,0.0,0.0,0
+2020-01-23,06071,San Bernardino County,0.0,0.0,0
+2020-01-23,06013,Contra Costa County,0.0,0.0,0
+2020-01-23,06003,Alpine County,0.0,0.0,0
+2020-01-23,06017,El Dorado County,0.0,0.0,0
+2020-01-23,06113,Yolo County,0.0,0.0,0
+2020-01-23,06115,Yuba County,0.0,0.0,0
+2020-01-23,06069,San Benito County,0.0,0.0,0
+2020-01-23,06023,Humboldt County,0.0,0.0,0
+2020-01-23,06065,Riverside County,0.0,0.0,0
+2020-01-23,06029,Kern County,0.0,0.0,0
+2020-01-23,06011,Colusa County,0.0,0.0,0
+2020-01-23,06015,Del Norte County,0.0,0.0,0
+2020-01-23,06049,Modoc County,0.0,0.0,0
+2020-01-23,06019,Fresno County,0.0,0.0,0
+2020-01-23,06039,Madera County,0.0,0.0,0
+2020-01-23,06085,Santa Clara County,0.0,0.0,0
+2020-01-23,06103,Tehama County,0.0,0.0,0
+2020-01-23,06077,San Joaquin County,0.0,0.0,0
+2020-01-23,06001,Alameda County,0.0,0.0,0
+2020-01-23,06057,Nevada County,0.0,0.0,0
+2020-01-23,06007,Butte County,0.0,0.0,0
+2020-01-23,06047,Merced County,0.0,0.0,0
+2020-01-23,06107,Tulare County,0.0,0.0,0
+2020-01-23,06099,Stanislaus County,0.0,0.0,0
+2020-01-23,06059,Orange County,0.0,0.0,0
+2020-01-23,06025,Imperial County,0.0,0.0,0
+2020-01-23,06101,Sutter County,0.0,0.0,0
+2020-01-23,06005,Amador County,0.0,0.0,0
+2020-01-23,06033,Lake County,0.0,0.0,0
+2020-01-23,06063,Plumas County,0.0,0.0,0
+2020-01-23,06081,San Mateo County,0.0,0.0,0
+2020-01-23,06093,Siskiyou County,0.0,0.0,0
+2020-01-23,06087,Santa Cruz County,0.0,0.0,0
+2020-01-23,06021,Glenn County,0.0,0.0,0
+2020-01-23,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-24,06091,Sierra County,0.0,0.0,0
+2020-01-24,06067,Sacramento County,0.0,0.0,0
+2020-01-24,06083,Santa Barbara County,0.0,0.0,0
+2020-01-24,06009,Calaveras County,0.0,0.0,0
+2020-01-24,06111,Ventura County,0.0,0.0,0
+2020-01-24,06037,Los Angeles County,0.0,0.0,0
+2020-01-24,06097,Sonoma County,0.0,0.0,0
+2020-01-24,06031,Kings County,0.0,0.0,0
+2020-01-24,06073,San Diego County,0.0,0.0,0
+2020-01-24,06061,Placer County,0.0,0.0,0
+2020-01-24,06075,San Francisco County,0.0,0.0,0
+2020-01-24,06041,Marin County,0.0,0.0,0
+2020-01-24,06043,Mariposa County,0.0,0.0,0
+2020-01-24,06035,Lassen County,0.0,0.0,0
+2020-01-24,06055,Napa County,0.0,0.0,0
+2020-01-24,06089,Shasta County,0.0,0.0,0
+2020-01-24,06053,Monterey County,0.0,0.0,0
+2020-01-24,06105,Trinity County,0.0,0.0,0
+2020-01-24,06045,Mendocino County,0.0,0.0,0
+2020-01-24,06027,Inyo County,0.0,0.0,0
+2020-01-24,06051,Mono County,0.0,0.0,0
+2020-01-24,06109,Tuolumne County,0.0,0.0,0
+2020-01-24,06095,Solano County,0.0,0.0,0
+2020-01-24,06071,San Bernardino County,0.0,0.0,0
+2020-01-24,06013,Contra Costa County,0.0,0.0,0
+2020-01-24,06003,Alpine County,0.0,0.0,0
+2020-01-24,06017,El Dorado County,0.0,0.0,0
+2020-01-24,06113,Yolo County,0.0,0.0,0
+2020-01-24,06115,Yuba County,0.0,0.0,0
+2020-01-24,06069,San Benito County,0.0,0.0,0
+2020-01-24,06023,Humboldt County,0.0,0.0,0
+2020-01-24,06065,Riverside County,0.0,0.0,0
+2020-01-24,06029,Kern County,0.0,0.0,0
+2020-01-24,06011,Colusa County,0.0,0.0,0
+2020-01-24,06015,Del Norte County,0.0,0.0,0
+2020-01-24,06049,Modoc County,0.0,0.0,0
+2020-01-24,06019,Fresno County,0.0,0.0,0
+2020-01-24,06039,Madera County,0.0,0.0,0
+2020-01-24,06085,Santa Clara County,0.0,0.0,0
+2020-01-24,06103,Tehama County,0.0,0.0,0
+2020-01-24,06077,San Joaquin County,0.0,0.0,0
+2020-01-24,06001,Alameda County,0.0,0.0,0
+2020-01-24,06057,Nevada County,0.0,0.0,0
+2020-01-24,06007,Butte County,0.0,0.0,0
+2020-01-24,06047,Merced County,0.0,0.0,0
+2020-01-24,06107,Tulare County,0.0,0.0,0
+2020-01-24,06099,Stanislaus County,0.0,0.0,0
+2020-01-24,06059,Orange County,0.0,0.0,0
+2020-01-24,06025,Imperial County,0.0,0.0,0
+2020-01-24,06101,Sutter County,0.0,0.0,0
+2020-01-24,06005,Amador County,0.0,0.0,0
+2020-01-24,06033,Lake County,0.0,0.0,0
+2020-01-24,06063,Plumas County,0.0,0.0,0
+2020-01-24,06081,San Mateo County,0.0,0.0,0
+2020-01-24,06093,Siskiyou County,0.0,0.0,0
+2020-01-24,06087,Santa Cruz County,0.0,0.0,0
+2020-01-24,06021,Glenn County,0.0,0.0,0
+2020-01-24,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-25,06091,Sierra County,0.0,0.0,0
+2020-01-25,06067,Sacramento County,0.0,0.0,0
+2020-01-25,06083,Santa Barbara County,0.0,0.0,0
+2020-01-25,06009,Calaveras County,0.0,0.0,0
+2020-01-25,06111,Ventura County,0.0,0.0,0
+2020-01-25,06037,Los Angeles County,0.0,0.0,0
+2020-01-25,06097,Sonoma County,0.0,0.0,0
+2020-01-25,06031,Kings County,0.0,0.0,0
+2020-01-25,06073,San Diego County,0.0,0.0,0
+2020-01-25,06061,Placer County,0.0,0.0,0
+2020-01-25,06075,San Francisco County,0.0,0.0,0
+2020-01-25,06041,Marin County,0.0,0.0,0
+2020-01-25,06043,Mariposa County,0.0,0.0,0
+2020-01-25,06035,Lassen County,0.0,0.0,0
+2020-01-25,06055,Napa County,0.0,0.0,0
+2020-01-25,06089,Shasta County,0.0,0.0,0
+2020-01-25,06053,Monterey County,0.0,0.0,0
+2020-01-25,06105,Trinity County,0.0,0.0,0
+2020-01-25,06045,Mendocino County,0.0,0.0,0
+2020-01-25,06027,Inyo County,0.0,0.0,0
+2020-01-25,06051,Mono County,0.0,0.0,0
+2020-01-25,06109,Tuolumne County,0.0,0.0,0
+2020-01-25,06095,Solano County,0.0,0.0,0
+2020-01-25,06071,San Bernardino County,0.0,0.0,0
+2020-01-25,06013,Contra Costa County,0.0,0.0,0
+2020-01-25,06003,Alpine County,0.0,0.0,0
+2020-01-25,06017,El Dorado County,0.0,0.0,0
+2020-01-25,06113,Yolo County,0.0,0.0,0
+2020-01-25,06115,Yuba County,0.0,0.0,0
+2020-01-25,06069,San Benito County,0.0,0.0,0
+2020-01-25,06023,Humboldt County,0.0,0.0,0
+2020-01-25,06065,Riverside County,0.0,0.0,0
+2020-01-25,06029,Kern County,0.0,0.0,0
+2020-01-25,06011,Colusa County,0.0,0.0,0
+2020-01-25,06015,Del Norte County,0.0,0.0,0
+2020-01-25,06049,Modoc County,0.0,0.0,0
+2020-01-25,06019,Fresno County,0.0,0.0,0
+2020-01-25,06039,Madera County,0.0,0.0,0
+2020-01-25,06085,Santa Clara County,0.0,0.0,0
+2020-01-25,06103,Tehama County,0.0,0.0,0
+2020-01-25,06077,San Joaquin County,0.0,0.0,0
+2020-01-25,06001,Alameda County,0.0,0.0,0
+2020-01-25,06057,Nevada County,0.0,0.0,0
+2020-01-25,06007,Butte County,0.0,0.0,0
+2020-01-25,06047,Merced County,0.0,0.0,0
+2020-01-25,06107,Tulare County,0.0,0.0,0
+2020-01-25,06099,Stanislaus County,0.0,0.0,0
+2020-01-25,06059,Orange County,0.0,0.0,0
+2020-01-25,06025,Imperial County,0.0,0.0,0
+2020-01-25,06101,Sutter County,0.0,0.0,0
+2020-01-25,06005,Amador County,0.0,0.0,0
+2020-01-25,06033,Lake County,0.0,0.0,0
+2020-01-25,06063,Plumas County,0.0,0.0,0
+2020-01-25,06081,San Mateo County,0.0,0.0,0
+2020-01-25,06093,Siskiyou County,0.0,0.0,0
+2020-01-25,06087,Santa Cruz County,0.0,0.0,0
+2020-01-25,06021,Glenn County,0.0,0.0,0
+2020-01-25,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-26,06091,Sierra County,0.0,0.0,0
+2020-01-26,06067,Sacramento County,0.0,0.0,0
+2020-01-26,06083,Santa Barbara County,0.0,0.0,0
+2020-01-26,06009,Calaveras County,0.0,0.0,0
+2020-01-26,06111,Ventura County,0.0,0.0,0
+2020-01-26,06037,Los Angeles County,1.0,0.0,0
+2020-01-26,06097,Sonoma County,0.0,0.0,0
+2020-01-26,06031,Kings County,0.0,0.0,0
+2020-01-26,06073,San Diego County,0.0,0.0,0
+2020-01-26,06061,Placer County,0.0,0.0,0
+2020-01-26,06075,San Francisco County,0.0,0.0,0
+2020-01-26,06041,Marin County,0.0,0.0,0
+2020-01-26,06043,Mariposa County,0.0,0.0,0
+2020-01-26,06035,Lassen County,0.0,0.0,0
+2020-01-26,06055,Napa County,0.0,0.0,0
+2020-01-26,06089,Shasta County,0.0,0.0,0
+2020-01-26,06053,Monterey County,0.0,0.0,0
+2020-01-26,06105,Trinity County,0.0,0.0,0
+2020-01-26,06045,Mendocino County,0.0,0.0,0
+2020-01-26,06027,Inyo County,0.0,0.0,0
+2020-01-26,06051,Mono County,0.0,0.0,0
+2020-01-26,06109,Tuolumne County,0.0,0.0,0
+2020-01-26,06095,Solano County,0.0,0.0,0
+2020-01-26,06071,San Bernardino County,0.0,0.0,0
+2020-01-26,06013,Contra Costa County,0.0,0.0,0
+2020-01-26,06003,Alpine County,0.0,0.0,0
+2020-01-26,06017,El Dorado County,0.0,0.0,0
+2020-01-26,06113,Yolo County,0.0,0.0,0
+2020-01-26,06115,Yuba County,0.0,0.0,0
+2020-01-26,06069,San Benito County,0.0,0.0,0
+2020-01-26,06023,Humboldt County,0.0,0.0,0
+2020-01-26,06065,Riverside County,0.0,0.0,0
+2020-01-26,06029,Kern County,0.0,0.0,0
+2020-01-26,06011,Colusa County,0.0,0.0,0
+2020-01-26,06015,Del Norte County,0.0,0.0,0
+2020-01-26,06049,Modoc County,0.0,0.0,0
+2020-01-26,06019,Fresno County,0.0,0.0,0
+2020-01-26,06039,Madera County,0.0,0.0,0
+2020-01-26,06085,Santa Clara County,0.0,0.0,0
+2020-01-26,06103,Tehama County,0.0,0.0,0
+2020-01-26,06077,San Joaquin County,0.0,0.0,0
+2020-01-26,06001,Alameda County,0.0,0.0,0
+2020-01-26,06057,Nevada County,0.0,0.0,0
+2020-01-26,06007,Butte County,0.0,0.0,0
+2020-01-26,06047,Merced County,0.0,0.0,0
+2020-01-26,06107,Tulare County,0.0,0.0,0
+2020-01-26,06099,Stanislaus County,0.0,0.0,0
+2020-01-26,06059,Orange County,1.0,0.0,0
+2020-01-26,06025,Imperial County,0.0,0.0,0
+2020-01-26,06101,Sutter County,0.0,0.0,0
+2020-01-26,06005,Amador County,0.0,0.0,0
+2020-01-26,06033,Lake County,0.0,0.0,0
+2020-01-26,06063,Plumas County,0.0,0.0,0
+2020-01-26,06081,San Mateo County,0.0,0.0,0
+2020-01-26,06093,Siskiyou County,0.0,0.0,0
+2020-01-26,06087,Santa Cruz County,0.0,0.0,0
+2020-01-26,06021,Glenn County,0.0,0.0,0
+2020-01-26,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-27,06091,Sierra County,0.0,0.0,0
+2020-01-27,06067,Sacramento County,0.0,0.0,0
+2020-01-27,06083,Santa Barbara County,0.0,0.0,0
+2020-01-27,06009,Calaveras County,0.0,0.0,0
+2020-01-27,06111,Ventura County,0.0,0.0,0
+2020-01-27,06037,Los Angeles County,1.0,0.0,0
+2020-01-27,06097,Sonoma County,0.0,0.0,0
+2020-01-27,06031,Kings County,0.0,0.0,0
+2020-01-27,06073,San Diego County,0.0,0.0,0
+2020-01-27,06061,Placer County,0.0,0.0,0
+2020-01-27,06075,San Francisco County,0.0,0.0,0
+2020-01-27,06041,Marin County,0.0,0.0,0
+2020-01-27,06043,Mariposa County,0.0,0.0,0
+2020-01-27,06035,Lassen County,0.0,0.0,0
+2020-01-27,06055,Napa County,0.0,0.0,0
+2020-01-27,06089,Shasta County,0.0,0.0,0
+2020-01-27,06053,Monterey County,0.0,0.0,0
+2020-01-27,06105,Trinity County,0.0,0.0,0
+2020-01-27,06045,Mendocino County,0.0,0.0,0
+2020-01-27,06027,Inyo County,0.0,0.0,0
+2020-01-27,06051,Mono County,0.0,0.0,0
+2020-01-27,06109,Tuolumne County,0.0,0.0,0
+2020-01-27,06095,Solano County,0.0,0.0,0
+2020-01-27,06071,San Bernardino County,0.0,0.0,0
+2020-01-27,06013,Contra Costa County,0.0,0.0,0
+2020-01-27,06003,Alpine County,0.0,0.0,0
+2020-01-27,06017,El Dorado County,0.0,0.0,0
+2020-01-27,06113,Yolo County,0.0,0.0,0
+2020-01-27,06115,Yuba County,0.0,0.0,0
+2020-01-27,06069,San Benito County,0.0,0.0,0
+2020-01-27,06023,Humboldt County,0.0,0.0,0
+2020-01-27,06065,Riverside County,0.0,0.0,0
+2020-01-27,06029,Kern County,0.0,0.0,0
+2020-01-27,06011,Colusa County,0.0,0.0,0
+2020-01-27,06015,Del Norte County,0.0,0.0,0
+2020-01-27,06049,Modoc County,0.0,0.0,0
+2020-01-27,06019,Fresno County,0.0,0.0,0
+2020-01-27,06039,Madera County,0.0,0.0,0
+2020-01-27,06085,Santa Clara County,0.0,0.0,0
+2020-01-27,06103,Tehama County,0.0,0.0,0
+2020-01-27,06077,San Joaquin County,0.0,0.0,0
+2020-01-27,06001,Alameda County,0.0,0.0,0
+2020-01-27,06057,Nevada County,0.0,0.0,0
+2020-01-27,06007,Butte County,0.0,0.0,0
+2020-01-27,06047,Merced County,0.0,0.0,0
+2020-01-27,06107,Tulare County,0.0,0.0,0
+2020-01-27,06099,Stanislaus County,0.0,0.0,0
+2020-01-27,06059,Orange County,1.0,0.0,0
+2020-01-27,06025,Imperial County,0.0,0.0,0
+2020-01-27,06101,Sutter County,0.0,0.0,0
+2020-01-27,06005,Amador County,0.0,0.0,0
+2020-01-27,06033,Lake County,0.0,0.0,0
+2020-01-27,06063,Plumas County,0.0,0.0,0
+2020-01-27,06081,San Mateo County,0.0,0.0,0
+2020-01-27,06093,Siskiyou County,0.0,0.0,0
+2020-01-27,06087,Santa Cruz County,0.0,0.0,0
+2020-01-27,06021,Glenn County,0.0,0.0,0
+2020-01-27,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-28,06091,Sierra County,0.0,0.0,0
+2020-01-28,06067,Sacramento County,0.0,0.0,0
+2020-01-28,06083,Santa Barbara County,0.0,0.0,0
+2020-01-28,06009,Calaveras County,0.0,0.0,0
+2020-01-28,06111,Ventura County,0.0,0.0,0
+2020-01-28,06037,Los Angeles County,1.0,0.0,0
+2020-01-28,06097,Sonoma County,0.0,0.0,0
+2020-01-28,06031,Kings County,0.0,0.0,0
+2020-01-28,06073,San Diego County,0.0,0.0,0
+2020-01-28,06061,Placer County,0.0,0.0,0
+2020-01-28,06075,San Francisco County,0.0,0.0,0
+2020-01-28,06041,Marin County,0.0,0.0,0
+2020-01-28,06043,Mariposa County,0.0,0.0,0
+2020-01-28,06035,Lassen County,0.0,0.0,0
+2020-01-28,06055,Napa County,0.0,0.0,0
+2020-01-28,06089,Shasta County,0.0,0.0,0
+2020-01-28,06053,Monterey County,0.0,0.0,0
+2020-01-28,06105,Trinity County,0.0,0.0,0
+2020-01-28,06045,Mendocino County,0.0,0.0,0
+2020-01-28,06027,Inyo County,0.0,0.0,0
+2020-01-28,06051,Mono County,0.0,0.0,0
+2020-01-28,06109,Tuolumne County,0.0,0.0,0
+2020-01-28,06095,Solano County,0.0,0.0,0
+2020-01-28,06071,San Bernardino County,0.0,0.0,0
+2020-01-28,06013,Contra Costa County,0.0,0.0,0
+2020-01-28,06003,Alpine County,0.0,0.0,0
+2020-01-28,06017,El Dorado County,0.0,0.0,0
+2020-01-28,06113,Yolo County,0.0,0.0,0
+2020-01-28,06115,Yuba County,0.0,0.0,0
+2020-01-28,06069,San Benito County,0.0,0.0,0
+2020-01-28,06023,Humboldt County,0.0,0.0,0
+2020-01-28,06065,Riverside County,0.0,0.0,0
+2020-01-28,06029,Kern County,0.0,0.0,0
+2020-01-28,06011,Colusa County,0.0,0.0,0
+2020-01-28,06015,Del Norte County,0.0,0.0,0
+2020-01-28,06049,Modoc County,0.0,0.0,0
+2020-01-28,06019,Fresno County,0.0,0.0,0
+2020-01-28,06039,Madera County,0.0,0.0,0
+2020-01-28,06085,Santa Clara County,0.0,0.0,0
+2020-01-28,06103,Tehama County,0.0,0.0,0
+2020-01-28,06077,San Joaquin County,0.0,0.0,0
+2020-01-28,06001,Alameda County,0.0,0.0,0
+2020-01-28,06057,Nevada County,0.0,0.0,0
+2020-01-28,06007,Butte County,0.0,0.0,0
+2020-01-28,06047,Merced County,0.0,0.0,0
+2020-01-28,06107,Tulare County,0.0,0.0,0
+2020-01-28,06099,Stanislaus County,0.0,0.0,0
+2020-01-28,06059,Orange County,1.0,0.0,0
+2020-01-28,06025,Imperial County,0.0,0.0,0
+2020-01-28,06101,Sutter County,0.0,0.0,0
+2020-01-28,06005,Amador County,0.0,0.0,0
+2020-01-28,06033,Lake County,0.0,0.0,0
+2020-01-28,06063,Plumas County,0.0,0.0,0
+2020-01-28,06081,San Mateo County,0.0,0.0,0
+2020-01-28,06093,Siskiyou County,0.0,0.0,0
+2020-01-28,06087,Santa Cruz County,0.0,0.0,0
+2020-01-28,06021,Glenn County,0.0,0.0,0
+2020-01-28,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-29,06091,Sierra County,0.0,0.0,0
+2020-01-29,06067,Sacramento County,0.0,0.0,0
+2020-01-29,06083,Santa Barbara County,0.0,0.0,0
+2020-01-29,06009,Calaveras County,0.0,0.0,0
+2020-01-29,06111,Ventura County,0.0,0.0,0
+2020-01-29,06037,Los Angeles County,1.0,0.0,0
+2020-01-29,06097,Sonoma County,0.0,0.0,0
+2020-01-29,06031,Kings County,0.0,0.0,0
+2020-01-29,06073,San Diego County,0.0,0.0,0
+2020-01-29,06061,Placer County,0.0,0.0,0
+2020-01-29,06075,San Francisco County,0.0,0.0,0
+2020-01-29,06041,Marin County,0.0,0.0,0
+2020-01-29,06043,Mariposa County,0.0,0.0,0
+2020-01-29,06035,Lassen County,0.0,0.0,0
+2020-01-29,06055,Napa County,0.0,0.0,0
+2020-01-29,06089,Shasta County,0.0,0.0,0
+2020-01-29,06053,Monterey County,0.0,0.0,0
+2020-01-29,06105,Trinity County,0.0,0.0,0
+2020-01-29,06045,Mendocino County,0.0,0.0,0
+2020-01-29,06027,Inyo County,0.0,0.0,0
+2020-01-29,06051,Mono County,0.0,0.0,0
+2020-01-29,06109,Tuolumne County,0.0,0.0,0
+2020-01-29,06095,Solano County,0.0,0.0,0
+2020-01-29,06071,San Bernardino County,0.0,0.0,0
+2020-01-29,06013,Contra Costa County,0.0,0.0,0
+2020-01-29,06003,Alpine County,0.0,0.0,0
+2020-01-29,06017,El Dorado County,0.0,0.0,0
+2020-01-29,06113,Yolo County,0.0,0.0,0
+2020-01-29,06115,Yuba County,0.0,0.0,0
+2020-01-29,06069,San Benito County,0.0,0.0,0
+2020-01-29,06023,Humboldt County,0.0,0.0,0
+2020-01-29,06065,Riverside County,0.0,0.0,0
+2020-01-29,06029,Kern County,0.0,0.0,0
+2020-01-29,06011,Colusa County,0.0,0.0,0
+2020-01-29,06015,Del Norte County,0.0,0.0,0
+2020-01-29,06049,Modoc County,0.0,0.0,0
+2020-01-29,06019,Fresno County,0.0,0.0,0
+2020-01-29,06039,Madera County,0.0,0.0,0
+2020-01-29,06085,Santa Clara County,0.0,0.0,0
+2020-01-29,06103,Tehama County,0.0,0.0,0
+2020-01-29,06077,San Joaquin County,0.0,0.0,0
+2020-01-29,06001,Alameda County,0.0,0.0,0
+2020-01-29,06057,Nevada County,0.0,0.0,0
+2020-01-29,06007,Butte County,0.0,0.0,0
+2020-01-29,06047,Merced County,0.0,0.0,0
+2020-01-29,06107,Tulare County,0.0,0.0,0
+2020-01-29,06099,Stanislaus County,0.0,0.0,0
+2020-01-29,06059,Orange County,1.0,0.0,0
+2020-01-29,06025,Imperial County,0.0,0.0,0
+2020-01-29,06101,Sutter County,0.0,0.0,0
+2020-01-29,06005,Amador County,0.0,0.0,0
+2020-01-29,06033,Lake County,0.0,0.0,0
+2020-01-29,06063,Plumas County,0.0,0.0,0
+2020-01-29,06081,San Mateo County,0.0,0.0,0
+2020-01-29,06093,Siskiyou County,0.0,0.0,0
+2020-01-29,06087,Santa Cruz County,0.0,0.0,0
+2020-01-29,06021,Glenn County,0.0,0.0,0
+2020-01-29,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-30,06091,Sierra County,0.0,0.0,0
+2020-01-30,06067,Sacramento County,0.0,0.0,0
+2020-01-30,06083,Santa Barbara County,0.0,0.0,0
+2020-01-30,06009,Calaveras County,0.0,0.0,0
+2020-01-30,06111,Ventura County,0.0,0.0,0
+2020-01-30,06037,Los Angeles County,1.0,0.0,0
+2020-01-30,06097,Sonoma County,0.0,0.0,0
+2020-01-30,06031,Kings County,0.0,0.0,0
+2020-01-30,06073,San Diego County,0.0,0.0,0
+2020-01-30,06061,Placer County,0.0,0.0,0
+2020-01-30,06075,San Francisco County,0.0,0.0,0
+2020-01-30,06041,Marin County,0.0,0.0,0
+2020-01-30,06043,Mariposa County,0.0,0.0,0
+2020-01-30,06035,Lassen County,0.0,0.0,0
+2020-01-30,06055,Napa County,0.0,0.0,0
+2020-01-30,06089,Shasta County,0.0,0.0,0
+2020-01-30,06053,Monterey County,0.0,0.0,0
+2020-01-30,06105,Trinity County,0.0,0.0,0
+2020-01-30,06045,Mendocino County,0.0,0.0,0
+2020-01-30,06027,Inyo County,0.0,0.0,0
+2020-01-30,06051,Mono County,0.0,0.0,0
+2020-01-30,06109,Tuolumne County,0.0,0.0,0
+2020-01-30,06095,Solano County,0.0,0.0,0
+2020-01-30,06071,San Bernardino County,0.0,0.0,0
+2020-01-30,06013,Contra Costa County,0.0,0.0,0
+2020-01-30,06003,Alpine County,0.0,0.0,0
+2020-01-30,06017,El Dorado County,0.0,0.0,0
+2020-01-30,06113,Yolo County,0.0,0.0,0
+2020-01-30,06115,Yuba County,0.0,0.0,0
+2020-01-30,06069,San Benito County,0.0,0.0,0
+2020-01-30,06023,Humboldt County,0.0,0.0,0
+2020-01-30,06065,Riverside County,0.0,0.0,0
+2020-01-30,06029,Kern County,0.0,0.0,0
+2020-01-30,06011,Colusa County,0.0,0.0,0
+2020-01-30,06015,Del Norte County,0.0,0.0,0
+2020-01-30,06049,Modoc County,0.0,0.0,0
+2020-01-30,06019,Fresno County,0.0,0.0,0
+2020-01-30,06039,Madera County,0.0,0.0,0
+2020-01-30,06085,Santa Clara County,0.0,0.0,0
+2020-01-30,06103,Tehama County,0.0,0.0,0
+2020-01-30,06077,San Joaquin County,0.0,0.0,0
+2020-01-30,06001,Alameda County,0.0,0.0,0
+2020-01-30,06057,Nevada County,0.0,0.0,0
+2020-01-30,06007,Butte County,0.0,0.0,0
+2020-01-30,06047,Merced County,0.0,0.0,0
+2020-01-30,06107,Tulare County,0.0,0.0,0
+2020-01-30,06099,Stanislaus County,0.0,0.0,0
+2020-01-30,06059,Orange County,1.0,0.0,0
+2020-01-30,06025,Imperial County,0.0,0.0,0
+2020-01-30,06101,Sutter County,0.0,0.0,0
+2020-01-30,06005,Amador County,0.0,0.0,0
+2020-01-30,06033,Lake County,0.0,0.0,0
+2020-01-30,06063,Plumas County,0.0,0.0,0
+2020-01-30,06081,San Mateo County,0.0,0.0,0
+2020-01-30,06093,Siskiyou County,0.0,0.0,0
+2020-01-30,06087,Santa Cruz County,0.0,0.0,0
+2020-01-30,06021,Glenn County,0.0,0.0,0
+2020-01-30,06079,San Luis Obispo County,0.0,0.0,0
+2020-01-31,06091,Sierra County,0.0,0.0,0
+2020-01-31,06067,Sacramento County,0.0,0.0,0
+2020-01-31,06083,Santa Barbara County,0.0,0.0,0
+2020-01-31,06009,Calaveras County,0.0,0.0,0
+2020-01-31,06111,Ventura County,0.0,0.0,0
+2020-01-31,06037,Los Angeles County,1.0,0.0,0
+2020-01-31,06097,Sonoma County,0.0,0.0,0
+2020-01-31,06031,Kings County,0.0,0.0,0
+2020-01-31,06073,San Diego County,0.0,0.0,0
+2020-01-31,06061,Placer County,0.0,0.0,0
+2020-01-31,06075,San Francisco County,0.0,0.0,0
+2020-01-31,06041,Marin County,0.0,0.0,0
+2020-01-31,06043,Mariposa County,0.0,0.0,0
+2020-01-31,06035,Lassen County,0.0,0.0,0
+2020-01-31,06055,Napa County,0.0,0.0,0
+2020-01-31,06089,Shasta County,0.0,0.0,0
+2020-01-31,06053,Monterey County,0.0,0.0,0
+2020-01-31,06105,Trinity County,0.0,0.0,0
+2020-01-31,06045,Mendocino County,0.0,0.0,0
+2020-01-31,06027,Inyo County,0.0,0.0,0
+2020-01-31,06051,Mono County,0.0,0.0,0
+2020-01-31,06109,Tuolumne County,0.0,0.0,0
+2020-01-31,06095,Solano County,0.0,0.0,0
+2020-01-31,06071,San Bernardino County,0.0,0.0,0
+2020-01-31,06013,Contra Costa County,0.0,0.0,0
+2020-01-31,06003,Alpine County,0.0,0.0,0
+2020-01-31,06017,El Dorado County,0.0,0.0,0
+2020-01-31,06113,Yolo County,0.0,0.0,0
+2020-01-31,06115,Yuba County,0.0,0.0,0
+2020-01-31,06069,San Benito County,0.0,0.0,0
+2020-01-31,06023,Humboldt County,0.0,0.0,0
+2020-01-31,06065,Riverside County,0.0,0.0,0
+2020-01-31,06029,Kern County,0.0,0.0,0
+2020-01-31,06011,Colusa County,0.0,0.0,0
+2020-01-31,06015,Del Norte County,0.0,0.0,0
+2020-01-31,06049,Modoc County,0.0,0.0,0
+2020-01-31,06019,Fresno County,0.0,0.0,0
+2020-01-31,06039,Madera County,0.0,0.0,0
+2020-01-31,06085,Santa Clara County,1.0,0.0,0
+2020-01-31,06103,Tehama County,0.0,0.0,0
+2020-01-31,06077,San Joaquin County,0.0,0.0,0
+2020-01-31,06001,Alameda County,0.0,0.0,0
+2020-01-31,06057,Nevada County,0.0,0.0,0
+2020-01-31,06007,Butte County,0.0,0.0,0
+2020-01-31,06047,Merced County,0.0,0.0,0
+2020-01-31,06107,Tulare County,0.0,0.0,0
+2020-01-31,06099,Stanislaus County,0.0,0.0,0
+2020-01-31,06059,Orange County,1.0,0.0,0
+2020-01-31,06025,Imperial County,0.0,0.0,0
+2020-01-31,06101,Sutter County,0.0,0.0,0
+2020-01-31,06005,Amador County,0.0,0.0,0
+2020-01-31,06033,Lake County,0.0,0.0,0
+2020-01-31,06063,Plumas County,0.0,0.0,0
+2020-01-31,06081,San Mateo County,0.0,0.0,0
+2020-01-31,06093,Siskiyou County,0.0,0.0,0
+2020-01-31,06087,Santa Cruz County,0.0,0.0,0
+2020-01-31,06021,Glenn County,0.0,0.0,0
+2020-01-31,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-01,06091,Sierra County,0.0,0.0,0
+2020-02-01,06067,Sacramento County,0.0,0.0,0
+2020-02-01,06083,Santa Barbara County,0.0,0.0,0
+2020-02-01,06009,Calaveras County,0.0,0.0,0
+2020-02-01,06111,Ventura County,0.0,0.0,0
+2020-02-01,06037,Los Angeles County,1.0,0.0,0
+2020-02-01,06097,Sonoma County,0.0,0.0,0
+2020-02-01,06031,Kings County,0.0,0.0,0
+2020-02-01,06073,San Diego County,0.0,0.0,0
+2020-02-01,06061,Placer County,0.0,0.0,0
+2020-02-01,06075,San Francisco County,0.0,0.0,0
+2020-02-01,06041,Marin County,0.0,0.0,0
+2020-02-01,06043,Mariposa County,0.0,0.0,0
+2020-02-01,06035,Lassen County,0.0,0.0,0
+2020-02-01,06055,Napa County,0.0,0.0,0
+2020-02-01,06089,Shasta County,0.0,0.0,0
+2020-02-01,06053,Monterey County,0.0,0.0,0
+2020-02-01,06105,Trinity County,0.0,0.0,0
+2020-02-01,06045,Mendocino County,0.0,0.0,0
+2020-02-01,06027,Inyo County,0.0,0.0,0
+2020-02-01,06051,Mono County,0.0,0.0,0
+2020-02-01,06109,Tuolumne County,0.0,0.0,0
+2020-02-01,06095,Solano County,0.0,0.0,0
+2020-02-01,06071,San Bernardino County,0.0,0.0,0
+2020-02-01,06013,Contra Costa County,0.0,0.0,0
+2020-02-01,06003,Alpine County,0.0,0.0,0
+2020-02-01,06017,El Dorado County,0.0,0.0,0
+2020-02-01,06113,Yolo County,0.0,0.0,0
+2020-02-01,06115,Yuba County,0.0,0.0,0
+2020-02-01,06069,San Benito County,0.0,0.0,0
+2020-02-01,06023,Humboldt County,0.0,0.0,0
+2020-02-01,06065,Riverside County,0.0,0.0,0
+2020-02-01,06029,Kern County,0.0,0.0,0
+2020-02-01,06011,Colusa County,0.0,0.0,0
+2020-02-01,06015,Del Norte County,0.0,0.0,0
+2020-02-01,06049,Modoc County,0.0,0.0,0
+2020-02-01,06019,Fresno County,0.0,0.0,0
+2020-02-01,06039,Madera County,0.0,0.0,0
+2020-02-01,06085,Santa Clara County,1.0,0.0,0
+2020-02-01,06103,Tehama County,0.0,0.0,0
+2020-02-01,06077,San Joaquin County,0.0,0.0,0
+2020-02-01,06001,Alameda County,0.0,0.0,0
+2020-02-01,06057,Nevada County,0.0,0.0,0
+2020-02-01,06007,Butte County,0.0,0.0,0
+2020-02-01,06047,Merced County,0.0,0.0,0
+2020-02-01,06107,Tulare County,0.0,0.0,0
+2020-02-01,06099,Stanislaus County,0.0,0.0,0
+2020-02-01,06059,Orange County,1.0,0.0,0
+2020-02-01,06025,Imperial County,0.0,0.0,0
+2020-02-01,06101,Sutter County,0.0,0.0,0
+2020-02-01,06005,Amador County,0.0,0.0,0
+2020-02-01,06033,Lake County,0.0,0.0,0
+2020-02-01,06063,Plumas County,0.0,0.0,0
+2020-02-01,06081,San Mateo County,0.0,0.0,0
+2020-02-01,06093,Siskiyou County,0.0,0.0,0
+2020-02-01,06087,Santa Cruz County,0.0,0.0,0
+2020-02-01,06021,Glenn County,0.0,0.0,0
+2020-02-01,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-02,06091,Sierra County,0.0,0.0,0
+2020-02-02,06067,Sacramento County,0.0,0.0,0
+2020-02-02,06083,Santa Barbara County,0.0,0.0,0
+2020-02-02,06009,Calaveras County,0.0,0.0,0
+2020-02-02,06111,Ventura County,0.0,0.0,0
+2020-02-02,06037,Los Angeles County,1.0,0.0,0
+2020-02-02,06097,Sonoma County,0.0,0.0,0
+2020-02-02,06031,Kings County,0.0,0.0,0
+2020-02-02,06073,San Diego County,0.0,0.0,0
+2020-02-02,06061,Placer County,0.0,0.0,0
+2020-02-02,06075,San Francisco County,0.0,0.0,0
+2020-02-02,06041,Marin County,0.0,0.0,0
+2020-02-02,06043,Mariposa County,0.0,0.0,0
+2020-02-02,06035,Lassen County,0.0,0.0,0
+2020-02-02,06055,Napa County,0.0,0.0,0
+2020-02-02,06089,Shasta County,0.0,0.0,0
+2020-02-02,06053,Monterey County,0.0,0.0,0
+2020-02-02,06105,Trinity County,0.0,0.0,0
+2020-02-02,06045,Mendocino County,0.0,0.0,0
+2020-02-02,06027,Inyo County,0.0,0.0,0
+2020-02-02,06051,Mono County,0.0,0.0,0
+2020-02-02,06109,Tuolumne County,0.0,0.0,0
+2020-02-02,06095,Solano County,0.0,0.0,0
+2020-02-02,06071,San Bernardino County,0.0,0.0,0
+2020-02-02,06013,Contra Costa County,0.0,0.0,0
+2020-02-02,06003,Alpine County,0.0,0.0,0
+2020-02-02,06017,El Dorado County,0.0,0.0,0
+2020-02-02,06113,Yolo County,0.0,0.0,0
+2020-02-02,06115,Yuba County,0.0,0.0,0
+2020-02-02,06069,San Benito County,0.0,0.0,0
+2020-02-02,06023,Humboldt County,0.0,0.0,0
+2020-02-02,06065,Riverside County,0.0,0.0,0
+2020-02-02,06029,Kern County,0.0,0.0,0
+2020-02-02,06011,Colusa County,0.0,0.0,0
+2020-02-02,06015,Del Norte County,0.0,0.0,0
+2020-02-02,06049,Modoc County,0.0,0.0,0
+2020-02-02,06019,Fresno County,0.0,0.0,0
+2020-02-02,06039,Madera County,0.0,0.0,0
+2020-02-02,06085,Santa Clara County,1.0,0.0,0
+2020-02-02,06103,Tehama County,0.0,0.0,0
+2020-02-02,06077,San Joaquin County,0.0,0.0,0
+2020-02-02,06001,Alameda County,0.0,0.0,0
+2020-02-02,06057,Nevada County,0.0,0.0,0
+2020-02-02,06007,Butte County,0.0,0.0,0
+2020-02-02,06047,Merced County,0.0,0.0,0
+2020-02-02,06107,Tulare County,0.0,0.0,0
+2020-02-02,06099,Stanislaus County,0.0,0.0,0
+2020-02-02,06059,Orange County,1.0,0.0,0
+2020-02-02,06025,Imperial County,0.0,0.0,0
+2020-02-02,06101,Sutter County,0.0,0.0,0
+2020-02-02,06005,Amador County,0.0,0.0,0
+2020-02-02,06033,Lake County,0.0,0.0,0
+2020-02-02,06063,Plumas County,0.0,0.0,0
+2020-02-02,06081,San Mateo County,0.0,0.0,0
+2020-02-02,06093,Siskiyou County,0.0,0.0,0
+2020-02-02,06087,Santa Cruz County,0.0,0.0,0
+2020-02-02,06021,Glenn County,0.0,0.0,0
+2020-02-02,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-03,06091,Sierra County,0.0,0.0,0
+2020-02-03,06067,Sacramento County,0.0,0.0,0
+2020-02-03,06083,Santa Barbara County,0.0,0.0,0
+2020-02-03,06009,Calaveras County,0.0,0.0,0
+2020-02-03,06111,Ventura County,0.0,0.0,0
+2020-02-03,06037,Los Angeles County,1.0,0.0,0
+2020-02-03,06097,Sonoma County,0.0,0.0,0
+2020-02-03,06031,Kings County,0.0,0.0,0
+2020-02-03,06073,San Diego County,0.0,0.0,0
+2020-02-03,06061,Placer County,0.0,0.0,0
+2020-02-03,06075,San Francisco County,0.0,0.0,0
+2020-02-03,06041,Marin County,0.0,0.0,0
+2020-02-03,06043,Mariposa County,0.0,0.0,0
+2020-02-03,06035,Lassen County,0.0,0.0,0
+2020-02-03,06055,Napa County,0.0,0.0,0
+2020-02-03,06089,Shasta County,0.0,0.0,0
+2020-02-03,06053,Monterey County,0.0,0.0,0
+2020-02-03,06105,Trinity County,0.0,0.0,0
+2020-02-03,06045,Mendocino County,0.0,0.0,0
+2020-02-03,06027,Inyo County,0.0,0.0,0
+2020-02-03,06051,Mono County,0.0,0.0,0
+2020-02-03,06109,Tuolumne County,0.0,0.0,0
+2020-02-03,06095,Solano County,0.0,0.0,0
+2020-02-03,06071,San Bernardino County,0.0,0.0,0
+2020-02-03,06013,Contra Costa County,0.0,0.0,0
+2020-02-03,06003,Alpine County,0.0,0.0,0
+2020-02-03,06017,El Dorado County,0.0,0.0,0
+2020-02-03,06113,Yolo County,0.0,0.0,0
+2020-02-03,06115,Yuba County,0.0,0.0,0
+2020-02-03,06069,San Benito County,2.0,0.0,0
+2020-02-03,06023,Humboldt County,0.0,0.0,0
+2020-02-03,06065,Riverside County,0.0,0.0,0
+2020-02-03,06029,Kern County,0.0,0.0,0
+2020-02-03,06011,Colusa County,0.0,0.0,0
+2020-02-03,06015,Del Norte County,0.0,0.0,0
+2020-02-03,06049,Modoc County,0.0,0.0,0
+2020-02-03,06019,Fresno County,0.0,0.0,0
+2020-02-03,06039,Madera County,0.0,0.0,0
+2020-02-03,06085,Santa Clara County,2.0,0.0,0
+2020-02-03,06103,Tehama County,0.0,0.0,0
+2020-02-03,06077,San Joaquin County,0.0,0.0,0
+2020-02-03,06001,Alameda County,0.0,0.0,0
+2020-02-03,06057,Nevada County,0.0,0.0,0
+2020-02-03,06007,Butte County,0.0,0.0,0
+2020-02-03,06047,Merced County,0.0,0.0,0
+2020-02-03,06107,Tulare County,0.0,0.0,0
+2020-02-03,06099,Stanislaus County,0.0,0.0,0
+2020-02-03,06059,Orange County,1.0,0.0,0
+2020-02-03,06025,Imperial County,0.0,0.0,0
+2020-02-03,06101,Sutter County,0.0,0.0,0
+2020-02-03,06005,Amador County,0.0,0.0,0
+2020-02-03,06033,Lake County,0.0,0.0,0
+2020-02-03,06063,Plumas County,0.0,0.0,0
+2020-02-03,06081,San Mateo County,0.0,0.0,0
+2020-02-03,06093,Siskiyou County,0.0,0.0,0
+2020-02-03,06087,Santa Cruz County,0.0,0.0,0
+2020-02-03,06021,Glenn County,0.0,0.0,0
+2020-02-03,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-04,06091,Sierra County,0.0,0.0,0
+2020-02-04,06067,Sacramento County,0.0,0.0,0
+2020-02-04,06083,Santa Barbara County,0.0,0.0,0
+2020-02-04,06009,Calaveras County,0.0,0.0,0
+2020-02-04,06111,Ventura County,0.0,0.0,0
+2020-02-04,06037,Los Angeles County,1.0,0.0,0
+2020-02-04,06097,Sonoma County,0.0,0.0,0
+2020-02-04,06031,Kings County,0.0,0.0,0
+2020-02-04,06073,San Diego County,0.0,0.0,0
+2020-02-04,06061,Placer County,0.0,0.0,0
+2020-02-04,06075,San Francisco County,0.0,0.0,0
+2020-02-04,06041,Marin County,0.0,0.0,0
+2020-02-04,06043,Mariposa County,0.0,0.0,0
+2020-02-04,06035,Lassen County,0.0,0.0,0
+2020-02-04,06055,Napa County,0.0,0.0,0
+2020-02-04,06089,Shasta County,0.0,0.0,0
+2020-02-04,06053,Monterey County,0.0,0.0,0
+2020-02-04,06105,Trinity County,0.0,0.0,0
+2020-02-04,06045,Mendocino County,0.0,0.0,0
+2020-02-04,06027,Inyo County,0.0,0.0,0
+2020-02-04,06051,Mono County,0.0,0.0,0
+2020-02-04,06109,Tuolumne County,0.0,0.0,0
+2020-02-04,06095,Solano County,0.0,0.0,0
+2020-02-04,06071,San Bernardino County,0.0,0.0,0
+2020-02-04,06013,Contra Costa County,0.0,0.0,0
+2020-02-04,06003,Alpine County,0.0,0.0,0
+2020-02-04,06017,El Dorado County,0.0,0.0,0
+2020-02-04,06113,Yolo County,0.0,0.0,0
+2020-02-04,06115,Yuba County,0.0,0.0,0
+2020-02-04,06069,San Benito County,2.0,0.0,0
+2020-02-04,06023,Humboldt County,0.0,0.0,0
+2020-02-04,06065,Riverside County,0.0,0.0,0
+2020-02-04,06029,Kern County,0.0,0.0,0
+2020-02-04,06011,Colusa County,0.0,0.0,0
+2020-02-04,06015,Del Norte County,0.0,0.0,0
+2020-02-04,06049,Modoc County,0.0,0.0,0
+2020-02-04,06019,Fresno County,0.0,0.0,0
+2020-02-04,06039,Madera County,0.0,0.0,0
+2020-02-04,06085,Santa Clara County,2.0,0.0,0
+2020-02-04,06103,Tehama County,0.0,0.0,0
+2020-02-04,06077,San Joaquin County,0.0,0.0,0
+2020-02-04,06001,Alameda County,0.0,0.0,0
+2020-02-04,06057,Nevada County,0.0,0.0,0
+2020-02-04,06007,Butte County,0.0,0.0,0
+2020-02-04,06047,Merced County,0.0,0.0,0
+2020-02-04,06107,Tulare County,0.0,0.0,0
+2020-02-04,06099,Stanislaus County,0.0,0.0,0
+2020-02-04,06059,Orange County,1.0,0.0,0
+2020-02-04,06025,Imperial County,0.0,0.0,0
+2020-02-04,06101,Sutter County,0.0,0.0,0
+2020-02-04,06005,Amador County,0.0,0.0,0
+2020-02-04,06033,Lake County,0.0,0.0,0
+2020-02-04,06063,Plumas County,0.0,0.0,0
+2020-02-04,06081,San Mateo County,0.0,0.0,0
+2020-02-04,06093,Siskiyou County,0.0,0.0,0
+2020-02-04,06087,Santa Cruz County,0.0,0.0,0
+2020-02-04,06021,Glenn County,0.0,0.0,0
+2020-02-04,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-05,06091,Sierra County,0.0,0.0,0
+2020-02-05,06067,Sacramento County,0.0,0.0,0
+2020-02-05,06083,Santa Barbara County,0.0,0.0,0
+2020-02-05,06009,Calaveras County,0.0,0.0,0
+2020-02-05,06111,Ventura County,0.0,0.0,0
+2020-02-05,06037,Los Angeles County,1.0,0.0,0
+2020-02-05,06097,Sonoma County,0.0,0.0,0
+2020-02-05,06031,Kings County,0.0,0.0,0
+2020-02-05,06073,San Diego County,0.0,0.0,0
+2020-02-05,06061,Placer County,0.0,0.0,0
+2020-02-05,06075,San Francisco County,0.0,0.0,0
+2020-02-05,06041,Marin County,0.0,0.0,0
+2020-02-05,06043,Mariposa County,0.0,0.0,0
+2020-02-05,06035,Lassen County,0.0,0.0,0
+2020-02-05,06055,Napa County,0.0,0.0,0
+2020-02-05,06089,Shasta County,0.0,0.0,0
+2020-02-05,06053,Monterey County,0.0,0.0,0
+2020-02-05,06105,Trinity County,0.0,0.0,0
+2020-02-05,06045,Mendocino County,0.0,0.0,0
+2020-02-05,06027,Inyo County,0.0,0.0,0
+2020-02-05,06051,Mono County,0.0,0.0,0
+2020-02-05,06109,Tuolumne County,0.0,0.0,0
+2020-02-05,06095,Solano County,0.0,0.0,0
+2020-02-05,06071,San Bernardino County,0.0,0.0,0
+2020-02-05,06013,Contra Costa County,0.0,0.0,0
+2020-02-05,06003,Alpine County,0.0,0.0,0
+2020-02-05,06017,El Dorado County,0.0,0.0,0
+2020-02-05,06113,Yolo County,0.0,0.0,0
+2020-02-05,06115,Yuba County,0.0,0.0,0
+2020-02-05,06069,San Benito County,2.0,0.0,0
+2020-02-05,06023,Humboldt County,0.0,0.0,0
+2020-02-05,06065,Riverside County,0.0,0.0,0
+2020-02-05,06029,Kern County,0.0,0.0,0
+2020-02-05,06011,Colusa County,0.0,0.0,0
+2020-02-05,06015,Del Norte County,0.0,0.0,0
+2020-02-05,06049,Modoc County,0.0,0.0,0
+2020-02-05,06019,Fresno County,0.0,0.0,0
+2020-02-05,06039,Madera County,0.0,0.0,0
+2020-02-05,06085,Santa Clara County,2.0,0.0,0
+2020-02-05,06103,Tehama County,0.0,0.0,0
+2020-02-05,06077,San Joaquin County,0.0,0.0,0
+2020-02-05,06001,Alameda County,0.0,0.0,0
+2020-02-05,06057,Nevada County,0.0,0.0,0
+2020-02-05,06007,Butte County,0.0,0.0,0
+2020-02-05,06047,Merced County,0.0,0.0,0
+2020-02-05,06107,Tulare County,0.0,0.0,0
+2020-02-05,06099,Stanislaus County,0.0,0.0,0
+2020-02-05,06059,Orange County,1.0,0.0,0
+2020-02-05,06025,Imperial County,0.0,0.0,0
+2020-02-05,06101,Sutter County,0.0,0.0,0
+2020-02-05,06005,Amador County,0.0,0.0,0
+2020-02-05,06033,Lake County,0.0,0.0,0
+2020-02-05,06063,Plumas County,0.0,0.0,0
+2020-02-05,06081,San Mateo County,0.0,0.0,0
+2020-02-05,06093,Siskiyou County,0.0,0.0,0
+2020-02-05,06087,Santa Cruz County,0.0,0.0,0
+2020-02-05,06021,Glenn County,0.0,0.0,0
+2020-02-05,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-06,06091,Sierra County,0.0,0.0,0
+2020-02-06,06067,Sacramento County,0.0,0.0,0
+2020-02-06,06083,Santa Barbara County,0.0,0.0,0
+2020-02-06,06009,Calaveras County,0.0,0.0,0
+2020-02-06,06111,Ventura County,0.0,0.0,0
+2020-02-06,06037,Los Angeles County,1.0,0.0,0
+2020-02-06,06097,Sonoma County,0.0,0.0,0
+2020-02-06,06031,Kings County,0.0,0.0,0
+2020-02-06,06073,San Diego County,0.0,0.0,0
+2020-02-06,06061,Placer County,0.0,0.0,0
+2020-02-06,06075,San Francisco County,0.0,0.0,0
+2020-02-06,06041,Marin County,0.0,0.0,0
+2020-02-06,06043,Mariposa County,0.0,0.0,0
+2020-02-06,06035,Lassen County,0.0,0.0,0
+2020-02-06,06055,Napa County,0.0,0.0,0
+2020-02-06,06089,Shasta County,0.0,0.0,0
+2020-02-06,06053,Monterey County,0.0,0.0,0
+2020-02-06,06105,Trinity County,0.0,0.0,0
+2020-02-06,06045,Mendocino County,0.0,0.0,0
+2020-02-06,06027,Inyo County,0.0,0.0,0
+2020-02-06,06051,Mono County,0.0,0.0,0
+2020-02-06,06109,Tuolumne County,0.0,0.0,0
+2020-02-06,06095,Solano County,0.0,0.0,0
+2020-02-06,06071,San Bernardino County,0.0,0.0,0
+2020-02-06,06013,Contra Costa County,0.0,0.0,0
+2020-02-06,06003,Alpine County,0.0,0.0,0
+2020-02-06,06017,El Dorado County,0.0,0.0,0
+2020-02-06,06113,Yolo County,0.0,0.0,0
+2020-02-06,06115,Yuba County,0.0,0.0,0
+2020-02-06,06069,San Benito County,2.0,0.0,0
+2020-02-06,06023,Humboldt County,0.0,0.0,0
+2020-02-06,06065,Riverside County,0.0,0.0,0
+2020-02-06,06029,Kern County,0.0,0.0,0
+2020-02-06,06011,Colusa County,0.0,0.0,0
+2020-02-06,06015,Del Norte County,0.0,0.0,0
+2020-02-06,06049,Modoc County,0.0,0.0,0
+2020-02-06,06019,Fresno County,0.0,0.0,0
+2020-02-06,06039,Madera County,0.0,0.0,0
+2020-02-06,06085,Santa Clara County,2.0,0.0,0
+2020-02-06,06103,Tehama County,0.0,0.0,0
+2020-02-06,06077,San Joaquin County,0.0,0.0,0
+2020-02-06,06001,Alameda County,0.0,0.0,0
+2020-02-06,06057,Nevada County,0.0,0.0,0
+2020-02-06,06007,Butte County,0.0,0.0,0
+2020-02-06,06047,Merced County,0.0,0.0,0
+2020-02-06,06107,Tulare County,0.0,0.0,0
+2020-02-06,06099,Stanislaus County,0.0,0.0,0
+2020-02-06,06059,Orange County,1.0,0.0,0
+2020-02-06,06025,Imperial County,0.0,0.0,0
+2020-02-06,06101,Sutter County,0.0,0.0,0
+2020-02-06,06005,Amador County,0.0,0.0,0
+2020-02-06,06033,Lake County,0.0,0.0,0
+2020-02-06,06063,Plumas County,0.0,0.0,0
+2020-02-06,06081,San Mateo County,0.0,0.0,0
+2020-02-06,06093,Siskiyou County,0.0,0.0,0
+2020-02-06,06087,Santa Cruz County,0.0,0.0,0
+2020-02-06,06021,Glenn County,0.0,0.0,0
+2020-02-06,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-07,06091,Sierra County,0.0,0.0,0
+2020-02-07,06067,Sacramento County,0.0,0.0,0
+2020-02-07,06083,Santa Barbara County,0.0,0.0,0
+2020-02-07,06009,Calaveras County,0.0,0.0,0
+2020-02-07,06111,Ventura County,0.0,0.0,0
+2020-02-07,06037,Los Angeles County,1.0,0.0,0
+2020-02-07,06097,Sonoma County,0.0,0.0,0
+2020-02-07,06031,Kings County,0.0,0.0,0
+2020-02-07,06073,San Diego County,0.0,0.0,0
+2020-02-07,06061,Placer County,0.0,0.0,0
+2020-02-07,06075,San Francisco County,0.0,0.0,0
+2020-02-07,06041,Marin County,0.0,0.0,0
+2020-02-07,06043,Mariposa County,0.0,0.0,0
+2020-02-07,06035,Lassen County,0.0,0.0,0
+2020-02-07,06055,Napa County,0.0,0.0,0
+2020-02-07,06089,Shasta County,0.0,0.0,0
+2020-02-07,06053,Monterey County,0.0,0.0,0
+2020-02-07,06105,Trinity County,0.0,0.0,0
+2020-02-07,06045,Mendocino County,0.0,0.0,0
+2020-02-07,06027,Inyo County,0.0,0.0,0
+2020-02-07,06051,Mono County,0.0,0.0,0
+2020-02-07,06109,Tuolumne County,0.0,0.0,0
+2020-02-07,06095,Solano County,0.0,0.0,0
+2020-02-07,06071,San Bernardino County,0.0,0.0,0
+2020-02-07,06013,Contra Costa County,0.0,0.0,0
+2020-02-07,06003,Alpine County,0.0,0.0,0
+2020-02-07,06017,El Dorado County,0.0,0.0,0
+2020-02-07,06113,Yolo County,0.0,0.0,0
+2020-02-07,06115,Yuba County,0.0,0.0,0
+2020-02-07,06069,San Benito County,2.0,0.0,0
+2020-02-07,06023,Humboldt County,0.0,0.0,0
+2020-02-07,06065,Riverside County,0.0,0.0,0
+2020-02-07,06029,Kern County,0.0,0.0,0
+2020-02-07,06011,Colusa County,0.0,0.0,0
+2020-02-07,06015,Del Norte County,0.0,0.0,0
+2020-02-07,06049,Modoc County,0.0,0.0,0
+2020-02-07,06019,Fresno County,0.0,0.0,0
+2020-02-07,06039,Madera County,0.0,0.0,0
+2020-02-07,06085,Santa Clara County,2.0,0.0,0
+2020-02-07,06103,Tehama County,0.0,0.0,0
+2020-02-07,06077,San Joaquin County,0.0,0.0,0
+2020-02-07,06001,Alameda County,0.0,0.0,0
+2020-02-07,06057,Nevada County,0.0,0.0,0
+2020-02-07,06007,Butte County,0.0,0.0,0
+2020-02-07,06047,Merced County,0.0,0.0,0
+2020-02-07,06107,Tulare County,0.0,0.0,0
+2020-02-07,06099,Stanislaus County,0.0,0.0,0
+2020-02-07,06059,Orange County,1.0,0.0,0
+2020-02-07,06025,Imperial County,0.0,0.0,0
+2020-02-07,06101,Sutter County,0.0,0.0,0
+2020-02-07,06005,Amador County,0.0,0.0,0
+2020-02-07,06033,Lake County,0.0,0.0,0
+2020-02-07,06063,Plumas County,0.0,0.0,0
+2020-02-07,06081,San Mateo County,0.0,0.0,0
+2020-02-07,06093,Siskiyou County,0.0,0.0,0
+2020-02-07,06087,Santa Cruz County,0.0,0.0,0
+2020-02-07,06021,Glenn County,0.0,0.0,0
+2020-02-07,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-08,06091,Sierra County,0.0,0.0,0
+2020-02-08,06067,Sacramento County,0.0,0.0,0
+2020-02-08,06083,Santa Barbara County,0.0,0.0,0
+2020-02-08,06009,Calaveras County,0.0,0.0,0
+2020-02-08,06111,Ventura County,0.0,0.0,0
+2020-02-08,06037,Los Angeles County,1.0,0.0,0
+2020-02-08,06097,Sonoma County,0.0,0.0,0
+2020-02-08,06031,Kings County,0.0,0.0,0
+2020-02-08,06073,San Diego County,0.0,0.0,0
+2020-02-08,06061,Placer County,0.0,0.0,0
+2020-02-08,06075,San Francisco County,0.0,0.0,0
+2020-02-08,06041,Marin County,0.0,0.0,0
+2020-02-08,06043,Mariposa County,0.0,0.0,0
+2020-02-08,06035,Lassen County,0.0,0.0,0
+2020-02-08,06055,Napa County,0.0,0.0,0
+2020-02-08,06089,Shasta County,0.0,0.0,0
+2020-02-08,06053,Monterey County,0.0,0.0,0
+2020-02-08,06105,Trinity County,0.0,0.0,0
+2020-02-08,06045,Mendocino County,0.0,0.0,0
+2020-02-08,06027,Inyo County,0.0,0.0,0
+2020-02-08,06051,Mono County,0.0,0.0,0
+2020-02-08,06109,Tuolumne County,0.0,0.0,0
+2020-02-08,06095,Solano County,0.0,0.0,0
+2020-02-08,06071,San Bernardino County,0.0,0.0,0
+2020-02-08,06013,Contra Costa County,0.0,0.0,0
+2020-02-08,06003,Alpine County,0.0,0.0,0
+2020-02-08,06017,El Dorado County,0.0,0.0,0
+2020-02-08,06113,Yolo County,0.0,0.0,0
+2020-02-08,06115,Yuba County,0.0,0.0,0
+2020-02-08,06069,San Benito County,2.0,0.0,0
+2020-02-08,06023,Humboldt County,0.0,0.0,0
+2020-02-08,06065,Riverside County,0.0,0.0,0
+2020-02-08,06029,Kern County,0.0,0.0,0
+2020-02-08,06011,Colusa County,0.0,0.0,0
+2020-02-08,06015,Del Norte County,0.0,0.0,0
+2020-02-08,06049,Modoc County,0.0,0.0,0
+2020-02-08,06019,Fresno County,0.0,0.0,0
+2020-02-08,06039,Madera County,0.0,0.0,0
+2020-02-08,06085,Santa Clara County,2.0,0.0,0
+2020-02-08,06103,Tehama County,0.0,0.0,0
+2020-02-08,06077,San Joaquin County,0.0,0.0,0
+2020-02-08,06001,Alameda County,0.0,0.0,0
+2020-02-08,06057,Nevada County,0.0,0.0,0
+2020-02-08,06007,Butte County,0.0,0.0,0
+2020-02-08,06047,Merced County,0.0,0.0,0
+2020-02-08,06107,Tulare County,0.0,0.0,0
+2020-02-08,06099,Stanislaus County,0.0,0.0,0
+2020-02-08,06059,Orange County,1.0,0.0,0
+2020-02-08,06025,Imperial County,0.0,0.0,0
+2020-02-08,06101,Sutter County,0.0,0.0,0
+2020-02-08,06005,Amador County,0.0,0.0,0
+2020-02-08,06033,Lake County,0.0,0.0,0
+2020-02-08,06063,Plumas County,0.0,0.0,0
+2020-02-08,06081,San Mateo County,0.0,0.0,0
+2020-02-08,06093,Siskiyou County,0.0,0.0,0
+2020-02-08,06087,Santa Cruz County,0.0,0.0,0
+2020-02-08,06021,Glenn County,0.0,0.0,0
+2020-02-08,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-09,06091,Sierra County,0.0,0.0,0
+2020-02-09,06067,Sacramento County,0.0,0.0,0
+2020-02-09,06083,Santa Barbara County,0.0,0.0,0
+2020-02-09,06009,Calaveras County,0.0,0.0,0
+2020-02-09,06111,Ventura County,0.0,0.0,0
+2020-02-09,06037,Los Angeles County,1.0,0.0,0
+2020-02-09,06097,Sonoma County,0.0,0.0,0
+2020-02-09,06031,Kings County,0.0,0.0,0
+2020-02-09,06073,San Diego County,0.0,0.0,0
+2020-02-09,06061,Placer County,0.0,0.0,0
+2020-02-09,06075,San Francisco County,0.0,0.0,0
+2020-02-09,06041,Marin County,0.0,0.0,0
+2020-02-09,06043,Mariposa County,0.0,0.0,0
+2020-02-09,06035,Lassen County,0.0,0.0,0
+2020-02-09,06055,Napa County,0.0,0.0,0
+2020-02-09,06089,Shasta County,0.0,0.0,0
+2020-02-09,06053,Monterey County,0.0,0.0,0
+2020-02-09,06105,Trinity County,0.0,0.0,0
+2020-02-09,06045,Mendocino County,0.0,0.0,0
+2020-02-09,06027,Inyo County,0.0,0.0,0
+2020-02-09,06051,Mono County,0.0,0.0,0
+2020-02-09,06109,Tuolumne County,0.0,0.0,0
+2020-02-09,06095,Solano County,0.0,0.0,0
+2020-02-09,06071,San Bernardino County,0.0,0.0,0
+2020-02-09,06013,Contra Costa County,0.0,0.0,0
+2020-02-09,06003,Alpine County,0.0,0.0,0
+2020-02-09,06017,El Dorado County,0.0,0.0,0
+2020-02-09,06113,Yolo County,0.0,0.0,0
+2020-02-09,06115,Yuba County,0.0,0.0,0
+2020-02-09,06069,San Benito County,2.0,0.0,0
+2020-02-09,06023,Humboldt County,0.0,0.0,0
+2020-02-09,06065,Riverside County,0.0,0.0,0
+2020-02-09,06029,Kern County,0.0,0.0,0
+2020-02-09,06011,Colusa County,0.0,0.0,0
+2020-02-09,06015,Del Norte County,0.0,0.0,0
+2020-02-09,06049,Modoc County,0.0,0.0,0
+2020-02-09,06019,Fresno County,0.0,0.0,0
+2020-02-09,06039,Madera County,0.0,0.0,0
+2020-02-09,06085,Santa Clara County,2.0,0.0,0
+2020-02-09,06103,Tehama County,0.0,0.0,0
+2020-02-09,06077,San Joaquin County,0.0,0.0,0
+2020-02-09,06001,Alameda County,0.0,0.0,0
+2020-02-09,06057,Nevada County,0.0,0.0,0
+2020-02-09,06007,Butte County,0.0,0.0,0
+2020-02-09,06047,Merced County,0.0,0.0,0
+2020-02-09,06107,Tulare County,0.0,0.0,0
+2020-02-09,06099,Stanislaus County,0.0,0.0,0
+2020-02-09,06059,Orange County,1.0,0.0,0
+2020-02-09,06025,Imperial County,0.0,0.0,0
+2020-02-09,06101,Sutter County,0.0,0.0,0
+2020-02-09,06005,Amador County,0.0,0.0,0
+2020-02-09,06033,Lake County,0.0,0.0,0
+2020-02-09,06063,Plumas County,0.0,0.0,0
+2020-02-09,06081,San Mateo County,0.0,0.0,0
+2020-02-09,06093,Siskiyou County,0.0,0.0,0
+2020-02-09,06087,Santa Cruz County,0.0,0.0,0
+2020-02-09,06021,Glenn County,0.0,0.0,0
+2020-02-09,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-10,06091,Sierra County,0.0,0.0,0
+2020-02-10,06067,Sacramento County,0.0,0.0,0
+2020-02-10,06083,Santa Barbara County,0.0,0.0,0
+2020-02-10,06009,Calaveras County,0.0,0.0,0
+2020-02-10,06111,Ventura County,0.0,0.0,0
+2020-02-10,06037,Los Angeles County,1.0,0.0,0
+2020-02-10,06097,Sonoma County,0.0,0.0,0
+2020-02-10,06031,Kings County,0.0,0.0,0
+2020-02-10,06073,San Diego County,0.0,0.0,0
+2020-02-10,06061,Placer County,0.0,0.0,0
+2020-02-10,06075,San Francisco County,0.0,0.0,0
+2020-02-10,06041,Marin County,0.0,0.0,0
+2020-02-10,06043,Mariposa County,0.0,0.0,0
+2020-02-10,06035,Lassen County,0.0,0.0,0
+2020-02-10,06055,Napa County,0.0,0.0,0
+2020-02-10,06089,Shasta County,0.0,0.0,0
+2020-02-10,06053,Monterey County,0.0,0.0,0
+2020-02-10,06105,Trinity County,0.0,0.0,0
+2020-02-10,06045,Mendocino County,0.0,0.0,0
+2020-02-10,06027,Inyo County,0.0,0.0,0
+2020-02-10,06051,Mono County,0.0,0.0,0
+2020-02-10,06109,Tuolumne County,0.0,0.0,0
+2020-02-10,06095,Solano County,0.0,0.0,0
+2020-02-10,06071,San Bernardino County,0.0,0.0,0
+2020-02-10,06013,Contra Costa County,0.0,0.0,0
+2020-02-10,06003,Alpine County,0.0,0.0,0
+2020-02-10,06017,El Dorado County,0.0,0.0,0
+2020-02-10,06113,Yolo County,0.0,0.0,0
+2020-02-10,06115,Yuba County,0.0,0.0,0
+2020-02-10,06069,San Benito County,2.0,0.0,0
+2020-02-10,06023,Humboldt County,0.0,0.0,0
+2020-02-10,06065,Riverside County,0.0,0.0,0
+2020-02-10,06029,Kern County,0.0,0.0,0
+2020-02-10,06011,Colusa County,0.0,0.0,0
+2020-02-10,06015,Del Norte County,0.0,0.0,0
+2020-02-10,06049,Modoc County,0.0,0.0,0
+2020-02-10,06019,Fresno County,0.0,0.0,0
+2020-02-10,06039,Madera County,0.0,0.0,0
+2020-02-10,06085,Santa Clara County,2.0,0.0,0
+2020-02-10,06103,Tehama County,0.0,0.0,0
+2020-02-10,06077,San Joaquin County,0.0,0.0,0
+2020-02-10,06001,Alameda County,0.0,0.0,0
+2020-02-10,06057,Nevada County,0.0,0.0,0
+2020-02-10,06007,Butte County,0.0,0.0,0
+2020-02-10,06047,Merced County,0.0,0.0,0
+2020-02-10,06107,Tulare County,0.0,0.0,0
+2020-02-10,06099,Stanislaus County,0.0,0.0,0
+2020-02-10,06059,Orange County,1.0,0.0,0
+2020-02-10,06025,Imperial County,0.0,0.0,0
+2020-02-10,06101,Sutter County,0.0,0.0,0
+2020-02-10,06005,Amador County,0.0,0.0,0
+2020-02-10,06033,Lake County,0.0,0.0,0
+2020-02-10,06063,Plumas County,0.0,0.0,0
+2020-02-10,06081,San Mateo County,0.0,0.0,0
+2020-02-10,06093,Siskiyou County,0.0,0.0,0
+2020-02-10,06087,Santa Cruz County,0.0,0.0,0
+2020-02-10,06021,Glenn County,0.0,0.0,0
+2020-02-10,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-11,06091,Sierra County,0.0,0.0,0
+2020-02-11,06067,Sacramento County,0.0,0.0,0
+2020-02-11,06083,Santa Barbara County,0.0,0.0,0
+2020-02-11,06009,Calaveras County,0.0,0.0,0
+2020-02-11,06111,Ventura County,0.0,0.0,0
+2020-02-11,06037,Los Angeles County,1.0,0.0,0
+2020-02-11,06097,Sonoma County,0.0,0.0,0
+2020-02-11,06031,Kings County,0.0,0.0,0
+2020-02-11,06073,San Diego County,1.0,0.0,0
+2020-02-11,06061,Placer County,0.0,0.0,0
+2020-02-11,06075,San Francisco County,0.0,0.0,0
+2020-02-11,06041,Marin County,0.0,0.0,0
+2020-02-11,06043,Mariposa County,0.0,0.0,0
+2020-02-11,06035,Lassen County,0.0,0.0,0
+2020-02-11,06055,Napa County,0.0,0.0,0
+2020-02-11,06089,Shasta County,0.0,0.0,0
+2020-02-11,06053,Monterey County,0.0,0.0,0
+2020-02-11,06105,Trinity County,0.0,0.0,0
+2020-02-11,06045,Mendocino County,0.0,0.0,0
+2020-02-11,06027,Inyo County,0.0,0.0,0
+2020-02-11,06051,Mono County,0.0,0.0,0
+2020-02-11,06109,Tuolumne County,0.0,0.0,0
+2020-02-11,06095,Solano County,0.0,0.0,0
+2020-02-11,06071,San Bernardino County,0.0,0.0,0
+2020-02-11,06013,Contra Costa County,0.0,0.0,0
+2020-02-11,06003,Alpine County,0.0,0.0,0
+2020-02-11,06017,El Dorado County,0.0,0.0,0
+2020-02-11,06113,Yolo County,0.0,0.0,0
+2020-02-11,06115,Yuba County,0.0,0.0,0
+2020-02-11,06069,San Benito County,2.0,0.0,0
+2020-02-11,06023,Humboldt County,0.0,0.0,0
+2020-02-11,06065,Riverside County,0.0,0.0,0
+2020-02-11,06029,Kern County,0.0,0.0,0
+2020-02-11,06011,Colusa County,0.0,0.0,0
+2020-02-11,06015,Del Norte County,0.0,0.0,0
+2020-02-11,06049,Modoc County,0.0,0.0,0
+2020-02-11,06019,Fresno County,0.0,0.0,0
+2020-02-11,06039,Madera County,0.0,0.0,0
+2020-02-11,06085,Santa Clara County,2.0,0.0,0
+2020-02-11,06103,Tehama County,0.0,0.0,0
+2020-02-11,06077,San Joaquin County,0.0,0.0,0
+2020-02-11,06001,Alameda County,0.0,0.0,0
+2020-02-11,06057,Nevada County,0.0,0.0,0
+2020-02-11,06007,Butte County,0.0,0.0,0
+2020-02-11,06047,Merced County,0.0,0.0,0
+2020-02-11,06107,Tulare County,0.0,0.0,0
+2020-02-11,06099,Stanislaus County,0.0,0.0,0
+2020-02-11,06059,Orange County,1.0,0.0,0
+2020-02-11,06025,Imperial County,0.0,0.0,0
+2020-02-11,06101,Sutter County,0.0,0.0,0
+2020-02-11,06005,Amador County,0.0,0.0,0
+2020-02-11,06033,Lake County,0.0,0.0,0
+2020-02-11,06063,Plumas County,0.0,0.0,0
+2020-02-11,06081,San Mateo County,0.0,0.0,0
+2020-02-11,06093,Siskiyou County,0.0,0.0,0
+2020-02-11,06087,Santa Cruz County,0.0,0.0,0
+2020-02-11,06021,Glenn County,0.0,0.0,0
+2020-02-11,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-12,06091,Sierra County,0.0,0.0,0
+2020-02-12,06067,Sacramento County,0.0,0.0,0
+2020-02-12,06083,Santa Barbara County,0.0,0.0,0
+2020-02-12,06009,Calaveras County,0.0,0.0,0
+2020-02-12,06111,Ventura County,0.0,0.0,0
+2020-02-12,06037,Los Angeles County,1.0,0.0,0
+2020-02-12,06097,Sonoma County,0.0,0.0,0
+2020-02-12,06031,Kings County,0.0,0.0,0
+2020-02-12,06073,San Diego County,1.0,0.0,0
+2020-02-12,06061,Placer County,0.0,0.0,0
+2020-02-12,06075,San Francisco County,0.0,0.0,0
+2020-02-12,06041,Marin County,0.0,0.0,0
+2020-02-12,06043,Mariposa County,0.0,0.0,0
+2020-02-12,06035,Lassen County,0.0,0.0,0
+2020-02-12,06055,Napa County,0.0,0.0,0
+2020-02-12,06089,Shasta County,0.0,0.0,0
+2020-02-12,06053,Monterey County,0.0,0.0,0
+2020-02-12,06105,Trinity County,0.0,0.0,0
+2020-02-12,06045,Mendocino County,0.0,0.0,0
+2020-02-12,06027,Inyo County,0.0,0.0,0
+2020-02-12,06051,Mono County,0.0,0.0,0
+2020-02-12,06109,Tuolumne County,0.0,0.0,0
+2020-02-12,06095,Solano County,0.0,0.0,0
+2020-02-12,06071,San Bernardino County,0.0,0.0,0
+2020-02-12,06013,Contra Costa County,0.0,0.0,0
+2020-02-12,06003,Alpine County,0.0,0.0,0
+2020-02-12,06017,El Dorado County,0.0,0.0,0
+2020-02-12,06113,Yolo County,0.0,0.0,0
+2020-02-12,06115,Yuba County,0.0,0.0,0
+2020-02-12,06069,San Benito County,2.0,0.0,0
+2020-02-12,06023,Humboldt County,0.0,0.0,0
+2020-02-12,06065,Riverside County,0.0,0.0,0
+2020-02-12,06029,Kern County,0.0,0.0,0
+2020-02-12,06011,Colusa County,0.0,0.0,0
+2020-02-12,06015,Del Norte County,0.0,0.0,0
+2020-02-12,06049,Modoc County,0.0,0.0,0
+2020-02-12,06019,Fresno County,0.0,0.0,0
+2020-02-12,06039,Madera County,0.0,0.0,0
+2020-02-12,06085,Santa Clara County,2.0,0.0,0
+2020-02-12,06103,Tehama County,0.0,0.0,0
+2020-02-12,06077,San Joaquin County,0.0,0.0,0
+2020-02-12,06001,Alameda County,0.0,0.0,0
+2020-02-12,06057,Nevada County,0.0,0.0,0
+2020-02-12,06007,Butte County,0.0,0.0,0
+2020-02-12,06047,Merced County,0.0,0.0,0
+2020-02-12,06107,Tulare County,0.0,0.0,0
+2020-02-12,06099,Stanislaus County,0.0,0.0,0
+2020-02-12,06059,Orange County,1.0,0.0,0
+2020-02-12,06025,Imperial County,0.0,0.0,0
+2020-02-12,06101,Sutter County,0.0,0.0,0
+2020-02-12,06005,Amador County,0.0,0.0,0
+2020-02-12,06033,Lake County,0.0,0.0,0
+2020-02-12,06063,Plumas County,0.0,0.0,0
+2020-02-12,06081,San Mateo County,0.0,0.0,0
+2020-02-12,06093,Siskiyou County,0.0,0.0,0
+2020-02-12,06087,Santa Cruz County,0.0,0.0,0
+2020-02-12,06021,Glenn County,0.0,0.0,0
+2020-02-12,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-13,06091,Sierra County,0.0,0.0,0
+2020-02-13,06067,Sacramento County,0.0,0.0,0
+2020-02-13,06083,Santa Barbara County,0.0,0.0,0
+2020-02-13,06009,Calaveras County,0.0,0.0,0
+2020-02-13,06111,Ventura County,0.0,0.0,0
+2020-02-13,06037,Los Angeles County,1.0,0.0,0
+2020-02-13,06097,Sonoma County,0.0,0.0,0
+2020-02-13,06031,Kings County,0.0,0.0,0
+2020-02-13,06073,San Diego County,2.0,0.0,0
+2020-02-13,06061,Placer County,0.0,0.0,0
+2020-02-13,06075,San Francisco County,0.0,0.0,0
+2020-02-13,06041,Marin County,0.0,0.0,0
+2020-02-13,06043,Mariposa County,0.0,0.0,0
+2020-02-13,06035,Lassen County,0.0,0.0,0
+2020-02-13,06055,Napa County,0.0,0.0,0
+2020-02-13,06089,Shasta County,0.0,0.0,0
+2020-02-13,06053,Monterey County,0.0,0.0,0
+2020-02-13,06105,Trinity County,0.0,0.0,0
+2020-02-13,06045,Mendocino County,0.0,0.0,0
+2020-02-13,06027,Inyo County,0.0,0.0,0
+2020-02-13,06051,Mono County,0.0,0.0,0
+2020-02-13,06109,Tuolumne County,0.0,0.0,0
+2020-02-13,06095,Solano County,0.0,0.0,0
+2020-02-13,06071,San Bernardino County,0.0,0.0,0
+2020-02-13,06013,Contra Costa County,0.0,0.0,0
+2020-02-13,06003,Alpine County,0.0,0.0,0
+2020-02-13,06017,El Dorado County,0.0,0.0,0
+2020-02-13,06113,Yolo County,0.0,0.0,0
+2020-02-13,06115,Yuba County,0.0,0.0,0
+2020-02-13,06069,San Benito County,2.0,0.0,0
+2020-02-13,06023,Humboldt County,0.0,0.0,0
+2020-02-13,06065,Riverside County,0.0,0.0,0
+2020-02-13,06029,Kern County,0.0,0.0,0
+2020-02-13,06011,Colusa County,0.0,0.0,0
+2020-02-13,06015,Del Norte County,0.0,0.0,0
+2020-02-13,06049,Modoc County,0.0,0.0,0
+2020-02-13,06019,Fresno County,0.0,0.0,0
+2020-02-13,06039,Madera County,0.0,0.0,0
+2020-02-13,06085,Santa Clara County,2.0,0.0,0
+2020-02-13,06103,Tehama County,0.0,0.0,0
+2020-02-13,06077,San Joaquin County,0.0,0.0,0
+2020-02-13,06001,Alameda County,0.0,0.0,0
+2020-02-13,06057,Nevada County,0.0,0.0,0
+2020-02-13,06007,Butte County,0.0,0.0,0
+2020-02-13,06047,Merced County,0.0,0.0,0
+2020-02-13,06107,Tulare County,0.0,0.0,0
+2020-02-13,06099,Stanislaus County,0.0,0.0,0
+2020-02-13,06059,Orange County,1.0,0.0,0
+2020-02-13,06025,Imperial County,0.0,0.0,0
+2020-02-13,06101,Sutter County,0.0,0.0,0
+2020-02-13,06005,Amador County,0.0,0.0,0
+2020-02-13,06033,Lake County,0.0,0.0,0
+2020-02-13,06063,Plumas County,0.0,0.0,0
+2020-02-13,06081,San Mateo County,0.0,0.0,0
+2020-02-13,06093,Siskiyou County,0.0,0.0,0
+2020-02-13,06087,Santa Cruz County,0.0,0.0,0
+2020-02-13,06021,Glenn County,0.0,0.0,0
+2020-02-13,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-14,06091,Sierra County,0.0,0.0,0
+2020-02-14,06067,Sacramento County,0.0,0.0,0
+2020-02-14,06083,Santa Barbara County,0.0,0.0,0
+2020-02-14,06009,Calaveras County,0.0,0.0,0
+2020-02-14,06111,Ventura County,0.0,0.0,0
+2020-02-14,06037,Los Angeles County,1.0,0.0,0
+2020-02-14,06097,Sonoma County,0.0,0.0,0
+2020-02-14,06031,Kings County,0.0,0.0,0
+2020-02-14,06073,San Diego County,2.0,0.0,0
+2020-02-14,06061,Placer County,0.0,0.0,0
+2020-02-14,06075,San Francisco County,0.0,0.0,0
+2020-02-14,06041,Marin County,0.0,0.0,0
+2020-02-14,06043,Mariposa County,0.0,0.0,0
+2020-02-14,06035,Lassen County,0.0,0.0,0
+2020-02-14,06055,Napa County,0.0,0.0,0
+2020-02-14,06089,Shasta County,0.0,0.0,0
+2020-02-14,06053,Monterey County,0.0,0.0,0
+2020-02-14,06105,Trinity County,0.0,0.0,0
+2020-02-14,06045,Mendocino County,0.0,0.0,0
+2020-02-14,06027,Inyo County,0.0,0.0,0
+2020-02-14,06051,Mono County,0.0,0.0,0
+2020-02-14,06109,Tuolumne County,0.0,0.0,0
+2020-02-14,06095,Solano County,0.0,0.0,0
+2020-02-14,06071,San Bernardino County,0.0,0.0,0
+2020-02-14,06013,Contra Costa County,0.0,0.0,0
+2020-02-14,06003,Alpine County,0.0,0.0,0
+2020-02-14,06017,El Dorado County,0.0,0.0,0
+2020-02-14,06113,Yolo County,0.0,0.0,0
+2020-02-14,06115,Yuba County,0.0,0.0,0
+2020-02-14,06069,San Benito County,2.0,0.0,0
+2020-02-14,06023,Humboldt County,0.0,0.0,0
+2020-02-14,06065,Riverside County,0.0,0.0,0
+2020-02-14,06029,Kern County,0.0,0.0,0
+2020-02-14,06011,Colusa County,0.0,0.0,0
+2020-02-14,06015,Del Norte County,0.0,0.0,0
+2020-02-14,06049,Modoc County,0.0,0.0,0
+2020-02-14,06019,Fresno County,0.0,0.0,0
+2020-02-14,06039,Madera County,0.0,0.0,0
+2020-02-14,06085,Santa Clara County,2.0,0.0,0
+2020-02-14,06103,Tehama County,0.0,0.0,0
+2020-02-14,06077,San Joaquin County,0.0,0.0,0
+2020-02-14,06001,Alameda County,0.0,0.0,0
+2020-02-14,06057,Nevada County,0.0,0.0,0
+2020-02-14,06007,Butte County,0.0,0.0,0
+2020-02-14,06047,Merced County,0.0,0.0,0
+2020-02-14,06107,Tulare County,0.0,0.0,0
+2020-02-14,06099,Stanislaus County,0.0,0.0,0
+2020-02-14,06059,Orange County,1.0,0.0,0
+2020-02-14,06025,Imperial County,0.0,0.0,0
+2020-02-14,06101,Sutter County,0.0,0.0,0
+2020-02-14,06005,Amador County,0.0,0.0,0
+2020-02-14,06033,Lake County,0.0,0.0,0
+2020-02-14,06063,Plumas County,0.0,0.0,0
+2020-02-14,06081,San Mateo County,0.0,0.0,0
+2020-02-14,06093,Siskiyou County,0.0,0.0,0
+2020-02-14,06087,Santa Cruz County,0.0,0.0,0
+2020-02-14,06021,Glenn County,0.0,0.0,0
+2020-02-14,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-15,06091,Sierra County,0.0,0.0,0
+2020-02-15,06067,Sacramento County,0.0,0.0,0
+2020-02-15,06083,Santa Barbara County,0.0,0.0,0
+2020-02-15,06009,Calaveras County,0.0,0.0,0
+2020-02-15,06111,Ventura County,0.0,0.0,0
+2020-02-15,06037,Los Angeles County,1.0,0.0,0
+2020-02-15,06097,Sonoma County,0.0,0.0,0
+2020-02-15,06031,Kings County,0.0,0.0,0
+2020-02-15,06073,San Diego County,2.0,0.0,0
+2020-02-15,06061,Placer County,0.0,0.0,0
+2020-02-15,06075,San Francisco County,0.0,0.0,0
+2020-02-15,06041,Marin County,0.0,0.0,0
+2020-02-15,06043,Mariposa County,0.0,0.0,0
+2020-02-15,06035,Lassen County,0.0,0.0,0
+2020-02-15,06055,Napa County,0.0,0.0,0
+2020-02-15,06089,Shasta County,0.0,0.0,0
+2020-02-15,06053,Monterey County,0.0,0.0,0
+2020-02-15,06105,Trinity County,0.0,0.0,0
+2020-02-15,06045,Mendocino County,0.0,0.0,0
+2020-02-15,06027,Inyo County,0.0,0.0,0
+2020-02-15,06051,Mono County,0.0,0.0,0
+2020-02-15,06109,Tuolumne County,0.0,0.0,0
+2020-02-15,06095,Solano County,0.0,0.0,0
+2020-02-15,06071,San Bernardino County,0.0,0.0,0
+2020-02-15,06013,Contra Costa County,0.0,0.0,0
+2020-02-15,06003,Alpine County,0.0,0.0,0
+2020-02-15,06017,El Dorado County,0.0,0.0,0
+2020-02-15,06113,Yolo County,0.0,0.0,0
+2020-02-15,06115,Yuba County,0.0,0.0,0
+2020-02-15,06069,San Benito County,2.0,0.0,0
+2020-02-15,06023,Humboldt County,0.0,0.0,0
+2020-02-15,06065,Riverside County,0.0,0.0,0
+2020-02-15,06029,Kern County,0.0,0.0,0
+2020-02-15,06011,Colusa County,0.0,0.0,0
+2020-02-15,06015,Del Norte County,0.0,0.0,0
+2020-02-15,06049,Modoc County,0.0,0.0,0
+2020-02-15,06019,Fresno County,0.0,0.0,0
+2020-02-15,06039,Madera County,0.0,0.0,0
+2020-02-15,06085,Santa Clara County,2.0,0.0,0
+2020-02-15,06103,Tehama County,0.0,0.0,0
+2020-02-15,06077,San Joaquin County,0.0,0.0,0
+2020-02-15,06001,Alameda County,0.0,0.0,0
+2020-02-15,06057,Nevada County,0.0,0.0,0
+2020-02-15,06007,Butte County,0.0,0.0,0
+2020-02-15,06047,Merced County,0.0,0.0,0
+2020-02-15,06107,Tulare County,0.0,0.0,0
+2020-02-15,06099,Stanislaus County,0.0,0.0,0
+2020-02-15,06059,Orange County,1.0,0.0,0
+2020-02-15,06025,Imperial County,0.0,0.0,0
+2020-02-15,06101,Sutter County,0.0,0.0,0
+2020-02-15,06005,Amador County,0.0,0.0,0
+2020-02-15,06033,Lake County,0.0,0.0,0
+2020-02-15,06063,Plumas County,0.0,0.0,0
+2020-02-15,06081,San Mateo County,0.0,0.0,0
+2020-02-15,06093,Siskiyou County,0.0,0.0,0
+2020-02-15,06087,Santa Cruz County,0.0,0.0,0
+2020-02-15,06021,Glenn County,0.0,0.0,0
+2020-02-15,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-16,06091,Sierra County,0.0,0.0,0
+2020-02-16,06067,Sacramento County,0.0,0.0,0
+2020-02-16,06083,Santa Barbara County,0.0,0.0,0
+2020-02-16,06009,Calaveras County,0.0,0.0,0
+2020-02-16,06111,Ventura County,0.0,0.0,0
+2020-02-16,06037,Los Angeles County,1.0,0.0,0
+2020-02-16,06097,Sonoma County,0.0,0.0,0
+2020-02-16,06031,Kings County,0.0,0.0,0
+2020-02-16,06073,San Diego County,2.0,0.0,0
+2020-02-16,06061,Placer County,0.0,0.0,0
+2020-02-16,06075,San Francisco County,0.0,0.0,0
+2020-02-16,06041,Marin County,0.0,0.0,0
+2020-02-16,06043,Mariposa County,0.0,0.0,0
+2020-02-16,06035,Lassen County,0.0,0.0,0
+2020-02-16,06055,Napa County,0.0,0.0,0
+2020-02-16,06089,Shasta County,0.0,0.0,0
+2020-02-16,06053,Monterey County,0.0,0.0,0
+2020-02-16,06105,Trinity County,0.0,0.0,0
+2020-02-16,06045,Mendocino County,0.0,0.0,0
+2020-02-16,06027,Inyo County,0.0,0.0,0
+2020-02-16,06051,Mono County,0.0,0.0,0
+2020-02-16,06109,Tuolumne County,0.0,0.0,0
+2020-02-16,06095,Solano County,0.0,0.0,0
+2020-02-16,06071,San Bernardino County,0.0,0.0,0
+2020-02-16,06013,Contra Costa County,0.0,0.0,0
+2020-02-16,06003,Alpine County,0.0,0.0,0
+2020-02-16,06017,El Dorado County,0.0,0.0,0
+2020-02-16,06113,Yolo County,0.0,0.0,0
+2020-02-16,06115,Yuba County,0.0,0.0,0
+2020-02-16,06069,San Benito County,2.0,0.0,0
+2020-02-16,06023,Humboldt County,0.0,0.0,0
+2020-02-16,06065,Riverside County,0.0,0.0,0
+2020-02-16,06029,Kern County,0.0,0.0,0
+2020-02-16,06011,Colusa County,0.0,0.0,0
+2020-02-16,06015,Del Norte County,0.0,0.0,0
+2020-02-16,06049,Modoc County,0.0,0.0,0
+2020-02-16,06019,Fresno County,0.0,0.0,0
+2020-02-16,06039,Madera County,0.0,0.0,0
+2020-02-16,06085,Santa Clara County,2.0,0.0,0
+2020-02-16,06103,Tehama County,0.0,0.0,0
+2020-02-16,06077,San Joaquin County,0.0,0.0,0
+2020-02-16,06001,Alameda County,0.0,0.0,0
+2020-02-16,06057,Nevada County,0.0,0.0,0
+2020-02-16,06007,Butte County,0.0,0.0,0
+2020-02-16,06047,Merced County,0.0,0.0,0
+2020-02-16,06107,Tulare County,0.0,0.0,0
+2020-02-16,06099,Stanislaus County,0.0,0.0,0
+2020-02-16,06059,Orange County,1.0,0.0,0
+2020-02-16,06025,Imperial County,0.0,0.0,0
+2020-02-16,06101,Sutter County,0.0,0.0,0
+2020-02-16,06005,Amador County,0.0,0.0,0
+2020-02-16,06033,Lake County,0.0,0.0,0
+2020-02-16,06063,Plumas County,0.0,0.0,0
+2020-02-16,06081,San Mateo County,0.0,0.0,0
+2020-02-16,06093,Siskiyou County,0.0,0.0,0
+2020-02-16,06087,Santa Cruz County,0.0,0.0,0
+2020-02-16,06021,Glenn County,0.0,0.0,0
+2020-02-16,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-17,06091,Sierra County,0.0,0.0,0
+2020-02-17,06067,Sacramento County,0.0,0.0,0
+2020-02-17,06083,Santa Barbara County,0.0,0.0,0
+2020-02-17,06009,Calaveras County,0.0,0.0,0
+2020-02-17,06111,Ventura County,0.0,0.0,0
+2020-02-17,06037,Los Angeles County,1.0,0.0,0
+2020-02-17,06097,Sonoma County,0.0,0.0,0
+2020-02-17,06031,Kings County,0.0,0.0,0
+2020-02-17,06073,San Diego County,2.0,0.0,0
+2020-02-17,06061,Placer County,0.0,0.0,0
+2020-02-17,06075,San Francisco County,0.0,0.0,0
+2020-02-17,06041,Marin County,0.0,0.0,0
+2020-02-17,06043,Mariposa County,0.0,0.0,0
+2020-02-17,06035,Lassen County,0.0,0.0,0
+2020-02-17,06055,Napa County,0.0,0.0,0
+2020-02-17,06089,Shasta County,0.0,0.0,0
+2020-02-17,06053,Monterey County,0.0,0.0,0
+2020-02-17,06105,Trinity County,0.0,0.0,0
+2020-02-17,06045,Mendocino County,0.0,0.0,0
+2020-02-17,06027,Inyo County,0.0,0.0,0
+2020-02-17,06051,Mono County,0.0,0.0,0
+2020-02-17,06109,Tuolumne County,0.0,0.0,0
+2020-02-17,06095,Solano County,0.0,0.0,0
+2020-02-17,06071,San Bernardino County,0.0,0.0,0
+2020-02-17,06013,Contra Costa County,0.0,0.0,0
+2020-02-17,06003,Alpine County,0.0,0.0,0
+2020-02-17,06017,El Dorado County,0.0,0.0,0
+2020-02-17,06113,Yolo County,0.0,0.0,0
+2020-02-17,06115,Yuba County,0.0,0.0,0
+2020-02-17,06069,San Benito County,2.0,0.0,0
+2020-02-17,06023,Humboldt County,0.0,0.0,0
+2020-02-17,06065,Riverside County,0.0,0.0,0
+2020-02-17,06029,Kern County,0.0,0.0,0
+2020-02-17,06011,Colusa County,0.0,0.0,0
+2020-02-17,06015,Del Norte County,0.0,0.0,0
+2020-02-17,06049,Modoc County,0.0,0.0,0
+2020-02-17,06019,Fresno County,0.0,0.0,0
+2020-02-17,06039,Madera County,0.0,0.0,0
+2020-02-17,06085,Santa Clara County,2.0,0.0,0
+2020-02-17,06103,Tehama County,0.0,0.0,0
+2020-02-17,06077,San Joaquin County,0.0,0.0,0
+2020-02-17,06001,Alameda County,0.0,0.0,0
+2020-02-17,06057,Nevada County,0.0,0.0,0
+2020-02-17,06007,Butte County,0.0,0.0,0
+2020-02-17,06047,Merced County,0.0,0.0,0
+2020-02-17,06107,Tulare County,0.0,0.0,0
+2020-02-17,06099,Stanislaus County,0.0,0.0,0
+2020-02-17,06059,Orange County,1.0,0.0,0
+2020-02-17,06025,Imperial County,0.0,0.0,0
+2020-02-17,06101,Sutter County,0.0,0.0,0
+2020-02-17,06005,Amador County,0.0,0.0,0
+2020-02-17,06033,Lake County,0.0,0.0,0
+2020-02-17,06063,Plumas County,0.0,0.0,0
+2020-02-17,06081,San Mateo County,0.0,0.0,0
+2020-02-17,06093,Siskiyou County,0.0,0.0,0
+2020-02-17,06087,Santa Cruz County,0.0,0.0,0
+2020-02-17,06021,Glenn County,0.0,0.0,0
+2020-02-17,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-18,06091,Sierra County,0.0,0.0,0
+2020-02-18,06067,Sacramento County,0.0,0.0,0
+2020-02-18,06083,Santa Barbara County,0.0,0.0,0
+2020-02-18,06009,Calaveras County,0.0,0.0,0
+2020-02-18,06111,Ventura County,0.0,0.0,0
+2020-02-18,06037,Los Angeles County,1.0,0.0,0
+2020-02-18,06097,Sonoma County,0.0,0.0,0
+2020-02-18,06031,Kings County,0.0,0.0,0
+2020-02-18,06073,San Diego County,2.0,0.0,0
+2020-02-18,06061,Placer County,0.0,0.0,0
+2020-02-18,06075,San Francisco County,0.0,0.0,0
+2020-02-18,06041,Marin County,0.0,0.0,0
+2020-02-18,06043,Mariposa County,0.0,0.0,0
+2020-02-18,06035,Lassen County,0.0,0.0,0
+2020-02-18,06055,Napa County,0.0,0.0,0
+2020-02-18,06089,Shasta County,0.0,0.0,0
+2020-02-18,06053,Monterey County,0.0,0.0,0
+2020-02-18,06105,Trinity County,0.0,0.0,0
+2020-02-18,06045,Mendocino County,0.0,0.0,0
+2020-02-18,06027,Inyo County,0.0,0.0,0
+2020-02-18,06051,Mono County,0.0,0.0,0
+2020-02-18,06109,Tuolumne County,0.0,0.0,0
+2020-02-18,06095,Solano County,0.0,0.0,0
+2020-02-18,06071,San Bernardino County,0.0,0.0,0
+2020-02-18,06013,Contra Costa County,0.0,0.0,0
+2020-02-18,06003,Alpine County,0.0,0.0,0
+2020-02-18,06017,El Dorado County,0.0,0.0,0
+2020-02-18,06113,Yolo County,0.0,0.0,0
+2020-02-18,06115,Yuba County,0.0,0.0,0
+2020-02-18,06069,San Benito County,2.0,0.0,0
+2020-02-18,06023,Humboldt County,0.0,0.0,0
+2020-02-18,06065,Riverside County,0.0,0.0,0
+2020-02-18,06029,Kern County,0.0,0.0,0
+2020-02-18,06011,Colusa County,0.0,0.0,0
+2020-02-18,06015,Del Norte County,0.0,0.0,0
+2020-02-18,06049,Modoc County,0.0,0.0,0
+2020-02-18,06019,Fresno County,0.0,0.0,0
+2020-02-18,06039,Madera County,0.0,0.0,0
+2020-02-18,06085,Santa Clara County,2.0,0.0,0
+2020-02-18,06103,Tehama County,0.0,0.0,0
+2020-02-18,06077,San Joaquin County,0.0,0.0,0
+2020-02-18,06001,Alameda County,0.0,0.0,0
+2020-02-18,06057,Nevada County,0.0,0.0,0
+2020-02-18,06007,Butte County,0.0,0.0,0
+2020-02-18,06047,Merced County,0.0,0.0,0
+2020-02-18,06107,Tulare County,0.0,0.0,0
+2020-02-18,06099,Stanislaus County,0.0,0.0,0
+2020-02-18,06059,Orange County,1.0,0.0,0
+2020-02-18,06025,Imperial County,0.0,0.0,0
+2020-02-18,06101,Sutter County,0.0,0.0,0
+2020-02-18,06005,Amador County,0.0,0.0,0
+2020-02-18,06033,Lake County,0.0,0.0,0
+2020-02-18,06063,Plumas County,0.0,0.0,0
+2020-02-18,06081,San Mateo County,0.0,0.0,0
+2020-02-18,06093,Siskiyou County,0.0,0.0,0
+2020-02-18,06087,Santa Cruz County,0.0,0.0,0
+2020-02-18,06021,Glenn County,0.0,0.0,0
+2020-02-18,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-19,06091,Sierra County,0.0,0.0,0
+2020-02-19,06067,Sacramento County,0.0,0.0,0
+2020-02-19,06083,Santa Barbara County,0.0,0.0,0
+2020-02-19,06009,Calaveras County,0.0,0.0,0
+2020-02-19,06111,Ventura County,0.0,0.0,0
+2020-02-19,06037,Los Angeles County,1.0,0.0,0
+2020-02-19,06097,Sonoma County,0.0,0.0,0
+2020-02-19,06031,Kings County,0.0,0.0,0
+2020-02-19,06073,San Diego County,2.0,0.0,0
+2020-02-19,06061,Placer County,0.0,0.0,0
+2020-02-19,06075,San Francisco County,0.0,0.0,0
+2020-02-19,06041,Marin County,0.0,0.0,0
+2020-02-19,06043,Mariposa County,0.0,0.0,0
+2020-02-19,06035,Lassen County,0.0,0.0,0
+2020-02-19,06055,Napa County,0.0,0.0,0
+2020-02-19,06089,Shasta County,0.0,0.0,0
+2020-02-19,06053,Monterey County,0.0,0.0,0
+2020-02-19,06105,Trinity County,0.0,0.0,0
+2020-02-19,06045,Mendocino County,0.0,0.0,0
+2020-02-19,06027,Inyo County,0.0,0.0,0
+2020-02-19,06051,Mono County,0.0,0.0,0
+2020-02-19,06109,Tuolumne County,0.0,0.0,0
+2020-02-19,06095,Solano County,0.0,0.0,0
+2020-02-19,06071,San Bernardino County,0.0,0.0,0
+2020-02-19,06013,Contra Costa County,0.0,0.0,0
+2020-02-19,06003,Alpine County,0.0,0.0,0
+2020-02-19,06017,El Dorado County,0.0,0.0,0
+2020-02-19,06113,Yolo County,0.0,0.0,0
+2020-02-19,06115,Yuba County,0.0,0.0,0
+2020-02-19,06069,San Benito County,2.0,0.0,0
+2020-02-19,06023,Humboldt County,0.0,0.0,0
+2020-02-19,06065,Riverside County,0.0,0.0,0
+2020-02-19,06029,Kern County,0.0,0.0,0
+2020-02-19,06011,Colusa County,0.0,0.0,0
+2020-02-19,06015,Del Norte County,0.0,0.0,0
+2020-02-19,06049,Modoc County,0.0,0.0,0
+2020-02-19,06019,Fresno County,0.0,0.0,0
+2020-02-19,06039,Madera County,0.0,0.0,0
+2020-02-19,06085,Santa Clara County,2.0,0.0,0
+2020-02-19,06103,Tehama County,0.0,0.0,0
+2020-02-19,06077,San Joaquin County,0.0,0.0,0
+2020-02-19,06001,Alameda County,0.0,0.0,0
+2020-02-19,06057,Nevada County,0.0,0.0,0
+2020-02-19,06007,Butte County,0.0,0.0,0
+2020-02-19,06047,Merced County,0.0,0.0,0
+2020-02-19,06107,Tulare County,0.0,0.0,0
+2020-02-19,06099,Stanislaus County,0.0,0.0,0
+2020-02-19,06059,Orange County,1.0,0.0,0
+2020-02-19,06025,Imperial County,0.0,0.0,0
+2020-02-19,06101,Sutter County,0.0,0.0,0
+2020-02-19,06005,Amador County,0.0,0.0,0
+2020-02-19,06033,Lake County,0.0,0.0,0
+2020-02-19,06063,Plumas County,0.0,0.0,0
+2020-02-19,06081,San Mateo County,0.0,0.0,0
+2020-02-19,06093,Siskiyou County,0.0,0.0,0
+2020-02-19,06087,Santa Cruz County,0.0,0.0,0
+2020-02-19,06021,Glenn County,0.0,0.0,0
+2020-02-19,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-20,06091,Sierra County,0.0,0.0,0
+2020-02-20,06067,Sacramento County,0.0,0.0,0
+2020-02-20,06083,Santa Barbara County,0.0,0.0,0
+2020-02-20,06009,Calaveras County,0.0,0.0,0
+2020-02-20,06111,Ventura County,0.0,0.0,0
+2020-02-20,06037,Los Angeles County,1.0,0.0,0
+2020-02-20,06097,Sonoma County,0.0,0.0,0
+2020-02-20,06031,Kings County,0.0,0.0,0
+2020-02-20,06073,San Diego County,2.0,0.0,0
+2020-02-20,06061,Placer County,0.0,0.0,0
+2020-02-20,06075,San Francisco County,0.0,0.0,0
+2020-02-20,06041,Marin County,0.0,0.0,0
+2020-02-20,06043,Mariposa County,0.0,0.0,0
+2020-02-20,06035,Lassen County,0.0,0.0,0
+2020-02-20,06055,Napa County,0.0,0.0,0
+2020-02-20,06089,Shasta County,0.0,0.0,0
+2020-02-20,06053,Monterey County,0.0,0.0,0
+2020-02-20,06105,Trinity County,0.0,0.0,0
+2020-02-20,06045,Mendocino County,0.0,0.0,0
+2020-02-20,06027,Inyo County,0.0,0.0,0
+2020-02-20,06051,Mono County,0.0,0.0,0
+2020-02-20,06109,Tuolumne County,0.0,0.0,0
+2020-02-20,06095,Solano County,0.0,0.0,0
+2020-02-20,06071,San Bernardino County,0.0,0.0,0
+2020-02-20,06013,Contra Costa County,0.0,0.0,0
+2020-02-20,06003,Alpine County,0.0,0.0,0
+2020-02-20,06017,El Dorado County,0.0,0.0,0
+2020-02-20,06113,Yolo County,0.0,0.0,0
+2020-02-20,06115,Yuba County,0.0,0.0,0
+2020-02-20,06069,San Benito County,2.0,0.0,0
+2020-02-20,06023,Humboldt County,0.0,0.0,0
+2020-02-20,06065,Riverside County,0.0,0.0,0
+2020-02-20,06029,Kern County,0.0,0.0,0
+2020-02-20,06011,Colusa County,0.0,0.0,0
+2020-02-20,06015,Del Norte County,0.0,0.0,0
+2020-02-20,06049,Modoc County,0.0,0.0,0
+2020-02-20,06019,Fresno County,0.0,0.0,0
+2020-02-20,06039,Madera County,0.0,0.0,0
+2020-02-20,06085,Santa Clara County,2.0,0.0,0
+2020-02-20,06103,Tehama County,0.0,0.0,0
+2020-02-20,06077,San Joaquin County,0.0,0.0,0
+2020-02-20,06001,Alameda County,0.0,0.0,0
+2020-02-20,06057,Nevada County,0.0,0.0,0
+2020-02-20,06007,Butte County,0.0,0.0,0
+2020-02-20,06047,Merced County,0.0,0.0,0
+2020-02-20,06107,Tulare County,0.0,0.0,0
+2020-02-20,06099,Stanislaus County,0.0,0.0,0
+2020-02-20,06059,Orange County,1.0,0.0,0
+2020-02-20,06025,Imperial County,0.0,0.0,0
+2020-02-20,06101,Sutter County,0.0,0.0,0
+2020-02-20,06005,Amador County,0.0,0.0,0
+2020-02-20,06033,Lake County,0.0,0.0,0
+2020-02-20,06063,Plumas County,0.0,0.0,0
+2020-02-20,06081,San Mateo County,0.0,0.0,0
+2020-02-20,06093,Siskiyou County,0.0,0.0,0
+2020-02-20,06087,Santa Cruz County,0.0,0.0,0
+2020-02-20,06021,Glenn County,0.0,0.0,0
+2020-02-20,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-21,06091,Sierra County,0.0,0.0,0
+2020-02-21,06067,Sacramento County,1.0,0.0,0
+2020-02-21,06083,Santa Barbara County,0.0,0.0,0
+2020-02-21,06009,Calaveras County,0.0,0.0,0
+2020-02-21,06111,Ventura County,0.0,0.0,0
+2020-02-21,06037,Los Angeles County,1.0,0.0,0
+2020-02-21,06097,Sonoma County,0.0,0.0,0
+2020-02-21,06031,Kings County,0.0,0.0,0
+2020-02-21,06073,San Diego County,2.0,0.0,0
+2020-02-21,06061,Placer County,0.0,0.0,0
+2020-02-21,06075,San Francisco County,0.0,0.0,0
+2020-02-21,06041,Marin County,0.0,0.0,0
+2020-02-21,06043,Mariposa County,0.0,0.0,0
+2020-02-21,06035,Lassen County,0.0,0.0,0
+2020-02-21,06055,Napa County,0.0,0.0,0
+2020-02-21,06089,Shasta County,0.0,0.0,0
+2020-02-21,06053,Monterey County,0.0,0.0,0
+2020-02-21,06105,Trinity County,0.0,0.0,0
+2020-02-21,06045,Mendocino County,0.0,0.0,0
+2020-02-21,06027,Inyo County,0.0,0.0,0
+2020-02-21,06051,Mono County,0.0,0.0,0
+2020-02-21,06109,Tuolumne County,0.0,0.0,0
+2020-02-21,06095,Solano County,0.0,0.0,0
+2020-02-21,06071,San Bernardino County,0.0,0.0,0
+2020-02-21,06013,Contra Costa County,0.0,0.0,0
+2020-02-21,06003,Alpine County,0.0,0.0,0
+2020-02-21,06017,El Dorado County,0.0,0.0,0
+2020-02-21,06113,Yolo County,0.0,0.0,0
+2020-02-21,06115,Yuba County,0.0,0.0,0
+2020-02-21,06069,San Benito County,2.0,0.0,0
+2020-02-21,06023,Humboldt County,1.0,0.0,0
+2020-02-21,06065,Riverside County,0.0,0.0,0
+2020-02-21,06029,Kern County,0.0,0.0,0
+2020-02-21,06011,Colusa County,0.0,0.0,0
+2020-02-21,06015,Del Norte County,0.0,0.0,0
+2020-02-21,06049,Modoc County,0.0,0.0,0
+2020-02-21,06019,Fresno County,0.0,0.0,0
+2020-02-21,06039,Madera County,0.0,0.0,0
+2020-02-21,06085,Santa Clara County,2.0,0.0,0
+2020-02-21,06103,Tehama County,0.0,0.0,0
+2020-02-21,06077,San Joaquin County,0.0,0.0,0
+2020-02-21,06001,Alameda County,0.0,0.0,0
+2020-02-21,06057,Nevada County,0.0,0.0,0
+2020-02-21,06007,Butte County,0.0,0.0,0
+2020-02-21,06047,Merced County,0.0,0.0,0
+2020-02-21,06107,Tulare County,0.0,0.0,0
+2020-02-21,06099,Stanislaus County,0.0,0.0,0
+2020-02-21,06059,Orange County,1.0,0.0,0
+2020-02-21,06025,Imperial County,0.0,0.0,0
+2020-02-21,06101,Sutter County,0.0,0.0,0
+2020-02-21,06005,Amador County,0.0,0.0,0
+2020-02-21,06033,Lake County,0.0,0.0,0
+2020-02-21,06063,Plumas County,0.0,0.0,0
+2020-02-21,06081,San Mateo County,0.0,0.0,0
+2020-02-21,06093,Siskiyou County,0.0,0.0,0
+2020-02-21,06087,Santa Cruz County,0.0,0.0,0
+2020-02-21,06021,Glenn County,0.0,0.0,0
+2020-02-21,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-22,06091,Sierra County,0.0,0.0,0
+2020-02-22,06067,Sacramento County,1.0,0.0,0
+2020-02-22,06083,Santa Barbara County,0.0,0.0,0
+2020-02-22,06009,Calaveras County,0.0,0.0,0
+2020-02-22,06111,Ventura County,0.0,0.0,0
+2020-02-22,06037,Los Angeles County,1.0,0.0,0
+2020-02-22,06097,Sonoma County,0.0,0.0,0
+2020-02-22,06031,Kings County,0.0,0.0,0
+2020-02-22,06073,San Diego County,2.0,0.0,0
+2020-02-22,06061,Placer County,0.0,0.0,0
+2020-02-22,06075,San Francisco County,0.0,0.0,0
+2020-02-22,06041,Marin County,0.0,0.0,0
+2020-02-22,06043,Mariposa County,0.0,0.0,0
+2020-02-22,06035,Lassen County,0.0,0.0,0
+2020-02-22,06055,Napa County,0.0,0.0,0
+2020-02-22,06089,Shasta County,0.0,0.0,0
+2020-02-22,06053,Monterey County,0.0,0.0,0
+2020-02-22,06105,Trinity County,0.0,0.0,0
+2020-02-22,06045,Mendocino County,0.0,0.0,0
+2020-02-22,06027,Inyo County,0.0,0.0,0
+2020-02-22,06051,Mono County,0.0,0.0,0
+2020-02-22,06109,Tuolumne County,0.0,0.0,0
+2020-02-22,06095,Solano County,0.0,0.0,0
+2020-02-22,06071,San Bernardino County,0.0,0.0,0
+2020-02-22,06013,Contra Costa County,0.0,0.0,0
+2020-02-22,06003,Alpine County,0.0,0.0,0
+2020-02-22,06017,El Dorado County,0.0,0.0,0
+2020-02-22,06113,Yolo County,0.0,0.0,0
+2020-02-22,06115,Yuba County,0.0,0.0,0
+2020-02-22,06069,San Benito County,2.0,0.0,0
+2020-02-22,06023,Humboldt County,1.0,0.0,0
+2020-02-22,06065,Riverside County,0.0,0.0,0
+2020-02-22,06029,Kern County,0.0,0.0,0
+2020-02-22,06011,Colusa County,0.0,0.0,0
+2020-02-22,06015,Del Norte County,0.0,0.0,0
+2020-02-22,06049,Modoc County,0.0,0.0,0
+2020-02-22,06019,Fresno County,0.0,0.0,0
+2020-02-22,06039,Madera County,0.0,0.0,0
+2020-02-22,06085,Santa Clara County,2.0,0.0,0
+2020-02-22,06103,Tehama County,0.0,0.0,0
+2020-02-22,06077,San Joaquin County,0.0,0.0,0
+2020-02-22,06001,Alameda County,0.0,0.0,0
+2020-02-22,06057,Nevada County,0.0,0.0,0
+2020-02-22,06007,Butte County,0.0,0.0,0
+2020-02-22,06047,Merced County,0.0,0.0,0
+2020-02-22,06107,Tulare County,0.0,0.0,0
+2020-02-22,06099,Stanislaus County,0.0,0.0,0
+2020-02-22,06059,Orange County,1.0,0.0,0
+2020-02-22,06025,Imperial County,0.0,0.0,0
+2020-02-22,06101,Sutter County,0.0,0.0,0
+2020-02-22,06005,Amador County,0.0,0.0,0
+2020-02-22,06033,Lake County,0.0,0.0,0
+2020-02-22,06063,Plumas County,0.0,0.0,0
+2020-02-22,06081,San Mateo County,0.0,0.0,0
+2020-02-22,06093,Siskiyou County,0.0,0.0,0
+2020-02-22,06087,Santa Cruz County,0.0,0.0,0
+2020-02-22,06021,Glenn County,0.0,0.0,0
+2020-02-22,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-23,06091,Sierra County,0.0,0.0,0
+2020-02-23,06067,Sacramento County,1.0,0.0,0
+2020-02-23,06083,Santa Barbara County,0.0,0.0,0
+2020-02-23,06009,Calaveras County,0.0,0.0,0
+2020-02-23,06111,Ventura County,0.0,0.0,0
+2020-02-23,06037,Los Angeles County,1.0,0.0,0
+2020-02-23,06097,Sonoma County,0.0,0.0,0
+2020-02-23,06031,Kings County,0.0,0.0,0
+2020-02-23,06073,San Diego County,2.0,0.0,0
+2020-02-23,06061,Placer County,0.0,0.0,0
+2020-02-23,06075,San Francisco County,0.0,0.0,0
+2020-02-23,06041,Marin County,0.0,0.0,0
+2020-02-23,06043,Mariposa County,0.0,0.0,0
+2020-02-23,06035,Lassen County,0.0,0.0,0
+2020-02-23,06055,Napa County,0.0,0.0,0
+2020-02-23,06089,Shasta County,0.0,0.0,0
+2020-02-23,06053,Monterey County,0.0,0.0,0
+2020-02-23,06105,Trinity County,0.0,0.0,0
+2020-02-23,06045,Mendocino County,0.0,0.0,0
+2020-02-23,06027,Inyo County,0.0,0.0,0
+2020-02-23,06051,Mono County,0.0,0.0,0
+2020-02-23,06109,Tuolumne County,0.0,0.0,0
+2020-02-23,06095,Solano County,0.0,0.0,0
+2020-02-23,06071,San Bernardino County,0.0,0.0,0
+2020-02-23,06013,Contra Costa County,0.0,0.0,0
+2020-02-23,06003,Alpine County,0.0,0.0,0
+2020-02-23,06017,El Dorado County,0.0,0.0,0
+2020-02-23,06113,Yolo County,0.0,0.0,0
+2020-02-23,06115,Yuba County,0.0,0.0,0
+2020-02-23,06069,San Benito County,2.0,0.0,0
+2020-02-23,06023,Humboldt County,1.0,0.0,0
+2020-02-23,06065,Riverside County,0.0,0.0,0
+2020-02-23,06029,Kern County,0.0,0.0,0
+2020-02-23,06011,Colusa County,0.0,0.0,0
+2020-02-23,06015,Del Norte County,0.0,0.0,0
+2020-02-23,06049,Modoc County,0.0,0.0,0
+2020-02-23,06019,Fresno County,0.0,0.0,0
+2020-02-23,06039,Madera County,0.0,0.0,0
+2020-02-23,06085,Santa Clara County,2.0,0.0,0
+2020-02-23,06103,Tehama County,0.0,0.0,0
+2020-02-23,06077,San Joaquin County,0.0,0.0,0
+2020-02-23,06001,Alameda County,0.0,0.0,0
+2020-02-23,06057,Nevada County,0.0,0.0,0
+2020-02-23,06007,Butte County,0.0,0.0,0
+2020-02-23,06047,Merced County,0.0,0.0,0
+2020-02-23,06107,Tulare County,0.0,0.0,0
+2020-02-23,06099,Stanislaus County,0.0,0.0,0
+2020-02-23,06059,Orange County,1.0,0.0,0
+2020-02-23,06025,Imperial County,0.0,0.0,0
+2020-02-23,06101,Sutter County,0.0,0.0,0
+2020-02-23,06005,Amador County,0.0,0.0,0
+2020-02-23,06033,Lake County,0.0,0.0,0
+2020-02-23,06063,Plumas County,0.0,0.0,0
+2020-02-23,06081,San Mateo County,0.0,0.0,0
+2020-02-23,06093,Siskiyou County,0.0,0.0,0
+2020-02-23,06087,Santa Cruz County,0.0,0.0,0
+2020-02-23,06021,Glenn County,0.0,0.0,0
+2020-02-23,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-24,06091,Sierra County,0.0,0.0,0
+2020-02-24,06067,Sacramento County,1.0,0.0,0
+2020-02-24,06083,Santa Barbara County,0.0,0.0,0
+2020-02-24,06009,Calaveras County,0.0,0.0,0
+2020-02-24,06111,Ventura County,0.0,0.0,0
+2020-02-24,06037,Los Angeles County,1.0,0.0,0
+2020-02-24,06097,Sonoma County,0.0,0.0,0
+2020-02-24,06031,Kings County,0.0,0.0,0
+2020-02-24,06073,San Diego County,2.0,0.0,0
+2020-02-24,06061,Placer County,0.0,0.0,0
+2020-02-24,06075,San Francisco County,0.0,0.0,0
+2020-02-24,06041,Marin County,0.0,0.0,0
+2020-02-24,06043,Mariposa County,0.0,0.0,0
+2020-02-24,06035,Lassen County,0.0,0.0,0
+2020-02-24,06055,Napa County,0.0,0.0,0
+2020-02-24,06089,Shasta County,0.0,0.0,0
+2020-02-24,06053,Monterey County,0.0,0.0,0
+2020-02-24,06105,Trinity County,0.0,0.0,0
+2020-02-24,06045,Mendocino County,0.0,0.0,0
+2020-02-24,06027,Inyo County,0.0,0.0,0
+2020-02-24,06051,Mono County,0.0,0.0,0
+2020-02-24,06109,Tuolumne County,0.0,0.0,0
+2020-02-24,06095,Solano County,0.0,0.0,0
+2020-02-24,06071,San Bernardino County,0.0,0.0,0
+2020-02-24,06013,Contra Costa County,0.0,0.0,0
+2020-02-24,06003,Alpine County,0.0,0.0,0
+2020-02-24,06017,El Dorado County,0.0,0.0,0
+2020-02-24,06113,Yolo County,0.0,0.0,0
+2020-02-24,06115,Yuba County,0.0,0.0,0
+2020-02-24,06069,San Benito County,2.0,0.0,0
+2020-02-24,06023,Humboldt County,1.0,0.0,0
+2020-02-24,06065,Riverside County,0.0,0.0,0
+2020-02-24,06029,Kern County,0.0,0.0,0
+2020-02-24,06011,Colusa County,0.0,0.0,0
+2020-02-24,06015,Del Norte County,0.0,0.0,0
+2020-02-24,06049,Modoc County,0.0,0.0,0
+2020-02-24,06019,Fresno County,0.0,0.0,0
+2020-02-24,06039,Madera County,0.0,0.0,0
+2020-02-24,06085,Santa Clara County,2.0,0.0,0
+2020-02-24,06103,Tehama County,0.0,0.0,0
+2020-02-24,06077,San Joaquin County,0.0,0.0,0
+2020-02-24,06001,Alameda County,0.0,0.0,0
+2020-02-24,06057,Nevada County,0.0,0.0,0
+2020-02-24,06007,Butte County,0.0,0.0,0
+2020-02-24,06047,Merced County,0.0,0.0,0
+2020-02-24,06107,Tulare County,0.0,0.0,0
+2020-02-24,06099,Stanislaus County,0.0,0.0,0
+2020-02-24,06059,Orange County,1.0,0.0,0
+2020-02-24,06025,Imperial County,0.0,0.0,0
+2020-02-24,06101,Sutter County,0.0,0.0,0
+2020-02-24,06005,Amador County,0.0,0.0,0
+2020-02-24,06033,Lake County,0.0,0.0,0
+2020-02-24,06063,Plumas County,0.0,0.0,0
+2020-02-24,06081,San Mateo County,0.0,0.0,0
+2020-02-24,06093,Siskiyou County,0.0,0.0,0
+2020-02-24,06087,Santa Cruz County,0.0,0.0,0
+2020-02-24,06021,Glenn County,0.0,0.0,0
+2020-02-24,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-25,06091,Sierra County,0.0,0.0,0
+2020-02-25,06067,Sacramento County,1.0,0.0,0
+2020-02-25,06083,Santa Barbara County,0.0,0.0,0
+2020-02-25,06009,Calaveras County,0.0,0.0,0
+2020-02-25,06111,Ventura County,0.0,0.0,0
+2020-02-25,06037,Los Angeles County,1.0,0.0,0
+2020-02-25,06097,Sonoma County,0.0,0.0,0
+2020-02-25,06031,Kings County,0.0,0.0,0
+2020-02-25,06073,San Diego County,2.0,0.0,0
+2020-02-25,06061,Placer County,0.0,0.0,0
+2020-02-25,06075,San Francisco County,0.0,0.0,0
+2020-02-25,06041,Marin County,0.0,0.0,0
+2020-02-25,06043,Mariposa County,0.0,0.0,0
+2020-02-25,06035,Lassen County,0.0,0.0,0
+2020-02-25,06055,Napa County,0.0,0.0,0
+2020-02-25,06089,Shasta County,0.0,0.0,0
+2020-02-25,06053,Monterey County,0.0,0.0,0
+2020-02-25,06105,Trinity County,0.0,0.0,0
+2020-02-25,06045,Mendocino County,0.0,0.0,0
+2020-02-25,06027,Inyo County,0.0,0.0,0
+2020-02-25,06051,Mono County,0.0,0.0,0
+2020-02-25,06109,Tuolumne County,0.0,0.0,0
+2020-02-25,06095,Solano County,0.0,0.0,0
+2020-02-25,06071,San Bernardino County,0.0,0.0,0
+2020-02-25,06013,Contra Costa County,0.0,0.0,0
+2020-02-25,06003,Alpine County,0.0,0.0,0
+2020-02-25,06017,El Dorado County,0.0,0.0,0
+2020-02-25,06113,Yolo County,0.0,0.0,0
+2020-02-25,06115,Yuba County,0.0,0.0,0
+2020-02-25,06069,San Benito County,2.0,0.0,0
+2020-02-25,06023,Humboldt County,1.0,0.0,0
+2020-02-25,06065,Riverside County,0.0,0.0,0
+2020-02-25,06029,Kern County,0.0,0.0,0
+2020-02-25,06011,Colusa County,0.0,0.0,0
+2020-02-25,06015,Del Norte County,0.0,0.0,0
+2020-02-25,06049,Modoc County,0.0,0.0,0
+2020-02-25,06019,Fresno County,0.0,0.0,0
+2020-02-25,06039,Madera County,0.0,0.0,0
+2020-02-25,06085,Santa Clara County,2.0,0.0,0
+2020-02-25,06103,Tehama County,0.0,0.0,0
+2020-02-25,06077,San Joaquin County,0.0,0.0,0
+2020-02-25,06001,Alameda County,0.0,0.0,0
+2020-02-25,06057,Nevada County,0.0,0.0,0
+2020-02-25,06007,Butte County,0.0,0.0,0
+2020-02-25,06047,Merced County,0.0,0.0,0
+2020-02-25,06107,Tulare County,0.0,0.0,0
+2020-02-25,06099,Stanislaus County,0.0,0.0,0
+2020-02-25,06059,Orange County,1.0,0.0,0
+2020-02-25,06025,Imperial County,0.0,0.0,0
+2020-02-25,06101,Sutter County,0.0,0.0,0
+2020-02-25,06005,Amador County,0.0,0.0,0
+2020-02-25,06033,Lake County,0.0,0.0,0
+2020-02-25,06063,Plumas County,0.0,0.0,0
+2020-02-25,06081,San Mateo County,0.0,0.0,0
+2020-02-25,06093,Siskiyou County,0.0,0.0,0
+2020-02-25,06087,Santa Cruz County,0.0,0.0,0
+2020-02-25,06021,Glenn County,0.0,0.0,0
+2020-02-25,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-26,06091,Sierra County,0.0,0.0,0
+2020-02-26,06067,Sacramento County,1.0,0.0,0
+2020-02-26,06083,Santa Barbara County,0.0,0.0,0
+2020-02-26,06009,Calaveras County,0.0,0.0,0
+2020-02-26,06111,Ventura County,0.0,0.0,0
+2020-02-26,06037,Los Angeles County,1.0,0.0,0
+2020-02-26,06097,Sonoma County,0.0,0.0,0
+2020-02-26,06031,Kings County,0.0,0.0,0
+2020-02-26,06073,San Diego County,2.0,0.0,0
+2020-02-26,06061,Placer County,0.0,0.0,0
+2020-02-26,06075,San Francisco County,0.0,0.0,0
+2020-02-26,06041,Marin County,0.0,0.0,0
+2020-02-26,06043,Mariposa County,0.0,0.0,0
+2020-02-26,06035,Lassen County,0.0,0.0,0
+2020-02-26,06055,Napa County,0.0,0.0,0
+2020-02-26,06089,Shasta County,0.0,0.0,0
+2020-02-26,06053,Monterey County,0.0,0.0,0
+2020-02-26,06105,Trinity County,0.0,0.0,0
+2020-02-26,06045,Mendocino County,0.0,0.0,0
+2020-02-26,06027,Inyo County,0.0,0.0,0
+2020-02-26,06051,Mono County,0.0,0.0,0
+2020-02-26,06109,Tuolumne County,0.0,0.0,0
+2020-02-26,06095,Solano County,0.0,0.0,0
+2020-02-26,06071,San Bernardino County,0.0,0.0,0
+2020-02-26,06013,Contra Costa County,0.0,0.0,0
+2020-02-26,06003,Alpine County,0.0,0.0,0
+2020-02-26,06017,El Dorado County,0.0,0.0,0
+2020-02-26,06113,Yolo County,0.0,0.0,0
+2020-02-26,06115,Yuba County,0.0,0.0,0
+2020-02-26,06069,San Benito County,2.0,0.0,0
+2020-02-26,06023,Humboldt County,1.0,0.0,0
+2020-02-26,06065,Riverside County,0.0,0.0,0
+2020-02-26,06029,Kern County,0.0,0.0,0
+2020-02-26,06011,Colusa County,0.0,0.0,0
+2020-02-26,06015,Del Norte County,0.0,0.0,0
+2020-02-26,06049,Modoc County,0.0,0.0,0
+2020-02-26,06019,Fresno County,0.0,0.0,0
+2020-02-26,06039,Madera County,0.0,0.0,0
+2020-02-26,06085,Santa Clara County,2.0,0.0,0
+2020-02-26,06103,Tehama County,0.0,0.0,0
+2020-02-26,06077,San Joaquin County,0.0,0.0,0
+2020-02-26,06001,Alameda County,0.0,0.0,0
+2020-02-26,06057,Nevada County,0.0,0.0,0
+2020-02-26,06007,Butte County,0.0,0.0,0
+2020-02-26,06047,Merced County,0.0,0.0,0
+2020-02-26,06107,Tulare County,0.0,0.0,0
+2020-02-26,06099,Stanislaus County,0.0,0.0,0
+2020-02-26,06059,Orange County,1.0,0.0,0
+2020-02-26,06025,Imperial County,0.0,0.0,0
+2020-02-26,06101,Sutter County,0.0,0.0,0
+2020-02-26,06005,Amador County,0.0,0.0,0
+2020-02-26,06033,Lake County,0.0,0.0,0
+2020-02-26,06063,Plumas County,0.0,0.0,0
+2020-02-26,06081,San Mateo County,0.0,0.0,0
+2020-02-26,06093,Siskiyou County,0.0,0.0,0
+2020-02-26,06087,Santa Cruz County,0.0,0.0,0
+2020-02-26,06021,Glenn County,0.0,0.0,0
+2020-02-26,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-27,06091,Sierra County,0.0,0.0,0
+2020-02-27,06067,Sacramento County,2.0,0.0,0
+2020-02-27,06083,Santa Barbara County,0.0,0.0,0
+2020-02-27,06009,Calaveras County,0.0,0.0,0
+2020-02-27,06111,Ventura County,0.0,0.0,0
+2020-02-27,06037,Los Angeles County,1.0,0.0,0
+2020-02-27,06097,Sonoma County,0.0,0.0,0
+2020-02-27,06031,Kings County,0.0,0.0,0
+2020-02-27,06073,San Diego County,2.0,0.0,0
+2020-02-27,06061,Placer County,0.0,0.0,0
+2020-02-27,06075,San Francisco County,0.0,0.0,0
+2020-02-27,06041,Marin County,0.0,0.0,0
+2020-02-27,06043,Mariposa County,0.0,0.0,0
+2020-02-27,06035,Lassen County,0.0,0.0,0
+2020-02-27,06055,Napa County,0.0,0.0,0
+2020-02-27,06089,Shasta County,0.0,0.0,0
+2020-02-27,06053,Monterey County,0.0,0.0,0
+2020-02-27,06105,Trinity County,0.0,0.0,0
+2020-02-27,06045,Mendocino County,0.0,0.0,0
+2020-02-27,06027,Inyo County,0.0,0.0,0
+2020-02-27,06051,Mono County,0.0,0.0,0
+2020-02-27,06109,Tuolumne County,0.0,0.0,0
+2020-02-27,06095,Solano County,0.0,0.0,0
+2020-02-27,06071,San Bernardino County,0.0,0.0,0
+2020-02-27,06013,Contra Costa County,0.0,0.0,0
+2020-02-27,06003,Alpine County,0.0,0.0,0
+2020-02-27,06017,El Dorado County,0.0,0.0,0
+2020-02-27,06113,Yolo County,0.0,0.0,0
+2020-02-27,06115,Yuba County,0.0,0.0,0
+2020-02-27,06069,San Benito County,2.0,0.0,0
+2020-02-27,06023,Humboldt County,1.0,0.0,0
+2020-02-27,06065,Riverside County,0.0,0.0,0
+2020-02-27,06029,Kern County,0.0,0.0,0
+2020-02-27,06011,Colusa County,0.0,0.0,0
+2020-02-27,06015,Del Norte County,0.0,0.0,0
+2020-02-27,06049,Modoc County,0.0,0.0,0
+2020-02-27,06019,Fresno County,0.0,0.0,0
+2020-02-27,06039,Madera County,0.0,0.0,0
+2020-02-27,06085,Santa Clara County,2.0,0.0,0
+2020-02-27,06103,Tehama County,0.0,0.0,0
+2020-02-27,06077,San Joaquin County,0.0,0.0,0
+2020-02-27,06001,Alameda County,0.0,0.0,0
+2020-02-27,06057,Nevada County,0.0,0.0,0
+2020-02-27,06007,Butte County,0.0,0.0,0
+2020-02-27,06047,Merced County,0.0,0.0,0
+2020-02-27,06107,Tulare County,0.0,0.0,0
+2020-02-27,06099,Stanislaus County,0.0,0.0,0
+2020-02-27,06059,Orange County,1.0,0.0,0
+2020-02-27,06025,Imperial County,0.0,0.0,0
+2020-02-27,06101,Sutter County,0.0,0.0,0
+2020-02-27,06005,Amador County,0.0,0.0,0
+2020-02-27,06033,Lake County,0.0,0.0,0
+2020-02-27,06063,Plumas County,0.0,0.0,0
+2020-02-27,06081,San Mateo County,0.0,0.0,0
+2020-02-27,06093,Siskiyou County,0.0,0.0,0
+2020-02-27,06087,Santa Cruz County,0.0,0.0,0
+2020-02-27,06021,Glenn County,0.0,0.0,0
+2020-02-27,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-28,06091,Sierra County,0.0,0.0,0
+2020-02-28,06067,Sacramento County,2.0,0.0,0
+2020-02-28,06083,Santa Barbara County,0.0,0.0,0
+2020-02-28,06009,Calaveras County,0.0,0.0,0
+2020-02-28,06111,Ventura County,0.0,0.0,0
+2020-02-28,06037,Los Angeles County,1.0,0.0,0
+2020-02-28,06097,Sonoma County,0.0,0.0,0
+2020-02-28,06031,Kings County,0.0,0.0,0
+2020-02-28,06073,San Diego County,2.0,0.0,0
+2020-02-28,06061,Placer County,0.0,0.0,0
+2020-02-28,06075,San Francisco County,0.0,0.0,0
+2020-02-28,06041,Marin County,0.0,0.0,0
+2020-02-28,06043,Mariposa County,0.0,0.0,0
+2020-02-28,06035,Lassen County,0.0,0.0,0
+2020-02-28,06055,Napa County,0.0,0.0,0
+2020-02-28,06089,Shasta County,0.0,0.0,0
+2020-02-28,06053,Monterey County,0.0,0.0,0
+2020-02-28,06105,Trinity County,0.0,0.0,0
+2020-02-28,06045,Mendocino County,0.0,0.0,0
+2020-02-28,06027,Inyo County,0.0,0.0,0
+2020-02-28,06051,Mono County,0.0,0.0,0
+2020-02-28,06109,Tuolumne County,0.0,0.0,0
+2020-02-28,06095,Solano County,0.0,0.0,0
+2020-02-28,06071,San Bernardino County,0.0,0.0,0
+2020-02-28,06013,Contra Costa County,0.0,0.0,0
+2020-02-28,06003,Alpine County,0.0,0.0,0
+2020-02-28,06017,El Dorado County,0.0,0.0,0
+2020-02-28,06113,Yolo County,0.0,0.0,0
+2020-02-28,06115,Yuba County,0.0,0.0,0
+2020-02-28,06069,San Benito County,2.0,0.0,0
+2020-02-28,06023,Humboldt County,1.0,0.0,0
+2020-02-28,06065,Riverside County,0.0,0.0,0
+2020-02-28,06029,Kern County,0.0,0.0,0
+2020-02-28,06011,Colusa County,0.0,0.0,0
+2020-02-28,06015,Del Norte County,0.0,0.0,0
+2020-02-28,06049,Modoc County,0.0,0.0,0
+2020-02-28,06019,Fresno County,0.0,0.0,0
+2020-02-28,06039,Madera County,0.0,0.0,0
+2020-02-28,06085,Santa Clara County,2.0,0.0,0
+2020-02-28,06103,Tehama County,0.0,0.0,0
+2020-02-28,06077,San Joaquin County,0.0,0.0,0
+2020-02-28,06001,Alameda County,0.0,0.0,0
+2020-02-28,06057,Nevada County,0.0,0.0,0
+2020-02-28,06007,Butte County,0.0,0.0,0
+2020-02-28,06047,Merced County,0.0,0.0,0
+2020-02-28,06107,Tulare County,0.0,0.0,0
+2020-02-28,06099,Stanislaus County,0.0,0.0,0
+2020-02-28,06059,Orange County,1.0,0.0,0
+2020-02-28,06025,Imperial County,0.0,0.0,0
+2020-02-28,06101,Sutter County,0.0,0.0,0
+2020-02-28,06005,Amador County,0.0,0.0,0
+2020-02-28,06033,Lake County,0.0,0.0,0
+2020-02-28,06063,Plumas County,0.0,0.0,0
+2020-02-28,06081,San Mateo County,0.0,0.0,0
+2020-02-28,06093,Siskiyou County,0.0,0.0,0
+2020-02-28,06087,Santa Cruz County,0.0,0.0,0
+2020-02-28,06021,Glenn County,0.0,0.0,0
+2020-02-28,06079,San Luis Obispo County,0.0,0.0,0
+2020-02-29,06091,Sierra County,0.0,0.0,0
+2020-02-29,06067,Sacramento County,2.0,0.0,0
+2020-02-29,06083,Santa Barbara County,0.0,0.0,0
+2020-02-29,06009,Calaveras County,0.0,0.0,0
+2020-02-29,06111,Ventura County,0.0,0.0,0
+2020-02-29,06037,Los Angeles County,1.0,0.0,0
+2020-02-29,06097,Sonoma County,0.0,0.0,0
+2020-02-29,06031,Kings County,0.0,0.0,0
+2020-02-29,06073,San Diego County,2.0,0.0,0
+2020-02-29,06061,Placer County,0.0,0.0,0
+2020-02-29,06075,San Francisco County,0.0,0.0,0
+2020-02-29,06041,Marin County,0.0,0.0,0
+2020-02-29,06043,Mariposa County,0.0,0.0,0
+2020-02-29,06035,Lassen County,0.0,0.0,0
+2020-02-29,06055,Napa County,0.0,0.0,0
+2020-02-29,06089,Shasta County,0.0,0.0,0
+2020-02-29,06053,Monterey County,0.0,0.0,0
+2020-02-29,06105,Trinity County,0.0,0.0,0
+2020-02-29,06045,Mendocino County,0.0,0.0,0
+2020-02-29,06027,Inyo County,0.0,0.0,0
+2020-02-29,06051,Mono County,0.0,0.0,0
+2020-02-29,06109,Tuolumne County,0.0,0.0,0
+2020-02-29,06095,Solano County,0.0,0.0,0
+2020-02-29,06071,San Bernardino County,0.0,0.0,0
+2020-02-29,06013,Contra Costa County,0.0,0.0,0
+2020-02-29,06003,Alpine County,0.0,0.0,0
+2020-02-29,06017,El Dorado County,0.0,0.0,0
+2020-02-29,06113,Yolo County,0.0,0.0,0
+2020-02-29,06115,Yuba County,0.0,0.0,0
+2020-02-29,06069,San Benito County,2.0,0.0,0
+2020-02-29,06023,Humboldt County,1.0,0.0,0
+2020-02-29,06065,Riverside County,0.0,0.0,0
+2020-02-29,06029,Kern County,0.0,0.0,0
+2020-02-29,06011,Colusa County,0.0,0.0,0
+2020-02-29,06015,Del Norte County,0.0,0.0,0
+2020-02-29,06049,Modoc County,0.0,0.0,0
+2020-02-29,06019,Fresno County,0.0,0.0,0
+2020-02-29,06039,Madera County,0.0,0.0,0
+2020-02-29,06085,Santa Clara County,3.0,0.0,0
+2020-02-29,06103,Tehama County,0.0,0.0,0
+2020-02-29,06077,San Joaquin County,0.0,0.0,0
+2020-02-29,06001,Alameda County,0.0,0.0,0
+2020-02-29,06057,Nevada County,0.0,0.0,0
+2020-02-29,06007,Butte County,0.0,0.0,0
+2020-02-29,06047,Merced County,0.0,0.0,0
+2020-02-29,06107,Tulare County,0.0,0.0,0
+2020-02-29,06099,Stanislaus County,0.0,0.0,0
+2020-02-29,06059,Orange County,1.0,0.0,0
+2020-02-29,06025,Imperial County,0.0,0.0,0
+2020-02-29,06101,Sutter County,0.0,0.0,0
+2020-02-29,06005,Amador County,0.0,0.0,0
+2020-02-29,06033,Lake County,0.0,0.0,0
+2020-02-29,06063,Plumas County,0.0,0.0,0
+2020-02-29,06081,San Mateo County,0.0,0.0,0
+2020-02-29,06093,Siskiyou County,0.0,0.0,0
+2020-02-29,06087,Santa Cruz County,0.0,0.0,0
+2020-02-29,06021,Glenn County,0.0,0.0,0
+2020-02-29,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-01,06091,Sierra County,0.0,0.0,0
+2020-03-01,06067,Sacramento County,2.0,0.0,0
+2020-03-01,06083,Santa Barbara County,0.0,0.0,0
+2020-03-01,06009,Calaveras County,0.0,0.0,0
+2020-03-01,06111,Ventura County,0.0,0.0,0
+2020-03-01,06037,Los Angeles County,1.0,0.0,0
+2020-03-01,06097,Sonoma County,0.0,0.0,0
+2020-03-01,06031,Kings County,0.0,0.0,0
+2020-03-01,06073,San Diego County,2.0,0.0,0
+2020-03-01,06061,Placer County,0.0,0.0,0
+2020-03-01,06075,San Francisco County,0.0,0.0,0
+2020-03-01,06041,Marin County,0.0,0.0,0
+2020-03-01,06043,Mariposa County,0.0,0.0,0
+2020-03-01,06035,Lassen County,0.0,0.0,0
+2020-03-01,06055,Napa County,0.0,0.0,0
+2020-03-01,06089,Shasta County,0.0,0.0,0
+2020-03-01,06053,Monterey County,0.0,0.0,0
+2020-03-01,06105,Trinity County,0.0,0.0,0
+2020-03-01,06045,Mendocino County,0.0,0.0,0
+2020-03-01,06027,Inyo County,0.0,0.0,0
+2020-03-01,06051,Mono County,0.0,0.0,0
+2020-03-01,06109,Tuolumne County,0.0,0.0,0
+2020-03-01,06095,Solano County,0.0,0.0,0
+2020-03-01,06071,San Bernardino County,0.0,0.0,0
+2020-03-01,06013,Contra Costa County,0.0,0.0,0
+2020-03-01,06003,Alpine County,0.0,0.0,0
+2020-03-01,06017,El Dorado County,0.0,0.0,0
+2020-03-01,06113,Yolo County,0.0,0.0,0
+2020-03-01,06115,Yuba County,0.0,0.0,0
+2020-03-01,06069,San Benito County,2.0,0.0,0
+2020-03-01,06023,Humboldt County,1.0,0.0,0
+2020-03-01,06065,Riverside County,0.0,0.0,0
+2020-03-01,06029,Kern County,0.0,0.0,0
+2020-03-01,06011,Colusa County,0.0,0.0,0
+2020-03-01,06015,Del Norte County,0.0,0.0,0
+2020-03-01,06049,Modoc County,0.0,0.0,0
+2020-03-01,06019,Fresno County,0.0,0.0,0
+2020-03-01,06039,Madera County,0.0,0.0,0
+2020-03-01,06085,Santa Clara County,3.0,0.0,0
+2020-03-01,06103,Tehama County,0.0,0.0,0
+2020-03-01,06077,San Joaquin County,0.0,0.0,0
+2020-03-01,06001,Alameda County,0.0,0.0,0
+2020-03-01,06057,Nevada County,0.0,0.0,0
+2020-03-01,06007,Butte County,0.0,0.0,0
+2020-03-01,06047,Merced County,0.0,0.0,0
+2020-03-01,06107,Tulare County,0.0,0.0,0
+2020-03-01,06099,Stanislaus County,0.0,0.0,0
+2020-03-01,06059,Orange County,1.0,0.0,0
+2020-03-01,06025,Imperial County,0.0,0.0,0
+2020-03-01,06101,Sutter County,0.0,0.0,0
+2020-03-01,06005,Amador County,0.0,0.0,0
+2020-03-01,06033,Lake County,0.0,0.0,0
+2020-03-01,06063,Plumas County,0.0,0.0,0
+2020-03-01,06081,San Mateo County,0.0,0.0,0
+2020-03-01,06093,Siskiyou County,0.0,0.0,0
+2020-03-01,06087,Santa Cruz County,0.0,0.0,0
+2020-03-01,06021,Glenn County,0.0,0.0,0
+2020-03-01,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-02,06091,Sierra County,0.0,0.0,0
+2020-03-02,06067,Sacramento County,2.0,0.0,0
+2020-03-02,06083,Santa Barbara County,0.0,0.0,0
+2020-03-02,06009,Calaveras County,0.0,0.0,0
+2020-03-02,06111,Ventura County,0.0,0.0,0
+2020-03-02,06037,Los Angeles County,1.0,0.0,0
+2020-03-02,06097,Sonoma County,1.0,0.0,0
+2020-03-02,06031,Kings County,0.0,0.0,0
+2020-03-02,06073,San Diego County,2.0,0.0,0
+2020-03-02,06061,Placer County,1.0,0.0,0
+2020-03-02,06075,San Francisco County,0.0,0.0,0
+2020-03-02,06041,Marin County,0.0,0.0,0
+2020-03-02,06043,Mariposa County,0.0,0.0,0
+2020-03-02,06035,Lassen County,0.0,0.0,0
+2020-03-02,06055,Napa County,0.0,0.0,0
+2020-03-02,06089,Shasta County,0.0,0.0,0
+2020-03-02,06053,Monterey County,0.0,0.0,0
+2020-03-02,06105,Trinity County,0.0,0.0,0
+2020-03-02,06045,Mendocino County,0.0,0.0,0
+2020-03-02,06027,Inyo County,0.0,0.0,0
+2020-03-02,06051,Mono County,0.0,0.0,0
+2020-03-02,06109,Tuolumne County,0.0,0.0,0
+2020-03-02,06095,Solano County,0.0,0.0,0
+2020-03-02,06071,San Bernardino County,0.0,0.0,0
+2020-03-02,06013,Contra Costa County,0.0,0.0,0
+2020-03-02,06003,Alpine County,0.0,0.0,0
+2020-03-02,06017,El Dorado County,0.0,0.0,0
+2020-03-02,06113,Yolo County,0.0,0.0,0
+2020-03-02,06115,Yuba County,0.0,0.0,0
+2020-03-02,06069,San Benito County,2.0,0.0,0
+2020-03-02,06023,Humboldt County,1.0,0.0,0
+2020-03-02,06065,Riverside County,0.0,0.0,0
+2020-03-02,06029,Kern County,0.0,0.0,0
+2020-03-02,06011,Colusa County,0.0,0.0,0
+2020-03-02,06015,Del Norte County,0.0,0.0,0
+2020-03-02,06049,Modoc County,0.0,0.0,0
+2020-03-02,06019,Fresno County,0.0,0.0,0
+2020-03-02,06039,Madera County,0.0,0.0,0
+2020-03-02,06085,Santa Clara County,9.0,0.0,0
+2020-03-02,06103,Tehama County,0.0,0.0,0
+2020-03-02,06077,San Joaquin County,0.0,0.0,0
+2020-03-02,06001,Alameda County,0.0,0.0,0
+2020-03-02,06057,Nevada County,0.0,0.0,0
+2020-03-02,06007,Butte County,0.0,0.0,0
+2020-03-02,06047,Merced County,0.0,0.0,0
+2020-03-02,06107,Tulare County,0.0,0.0,0
+2020-03-02,06099,Stanislaus County,0.0,0.0,0
+2020-03-02,06059,Orange County,1.0,0.0,0
+2020-03-02,06025,Imperial County,0.0,0.0,0
+2020-03-02,06101,Sutter County,0.0,0.0,0
+2020-03-02,06005,Amador County,0.0,0.0,0
+2020-03-02,06033,Lake County,0.0,0.0,0
+2020-03-02,06063,Plumas County,0.0,0.0,0
+2020-03-02,06081,San Mateo County,1.0,0.0,0
+2020-03-02,06093,Siskiyou County,0.0,0.0,0
+2020-03-02,06087,Santa Cruz County,0.0,0.0,0
+2020-03-02,06021,Glenn County,0.0,0.0,0
+2020-03-02,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-03,06091,Sierra County,0.0,0.0,0
+2020-03-03,06067,Sacramento County,2.0,0.0,0
+2020-03-03,06083,Santa Barbara County,0.0,0.0,0
+2020-03-03,06009,Calaveras County,0.0,0.0,0
+2020-03-03,06111,Ventura County,0.0,0.0,0
+2020-03-03,06037,Los Angeles County,1.0,0.0,0
+2020-03-03,06097,Sonoma County,1.0,0.0,0
+2020-03-03,06031,Kings County,0.0,0.0,0
+2020-03-03,06073,San Diego County,2.0,0.0,0
+2020-03-03,06061,Placer County,1.0,0.0,0
+2020-03-03,06075,San Francisco County,0.0,0.0,0
+2020-03-03,06041,Marin County,0.0,0.0,0
+2020-03-03,06043,Mariposa County,0.0,0.0,0
+2020-03-03,06035,Lassen County,0.0,0.0,0
+2020-03-03,06055,Napa County,0.0,0.0,0
+2020-03-03,06089,Shasta County,0.0,0.0,0
+2020-03-03,06053,Monterey County,0.0,0.0,0
+2020-03-03,06105,Trinity County,0.0,0.0,0
+2020-03-03,06045,Mendocino County,0.0,0.0,0
+2020-03-03,06027,Inyo County,0.0,0.0,0
+2020-03-03,06051,Mono County,0.0,0.0,0
+2020-03-03,06109,Tuolumne County,0.0,0.0,0
+2020-03-03,06095,Solano County,0.0,0.0,0
+2020-03-03,06071,San Bernardino County,0.0,0.0,0
+2020-03-03,06013,Contra Costa County,0.0,0.0,0
+2020-03-03,06003,Alpine County,0.0,0.0,0
+2020-03-03,06017,El Dorado County,0.0,0.0,0
+2020-03-03,06113,Yolo County,0.0,0.0,0
+2020-03-03,06115,Yuba County,0.0,0.0,0
+2020-03-03,06069,San Benito County,2.0,0.0,0
+2020-03-03,06023,Humboldt County,1.0,0.0,0
+2020-03-03,06065,Riverside County,0.0,0.0,0
+2020-03-03,06029,Kern County,0.0,0.0,0
+2020-03-03,06011,Colusa County,0.0,0.0,0
+2020-03-03,06015,Del Norte County,0.0,0.0,0
+2020-03-03,06049,Modoc County,0.0,0.0,0
+2020-03-03,06019,Fresno County,0.0,0.0,0
+2020-03-03,06039,Madera County,0.0,0.0,0
+2020-03-03,06085,Santa Clara County,11.0,0.0,0
+2020-03-03,06103,Tehama County,0.0,0.0,0
+2020-03-03,06077,San Joaquin County,0.0,0.0,0
+2020-03-03,06001,Alameda County,2.0,0.0,0
+2020-03-03,06057,Nevada County,0.0,0.0,0
+2020-03-03,06007,Butte County,0.0,0.0,0
+2020-03-03,06047,Merced County,0.0,0.0,0
+2020-03-03,06107,Tulare County,0.0,0.0,0
+2020-03-03,06099,Stanislaus County,0.0,0.0,0
+2020-03-03,06059,Orange County,1.0,0.0,0
+2020-03-03,06025,Imperial County,0.0,0.0,0
+2020-03-03,06101,Sutter County,0.0,0.0,0
+2020-03-03,06005,Amador County,0.0,0.0,0
+2020-03-03,06033,Lake County,0.0,0.0,0
+2020-03-03,06063,Plumas County,0.0,0.0,0
+2020-03-03,06081,San Mateo County,2.0,0.0,0
+2020-03-03,06093,Siskiyou County,0.0,0.0,0
+2020-03-03,06087,Santa Cruz County,0.0,0.0,0
+2020-03-03,06021,Glenn County,0.0,0.0,0
+2020-03-03,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-04,06091,Sierra County,0.0,0.0,0
+2020-03-04,06067,Sacramento County,2.0,0.0,0
+2020-03-04,06083,Santa Barbara County,0.0,0.0,0
+2020-03-04,06009,Calaveras County,0.0,0.0,0
+2020-03-04,06111,Ventura County,0.0,0.0,0
+2020-03-04,06037,Los Angeles County,7.0,0.0,0
+2020-03-04,06097,Sonoma County,1.0,0.0,0
+2020-03-04,06031,Kings County,0.0,0.0,0
+2020-03-04,06073,San Diego County,2.0,0.0,0
+2020-03-04,06061,Placer County,2.0,1.0,0
+2020-03-04,06075,San Francisco County,0.0,0.0,0
+2020-03-04,06041,Marin County,0.0,0.0,0
+2020-03-04,06043,Mariposa County,0.0,0.0,0
+2020-03-04,06035,Lassen County,0.0,0.0,0
+2020-03-04,06055,Napa County,0.0,0.0,0
+2020-03-04,06089,Shasta County,0.0,0.0,0
+2020-03-04,06053,Monterey County,0.0,0.0,0
+2020-03-04,06105,Trinity County,0.0,0.0,0
+2020-03-04,06045,Mendocino County,0.0,0.0,0
+2020-03-04,06027,Inyo County,0.0,0.0,0
+2020-03-04,06051,Mono County,0.0,0.0,0
+2020-03-04,06109,Tuolumne County,0.0,0.0,0
+2020-03-04,06095,Solano County,0.0,0.0,0
+2020-03-04,06071,San Bernardino County,0.0,0.0,0
+2020-03-04,06013,Contra Costa County,1.0,0.0,0
+2020-03-04,06003,Alpine County,0.0,0.0,0
+2020-03-04,06017,El Dorado County,0.0,0.0,0
+2020-03-04,06113,Yolo County,0.0,0.0,0
+2020-03-04,06115,Yuba County,0.0,0.0,0
+2020-03-04,06069,San Benito County,2.0,0.0,0
+2020-03-04,06023,Humboldt County,1.0,0.0,0
+2020-03-04,06065,Riverside County,0.0,0.0,0
+2020-03-04,06029,Kern County,0.0,0.0,0
+2020-03-04,06011,Colusa County,0.0,0.0,0
+2020-03-04,06015,Del Norte County,0.0,0.0,0
+2020-03-04,06049,Modoc County,0.0,0.0,0
+2020-03-04,06019,Fresno County,0.0,0.0,0
+2020-03-04,06039,Madera County,0.0,0.0,0
+2020-03-04,06085,Santa Clara County,11.0,0.0,0
+2020-03-04,06103,Tehama County,0.0,0.0,0
+2020-03-04,06077,San Joaquin County,0.0,0.0,0
+2020-03-04,06001,Alameda County,1.0,0.0,0
+2020-03-04,06057,Nevada County,0.0,0.0,0
+2020-03-04,06007,Butte County,0.0,0.0,0
+2020-03-04,06047,Merced County,0.0,0.0,0
+2020-03-04,06107,Tulare County,0.0,0.0,0
+2020-03-04,06099,Stanislaus County,0.0,0.0,0
+2020-03-04,06059,Orange County,3.0,0.0,0
+2020-03-04,06025,Imperial County,0.0,0.0,0
+2020-03-04,06101,Sutter County,0.0,0.0,0
+2020-03-04,06005,Amador County,0.0,0.0,0
+2020-03-04,06033,Lake County,0.0,0.0,0
+2020-03-04,06063,Plumas County,0.0,0.0,0
+2020-03-04,06081,San Mateo County,2.0,0.0,0
+2020-03-04,06093,Siskiyou County,0.0,0.0,0
+2020-03-04,06087,Santa Cruz County,0.0,0.0,0
+2020-03-04,06021,Glenn County,0.0,0.0,0
+2020-03-04,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-05,06091,Sierra County,0.0,0.0,0
+2020-03-05,06067,Sacramento County,2.0,0.0,0
+2020-03-05,06083,Santa Barbara County,0.0,0.0,0
+2020-03-05,06009,Calaveras County,0.0,0.0,0
+2020-03-05,06111,Ventura County,0.0,0.0,0
+2020-03-05,06037,Los Angeles County,11.0,0.0,0
+2020-03-05,06097,Sonoma County,1.0,0.0,0
+2020-03-05,06031,Kings County,0.0,0.0,0
+2020-03-05,06073,San Diego County,3.0,0.0,0
+2020-03-05,06061,Placer County,2.0,1.0,0
+2020-03-05,06075,San Francisco County,2.0,0.0,0
+2020-03-05,06041,Marin County,0.0,0.0,0
+2020-03-05,06043,Mariposa County,0.0,0.0,0
+2020-03-05,06035,Lassen County,0.0,0.0,0
+2020-03-05,06055,Napa County,0.0,0.0,0
+2020-03-05,06089,Shasta County,0.0,0.0,0
+2020-03-05,06053,Monterey County,0.0,0.0,0
+2020-03-05,06105,Trinity County,0.0,0.0,0
+2020-03-05,06045,Mendocino County,0.0,0.0,0
+2020-03-05,06027,Inyo County,0.0,0.0,0
+2020-03-05,06051,Mono County,0.0,0.0,0
+2020-03-05,06109,Tuolumne County,0.0,0.0,0
+2020-03-05,06095,Solano County,0.0,0.0,0
+2020-03-05,06071,San Bernardino County,0.0,0.0,0
+2020-03-05,06013,Contra Costa County,1.0,0.0,0
+2020-03-05,06003,Alpine County,0.0,0.0,0
+2020-03-05,06017,El Dorado County,0.0,0.0,0
+2020-03-05,06113,Yolo County,0.0,0.0,0
+2020-03-05,06115,Yuba County,0.0,0.0,0
+2020-03-05,06069,San Benito County,2.0,0.0,0
+2020-03-05,06023,Humboldt County,1.0,0.0,0
+2020-03-05,06065,Riverside County,0.0,0.0,0
+2020-03-05,06029,Kern County,0.0,0.0,0
+2020-03-05,06011,Colusa County,0.0,0.0,0
+2020-03-05,06015,Del Norte County,0.0,0.0,0
+2020-03-05,06049,Modoc County,0.0,0.0,0
+2020-03-05,06019,Fresno County,0.0,0.0,0
+2020-03-05,06039,Madera County,0.0,0.0,0
+2020-03-05,06085,Santa Clara County,20.0,0.0,0
+2020-03-05,06103,Tehama County,0.0,0.0,0
+2020-03-05,06077,San Joaquin County,0.0,0.0,0
+2020-03-05,06001,Alameda County,1.0,0.0,0
+2020-03-05,06057,Nevada County,0.0,0.0,0
+2020-03-05,06007,Butte County,0.0,0.0,0
+2020-03-05,06047,Merced County,0.0,0.0,0
+2020-03-05,06107,Tulare County,0.0,0.0,0
+2020-03-05,06099,Stanislaus County,0.0,0.0,0
+2020-03-05,06059,Orange County,3.0,0.0,0
+2020-03-05,06025,Imperial County,0.0,0.0,0
+2020-03-05,06101,Sutter County,0.0,0.0,0
+2020-03-05,06005,Amador County,0.0,0.0,0
+2020-03-05,06033,Lake County,0.0,0.0,0
+2020-03-05,06063,Plumas County,0.0,0.0,0
+2020-03-05,06081,San Mateo County,2.0,0.0,0
+2020-03-05,06093,Siskiyou County,0.0,0.0,0
+2020-03-05,06087,Santa Cruz County,0.0,0.0,0
+2020-03-05,06021,Glenn County,0.0,0.0,0
+2020-03-05,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-06,06091,Sierra County,0.0,0.0,0
+2020-03-06,06067,Sacramento County,2.0,0.0,0
+2020-03-06,06083,Santa Barbara County,0.0,0.0,0
+2020-03-06,06009,Calaveras County,0.0,0.0,0
+2020-03-06,06111,Ventura County,0.0,0.0,0
+2020-03-06,06037,Los Angeles County,13.0,0.0,0
+2020-03-06,06097,Sonoma County,1.0,0.0,0
+2020-03-06,06031,Kings County,0.0,0.0,0
+2020-03-06,06073,San Diego County,3.0,0.0,0
+2020-03-06,06061,Placer County,5.0,1.0,0
+2020-03-06,06075,San Francisco County,2.0,0.0,0
+2020-03-06,06041,Marin County,0.0,0.0,0
+2020-03-06,06043,Mariposa County,0.0,0.0,0
+2020-03-06,06035,Lassen County,0.0,0.0,0
+2020-03-06,06055,Napa County,0.0,0.0,0
+2020-03-06,06089,Shasta County,0.0,0.0,0
+2020-03-06,06053,Monterey County,0.0,0.0,0
+2020-03-06,06105,Trinity County,0.0,0.0,0
+2020-03-06,06045,Mendocino County,0.0,0.0,0
+2020-03-06,06027,Inyo County,0.0,0.0,0
+2020-03-06,06051,Mono County,0.0,0.0,0
+2020-03-06,06109,Tuolumne County,0.0,0.0,0
+2020-03-06,06095,Solano County,0.0,0.0,0
+2020-03-06,06071,San Bernardino County,0.0,0.0,0
+2020-03-06,06013,Contra Costa County,3.0,0.0,0
+2020-03-06,06003,Alpine County,0.0,0.0,0
+2020-03-06,06017,El Dorado County,0.0,0.0,0
+2020-03-06,06113,Yolo County,1.0,0.0,0
+2020-03-06,06115,Yuba County,0.0,0.0,0
+2020-03-06,06069,San Benito County,2.0,0.0,0
+2020-03-06,06023,Humboldt County,1.0,0.0,0
+2020-03-06,06065,Riverside County,0.0,0.0,0
+2020-03-06,06029,Kern County,0.0,0.0,0
+2020-03-06,06011,Colusa County,0.0,0.0,0
+2020-03-06,06015,Del Norte County,0.0,0.0,0
+2020-03-06,06049,Modoc County,0.0,0.0,0
+2020-03-06,06019,Fresno County,0.0,0.0,0
+2020-03-06,06039,Madera County,0.0,0.0,0
+2020-03-06,06085,Santa Clara County,20.0,0.0,0
+2020-03-06,06103,Tehama County,0.0,0.0,0
+2020-03-06,06077,San Joaquin County,0.0,0.0,0
+2020-03-06,06001,Alameda County,1.0,0.0,0
+2020-03-06,06057,Nevada County,0.0,0.0,0
+2020-03-06,06007,Butte County,0.0,0.0,0
+2020-03-06,06047,Merced County,0.0,0.0,0
+2020-03-06,06107,Tulare County,0.0,0.0,0
+2020-03-06,06099,Stanislaus County,0.0,0.0,0
+2020-03-06,06059,Orange County,3.0,0.0,0
+2020-03-06,06025,Imperial County,0.0,0.0,0
+2020-03-06,06101,Sutter County,0.0,0.0,0
+2020-03-06,06005,Amador County,0.0,0.0,0
+2020-03-06,06033,Lake County,0.0,0.0,0
+2020-03-06,06063,Plumas County,0.0,0.0,0
+2020-03-06,06081,San Mateo County,2.0,0.0,0
+2020-03-06,06093,Siskiyou County,0.0,0.0,0
+2020-03-06,06087,Santa Cruz County,0.0,0.0,0
+2020-03-06,06021,Glenn County,0.0,0.0,0
+2020-03-06,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-07,06091,Sierra County,0.0,0.0,0
+2020-03-07,06067,Sacramento County,2.0,0.0,0
+2020-03-07,06083,Santa Barbara County,0.0,0.0,0
+2020-03-07,06009,Calaveras County,0.0,0.0,0
+2020-03-07,06111,Ventura County,0.0,0.0,0
+2020-03-07,06037,Los Angeles County,14.0,0.0,0
+2020-03-07,06097,Sonoma County,1.0,0.0,0
+2020-03-07,06031,Kings County,0.0,0.0,0
+2020-03-07,06073,San Diego County,3.0,0.0,0
+2020-03-07,06061,Placer County,5.0,1.0,0
+2020-03-07,06075,San Francisco County,9.0,0.0,0
+2020-03-07,06041,Marin County,0.0,0.0,0
+2020-03-07,06043,Mariposa County,0.0,0.0,0
+2020-03-07,06035,Lassen County,0.0,0.0,0
+2020-03-07,06055,Napa County,0.0,0.0,0
+2020-03-07,06089,Shasta County,0.0,0.0,0
+2020-03-07,06053,Monterey County,0.0,0.0,0
+2020-03-07,06105,Trinity County,0.0,0.0,0
+2020-03-07,06045,Mendocino County,0.0,0.0,0
+2020-03-07,06027,Inyo County,0.0,0.0,0
+2020-03-07,06051,Mono County,0.0,0.0,0
+2020-03-07,06109,Tuolumne County,0.0,0.0,0
+2020-03-07,06095,Solano County,0.0,0.0,0
+2020-03-07,06071,San Bernardino County,0.0,0.0,0
+2020-03-07,06013,Contra Costa County,3.0,0.0,0
+2020-03-07,06003,Alpine County,0.0,0.0,0
+2020-03-07,06017,El Dorado County,0.0,0.0,0
+2020-03-07,06113,Yolo County,1.0,0.0,0
+2020-03-07,06115,Yuba County,0.0,0.0,0
+2020-03-07,06069,San Benito County,2.0,0.0,0
+2020-03-07,06023,Humboldt County,1.0,0.0,0
+2020-03-07,06065,Riverside County,0.0,0.0,0
+2020-03-07,06029,Kern County,0.0,0.0,0
+2020-03-07,06011,Colusa County,0.0,0.0,0
+2020-03-07,06015,Del Norte County,0.0,0.0,0
+2020-03-07,06049,Modoc County,0.0,0.0,0
+2020-03-07,06019,Fresno County,0.0,0.0,0
+2020-03-07,06039,Madera County,1.0,0.0,0
+2020-03-07,06085,Santa Clara County,32.0,0.0,0
+2020-03-07,06103,Tehama County,0.0,0.0,0
+2020-03-07,06077,San Joaquin County,0.0,0.0,0
+2020-03-07,06001,Alameda County,2.0,0.0,0
+2020-03-07,06057,Nevada County,0.0,0.0,0
+2020-03-07,06007,Butte County,0.0,0.0,0
+2020-03-07,06047,Merced County,0.0,0.0,0
+2020-03-07,06107,Tulare County,0.0,0.0,0
+2020-03-07,06099,Stanislaus County,0.0,0.0,0
+2020-03-07,06059,Orange County,3.0,0.0,0
+2020-03-07,06025,Imperial County,0.0,0.0,0
+2020-03-07,06101,Sutter County,0.0,0.0,0
+2020-03-07,06005,Amador County,0.0,0.0,0
+2020-03-07,06033,Lake County,0.0,0.0,0
+2020-03-07,06063,Plumas County,0.0,0.0,0
+2020-03-07,06081,San Mateo County,2.0,0.0,0
+2020-03-07,06093,Siskiyou County,0.0,0.0,0
+2020-03-07,06087,Santa Cruz County,0.0,0.0,0
+2020-03-07,06021,Glenn County,0.0,0.0,0
+2020-03-07,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-08,06091,Sierra County,0.0,0.0,0
+2020-03-08,06067,Sacramento County,2.0,0.0,0
+2020-03-08,06083,Santa Barbara County,0.0,0.0,0
+2020-03-08,06009,Calaveras County,0.0,0.0,0
+2020-03-08,06111,Ventura County,0.0,0.0,0
+2020-03-08,06037,Los Angeles County,14.0,0.0,0
+2020-03-08,06097,Sonoma County,1.0,0.0,0
+2020-03-08,06031,Kings County,0.0,0.0,0
+2020-03-08,06073,San Diego County,3.0,0.0,0
+2020-03-08,06061,Placer County,5.0,1.0,0
+2020-03-08,06075,San Francisco County,9.0,0.0,0
+2020-03-08,06041,Marin County,0.0,0.0,0
+2020-03-08,06043,Mariposa County,0.0,0.0,0
+2020-03-08,06035,Lassen County,0.0,0.0,0
+2020-03-08,06055,Napa County,0.0,0.0,0
+2020-03-08,06089,Shasta County,0.0,0.0,0
+2020-03-08,06053,Monterey County,0.0,0.0,0
+2020-03-08,06105,Trinity County,0.0,0.0,0
+2020-03-08,06045,Mendocino County,0.0,0.0,0
+2020-03-08,06027,Inyo County,0.0,0.0,0
+2020-03-08,06051,Mono County,0.0,0.0,0
+2020-03-08,06109,Tuolumne County,0.0,0.0,0
+2020-03-08,06095,Solano County,0.0,0.0,0
+2020-03-08,06071,San Bernardino County,0.0,0.0,0
+2020-03-08,06013,Contra Costa County,9.0,0.0,0
+2020-03-08,06003,Alpine County,0.0,0.0,0
+2020-03-08,06017,El Dorado County,0.0,0.0,0
+2020-03-08,06113,Yolo County,1.0,0.0,0
+2020-03-08,06115,Yuba County,0.0,0.0,0
+2020-03-08,06069,San Benito County,2.0,0.0,0
+2020-03-08,06023,Humboldt County,1.0,0.0,0
+2020-03-08,06065,Riverside County,1.0,0.0,0
+2020-03-08,06029,Kern County,0.0,0.0,0
+2020-03-08,06011,Colusa County,0.0,0.0,0
+2020-03-08,06015,Del Norte County,0.0,0.0,0
+2020-03-08,06049,Modoc County,0.0,0.0,0
+2020-03-08,06019,Fresno County,1.0,0.0,0
+2020-03-08,06039,Madera County,1.0,0.0,0
+2020-03-08,06085,Santa Clara County,38.0,0.0,0
+2020-03-08,06103,Tehama County,0.0,0.0,0
+2020-03-08,06077,San Joaquin County,0.0,0.0,0
+2020-03-08,06001,Alameda County,2.0,0.0,0
+2020-03-08,06057,Nevada County,0.0,0.0,0
+2020-03-08,06007,Butte County,0.0,0.0,0
+2020-03-08,06047,Merced County,0.0,0.0,0
+2020-03-08,06107,Tulare County,0.0,0.0,0
+2020-03-08,06099,Stanislaus County,0.0,0.0,0
+2020-03-08,06059,Orange County,3.0,0.0,0
+2020-03-08,06025,Imperial County,0.0,0.0,0
+2020-03-08,06101,Sutter County,0.0,0.0,0
+2020-03-08,06005,Amador County,0.0,0.0,0
+2020-03-08,06033,Lake County,0.0,0.0,0
+2020-03-08,06063,Plumas County,0.0,0.0,0
+2020-03-08,06081,San Mateo County,2.0,0.0,0
+2020-03-08,06093,Siskiyou County,0.0,0.0,0
+2020-03-08,06087,Santa Cruz County,0.0,0.0,0
+2020-03-08,06021,Glenn County,0.0,0.0,0
+2020-03-08,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-09,06091,Sierra County,0.0,0.0,0
+2020-03-09,06067,Sacramento County,10.0,0.0,0
+2020-03-09,06083,Santa Barbara County,0.0,0.0,0
+2020-03-09,06009,Calaveras County,0.0,0.0,0
+2020-03-09,06111,Ventura County,1.0,0.0,0
+2020-03-09,06037,Los Angeles County,20.0,0.0,0
+2020-03-09,06097,Sonoma County,3.0,0.0,0
+2020-03-09,06031,Kings County,0.0,0.0,0
+2020-03-09,06073,San Diego County,3.0,0.0,0
+2020-03-09,06061,Placer County,7.0,1.0,0
+2020-03-09,06075,San Francisco County,15.0,0.0,0
+2020-03-09,06041,Marin County,0.0,0.0,0
+2020-03-09,06043,Mariposa County,0.0,0.0,0
+2020-03-09,06035,Lassen County,0.0,0.0,0
+2020-03-09,06055,Napa County,0.0,0.0,0
+2020-03-09,06089,Shasta County,1.0,0.0,0
+2020-03-09,06053,Monterey County,0.0,0.0,0
+2020-03-09,06105,Trinity County,0.0,0.0,0
+2020-03-09,06045,Mendocino County,0.0,0.0,0
+2020-03-09,06027,Inyo County,0.0,0.0,0
+2020-03-09,06051,Mono County,0.0,0.0,0
+2020-03-09,06109,Tuolumne County,0.0,0.0,0
+2020-03-09,06095,Solano County,3.0,0.0,0
+2020-03-09,06071,San Bernardino County,0.0,0.0,0
+2020-03-09,06013,Contra Costa County,9.0,0.0,0
+2020-03-09,06003,Alpine County,0.0,0.0,0
+2020-03-09,06017,El Dorado County,0.0,0.0,0
+2020-03-09,06113,Yolo County,1.0,0.0,0
+2020-03-09,06115,Yuba County,0.0,0.0,0
+2020-03-09,06069,San Benito County,2.0,0.0,0
+2020-03-09,06023,Humboldt County,1.0,0.0,0
+2020-03-09,06065,Riverside County,6.0,0.0,0
+2020-03-09,06029,Kern County,0.0,0.0,0
+2020-03-09,06011,Colusa County,0.0,0.0,0
+2020-03-09,06015,Del Norte County,0.0,0.0,0
+2020-03-09,06049,Modoc County,0.0,0.0,0
+2020-03-09,06019,Fresno County,1.0,0.0,0
+2020-03-09,06039,Madera County,1.0,0.0,0
+2020-03-09,06085,Santa Clara County,43.0,1.0,0
+2020-03-09,06103,Tehama County,0.0,0.0,0
+2020-03-09,06077,San Joaquin County,0.0,0.0,0
+2020-03-09,06001,Alameda County,3.0,0.0,0
+2020-03-09,06057,Nevada County,0.0,0.0,0
+2020-03-09,06007,Butte County,0.0,0.0,0
+2020-03-09,06047,Merced County,0.0,0.0,0
+2020-03-09,06107,Tulare County,0.0,0.0,0
+2020-03-09,06099,Stanislaus County,0.0,0.0,0
+2020-03-09,06059,Orange County,5.0,0.0,0
+2020-03-09,06025,Imperial County,0.0,0.0,0
+2020-03-09,06101,Sutter County,0.0,0.0,0
+2020-03-09,06005,Amador County,0.0,0.0,0
+2020-03-09,06033,Lake County,0.0,0.0,0
+2020-03-09,06063,Plumas County,0.0,0.0,0
+2020-03-09,06081,San Mateo County,9.0,0.0,0
+2020-03-09,06093,Siskiyou County,0.0,0.0,0
+2020-03-09,06087,Santa Cruz County,2.0,0.0,0
+2020-03-09,06021,Glenn County,0.0,0.0,0
+2020-03-09,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-10,06091,Sierra County,0.0,0.0,0
+2020-03-10,06067,Sacramento County,10.0,1.0,0
+2020-03-10,06083,Santa Barbara County,0.0,0.0,0
+2020-03-10,06009,Calaveras County,0.0,0.0,0
+2020-03-10,06111,Ventura County,1.0,0.0,0
+2020-03-10,06037,Los Angeles County,20.0,0.0,0
+2020-03-10,06097,Sonoma County,3.0,0.0,0
+2020-03-10,06031,Kings County,0.0,0.0,0
+2020-03-10,06073,San Diego County,3.0,0.0,0
+2020-03-10,06061,Placer County,7.0,1.0,0
+2020-03-10,06075,San Francisco County,15.0,0.0,0
+2020-03-10,06041,Marin County,0.0,0.0,0
+2020-03-10,06043,Mariposa County,0.0,0.0,0
+2020-03-10,06035,Lassen County,0.0,0.0,0
+2020-03-10,06055,Napa County,0.0,0.0,0
+2020-03-10,06089,Shasta County,1.0,0.0,0
+2020-03-10,06053,Monterey County,0.0,0.0,0
+2020-03-10,06105,Trinity County,0.0,0.0,0
+2020-03-10,06045,Mendocino County,0.0,0.0,0
+2020-03-10,06027,Inyo County,0.0,0.0,0
+2020-03-10,06051,Mono County,0.0,0.0,0
+2020-03-10,06109,Tuolumne County,0.0,0.0,0
+2020-03-10,06095,Solano County,6.0,0.0,0
+2020-03-10,06071,San Bernardino County,0.0,0.0,0
+2020-03-10,06013,Contra Costa County,10.0,0.0,0
+2020-03-10,06003,Alpine County,0.0,0.0,0
+2020-03-10,06017,El Dorado County,0.0,0.0,0
+2020-03-10,06113,Yolo County,1.0,0.0,0
+2020-03-10,06115,Yuba County,0.0,0.0,0
+2020-03-10,06069,San Benito County,2.0,0.0,0
+2020-03-10,06023,Humboldt County,1.0,0.0,0
+2020-03-10,06065,Riverside County,8.0,0.0,0
+2020-03-10,06029,Kern County,0.0,0.0,0
+2020-03-10,06011,Colusa County,0.0,0.0,0
+2020-03-10,06015,Del Norte County,0.0,0.0,0
+2020-03-10,06049,Modoc County,0.0,0.0,0
+2020-03-10,06019,Fresno County,1.0,0.0,0
+2020-03-10,06039,Madera County,1.0,0.0,0
+2020-03-10,06085,Santa Clara County,43.0,1.0,0
+2020-03-10,06103,Tehama County,0.0,0.0,0
+2020-03-10,06077,San Joaquin County,0.0,0.0,0
+2020-03-10,06001,Alameda County,3.0,0.0,0
+2020-03-10,06057,Nevada County,0.0,0.0,0
+2020-03-10,06007,Butte County,0.0,0.0,0
+2020-03-10,06047,Merced County,0.0,0.0,0
+2020-03-10,06107,Tulare County,0.0,0.0,0
+2020-03-10,06099,Stanislaus County,0.0,0.0,0
+2020-03-10,06059,Orange County,5.0,0.0,0
+2020-03-10,06025,Imperial County,0.0,0.0,0
+2020-03-10,06101,Sutter County,0.0,0.0,0
+2020-03-10,06005,Amador County,0.0,0.0,0
+2020-03-10,06033,Lake County,0.0,0.0,0
+2020-03-10,06063,Plumas County,0.0,0.0,0
+2020-03-10,06081,San Mateo County,15.0,0.0,0
+2020-03-10,06093,Siskiyou County,0.0,0.0,0
+2020-03-10,06087,Santa Cruz County,2.0,0.0,0
+2020-03-10,06021,Glenn County,0.0,0.0,0
+2020-03-10,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-11,06091,Sierra County,0.0,0.0,0
+2020-03-11,06067,Sacramento County,10.0,1.0,0
+2020-03-11,06083,Santa Barbara County,0.0,0.0,0
+2020-03-11,06009,Calaveras County,0.0,0.0,0
+2020-03-11,06111,Ventura County,2.0,0.0,0
+2020-03-11,06037,Los Angeles County,29.0,1.0,0
+2020-03-11,06097,Sonoma County,3.0,0.0,0
+2020-03-11,06031,Kings County,0.0,0.0,0
+2020-03-11,06073,San Diego County,3.0,0.0,0
+2020-03-11,06061,Placer County,7.0,1.0,0
+2020-03-11,06075,San Francisco County,18.0,0.0,0
+2020-03-11,06041,Marin County,16.0,0.0,0
+2020-03-11,06043,Mariposa County,0.0,0.0,0
+2020-03-11,06035,Lassen County,0.0,0.0,0
+2020-03-11,06055,Napa County,0.0,0.0,0
+2020-03-11,06089,Shasta County,1.0,0.0,0
+2020-03-11,06053,Monterey County,0.0,0.0,0
+2020-03-11,06105,Trinity County,0.0,0.0,0
+2020-03-11,06045,Mendocino County,0.0,0.0,0
+2020-03-11,06027,Inyo County,0.0,0.0,0
+2020-03-11,06051,Mono County,0.0,0.0,0
+2020-03-11,06109,Tuolumne County,0.0,0.0,0
+2020-03-11,06095,Solano County,6.0,0.0,0
+2020-03-11,06071,San Bernardino County,0.0,0.0,0
+2020-03-11,06013,Contra Costa County,10.0,0.0,0
+2020-03-11,06003,Alpine County,0.0,0.0,0
+2020-03-11,06017,El Dorado County,0.0,0.0,0
+2020-03-11,06113,Yolo County,1.0,0.0,0
+2020-03-11,06115,Yuba County,0.0,0.0,0
+2020-03-11,06069,San Benito County,2.0,0.0,0
+2020-03-11,06023,Humboldt County,1.0,0.0,0
+2020-03-11,06065,Riverside County,8.0,0.0,0
+2020-03-11,06029,Kern County,0.0,0.0,0
+2020-03-11,06011,Colusa County,0.0,0.0,0
+2020-03-11,06015,Del Norte County,0.0,0.0,0
+2020-03-11,06049,Modoc County,0.0,0.0,0
+2020-03-11,06019,Fresno County,1.0,0.0,0
+2020-03-11,06039,Madera County,1.0,0.0,0
+2020-03-11,06085,Santa Clara County,48.0,1.0,0
+2020-03-11,06103,Tehama County,0.0,0.0,0
+2020-03-11,06077,San Joaquin County,0.0,0.0,0
+2020-03-11,06001,Alameda County,4.0,0.0,0
+2020-03-11,06057,Nevada County,0.0,0.0,0
+2020-03-11,06007,Butte County,0.0,0.0,0
+2020-03-11,06047,Merced County,0.0,0.0,0
+2020-03-11,06107,Tulare County,0.0,0.0,0
+2020-03-11,06099,Stanislaus County,0.0,0.0,0
+2020-03-11,06059,Orange County,6.0,0.0,0
+2020-03-11,06025,Imperial County,16.0,0.0,0
+2020-03-11,06101,Sutter County,0.0,0.0,0
+2020-03-11,06005,Amador County,0.0,0.0,0
+2020-03-11,06033,Lake County,0.0,0.0,0
+2020-03-11,06063,Plumas County,0.0,0.0,0
+2020-03-11,06081,San Mateo County,15.0,0.0,0
+2020-03-11,06093,Siskiyou County,0.0,0.0,0
+2020-03-11,06087,Santa Cruz County,2.0,0.0,0
+2020-03-11,06021,Glenn County,0.0,0.0,0
+2020-03-11,06079,San Luis Obispo County,16.0,0.0,0
+2020-03-12,06091,Sierra County,0.0,0.0,0
+2020-03-12,06067,Sacramento County,10.0,1.0,0
+2020-03-12,06083,Santa Barbara County,0.0,0.0,0
+2020-03-12,06009,Calaveras County,0.0,0.0,0
+2020-03-12,06111,Ventura County,2.0,0.0,0
+2020-03-12,06037,Los Angeles County,29.0,1.0,0
+2020-03-12,06097,Sonoma County,3.0,0.0,0
+2020-03-12,06031,Kings County,0.0,0.0,0
+2020-03-12,06073,San Diego County,3.0,0.0,0
+2020-03-12,06061,Placer County,7.0,1.0,0
+2020-03-12,06075,San Francisco County,18.0,0.0,0
+2020-03-12,06041,Marin County,16.0,0.0,0
+2020-03-12,06043,Mariposa County,0.0,0.0,0
+2020-03-12,06035,Lassen County,0.0,0.0,0
+2020-03-12,06055,Napa County,0.0,0.0,0
+2020-03-12,06089,Shasta County,1.0,0.0,0
+2020-03-12,06053,Monterey County,0.0,0.0,0
+2020-03-12,06105,Trinity County,0.0,0.0,0
+2020-03-12,06045,Mendocino County,0.0,0.0,0
+2020-03-12,06027,Inyo County,0.0,0.0,0
+2020-03-12,06051,Mono County,0.0,0.0,0
+2020-03-12,06109,Tuolumne County,0.0,0.0,0
+2020-03-12,06095,Solano County,6.0,0.0,0
+2020-03-12,06071,San Bernardino County,0.0,0.0,0
+2020-03-12,06013,Contra Costa County,10.0,0.0,0
+2020-03-12,06003,Alpine County,0.0,0.0,0
+2020-03-12,06017,El Dorado County,0.0,0.0,0
+2020-03-12,06113,Yolo County,1.0,0.0,0
+2020-03-12,06115,Yuba County,0.0,0.0,0
+2020-03-12,06069,San Benito County,2.0,0.0,0
+2020-03-12,06023,Humboldt County,1.0,0.0,0
+2020-03-12,06065,Riverside County,8.0,0.0,0
+2020-03-12,06029,Kern County,0.0,0.0,0
+2020-03-12,06011,Colusa County,0.0,0.0,0
+2020-03-12,06015,Del Norte County,0.0,0.0,0
+2020-03-12,06049,Modoc County,0.0,0.0,0
+2020-03-12,06019,Fresno County,1.0,0.0,0
+2020-03-12,06039,Madera County,1.0,0.0,0
+2020-03-12,06085,Santa Clara County,48.0,1.0,0
+2020-03-12,06103,Tehama County,0.0,0.0,0
+2020-03-12,06077,San Joaquin County,0.0,0.0,0
+2020-03-12,06001,Alameda County,4.0,0.0,0
+2020-03-12,06057,Nevada County,0.0,0.0,0
+2020-03-12,06007,Butte County,0.0,0.0,0
+2020-03-12,06047,Merced County,0.0,0.0,0
+2020-03-12,06107,Tulare County,1.0,0.0,0
+2020-03-12,06099,Stanislaus County,2.0,0.0,0
+2020-03-12,06059,Orange County,6.0,0.0,0
+2020-03-12,06025,Imperial County,16.0,0.0,0
+2020-03-12,06101,Sutter County,0.0,0.0,0
+2020-03-12,06005,Amador County,0.0,0.0,0
+2020-03-12,06033,Lake County,0.0,0.0,0
+2020-03-12,06063,Plumas County,0.0,0.0,0
+2020-03-12,06081,San Mateo County,15.0,0.0,0
+2020-03-12,06093,Siskiyou County,0.0,0.0,0
+2020-03-12,06087,Santa Cruz County,2.0,0.0,0
+2020-03-12,06021,Glenn County,0.0,0.0,0
+2020-03-12,06079,San Luis Obispo County,16.0,0.0,0
+2020-03-13,06091,Sierra County,0.0,0.0,0
+2020-03-13,06067,Sacramento County,17.0,1.0,0
+2020-03-13,06083,Santa Barbara County,0.0,0.0,0
+2020-03-13,06009,Calaveras County,2.0,0.0,0
+2020-03-13,06111,Ventura County,3.0,0.0,0
+2020-03-13,06037,Los Angeles County,40.0,1.0,0
+2020-03-13,06097,Sonoma County,3.0,0.0,0
+2020-03-13,06031,Kings County,0.0,0.0,0
+2020-03-13,06073,San Diego County,8.0,0.0,0
+2020-03-13,06061,Placer County,7.0,1.0,0
+2020-03-13,06075,San Francisco County,23.0,0.0,0
+2020-03-13,06041,Marin County,0.0,0.0,0
+2020-03-13,06043,Mariposa County,0.0,0.0,0
+2020-03-13,06035,Lassen County,0.0,0.0,0
+2020-03-13,06055,Napa County,0.0,0.0,0
+2020-03-13,06089,Shasta County,1.0,0.0,0
+2020-03-13,06053,Monterey County,0.0,0.0,0
+2020-03-13,06105,Trinity County,0.0,0.0,0
+2020-03-13,06045,Mendocino County,0.0,0.0,0
+2020-03-13,06027,Inyo County,0.0,0.0,0
+2020-03-13,06051,Mono County,0.0,0.0,0
+2020-03-13,06109,Tuolumne County,0.0,0.0,0
+2020-03-13,06095,Solano County,6.0,0.0,0
+2020-03-13,06071,San Bernardino County,0.0,0.0,0
+2020-03-13,06013,Contra Costa County,25.0,0.0,0
+2020-03-13,06003,Alpine County,0.0,0.0,0
+2020-03-13,06017,El Dorado County,0.0,0.0,0
+2020-03-13,06113,Yolo County,2.0,0.0,0
+2020-03-13,06115,Yuba County,0.0,0.0,0
+2020-03-13,06069,San Benito County,3.0,0.0,0
+2020-03-13,06023,Humboldt County,1.0,0.0,0
+2020-03-13,06065,Riverside County,8.0,0.0,0
+2020-03-13,06029,Kern County,0.0,0.0,0
+2020-03-13,06011,Colusa County,0.0,0.0,0
+2020-03-13,06015,Del Norte County,0.0,0.0,0
+2020-03-13,06049,Modoc County,0.0,0.0,0
+2020-03-13,06019,Fresno County,1.0,0.0,0
+2020-03-13,06039,Madera County,1.0,0.0,0
+2020-03-13,06085,Santa Clara County,79.0,1.0,0
+2020-03-13,06103,Tehama County,0.0,0.0,0
+2020-03-13,06077,San Joaquin County,3.0,0.0,0
+2020-03-13,06001,Alameda County,7.0,0.0,0
+2020-03-13,06057,Nevada County,0.0,0.0,0
+2020-03-13,06007,Butte County,0.0,0.0,0
+2020-03-13,06047,Merced County,0.0,0.0,0
+2020-03-13,06107,Tulare County,2.0,0.0,0
+2020-03-13,06099,Stanislaus County,2.0,0.0,0
+2020-03-13,06059,Orange County,13.0,0.0,0
+2020-03-13,06025,Imperial County,0.0,0.0,0
+2020-03-13,06101,Sutter County,0.0,0.0,0
+2020-03-13,06005,Amador County,0.0,0.0,0
+2020-03-13,06033,Lake County,0.0,0.0,0
+2020-03-13,06063,Plumas County,0.0,0.0,0
+2020-03-13,06081,San Mateo County,20.0,0.0,0
+2020-03-13,06093,Siskiyou County,0.0,0.0,0
+2020-03-13,06087,Santa Cruz County,7.0,0.0,0
+2020-03-13,06021,Glenn County,0.0,0.0,0
+2020-03-13,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-14,06091,Sierra County,0.0,0.0,0
+2020-03-14,06067,Sacramento County,29.0,1.0,0
+2020-03-14,06083,Santa Barbara County,0.0,0.0,0
+2020-03-14,06009,Calaveras County,2.0,0.0,0
+2020-03-14,06111,Ventura County,4.0,0.0,0
+2020-03-14,06037,Los Angeles County,53.0,1.0,0
+2020-03-14,06097,Sonoma County,3.0,0.0,0
+2020-03-14,06031,Kings County,0.0,0.0,0
+2020-03-14,06073,San Diego County,8.0,0.0,0
+2020-03-14,06061,Placer County,8.0,1.0,0
+2020-03-14,06075,San Francisco County,28.0,0.0,0
+2020-03-14,06041,Marin County,0.0,0.0,0
+2020-03-14,06043,Mariposa County,0.0,0.0,0
+2020-03-14,06035,Lassen County,0.0,0.0,0
+2020-03-14,06055,Napa County,0.0,0.0,0
+2020-03-14,06089,Shasta County,1.0,0.0,0
+2020-03-14,06053,Monterey County,0.0,0.0,0
+2020-03-14,06105,Trinity County,0.0,0.0,0
+2020-03-14,06045,Mendocino County,0.0,0.0,0
+2020-03-14,06027,Inyo County,0.0,0.0,0
+2020-03-14,06051,Mono County,0.0,0.0,0
+2020-03-14,06109,Tuolumne County,0.0,0.0,0
+2020-03-14,06095,Solano County,6.0,0.0,0
+2020-03-14,06071,San Bernardino County,0.0,0.0,0
+2020-03-14,06013,Contra Costa County,29.0,0.0,0
+2020-03-14,06003,Alpine County,0.0,0.0,0
+2020-03-14,06017,El Dorado County,0.0,0.0,0
+2020-03-14,06113,Yolo County,2.0,0.0,0
+2020-03-14,06115,Yuba County,0.0,0.0,0
+2020-03-14,06069,San Benito County,3.0,0.0,0
+2020-03-14,06023,Humboldt County,1.0,0.0,0
+2020-03-14,06065,Riverside County,8.0,0.0,0
+2020-03-14,06029,Kern County,0.0,0.0,0
+2020-03-14,06011,Colusa County,0.0,0.0,0
+2020-03-14,06015,Del Norte County,0.0,0.0,0
+2020-03-14,06049,Modoc County,0.0,0.0,0
+2020-03-14,06019,Fresno County,2.0,0.0,0
+2020-03-14,06039,Madera County,1.0,0.0,0
+2020-03-14,06085,Santa Clara County,91.0,1.0,0
+2020-03-14,06103,Tehama County,0.0,0.0,0
+2020-03-14,06077,San Joaquin County,8.0,0.0,0
+2020-03-14,06001,Alameda County,7.0,0.0,0
+2020-03-14,06057,Nevada County,0.0,0.0,0
+2020-03-14,06007,Butte County,0.0,0.0,0
+2020-03-14,06047,Merced County,0.0,0.0,0
+2020-03-14,06107,Tulare County,2.0,0.0,0
+2020-03-14,06099,Stanislaus County,2.0,0.0,0
+2020-03-14,06059,Orange County,14.0,0.0,0
+2020-03-14,06025,Imperial County,0.0,0.0,0
+2020-03-14,06101,Sutter County,0.0,0.0,0
+2020-03-14,06005,Amador County,0.0,0.0,0
+2020-03-14,06033,Lake County,0.0,0.0,0
+2020-03-14,06063,Plumas County,0.0,0.0,0
+2020-03-14,06081,San Mateo County,32.0,0.0,0
+2020-03-14,06093,Siskiyou County,0.0,0.0,0
+2020-03-14,06087,Santa Cruz County,7.0,0.0,0
+2020-03-14,06021,Glenn County,0.0,0.0,0
+2020-03-14,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-15,06091,Sierra County,0.0,0.0,0
+2020-03-15,06067,Sacramento County,32.0,1.0,0
+2020-03-15,06083,Santa Barbara County,1.0,0.0,0
+2020-03-15,06009,Calaveras County,2.0,0.0,0
+2020-03-15,06111,Ventura County,4.0,0.0,0
+2020-03-15,06037,Los Angeles County,69.0,1.0,0
+2020-03-15,06097,Sonoma County,5.0,0.0,0
+2020-03-15,06031,Kings County,0.0,0.0,0
+2020-03-15,06073,San Diego County,39.0,0.0,0
+2020-03-15,06061,Placer County,8.0,1.0,0
+2020-03-15,06075,San Francisco County,37.0,0.0,0
+2020-03-15,06041,Marin County,4.0,0.0,0
+2020-03-15,06043,Mariposa County,0.0,0.0,0
+2020-03-15,06035,Lassen County,0.0,0.0,0
+2020-03-15,06055,Napa County,0.0,0.0,0
+2020-03-15,06089,Shasta County,1.0,0.0,0
+2020-03-15,06053,Monterey County,0.0,0.0,0
+2020-03-15,06105,Trinity County,0.0,0.0,0
+2020-03-15,06045,Mendocino County,0.0,0.0,0
+2020-03-15,06027,Inyo County,0.0,0.0,0
+2020-03-15,06051,Mono County,0.0,0.0,0
+2020-03-15,06109,Tuolumne County,0.0,0.0,0
+2020-03-15,06095,Solano County,7.0,0.0,0
+2020-03-15,06071,San Bernardino County,1.0,0.0,0
+2020-03-15,06013,Contra Costa County,29.0,0.0,0
+2020-03-15,06003,Alpine County,0.0,0.0,0
+2020-03-15,06017,El Dorado County,0.0,0.0,0
+2020-03-15,06113,Yolo County,2.0,0.0,0
+2020-03-15,06115,Yuba County,0.0,0.0,0
+2020-03-15,06069,San Benito County,3.0,0.0,0
+2020-03-15,06023,Humboldt County,1.0,0.0,0
+2020-03-15,06065,Riverside County,14.0,0.0,0
+2020-03-15,06029,Kern County,0.0,0.0,0
+2020-03-15,06011,Colusa County,0.0,0.0,0
+2020-03-15,06015,Del Norte County,0.0,0.0,0
+2020-03-15,06049,Modoc County,0.0,0.0,0
+2020-03-15,06019,Fresno County,2.0,0.0,0
+2020-03-15,06039,Madera County,1.0,0.0,0
+2020-03-15,06085,Santa Clara County,114.0,2.0,0
+2020-03-15,06103,Tehama County,0.0,0.0,0
+2020-03-15,06077,San Joaquin County,8.0,0.0,0
+2020-03-15,06001,Alameda County,15.0,0.0,0
+2020-03-15,06057,Nevada County,0.0,0.0,0
+2020-03-15,06007,Butte County,0.0,0.0,0
+2020-03-15,06047,Merced County,0.0,0.0,0
+2020-03-15,06107,Tulare County,2.0,0.0,0
+2020-03-15,06099,Stanislaus County,2.0,0.0,0
+2020-03-15,06059,Orange County,17.0,0.0,0
+2020-03-15,06025,Imperial County,0.0,0.0,0
+2020-03-15,06101,Sutter County,0.0,0.0,0
+2020-03-15,06005,Amador County,0.0,0.0,0
+2020-03-15,06033,Lake County,0.0,0.0,0
+2020-03-15,06063,Plumas County,0.0,0.0,0
+2020-03-15,06081,San Mateo County,32.0,1.0,0
+2020-03-15,06093,Siskiyou County,0.0,0.0,0
+2020-03-15,06087,Santa Cruz County,7.0,0.0,0
+2020-03-15,06021,Glenn County,0.0,0.0,0
+2020-03-15,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-16,06091,Sierra County,0.0,0.0,0
+2020-03-16,06067,Sacramento County,33.0,2.0,0
+2020-03-16,06083,Santa Barbara County,1.0,0.0,0
+2020-03-16,06009,Calaveras County,2.0,0.0,0
+2020-03-16,06111,Ventura County,4.0,0.0,0
+2020-03-16,06037,Los Angeles County,94.0,1.0,0
+2020-03-16,06097,Sonoma County,6.0,0.0,0
+2020-03-16,06031,Kings County,0.0,0.0,0
+2020-03-16,06073,San Diego County,53.0,0.0,0
+2020-03-16,06061,Placer County,8.0,1.0,0
+2020-03-16,06075,San Francisco County,40.0,0.0,0
+2020-03-16,06041,Marin County,9.0,0.0,0
+2020-03-16,06043,Mariposa County,0.0,0.0,0
+2020-03-16,06035,Lassen County,0.0,0.0,0
+2020-03-16,06055,Napa County,0.0,0.0,0
+2020-03-16,06089,Shasta County,1.0,0.0,0
+2020-03-16,06053,Monterey County,0.0,0.0,0
+2020-03-16,06105,Trinity County,0.0,0.0,0
+2020-03-16,06045,Mendocino County,0.0,0.0,0
+2020-03-16,06027,Inyo County,0.0,0.0,0
+2020-03-16,06051,Mono County,0.0,0.0,0
+2020-03-16,06109,Tuolumne County,0.0,0.0,0
+2020-03-16,06095,Solano County,8.0,0.0,0
+2020-03-16,06071,San Bernardino County,2.0,0.0,0
+2020-03-16,06013,Contra Costa County,34.0,0.0,0
+2020-03-16,06003,Alpine County,0.0,0.0,0
+2020-03-16,06017,El Dorado County,0.0,0.0,0
+2020-03-16,06113,Yolo County,2.0,0.0,0
+2020-03-16,06115,Yuba County,0.0,0.0,0
+2020-03-16,06069,San Benito County,3.0,0.0,0
+2020-03-16,06023,Humboldt County,1.0,0.0,0
+2020-03-16,06065,Riverside County,15.0,2.0,0
+2020-03-16,06029,Kern County,0.0,0.0,0
+2020-03-16,06011,Colusa County,0.0,0.0,0
+2020-03-16,06015,Del Norte County,0.0,0.0,0
+2020-03-16,06049,Modoc County,0.0,0.0,0
+2020-03-16,06019,Fresno County,2.0,0.0,0
+2020-03-16,06039,Madera County,1.0,0.0,0
+2020-03-16,06085,Santa Clara County,138.0,4.0,0
+2020-03-16,06103,Tehama County,0.0,0.0,0
+2020-03-16,06077,San Joaquin County,9.0,0.0,0
+2020-03-16,06001,Alameda County,18.0,0.0,0
+2020-03-16,06057,Nevada County,1.0,0.0,0
+2020-03-16,06007,Butte County,0.0,0.0,0
+2020-03-16,06047,Merced County,0.0,0.0,0
+2020-03-16,06107,Tulare County,3.0,0.0,0
+2020-03-16,06099,Stanislaus County,3.0,0.0,0
+2020-03-16,06059,Orange County,22.0,0.0,0
+2020-03-16,06025,Imperial County,0.0,0.0,0
+2020-03-16,06101,Sutter County,0.0,0.0,0
+2020-03-16,06005,Amador County,1.0,0.0,0
+2020-03-16,06033,Lake County,0.0,0.0,0
+2020-03-16,06063,Plumas County,0.0,0.0,0
+2020-03-16,06081,San Mateo County,41.0,1.0,0
+2020-03-16,06093,Siskiyou County,0.0,0.0,0
+2020-03-16,06087,Santa Cruz County,9.0,0.0,0
+2020-03-16,06021,Glenn County,0.0,0.0,0
+2020-03-16,06079,San Luis Obispo County,3.0,0.0,0
+2020-03-17,06091,Sierra County,0.0,0.0,0
+2020-03-17,06067,Sacramento County,40.0,2.0,0
+2020-03-17,06083,Santa Barbara County,1.0,0.0,0
+2020-03-17,06009,Calaveras County,2.0,0.0,0
+2020-03-17,06111,Ventura County,10.0,0.0,0
+2020-03-17,06037,Los Angeles County,144.0,1.0,0
+2020-03-17,06097,Sonoma County,6.0,0.0,0
+2020-03-17,06031,Kings County,0.0,0.0,0
+2020-03-17,06073,San Diego County,58.0,0.0,0
+2020-03-17,06061,Placer County,8.0,1.0,0
+2020-03-17,06075,San Francisco County,43.0,0.0,0
+2020-03-17,06041,Marin County,15.0,0.0,0
+2020-03-17,06043,Mariposa County,0.0,0.0,0
+2020-03-17,06035,Lassen County,0.0,0.0,0
+2020-03-17,06055,Napa County,0.0,0.0,0
+2020-03-17,06089,Shasta County,1.0,0.0,0
+2020-03-17,06053,Monterey County,0.0,0.0,0
+2020-03-17,06105,Trinity County,0.0,0.0,0
+2020-03-17,06045,Mendocino County,0.0,0.0,0
+2020-03-17,06027,Inyo County,0.0,0.0,0
+2020-03-17,06051,Mono County,0.0,0.0,0
+2020-03-17,06109,Tuolumne County,0.0,0.0,0
+2020-03-17,06095,Solano County,8.0,0.0,0
+2020-03-17,06071,San Bernardino County,2.0,0.0,0
+2020-03-17,06013,Contra Costa County,39.0,0.0,0
+2020-03-17,06003,Alpine County,0.0,0.0,0
+2020-03-17,06017,El Dorado County,0.0,0.0,0
+2020-03-17,06113,Yolo County,4.0,0.0,0
+2020-03-17,06115,Yuba County,0.0,0.0,0
+2020-03-17,06069,San Benito County,5.0,1.0,0
+2020-03-17,06023,Humboldt County,1.0,0.0,0
+2020-03-17,06065,Riverside County,16.0,3.0,0
+2020-03-17,06029,Kern County,0.0,0.0,0
+2020-03-17,06011,Colusa County,0.0,0.0,0
+2020-03-17,06015,Del Norte County,0.0,0.0,0
+2020-03-17,06049,Modoc County,0.0,0.0,0
+2020-03-17,06019,Fresno County,2.0,0.0,0
+2020-03-17,06039,Madera County,1.0,0.0,0
+2020-03-17,06085,Santa Clara County,155.0,5.0,0
+2020-03-17,06103,Tehama County,0.0,0.0,0
+2020-03-17,06077,San Joaquin County,9.0,0.0,0
+2020-03-17,06001,Alameda County,27.0,0.0,0
+2020-03-17,06057,Nevada County,1.0,0.0,0
+2020-03-17,06007,Butte County,0.0,0.0,0
+2020-03-17,06047,Merced County,0.0,0.0,0
+2020-03-17,06107,Tulare County,3.0,0.0,0
+2020-03-17,06099,Stanislaus County,4.0,0.0,0
+2020-03-17,06059,Orange County,29.0,0.0,0
+2020-03-17,06025,Imperial County,2.0,0.0,0
+2020-03-17,06101,Sutter County,0.0,0.0,0
+2020-03-17,06005,Amador County,1.0,0.0,0
+2020-03-17,06033,Lake County,0.0,0.0,0
+2020-03-17,06063,Plumas County,0.0,0.0,0
+2020-03-17,06081,San Mateo County,64.0,1.0,0
+2020-03-17,06093,Siskiyou County,0.0,0.0,0
+2020-03-17,06087,Santa Cruz County,13.0,0.0,0
+2020-03-17,06021,Glenn County,0.0,0.0,0
+2020-03-17,06079,San Luis Obispo County,6.0,0.0,0
+2020-03-18,06091,Sierra County,0.0,0.0,0
+2020-03-18,06067,Sacramento County,40.0,2.0,0
+2020-03-18,06083,Santa Barbara County,3.0,0.0,0
+2020-03-18,06009,Calaveras County,2.0,0.0,0
+2020-03-18,06111,Ventura County,13.0,0.0,0
+2020-03-18,06037,Los Angeles County,190.0,1.0,0
+2020-03-18,06097,Sonoma County,8.0,0.0,0
+2020-03-18,06031,Kings County,0.0,0.0,0
+2020-03-18,06073,San Diego County,75.0,0.0,0
+2020-03-18,06061,Placer County,9.0,1.0,0
+2020-03-18,06075,San Francisco County,51.0,0.0,0
+2020-03-18,06041,Marin County,15.0,0.0,0
+2020-03-18,06043,Mariposa County,0.0,0.0,0
+2020-03-18,06035,Lassen County,0.0,0.0,0
+2020-03-18,06055,Napa County,0.0,0.0,0
+2020-03-18,06089,Shasta County,1.0,0.0,0
+2020-03-18,06053,Monterey County,2.0,0.0,0
+2020-03-18,06105,Trinity County,0.0,0.0,0
+2020-03-18,06045,Mendocino County,1.0,0.0,0
+2020-03-18,06027,Inyo County,0.0,0.0,0
+2020-03-18,06051,Mono County,0.0,0.0,0
+2020-03-18,06109,Tuolumne County,0.0,0.0,0
+2020-03-18,06095,Solano County,8.0,0.0,0
+2020-03-18,06071,San Bernardino County,5.0,0.0,0
+2020-03-18,06013,Contra Costa County,41.0,0.0,0
+2020-03-18,06003,Alpine County,0.0,0.0,0
+2020-03-18,06017,El Dorado County,0.0,0.0,0
+2020-03-18,06113,Yolo County,5.0,0.0,0
+2020-03-18,06115,Yuba County,0.0,0.0,0
+2020-03-18,06069,San Benito County,5.0,1.0,0
+2020-03-18,06023,Humboldt County,1.0,0.0,0
+2020-03-18,06065,Riverside County,16.0,3.0,0
+2020-03-18,06029,Kern County,0.0,0.0,0
+2020-03-18,06011,Colusa County,0.0,0.0,0
+2020-03-18,06015,Del Norte County,0.0,0.0,0
+2020-03-18,06049,Modoc County,0.0,0.0,0
+2020-03-18,06019,Fresno County,3.0,0.0,0
+2020-03-18,06039,Madera County,1.0,0.0,0
+2020-03-18,06085,Santa Clara County,175.0,6.0,0
+2020-03-18,06103,Tehama County,0.0,0.0,0
+2020-03-18,06077,San Joaquin County,14.0,2.0,0
+2020-03-18,06001,Alameda County,31.0,0.0,0
+2020-03-18,06057,Nevada County,1.0,0.0,0
+2020-03-18,06007,Butte County,0.0,0.0,0
+2020-03-18,06047,Merced County,0.0,0.0,0
+2020-03-18,06107,Tulare County,5.0,0.0,0
+2020-03-18,06099,Stanislaus County,5.0,0.0,0
+2020-03-18,06059,Orange County,42.0,0.0,0
+2020-03-18,06025,Imperial County,2.0,0.0,0
+2020-03-18,06101,Sutter County,0.0,0.0,0
+2020-03-18,06005,Amador County,1.0,0.0,0
+2020-03-18,06033,Lake County,0.0,0.0,0
+2020-03-18,06063,Plumas County,0.0,0.0,0
+2020-03-18,06081,San Mateo County,80.0,1.0,0
+2020-03-18,06093,Siskiyou County,0.0,0.0,0
+2020-03-18,06087,Santa Cruz County,13.0,0.0,0
+2020-03-18,06021,Glenn County,0.0,0.0,0
+2020-03-18,06079,San Luis Obispo County,7.0,0.0,0
+2020-03-19,06091,Sierra County,0.0,0.0,0
+2020-03-19,06067,Sacramento County,45.0,3.0,0
+2020-03-19,06083,Santa Barbara County,8.0,0.0,0
+2020-03-19,06009,Calaveras County,2.0,0.0,0
+2020-03-19,06111,Ventura County,17.0,0.0,0
+2020-03-19,06037,Los Angeles County,231.0,2.0,0
+2020-03-19,06097,Sonoma County,9.0,0.0,0
+2020-03-19,06031,Kings County,0.0,0.0,0
+2020-03-19,06073,San Diego County,89.0,0.0,0
+2020-03-19,06061,Placer County,9.0,1.0,0
+2020-03-19,06075,San Francisco County,70.0,0.0,0
+2020-03-19,06041,Marin County,25.0,0.0,0
+2020-03-19,06043,Mariposa County,0.0,0.0,0
+2020-03-19,06035,Lassen County,0.0,0.0,0
+2020-03-19,06055,Napa County,0.0,0.0,0
+2020-03-19,06089,Shasta County,1.0,0.0,0
+2020-03-19,06053,Monterey County,2.0,0.0,0
+2020-03-19,06105,Trinity County,0.0,0.0,0
+2020-03-19,06045,Mendocino County,1.0,0.0,0
+2020-03-19,06027,Inyo County,0.0,0.0,0
+2020-03-19,06051,Mono County,0.0,0.0,0
+2020-03-19,06109,Tuolumne County,0.0,0.0,0
+2020-03-19,06095,Solano County,10.0,0.0,0
+2020-03-19,06071,San Bernardino County,5.0,0.0,0
+2020-03-19,06013,Contra Costa County,42.0,0.0,0
+2020-03-19,06003,Alpine County,0.0,0.0,0
+2020-03-19,06017,El Dorado County,0.0,0.0,0
+2020-03-19,06113,Yolo County,5.0,0.0,0
+2020-03-19,06115,Yuba County,0.0,0.0,0
+2020-03-19,06069,San Benito County,5.0,1.0,0
+2020-03-19,06023,Humboldt County,1.0,0.0,0
+2020-03-19,06065,Riverside County,22.0,3.0,0
+2020-03-19,06029,Kern County,4.0,0.0,0
+2020-03-19,06011,Colusa County,0.0,0.0,0
+2020-03-19,06015,Del Norte County,0.0,0.0,0
+2020-03-19,06049,Modoc County,0.0,0.0,0
+2020-03-19,06019,Fresno County,3.0,0.0,0
+2020-03-19,06039,Madera County,2.0,0.0,0
+2020-03-19,06085,Santa Clara County,189.0,6.0,0
+2020-03-19,06103,Tehama County,0.0,0.0,0
+2020-03-19,06077,San Joaquin County,17.0,2.0,0
+2020-03-19,06001,Alameda County,35.0,0.0,0
+2020-03-19,06057,Nevada County,1.0,0.0,0
+2020-03-19,06007,Butte County,0.0,0.0,0
+2020-03-19,06047,Merced County,0.0,0.0,0
+2020-03-19,06107,Tulare County,7.0,0.0,0
+2020-03-19,06099,Stanislaus County,5.0,0.0,0
+2020-03-19,06059,Orange County,53.0,0.0,0
+2020-03-19,06025,Imperial County,4.0,0.0,0
+2020-03-19,06101,Sutter County,0.0,0.0,0
+2020-03-19,06005,Amador County,1.0,0.0,0
+2020-03-19,06033,Lake County,0.0,0.0,0
+2020-03-19,06063,Plumas County,0.0,0.0,0
+2020-03-19,06081,San Mateo County,97.0,1.0,0
+2020-03-19,06093,Siskiyou County,0.0,0.0,0
+2020-03-19,06087,Santa Cruz County,14.0,0.0,0
+2020-03-19,06021,Glenn County,0.0,0.0,0
+2020-03-19,06079,San Luis Obispo County,13.0,0.0,0
+2020-03-20,06091,Sierra County,0.0,0.0,0
+2020-03-20,06067,Sacramento County,53.0,3.0,0
+2020-03-20,06083,Santa Barbara County,9.0,0.0,0
+2020-03-20,06009,Calaveras County,2.0,0.0,0
+2020-03-20,06111,Ventura County,19.0,0.0,0
+2020-03-20,06037,Los Angeles County,292.0,2.0,0
+2020-03-20,06097,Sonoma County,21.0,1.0,0
+2020-03-20,06031,Kings County,0.0,0.0,0
+2020-03-20,06073,San Diego County,120.0,0.0,0
+2020-03-20,06061,Placer County,9.0,1.0,0
+2020-03-20,06075,San Francisco County,84.0,0.0,0
+2020-03-20,06041,Marin County,38.0,0.0,0
+2020-03-20,06043,Mariposa County,0.0,0.0,0
+2020-03-20,06035,Lassen County,0.0,0.0,0
+2020-03-20,06055,Napa County,0.0,0.0,0
+2020-03-20,06089,Shasta County,1.0,0.0,0
+2020-03-20,06053,Monterey County,5.0,0.0,0
+2020-03-20,06105,Trinity County,0.0,0.0,0
+2020-03-20,06045,Mendocino County,1.0,0.0,0
+2020-03-20,06027,Inyo County,0.0,0.0,0
+2020-03-20,06051,Mono County,1.0,0.0,0
+2020-03-20,06109,Tuolumne County,0.0,0.0,0
+2020-03-20,06095,Solano County,10.0,0.0,0
+2020-03-20,06071,San Bernardino County,9.0,0.0,0
+2020-03-20,06013,Contra Costa County,46.0,1.0,0
+2020-03-20,06003,Alpine County,0.0,0.0,0
+2020-03-20,06017,El Dorado County,1.0,0.0,0
+2020-03-20,06113,Yolo County,6.0,0.0,0
+2020-03-20,06115,Yuba County,0.0,0.0,0
+2020-03-20,06069,San Benito County,5.0,1.0,0
+2020-03-20,06023,Humboldt County,1.0,0.0,0
+2020-03-20,06065,Riverside County,28.0,4.0,0
+2020-03-20,06029,Kern County,4.0,0.0,0
+2020-03-20,06011,Colusa County,0.0,0.0,0
+2020-03-20,06015,Del Norte County,0.0,0.0,0
+2020-03-20,06049,Modoc County,0.0,0.0,0
+2020-03-20,06019,Fresno County,6.0,0.0,0
+2020-03-20,06039,Madera County,2.0,0.0,0
+2020-03-20,06085,Santa Clara County,196.0,8.0,0
+2020-03-20,06103,Tehama County,0.0,0.0,0
+2020-03-20,06077,San Joaquin County,25.0,2.0,0
+2020-03-20,06001,Alameda County,45.0,0.0,0
+2020-03-20,06057,Nevada County,1.0,0.0,0
+2020-03-20,06007,Butte County,0.0,0.0,0
+2020-03-20,06047,Merced County,0.0,0.0,0
+2020-03-20,06107,Tulare County,11.0,0.0,0
+2020-03-20,06099,Stanislaus County,5.0,0.0,0
+2020-03-20,06059,Orange County,65.0,0.0,0
+2020-03-20,06025,Imperial County,4.0,0.0,0
+2020-03-20,06101,Sutter County,0.0,0.0,0
+2020-03-20,06005,Amador County,2.0,0.0,0
+2020-03-20,06033,Lake County,0.0,0.0,0
+2020-03-20,06063,Plumas County,0.0,0.0,0
+2020-03-20,06081,San Mateo County,110.0,1.0,0
+2020-03-20,06093,Siskiyou County,0.0,0.0,0
+2020-03-20,06087,Santa Cruz County,15.0,0.0,0
+2020-03-20,06021,Glenn County,0.0,0.0,0
+2020-03-20,06079,San Luis Obispo County,16.0,0.0,0
+2020-03-21,06091,Sierra County,0.0,0.0,0
+2020-03-21,06067,Sacramento County,0.0,0.0,0
+2020-03-21,06083,Santa Barbara County,0.0,0.0,0
+2020-03-21,06009,Calaveras County,0.0,0.0,0
+2020-03-21,06111,Ventura County,0.0,0.0,0
+2020-03-21,06037,Los Angeles County,0.0,0.0,0
+2020-03-21,06097,Sonoma County,0.0,0.0,0
+2020-03-21,06031,Kings County,0.0,0.0,0
+2020-03-21,06073,San Diego County,0.0,0.0,0
+2020-03-21,06061,Placer County,0.0,0.0,0
+2020-03-21,06075,San Francisco County,0.0,0.0,0
+2020-03-21,06041,Marin County,0.0,0.0,0
+2020-03-21,06043,Mariposa County,0.0,0.0,0
+2020-03-21,06035,Lassen County,0.0,0.0,0
+2020-03-21,06055,Napa County,0.0,0.0,0
+2020-03-21,06089,Shasta County,0.0,0.0,0
+2020-03-21,06053,Monterey County,0.0,0.0,0
+2020-03-21,06105,Trinity County,0.0,0.0,0
+2020-03-21,06045,Mendocino County,0.0,0.0,0
+2020-03-21,06027,Inyo County,0.0,0.0,0
+2020-03-21,06051,Mono County,0.0,0.0,0
+2020-03-21,06109,Tuolumne County,0.0,0.0,0
+2020-03-21,06095,Solano County,0.0,0.0,0
+2020-03-21,06071,San Bernardino County,0.0,0.0,0
+2020-03-21,06013,Contra Costa County,0.0,0.0,0
+2020-03-21,06003,Alpine County,0.0,0.0,0
+2020-03-21,06017,El Dorado County,0.0,0.0,0
+2020-03-21,06113,Yolo County,0.0,0.0,0
+2020-03-21,06115,Yuba County,0.0,0.0,0
+2020-03-21,06069,San Benito County,0.0,0.0,0
+2020-03-21,06023,Humboldt County,0.0,0.0,0
+2020-03-21,06065,Riverside County,0.0,0.0,0
+2020-03-21,06029,Kern County,0.0,0.0,0
+2020-03-21,06011,Colusa County,0.0,0.0,0
+2020-03-21,06015,Del Norte County,0.0,0.0,0
+2020-03-21,06049,Modoc County,0.0,0.0,0
+2020-03-21,06019,Fresno County,0.0,0.0,0
+2020-03-21,06039,Madera County,0.0,0.0,0
+2020-03-21,06085,Santa Clara County,0.0,0.0,0
+2020-03-21,06103,Tehama County,0.0,0.0,0
+2020-03-21,06077,San Joaquin County,0.0,0.0,0
+2020-03-21,06001,Alameda County,0.0,0.0,0
+2020-03-21,06057,Nevada County,0.0,0.0,0
+2020-03-21,06007,Butte County,0.0,0.0,0
+2020-03-21,06047,Merced County,0.0,0.0,0
+2020-03-21,06107,Tulare County,0.0,0.0,0
+2020-03-21,06099,Stanislaus County,0.0,0.0,0
+2020-03-21,06059,Orange County,0.0,0.0,0
+2020-03-21,06025,Imperial County,0.0,0.0,0
+2020-03-21,06101,Sutter County,0.0,0.0,0
+2020-03-21,06005,Amador County,0.0,0.0,0
+2020-03-21,06033,Lake County,0.0,0.0,0
+2020-03-21,06063,Plumas County,0.0,0.0,0
+2020-03-21,06081,San Mateo County,0.0,0.0,0
+2020-03-21,06093,Siskiyou County,0.0,0.0,0
+2020-03-21,06087,Santa Cruz County,0.0,0.0,0
+2020-03-21,06021,Glenn County,0.0,0.0,0
+2020-03-21,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-22,06091,Sierra County,0.0,0.0,0
+2020-03-22,06067,Sacramento County,0.0,0.0,0
+2020-03-22,06083,Santa Barbara County,0.0,0.0,0
+2020-03-22,06009,Calaveras County,0.0,0.0,0
+2020-03-22,06111,Ventura County,0.0,0.0,0
+2020-03-22,06037,Los Angeles County,0.0,0.0,0
+2020-03-22,06097,Sonoma County,0.0,0.0,0
+2020-03-22,06031,Kings County,0.0,0.0,0
+2020-03-22,06073,San Diego County,0.0,0.0,0
+2020-03-22,06061,Placer County,0.0,0.0,0
+2020-03-22,06075,San Francisco County,0.0,0.0,0
+2020-03-22,06041,Marin County,0.0,0.0,0
+2020-03-22,06043,Mariposa County,0.0,0.0,0
+2020-03-22,06035,Lassen County,0.0,0.0,0
+2020-03-22,06055,Napa County,0.0,0.0,0
+2020-03-22,06089,Shasta County,0.0,0.0,0
+2020-03-22,06053,Monterey County,0.0,0.0,0
+2020-03-22,06105,Trinity County,0.0,0.0,0
+2020-03-22,06045,Mendocino County,0.0,0.0,0
+2020-03-22,06027,Inyo County,0.0,0.0,0
+2020-03-22,06051,Mono County,0.0,0.0,0
+2020-03-22,06109,Tuolumne County,0.0,0.0,0
+2020-03-22,06095,Solano County,0.0,0.0,0
+2020-03-22,06071,San Bernardino County,0.0,0.0,0
+2020-03-22,06013,Contra Costa County,0.0,0.0,0
+2020-03-22,06003,Alpine County,0.0,0.0,0
+2020-03-22,06017,El Dorado County,0.0,0.0,0
+2020-03-22,06113,Yolo County,0.0,0.0,0
+2020-03-22,06115,Yuba County,0.0,0.0,0
+2020-03-22,06069,San Benito County,0.0,0.0,0
+2020-03-22,06023,Humboldt County,0.0,0.0,0
+2020-03-22,06065,Riverside County,0.0,0.0,0
+2020-03-22,06029,Kern County,0.0,0.0,0
+2020-03-22,06011,Colusa County,0.0,0.0,0
+2020-03-22,06015,Del Norte County,0.0,0.0,0
+2020-03-22,06049,Modoc County,0.0,0.0,0
+2020-03-22,06019,Fresno County,0.0,0.0,0
+2020-03-22,06039,Madera County,0.0,0.0,0
+2020-03-22,06085,Santa Clara County,0.0,0.0,0
+2020-03-22,06103,Tehama County,0.0,0.0,0
+2020-03-22,06077,San Joaquin County,0.0,0.0,0
+2020-03-22,06001,Alameda County,0.0,0.0,0
+2020-03-22,06057,Nevada County,0.0,0.0,0
+2020-03-22,06007,Butte County,0.0,0.0,0
+2020-03-22,06047,Merced County,0.0,0.0,0
+2020-03-22,06107,Tulare County,0.0,0.0,0
+2020-03-22,06099,Stanislaus County,0.0,0.0,0
+2020-03-22,06059,Orange County,0.0,0.0,0
+2020-03-22,06025,Imperial County,0.0,0.0,0
+2020-03-22,06101,Sutter County,0.0,0.0,0
+2020-03-22,06005,Amador County,0.0,0.0,0
+2020-03-22,06033,Lake County,0.0,0.0,0
+2020-03-22,06063,Plumas County,0.0,0.0,0
+2020-03-22,06081,San Mateo County,0.0,0.0,0
+2020-03-22,06093,Siskiyou County,0.0,0.0,0
+2020-03-22,06087,Santa Cruz County,0.0,0.0,0
+2020-03-22,06021,Glenn County,0.0,0.0,0
+2020-03-22,06079,San Luis Obispo County,0.0,0.0,0
+2020-03-23,06091,Sierra County,0.0,0.0,http://sierracounty.ca.gov/582/Coronavirus-COVID-19
+2020-03-23,06067,Sacramento County,88.0,4.0,https://www.saccounty.net/COVID-19/Pages/default.aspx
+2020-03-23,06083,Santa Barbara County,18.0,0.0,https://publichealthsbc.org/status-reports/
+2020-03-23,06009,Calaveras County,2.0,0.0,https://covid19.calaverasgov.us/
+2020-03-23,06111,Ventura County,35.0,1.0,https://www.vcemergency.com/
+2020-03-23,06037,Los Angeles County,536.0,7.0,http://publichealth.lacounty.gov/media/Coronavirus/
+2020-03-23,06097,Sonoma County,29.0,1.0,https://socoemergency.org/emergency/novel-coronavirus/novel-coronavirus-in-sonoma-county/
+2020-03-23,06031,Kings County,0.0,0.0,https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19
+2020-03-23,06073,San Diego County,230.0,1.0,https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/status.html#Table
+2020-03-23,06061,Placer County,20.0,1.0,https://www.placer.ca.gov/6448/Cases-in-Placer
+2020-03-23,06075,San Francisco County,131.0,0.0,https://www.sfdph.org/dph/alerts/coronavirus.asp
+2020-03-23,06041,Marin County,47.0,0.0,https://coronavirus.marinhhs.org/
+2020-03-23,06043,Mariposa County,0.0,0.0,https://www.mariposacounty.org/1592/COVID-19-Information
+2020-03-23,06035,Lassen County,0.0,0.0,http://www.co.lassen.ca.us/dept/public-health/public-health
+2020-03-23,06055,Napa County,2.0,0.0,https://www.countyofnapa.org/2770/Situation-Updates
+2020-03-23,06089,Shasta County,3.0,0.0,https://www.co.shasta.ca.us/index/hhsa/health-safety/current-heath-concerns/coronavirus
+2020-03-23,06053,Monterey County,20.0,1.0,https://www.co.monterey.ca.us/government/departments-a-h/health/diseases/2019-novel-coronavirus-2019-ncov/2019-novel-coronavirus-2019-ncov-local-data
+2020-03-23,06105,Trinity County,0.0,0.0,https://www.trinitycounty.org/coronavirus-updates
+2020-03-23,06045,Mendocino County,1.0,0.0,https://www.mendocinocounty.org/community/novel-coronavirus
+2020-03-23,06027,Inyo County,0.0,0.0,https://www.inyocounty.us/covid-19/local-updates
+2020-03-23,06051,Mono County,0.0,0.0,https://coronavirus.monocounty.ca.gov/
+2020-03-23,06109,Tuolumne County,0.0,0.0,https://www.tuolumnecounty.ca.gov/250/Public-Health
+2020-03-23,06095,Solano County,21.0,0.0,http://www.solanocounty.com/depts/ph/ncov.asp
+2020-03-23,06071,San Bernardino County,17.0,0.0,http://wp.sbcounty.gov/dph/coronavirus/
+2020-03-23,06013,Contra Costa County,71.0,1.0,https://www.contracostahealth.org/
+2020-03-23,06003,Alpine County,0.0,0.0,http://alpinecountyca.gov/Index.aspx?NID=516
+2020-03-23,06017,El Dorado County,2.0,0.0,https://www.edcgov.us/Government/hhsa/Pages/EDCCOVID-19.aspx
+2020-03-23,06113,Yolo County,8.0,1.0,https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019
+2020-03-23,06115,Yuba County,0.0,0.0,0
+2020-03-23,06069,San Benito County,6.0,1.0,https://cosb.maps.arcgis.com/apps/opsdashboard/index.html#/1b049e2ea65043baafcf5361b5b07ddd
+2020-03-23,06023,Humboldt County,2.0,0.0,https://humboldtgov.org/2018/Humboldt-Health-Alert
+2020-03-23,06065,Riverside County,48.0,6.0,https://www.rivcoph.org/coronavirus
+2020-03-23,06029,Kern County,13.0,0.0,https://kernpublichealth.com/2019-novel-coronavirus/
+2020-03-23,06011,Colusa County,0.0,0.0,http://www.countyofcolusa.org/99/Public-Health
+2020-03-23,06015,Del Norte County,0.0,0.0,http://www.co.del-norte.ca.us/departments/health-human-services/public-health
+2020-03-23,06049,Modoc County,0.0,0.0,https://www.facebook.com/pg/Modoc-County-Sheriffs-Office-153688004804447/posts/
+2020-03-23,06019,Fresno County,13.0,0.0,https://www.co.fresno.ca.us/departments/public-health/covid-19
+2020-03-23,06039,Madera County,5.0,0.0,https://www.maderacounty.com/government/public-health/health-updates/corona-virus
+2020-03-23,06085,Santa Clara County,321.0,13.0,https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx
+2020-03-23,06103,Tehama County,0.0,0.0,https://www.tehamacohealthservices.net/services/communicable-diseases/#current-events
+2020-03-23,06077,San Joaquin County,51.0,2.0,http://www.sjcphs.org/
+2020-03-23,06001,Alameda County,122.0,1.0,http://www.acphd.org/2019-ncov.aspx
+2020-03-23,06057,Nevada County,3.0,0.0,https://www.mynevadacounty.com/2924/Coronavirus
+2020-03-23,06007,Butte County,3.0,0.0,http://www.buttecounty.net/publichealth/Home/fbclid/IwAR3fSGcPIbTuP9oMALIinPe68ft2E_vscQm2hDlGwwyilvdXog7KZwY9vTw
+2020-03-23,06047,Merced County,1.0,0.0,https://www.co.merced.ca.us/3350/Coronavirus-Disease-2019
+2020-03-23,06107,Tulare County,16.0,0.0,https://tchhsa.org/eng/index.cfm/public-health/covid-19-updates-novel-coronavirus/tulare-county-health-report/
+2020-03-23,06099,Stanislaus County,10.0,0.0,http://www.schsa.org/PublicHealth/pages/corona-virus/
+2020-03-23,06059,Orange County,125.0,0.0,http://www.ochealthinfo.com/phs/about/epidasmt/epi/dip/prevention/novel_coronavirus
+2020-03-23,06025,Imperial County,6.0,0.0,http://www.icphd.org/health-information-and-resources/healthy-facts/covid-19/
+2020-03-23,06101,Sutter County,0.0,0.0,0
+2020-03-23,06005,Amador County,2.0,0.0,https://www.amadorgov.org/services/public-health
+2020-03-23,06033,Lake County,0.0,0.0,http://health.co.lake.ca.us/Coronavirus.htm
+2020-03-23,06063,Plumas County,0.0,0.0,https://www.plumascounty.us/2669/Novel-Coronavirus-2019-COVID-19
+2020-03-23,06081,San Mateo County,142.0,1.0,https://www.smchealth.org/coronavirus
+2020-03-23,06093,Siskiyou County,3.0,0.0,https://www.co.siskiyou.ca.us/publichealth
+2020-03-23,06087,Santa Cruz County,22.0,0.0,https://www.santacruzhealth.org/HSAHome/HSADivisions/PublicHealth/CommunicableDiseaseControl/Coronavirus.aspx
+2020-03-23,06021,Glenn County,0.0,0.0,https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19
+2020-03-23,06079,San Luis Obispo County,33.0,0.0,https://www.emergencyslo.org/en/covid19.aspx
+2020-03-24,06091,Sierra County,0.0,0.0,http://sierracounty.ca.gov/582/Coronavirus-COVID-19
+2020-03-24,06067,Sacramento County,88.0,4.0,https://www.saccounty.net/COVID-19/Pages/default.aspx
+2020-03-24,06083,Santa Barbara County,18.0,0.0,https://publichealthsbc.org/status-reports/
+2020-03-24,06009,Calaveras County,2.0,0.0,https://covid19.calaverasgov.us/
+2020-03-24,06111,Ventura County,35.0,1.0,https://www.vcemergency.com/
+2020-03-24,06037,Los Angeles County,662.0,11.0,http://publichealth.lacounty.gov/media/Coronavirus/
+2020-03-24,06097,Sonoma County,31.0,1.0,https://socoemergency.org/emergency/novel-coronavirus/novel-coronavirus-in-sonoma-county/
+2020-03-24,06031,Kings County,0.0,0.0,https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19
+2020-03-24,06073,San Diego County,242.0,2.0,https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/status.html#Table
+2020-03-24,06061,Placer County,26.0,1.0,https://www.placer.ca.gov/6448/Cases-in-Placer
+2020-03-24,06075,San Francisco County,152.0,0.0,https://www.sfdph.org/dph/alerts/coronavirus.asp
+2020-03-24,06041,Marin County,53.0,0.0,https://coronavirus.marinhhs.org/
+2020-03-24,06043,Mariposa County,0.0,0.0,https://www.mariposacounty.org/1592/COVID-19-Information
+2020-03-24,06035,Lassen County,0.0,0.0,http://www.co.lassen.ca.us/dept/public-health/public-health
+2020-03-24,06055,Napa County,2.0,0.0,https://www.countyofnapa.org/2770/Situation-Updates
+2020-03-24,06089,Shasta County,3.0,0.0,https://www.co.shasta.ca.us/index/hhsa/health-safety/current-heath-concerns/coronavirus
+2020-03-24,06053,Monterey County,24.0,1.0,https://www.co.monterey.ca.us/government/departments-a-h/health/diseases/2019-novel-coronavirus-2019-ncov/2019-novel-coronavirus-2019-ncov-local-data
+2020-03-24,06105,Trinity County,0.0,0.0,https://www.trinitycounty.org/coronavirus-updates
+2020-03-24,06045,Mendocino County,2.0,0.0,https://www.mendocinocounty.org/community/novel-coronavirus
+2020-03-24,06027,Inyo County,0.0,0.0,https://www.inyocounty.us/covid-19/local-updates
+2020-03-24,06051,Mono County,2.0,0.0,https://coronavirus.monocounty.ca.gov/
+2020-03-24,06109,Tuolumne County,0.0,0.0,https://www.tuolumnecounty.ca.gov/250/Public-Health
+2020-03-24,06095,Solano County,24.0,0.0,http://www.solanocounty.com/depts/ph/ncov.asp
+2020-03-24,06071,San Bernardino County,31.0,0.0,http://wp.sbcounty.gov/dph/coronavirus/
+2020-03-24,06013,Contra Costa County,86.0,1.0,https://www.contracostahealth.org/
+2020-03-24,06003,Alpine County,0.0,0.0,http://alpinecountyca.gov/Index.aspx?NID=516
+2020-03-24,06017,El Dorado County,3.0,0.0,https://www.edcgov.us/Government/hhsa/Pages/EDCCOVID-19.aspx
+2020-03-24,06113,Yolo County,10.0,1.0,https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019
+2020-03-24,06115,Yuba County,0.0,0.0,0
+2020-03-24,06069,San Benito County,7.0,1.0,https://cosb.maps.arcgis.com/apps/opsdashboard/index.html#/1b049e2ea65043baafcf5361b5b07ddd
+2020-03-24,06023,Humboldt County,4.0,0.0,https://humboldtgov.org/2018/Humboldt-Health-Alert
+2020-03-24,06065,Riverside County,59.0,6.0,https://www.rivcoph.org/coronavirus
+2020-03-24,06029,Kern County,15.0,0.0,https://kernpublichealth.com/2019-novel-coronavirus/
+2020-03-24,06011,Colusa County,0.0,0.0,http://www.countyofcolusa.org/99/Public-Health
+2020-03-24,06015,Del Norte County,0.0,0.0,http://www.co.del-norte.ca.us/departments/health-human-services/public-health
+2020-03-24,06049,Modoc County,0.0,0.0,https://www.facebook.com/pg/Modoc-County-Sheriffs-Office-153688004804447/posts/
+2020-03-24,06019,Fresno County,13.0,0.0,https://www.co.fresno.ca.us/departments/public-health/covid-19
+2020-03-24,06039,Madera County,6.0,0.0,https://www.maderacounty.com/government/public-health/health-updates/corona-virus
+2020-03-24,06085,Santa Clara County,375.0,16.0,https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx
+2020-03-24,06103,Tehama County,0.0,0.0,https://www.tehamacohealthservices.net/services/communicable-diseases/#current-events
+2020-03-24,06077,San Joaquin County,60.0,2.0,http://www.sjcphs.org/
+2020-03-24,06001,Alameda County,135.0,2.0,http://www.acphd.org/2019-ncov.aspx
+2020-03-24,06057,Nevada County,4.0,0.0,https://www.mynevadacounty.com/2924/Coronavirus
+2020-03-24,06007,Butte County,4.0,0.0,http://www.buttecounty.net/publichealth/Home/fbclid/IwAR3fSGcPIbTuP9oMALIinPe68ft2E_vscQm2hDlGwwyilvdXog7KZwY9vTw
+2020-03-24,06047,Merced County,1.0,0.0,https://www.co.merced.ca.us/3350/Coronavirus-Disease-2019
+2020-03-24,06107,Tulare County,16.0,0.0,https://tchhsa.org/eng/index.cfm/public-health/covid-19-updates-novel-coronavirus/
+2020-03-24,06099,Stanislaus County,11.0,0.0,http://www.schsa.org/PublicHealth/pages/corona-virus/
+2020-03-24,06059,Orange County,152.0,0.0,http://www.ochealthinfo.com/phs/about/epidasmt/epi/dip/prevention/novel_coronavirus
+2020-03-24,06025,Imperial County,6.0,0.0,http://www.icphd.org/health-information-and-resources/healthy-facts/covid-19/
+2020-03-24,06101,Sutter County,0.0,0.0,0
+2020-03-24,06005,Amador County,2.0,0.0,https://www.amadorgov.org/services/public-health
+2020-03-24,06033,Lake County,0.0,0.0,http://health.co.lake.ca.us/Coronavirus.htm
+2020-03-24,06063,Plumas County,0.0,0.0,https://www.plumascounty.us/2669/Novel-Coronavirus-2019-COVID-19
+2020-03-24,06081,San Mateo County,161.0,1.0,https://www.smchealth.org/coronavirus
+2020-03-24,06093,Siskiyou County,3.0,0.0,https://www.co.siskiyou.ca.us/publichealth
+2020-03-24,06087,Santa Cruz County,24.0,0.0,https://www.santacruzhealth.org/HSAHome/HSADivisions/PublicHealth/CommunicableDiseaseControl/Coronavirus.aspx
+2020-03-24,06021,Glenn County,0.0,0.0,https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19
+2020-03-24,06079,San Luis Obispo County,42.0,0.0,https://www.emergencyslo.org/en/covid19.aspx
+2020-03-25,06091,Sierra County,0.0,0.0,0
+2020-03-25,06067,Sacramento County,0.0,0.0,0
+2020-03-25,06083,Santa Barbara County,0.0,0.0,0
+2020-03-25,06009,Calaveras County,0.0,0.0,0
+2020-03-25,06111,Ventura County,0.0,0.0,0
+2020-03-25,06037,Los Angeles County,0.0,0.0,0
+2020-03-25,06097,Sonoma County,0.0,0.0,0
+2020-03-25,06031,Kings County,0.0,0.0,0
+2020-03-25,06073,San Diego County,0.0,0.0,0
+2020-03-25,06061,Placer County,0.0,0.0,0
+2020-03-25,06075,San Francisco County,0.0,0.0,0
+2020-03-25,06041,Marin County,0.0,0.0,0
+2020-03-25,06043,Mariposa County,0.0,0.0,0
+2020-03-25,06035,Lassen County,0.0,0.0,0
+2020-03-25,06055,Napa County,0.0,0.0,0
+2020-03-25,06089,Shasta County,0.0,0.0,0
+2020-03-25,06053,Monterey County,0.0,0.0,0
+2020-03-25,06105,Trinity County,0.0,0.0,0
+2020-03-25,06045,Mendocino County,0.0,0.0,0
+2020-03-25,06027,Inyo County,0.0,0.0,0
+2020-03-25,06051,Mono County,0.0,0.0,0
+2020-03-25,06109,Tuolumne County,0.0,0.0,0
+2020-03-25,06095,Solano County,0.0,0.0,0
+2020-03-25,06071,San Bernardino County,0.0,0.0,0
+2020-03-25,06013,Contra Costa County,0.0,0.0,0
+2020-03-25,06003,Alpine County,0.0,0.0,0
+2020-03-25,06017,El Dorado County,0.0,0.0,0
+2020-03-25,06113,Yolo County,0.0,0.0,0
+2020-03-25,06115,Yuba County,0.0,0.0,0
+2020-03-25,06069,San Benito County,0.0,0.0,0
+2020-03-25,06023,Humboldt County,0.0,0.0,0
+2020-03-25,06065,Riverside County,0.0,0.0,0
+2020-03-25,06029,Kern County,0.0,0.0,0
+2020-03-25,06011,Colusa County,0.0,0.0,0
+2020-03-25,06015,Del Norte County,0.0,0.0,0
+2020-03-25,06049,Modoc County,0.0,0.0,0
+2020-03-25,06019,Fresno County,0.0,0.0,0
+2020-03-25,06039,Madera County,0.0,0.0,0
+2020-03-25,06085,Santa Clara County,0.0,0.0,0
+2020-03-25,06103,Tehama County,0.0,0.0,0
+2020-03-25,06077,San Joaquin County,0.0,0.0,0
+2020-03-25,06001,Alameda County,0.0,0.0,0
+2020-03-25,06057,Nevada County,0.0,0.0,0
+2020-03-25,06007,Butte County,0.0,0.0,0
+2020-03-25,06047,Merced County,0.0,0.0,0
+2020-03-25,06107,Tulare County,0.0,0.0,0
+2020-03-25,06099,Stanislaus County,0.0,0.0,0
+2020-03-25,06059,Orange County,0.0,0.0,0
+2020-03-25,06025,Imperial County,0.0,0.0,0
+2020-03-25,06101,Sutter County,0.0,0.0,0
+2020-03-25,06005,Amador County,0.0,0.0,0
+2020-03-25,06033,Lake County,0.0,0.0,0
+2020-03-25,06063,Plumas County,0.0,0.0,0
+2020-03-25,06081,San Mateo County,0.0,0.0,0
+2020-03-25,06093,Siskiyou County,0.0,0.0,0
+2020-03-25,06087,Santa Cruz County,0.0,0.0,0
+2020-03-25,06021,Glenn County,0.0,0.0,0
+2020-03-25,06079,San Luis Obispo County,0.0,0.0,0
