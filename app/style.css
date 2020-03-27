@@ -53,6 +53,10 @@ h1 {
   margin-bottom:0;
 }
 
+#stats{
+  margin-top:1.5em;
+}
+
 #charts.row{
   margin-top:0;
 }
@@ -70,8 +74,16 @@ h1 {
   line-height: 1.35em;
 }
 
-h5{
+
+
+h2{
   font-size: 1.75em;
+  font-weight: 800;
+  margin-bottom:.125rem;
+}
+
+h3{
+  font-size: 1.25em;
   font-weight: 800;
   margin-bottom:.125rem;
 }
@@ -81,6 +93,8 @@ h5{
 }
 
 #data-notes{
+  background:#ebebeb;
+  padding:2em 4em;
   font-size: 1em;
   font-style: italic;
 }

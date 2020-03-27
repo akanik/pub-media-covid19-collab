@@ -69,11 +69,11 @@
     
     <style> /* set the CSS */
       body { font: 12px Arial;}
-      path { 
+      /*path { 
           stroke: steelblue;
           stroke-width: 2;
           fill: none;
-      }
+      }*/
       .axis path,
       .axis line {
           fill: none;
@@ -110,30 +110,41 @@
           <div id="deaths-chart" class="chart one-half column"></div>
         </div>
         
-        <div id="cnty-pop" class="stat-row row"></div>
+        <div id="cnty-demo">
+          <div id="cnty-pop" class="stat-row row"></div>
+          <div id="cnty-age" class="stat-row row"></div>
+          <div id="cnty-crd" class="stat-row row"></div>
+          <div id="cnty-cvd" class="stat-row row"></div>
+          <div id="cnty-dia" class="stat-row row"></div>
+        </div>
         
       </div><!-- END STATS -->
-      
-      <div id="data-notes" class="row">
-        <div id="data-sources">
-          <p>Sources: xxxxxx; xxxxxx; xxxxxx</p>
-        </div>
+    </div>
+    <div id="data-notes">
+      <div class="row">
         <div id="data-disclaimers">
-          <p>CB's Nuts Peanut Butter is produced in Washington State from peanuts grown in Texas. Aside from using the best peanuts in the world, our slow barrel roasting process is what sets us apart and gives our PB its rich roasted taste that's unlike any other brand on the market. Its also this roasting technique, along with our Creamunchy grind that limits annoying oil separation in the jar.</p>
+          <h3>Disclaimer</h3>
+          <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
+          <p>The case data on this dashboard is powered by data from Johns Hopkins University. The data presented here only includes confirmed cases, but it may be lower than the actual number of infected people in a community due to a lack of testing. Depending on when counties report and when data is collected, these numbers may be behind in some areas.</p>
+
+          <p>As counties report confirmed cases when test results are confirmed positive, some of the increases in counties’ cases in one day could be due to many pending tests being confirmed rather than many people coming down with symptoms in one day.</p>
+          <h3>Credits</h3>
+          <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere & Aaron Mendelson at KPCC.</p>
         </div>
       </div><!-- END DATA-NOTES -->
     </div>
+  </div>
     
     <script>
-      var cases_file = 'assets/data/2020-03-25-California-export.csv';
-      var state_fips = '06';
-      var state_name = 'California';
+      var casesFile = 'assets/data/2020-03-27-California-export.csv';
+      var stateFips = '06';
+      var stateName = 'California';
       
       var include_state_testing = false;
       
       var data_level = 'state';
-      var county_selection = '';
-      var county_name = '';
+      var countySelection = '';
+      var countyName = '';
       
       var dropdown = d3.select('#county-select');
       var stateStats = d3.select('#state-stats').append('p');
@@ -155,10 +166,18 @@
           return console.warn(fips_error);
         }
         //ADD CASE DATA
-        d3.csv(cases_file, function(case_error, case_data) {
+        d3.csv(casesFile, function(case_error, case_data) {
           if (case_error) {
             return console.warn(case_error);
           }   
+          
+          case_data.forEach(function(d) {
+            //d.date = parseDate(d.date);
+            d.cases = d.cases.replace(/,/g, '');
+          });
+          
+          //need to remove commas
+          console.log(case_data);
                       
           //BEGIN CHART STUFF
           var elWidth = document.getElementById("cases-chart").offsetWidth;
@@ -169,7 +188,7 @@
           	height = 270 - margin.top - margin.bottom;
            
           // Parse the date / time
-          var	parseDate = d3.time.format("%Y-%m-%d").parse;
+          var	parseDate = d3.time.format("%m/%d/%Y").parse;
            
           // Set the case ranges
           var	xCases = d3.time.scale().range([0, width]);
@@ -232,7 +251,7 @@
                 };
               })
               .entries(data);
-            
+              
             var caseDateLookup = {};
             for(i=0;i<stateDataByDate.length;i++){
               dict = {}
@@ -245,30 +264,68 @@
           }
           
           function updatePopText(region_data){
+            
+            console.log(region_data);
+            
             var cntyName = region_data['cnty_name'];
-            var popText = 'Experts say that some groups are more at risk if they contract COVID-19,'+
-                          'for instance, seniors or people who suffer from diabetes, chronic respiratory'+
-                          ' disease or cardiovascular disease. Here’s a breakdown of how many people in <strong>'+
-                          cntyName + '</strong> are part of these vulnerable groups.'
+            var pop65plus = region_data['perc_65plus'];
+            var crdRate = region_data['crd_rate'];
+            var cvdRate = region_data['cvd_rate'];
+            var diaRate = region_data['diabetes_rate'];
+            
+            var popText = "Experts say that some groups are more at risk if they contract COVID-19,"+
+                          "for instance, seniors or people who suffer from diabetes, chronic respiratory"+
+                          " disease or cardiovascular disease. Here’s a breakdown of how many people in <strong>"+
+                          cntyName + "</strong> are part of these vulnerable groups.";
+                          
+            var ageText = pop65plus+"% of "+cntyName+"&#39;s residents were 65 or older as of 2018.";
+            
+            var crdText = "People who suffer from chronic respiratory disease are more vulnerable to a serious"+
+                          " COVID-19 case, because the coronavirus can inflame the lungs. In 2014, "+
+                          crdRate + " deaths per 100,000 in "+ cntyName + " were due to chronic respiratory"+
+                          " disease. That’s in the top quarter/top half/bottom half/bottom quarter nationwide.";
+            
+            var cvdText = "The novel coronavirus especially threatens people with cardiovascular disease. "+
+                          "In patients whose heart is made more vulnerable by pre-existing conditions, "+
+                          "COVID-19 causes complications like embolisms and irregular heartbeats, and that "+
+                          "raises a patient’s risk of death. In 2014, "+ cvdRate +" per 100,000 in "+cntyName+
+                          "were due to cardiovascular disease. That’s in the top quarter/top half/bottom "+
+                          "half/bottom quarter nationwide.";
+            
+            var diaText = "COVID-19 threatens people with diabetes, whose blood sugar isn't stable, because this"+
+                          " pre-existing condition makes their ability to fight off infection unstable too. "+
+                          "Unchecked, the virus can cause complications leading to coma or death. In 2012, "+
+                          diaRate+"% of adults over 20 in "+cntyName+" have diabetes or a high FPG/AIC level. "+
+                          "That’s in the top quarter/top half/bottom half/bottom quarter nationwide.";
 
             //// Add text to case text block
             //var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
             //var totalCaseText = 'There have been '+ formatComma(totalCases) +' confirmed cases of COVID-19 in <strong>'+
             //                    region_name +'</strong>.';
             var casesText = d3.select('#cnty-pop')
-              .html('<h5>County vulnerable population information</h5>')
+              .html('<h2>County vulnerable population information</h2>')
               .append('p')
               .html(popText);
-            //  
-            //// Add text to death text block
-            //var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
-            //var totalDeathText = 'There have been '+ formatComma(totalDeaths) +
-            //                    ' reported deaths related to COVID-19 in <strong>'+
-            //                    region_name + '</strong>.';
-            //var deathText = d3.select('#deaths-text')
-            //  .html('<h5>Deaths</h5>')
-            //  .append('p')
-            //  .html(totalDeathText);
+              
+            var ageText = d3.select('#cnty-age')
+              .html('<h2>65+</h2>')
+              .append('p')
+              .html(ageText);
+              
+            var crdText = d3.select('#cnty-crd')
+              .html('<h2>Chronic Respiratory Disease</h2>')
+              .append('p')
+              .html(crdText);
+            
+            var cvdText = d3.select('#cnty-cvd')
+              .html('<h2>Cardiovascular Disease</h2>')
+              .append('p')
+              .html(cvdText);
+              
+            var cvdText = d3.select('#cnty-dia')
+              .html('<h2>Diabetes</h2>')
+              .append('p')
+              .html(diaText);
           }
           
           function updateChartText(caseDateLookup,region_name){
@@ -277,7 +334,7 @@
             var totalCaseText = 'There have been '+ formatComma(totalCases) +' confirmed cases of COVID-19 in <strong>'+
                                 region_name +'</strong>.';
             var casesText = d3.select('#cases-text')
-              .html('<h5>Positive cases</h5>')
+              .html('<h2>Positive cases</h2>')
               .append('p')
               .html(totalCaseText);
               
@@ -287,7 +344,7 @@
                                 ' reported deaths related to COVID-19 in <strong>'+
                                 region_name + '</strong>.';
             var deathText = d3.select('#deaths-text')
-              .html('<h5>Deaths</h5>')
+              .html('<h2>Deaths</h2>')
               .append('p')
               .html(totalDeathText);
           }
@@ -295,7 +352,6 @@
           function updateCharts(caseDateLookup,region_name) {
             
             updateChartText(caseDateLookup,region_name);
-            
             // First update the cases y-axis domain to match data
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
 
@@ -326,7 +382,7 @@
           };
           
           function createCharts(caseDateLookup,region_name){
-            
+
             updateChartText(caseDateLookup,region_name);         
                         
           	// Scale the range of the case data
@@ -337,6 +393,10 @@
           	svgCases.append("path")
           	  .datum(caseDateLookup)
           		.attr("class", "line")
+          		.attr("stroke", "#8C8C8C")
+          		.attr("stroke-width", 2)
+          		//.attr("fill", "#cccccc")
+          		.attr("fill", "None")
           		.attr("d", caseValueline(caseDateLookup));
            
           	// Add the case X Axis
@@ -359,6 +419,10 @@
           	svgDeaths.append("path")	
           	  .datum(caseDateLookup)
           		.attr("class", "line")
+          		.attr("stroke", "#730101")
+          		.attr("stroke-width", 2)
+          		//.attr("fill", "#FD6565")
+          		.attr("fill", "None")
           		.attr("d", deathValueline(caseDateLookup));
            
           	// Add the death X Axis
@@ -374,9 +438,10 @@
           }//END getSelectionTotals
           
           
-          function filterCntyPop(cnty_fips){
-            var cntyFilter = cnty_data.filter( function(d){
-              return d['cnty_fips'] == cnty_fips
+          function filterCntyPop(cntyFips){
+
+            var cntyFilter = cntyData.filter( function(d){
+              return d['cnty_fips'] == cntyFips
             });
             return cntyFilter;
           }
@@ -388,18 +453,17 @@
             return cntyFilter;
           }
           
-          function filterStateCases(state_fips){
+          function filterStateCounties(stateFips){
             var stateFilter = fips_data.filter( function(d){
-              return d['state_fips'] == state_fips
+              return d['state_fips'] == stateFips
             });
             return stateFilter;
           }
           
           //COUNTY STUFF
-          var cnty_data = filterStateCases(state_fips);
-          
+          var cntyData = filterStateCounties(stateFips);
           dropdown.selectAll('option')
-              .data(cnty_data)
+              .data(cntyData)
             .enter().append('option')
               .attr('value', function(d) {
                 return d.cnty_fips;
@@ -408,142 +472,27 @@
                   return d.cnty_name;
               });
             dropdown.on('change',function(){
-              data_level = 'county';
-              county_selection = d3.select(this).property('value');
-              county_name = d3.select('#county-select option:checked').text();
+              dataLevel = 'county';
+              countySelection = d3.select(this).property('value');
+              countyName = d3.select('#county-select option:checked').text();
               
-              var cntyPopData = filterCntyPop(county_selection);
+              var cntyPopData = filterCntyPop(countySelection);
               var cntyPop = cntyPopData['population'];
               updatePopText(cntyPopData[0]);
               
-              var filtered_cases = filterCntyCases(county_selection);
+              var filtered_cases = filterCntyCases(countySelection);
               caseDateLookup = formatCaseData(filtered_cases);
-              updateCharts(caseDateLookup,county_name);
+              updateCharts(caseDateLookup,countyName);
             });
             
           var caseDateLookup = formatCaseData(case_data);
-          createCharts(caseDateLookup,state_name);
+          createCharts(caseDateLookup,stateName);
           
         });
       });
       
     </script>
     <script>
-    //  window.onload=function(){
-    //    d3.json("assets/data/cnty-fips.json", function(error, data) {
-    //      console.log(data);
-    //      if (error) {
-    //          return console.warn(error);
-    //      }
-    //      d3.select("select")
-    //        .selectAll("option")
-    //        .data(data)
-    //        .enter()
-    //        .append("option")
-    //        .attr('value', function(d) {
-    //          return d.values();
-    //          //console.log(d);
-    //        })
-    //        .text(function(d) {
-    //            return d.keys();
-    //        });
-    //    });
-    //  }//]]>
-        
-        
-        
-        
-        
-      //  var stateSelect = d3.select("#state-select");
-      //  
-      //  var stateCounties = cnty_fips['06'];        
-      //
-      //  //we have select all options tags from inside select tag (which there are 0 atm)
-      //  //and assigned data as to be the base of modelling that selection.
-      //  var stateOptions = stateSelect.selectAll('option')
-      //    .data(stateCounties);
-      //    
-      //  console.log(stateOptions);
-      //
-      //  //d3 sees we have less elements (0) than the data (2), so we are tasked to create
-      //  //these missing inside the `options.enter` pseudo selection.
-      //  //if we had some elements from before, they would be reused, and we could access their
-      //  //selection with just `options`
-      //  stateOptions.enter()
-      //    .append('option')
-      //    .attr('value', function(d) {
-      //      return d.values();
-      //      //console.log(d);
-      //    })
-      //    .text(function(d) {
-      //      return d.values();
-      //      //console.log(d);
-      //    });
-      //  });
-      //
-      //d3.select("#state-select")
-      //  .append("select")
-      //  .append("option")
-      //  .attr("value", "---")
-      //  .text("---");
-      
-      
-      
-      //const pymChild = new pym.Child({ polling: 100 });
-      //  
-      ////////////// THIS IS ALL AUTO GEOLOCATOR CODE. WE CAN'T USE IT UNTIL WE UPGRADE SERVER TO HTTPS
-      //function getLocation() {
-      //    if (navigator.geolocation) {
-      //        navigator.geolocation.getCurrentPosition(autoGeo);
-      //    } else {
-      //        console.log("Geolocation is not supported by this browser.");
-      //    }
-      //}
-      //
-      //function autoGeo(position){
-      //  var foundLat = position.coords.latitude;
-      //  var foundLng = position.coords.longitude;
-      //  var point = [foundLat, foundLng];
-      //  var inKY = findState(point);
-      //  
-      //  if(inKY == 1){
-      //    if(marker){
-      //      map.removeLayer(marker); 
-      //    }
-      //    marker = L.marker([foundLat, foundLng]).addTo(map);
-      //    map.flyTo(new L.LatLng(foundLat, foundLng), 11);
-      //    findDistrict(foundLat,foundLng)
-      //  }else{
-      //    houseDIV.innerHTML = "<p><em>Looks like you're not in Kentucky</em></p>";
-      //    metroDIV.innerHTML = "<p><em>Looks like you're not in Jefferson County</em></p>";
-      //    houseContestDIV.innerHTML = '';
-      //    metroContestDIV.innerHTML = '';
-      //  }
-      //}
-      //  
-      //function findState(point){
-      //  const addURL = 'http://dev.virtualearth.net/REST/v1/Locations/' + point + '?o=json&key=' + BING_KEY;
-      //  
-      //  $.ajax({
-      //    url: addURL,
-      //    type: 'GET',
-      //    success: function(result){
-      //      var state = result['resourceSets'][0]['resources'][0]['address']['adminDistrict'];
-      //      
-      //      geoResultsDIV.innerHTML = 'Showing results for ' + result['resourceSets'][0]['resources'][0]['address']['formattedAddress'];
-      //      
-      //      if(state != 'KY'){
-      //        return 0;
-      //      }else{
-      //        return 1;
-      //      }            
-      //    },
-      //    error: function(error){
-      //      console.log(`Error ${error}`)
-      //    }
-      //  })
-      //}
-        ////////////// END AUTO GEOLOCATON
     </script>
     
     <script src="app.js" async></script>
