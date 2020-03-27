@@ -186,6 +186,7 @@
           d.crd_rate = formatNoDecimal(d.crd_rate);
           d.cvd_rate = formatNoDecimal(d.cvd_rate);
           d.diabetes_rate = formatNoDecimal(d.diabetes_rate);
+          d.population = d.population.replace(/,/g, '');
         });
         
         //ADD CASE DATA
@@ -380,7 +381,7 @@
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
             var totalCaseText = 'There have been <strong>'+ formatComma(totalCases) +' cases</strong> of COVID-19 in '+
-                                region_name +'. The population of this region is '+ formatComma(pop);
+                                region_name +'. The population of this region is '+ formatComma(pop) + '.';
             var casesText = d3.select('#cases-text')
               .html('<h2>Positive cases</h2>')
               .append('p')
@@ -525,7 +526,8 @@
               countyName = d3.select('#county-select option:checked').text();
               
               var cntyPopData = filterCntyPop(countySelection);
-              var cntyPop = cntyPopData['population'];
+              var cntyPop = cntyPopData[0]['population'];
+              console.log(cntyPop);
               updatePopText(cntyPopData[0]);
               
               var filtered_cases = filterCntyCases(countySelection);
