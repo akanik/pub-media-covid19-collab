@@ -39,14 +39,28 @@ h1 {
   margin:0 auto;
 }*/
 
-.row{
+/*.row{
   margin-top:2em;
   margin-bottom:2em;
-}
+}*/
 
 .row img{
   max-width: 100%;
 }
+
+#chart-text.row,
+#chart-text.row p{
+  margin-bottom:0;
+}
+
+#stats{
+  margin-top:1.5em;
+}
+
+#charts.row{
+  margin-top:0;
+}
+
 
 .lead{
   font-size: 1.5em;
@@ -54,19 +68,33 @@ h1 {
   font-weight: 200;
 }
 
-.row .text{
-  margin-top:2em;
+.row p{
+  margin-top:.75em;
   font-size: 1.25em;
   line-height: 1.35em;
 }
 
-h5{
+
+
+h2{
+  font-size: 1.75em;
+  font-weight: 800;
+  margin-bottom:.125rem;
+}
+
+h3{
   font-size: 1.25em;
   font-weight: 800;
   margin-bottom:.125rem;
 }
 
+#cnty-pop{
+  margin-top:2em;
+}
+
 #data-notes{
+  background:#ebebeb;
+  padding:2em 4em;
   font-size: 1em;
   font-style: italic;
 }
