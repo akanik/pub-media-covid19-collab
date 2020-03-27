@@ -148,6 +148,7 @@
       var casesFile = 'assets/data/2020-03-27-California-export.csv';
       var stateFips = '06';
       var stateName = 'California';
+      var statePop = 39148760;
       var dateFormat = "%m/%d/%Y";
       
       var include_state_testing = false;
@@ -375,11 +376,11 @@
                 .attr('alt','quartile chart');
           }
           
-          function updateChartText(caseDateLookup,region_name){
+          function updateChartText(caseDateLookup,region_name,pop){
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
             var totalCaseText = 'There have been <strong>'+ formatComma(totalCases) +' cases</strong> of COVID-19 in '+
-                                region_name +'.';
+                                region_name +'. The population of this region is '+ formatComma(pop);
             var casesText = d3.select('#cases-text')
               .html('<h2>Positive cases</h2>')
               .append('p')
@@ -396,9 +397,9 @@
               .html(totalDeathText);
           }
           
-          function updateCharts(caseDateLookup,region_name) {
+          function updateCharts(caseDateLookup,region_name,pop) {
             
-            updateChartText(caseDateLookup,region_name);
+            updateChartText(caseDateLookup,region_name,pop);
             // First update the cases y-axis domain to match data
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
 
@@ -428,9 +429,9 @@
               .call(yDeathAxis);
           };
           
-          function createCharts(caseDateLookup,region_name){
+          function createCharts(caseDateLookup,region_name,pop){
 
-            updateChartText(caseDateLookup,region_name);         
+            updateChartText(caseDateLookup,region_name,pop);         
                         
           	// Scale the range of the case data
           	xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
@@ -529,11 +530,11 @@
               
               var filtered_cases = filterCntyCases(countySelection);
               caseDateLookup = formatCaseData(filtered_cases);
-              updateCharts(caseDateLookup,countyName);
+              updateCharts(caseDateLookup,countyName,cntyPop);
             });
             
           var caseDateLookup = formatCaseData(case_data);
-          createCharts(caseDateLookup,stateName);
+          createCharts(caseDateLookup,stateName,statePop);
           
         });
       });
