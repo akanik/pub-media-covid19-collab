@@ -74,7 +74,40 @@ h1 {
   line-height: 1.35em;
 }
 
+.stat-row{
+  margin:4em 0;
+}
 
+.stat-row .img{
+  float:left;
+  padding:0 1em 1em 0;
+}
+
+.stat-row p{
+  margin-bottom:.75em;
+}
+
+.stat-row .q1{
+  background:#BDD67Acc;
+  padding:2px 5px;
+  font-weight: 800;
+}
+.stat-row .q2{
+  background:#F6DE42cc;
+  padding:2px 5px;
+  font-weight: 800;
+}
+.stat-row .q3{
+  background:#F2AF0Dcc;
+  padding:2px 5px;
+  font-weight: 800;
+}
+.stat-row .q4{
+  background:#CC3333cc;
+  color:#ffffff;
+  padding:2px 5px;
+  font-weight: 800;
+}
 
 h2{
   font-size: 1.75em;

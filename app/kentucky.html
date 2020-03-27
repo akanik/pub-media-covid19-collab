@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>COVID-19 County Tracker</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="152x152" href="https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-152-precomposed.png" />
+    <link rel="icon" sizes="120x120" href="https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-120-precomposed.png" />
+    <link rel="icon" sizes="76x76" href="https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-76-precomposed.png" />
+    <!-- Safari, you're the worst -->
+    <meta name='format-detection' content='telephone=no'>
+    
+    
+    <!-- BEGIN TWITTER SUMMARY CARD -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Interactive: Coal & Gas Extraction Near WV Water Sources">
+    <meta name="twitter:site" content="@OVReSRC">
+    <meta name="twitter:url" content="https://local.wfpl.org/ovr/water-hazards/index.html">
+    <meta name="twitter:image" content="https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png">
+    <meta name="twitter:description" content="EXPLORE: The Ohio Valley ReSource used data on protected water areas to build this tool showing some of the coal mines and gas wells within the watersheds providing West Virginians drinking water.">
+    
+    <!-- Social sharing meta -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Interactive: Coal & Gas Extraction Near WV Water Sources">
+    <meta property="og:site_name" content="Ohio Valley ReSource">
+    <meta property="og:url" content="https://local.wfpl.org/ovr/water-hazards/index.html">
+    <meta property="og:image" content="https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png">
+    <meta property="og:description" content="EXPLORE: The Ohio Valley ReSource used data on protected water areas to build this tool showing some of the coal mines and gas wells within the watersheds providing West Virginians drinking water.">
+    
+    <!-- Google structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://local.wfpl.org/ovr/water-hazards/"
+      },
+      "headline": "Interactive: Coal & Gas Extraction Near WV Water Sources",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "NPR Staff"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NPR",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://local.wfpl.org/ovr/water-hazards/assets/logo.png",
+          "width": 891,
+          "height": 296
+        }
+      },
+      "description": "EXPLORE: This dashboard provides a localized look at confirmed cases of and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population."
+    }
+    </script>
+    <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <style> /* set the CSS */
+      body { font: 12px Arial;}
+      /*path { 
+          stroke: steelblue;
+          stroke-width: 2;
+          fill: none;
+      }*/
+      .axis path,
+      .axis line {
+          fill: none;
+          stroke: grey;
+          stroke-width: 1;
+          shape-rendering: crispEdges;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="container-top" class="row">
+        <h1>Kentucky COVID-19 Case Tracker</h1>
+        <div class="lead" id="intro">
+          <p>This dashboard provides a localized look at confirmed cases of and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population. Select your county below to see your local numbers.</p>
+        </div>
+        
+        <select id="county-select" class="row">
+          <option>Select a county...</option>
+        </select>        
+  
+      </div><!-- END CONTAINER-TOP -->
+      
+      <div id="stats" class="row">
+        
+        <div id="chart-text" class="row">
+          <div id="cases-text" class="text one-half column"></div>
+          <div id="deaths-text" class="text one-half column"></div>
+        </div>
+        
+        <div id="charts" class="row">
+          <div id="cases-chart" class="chart one-half column"></div>
+          <div id="deaths-chart" class="chart one-half column"></div>
+        </div>
+        
+        <div id="cnty-demo">
+          <div id="cnty-pop" class="stat-row row"></div>
+          <div id="cnty-age" class="stat-row row"></div>
+          <div id="cnty-crd" class="stat-row row">
+            <div class="img"></div>
+            <div class="text"></div>
+          </div>
+          <div id="cnty-cvd" class="stat-row row">
+            <div class="img"></div>
+            <div class="text"></div>
+          </div>
+          <div id="cnty-dia" class="stat-row row">
+            <div class="img"></div>
+            <div class="text"></div>
+          </div>
+        </div>
+        
+      </div><!-- END STATS -->
+    </div>
+    <div id="data-notes">
+      <div class="row">
+        <div id="data-disclaimers">
+          <h3>Disclaimer</h3>
+          <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
+          <p>The case data on this dashboard is powered by data from Johns Hopkins University. The data presented here only includes confirmed cases, but it may be lower than the actual number of infected people in a community due to a lack of testing. Depending on when counties report and when data is collected, these numbers may be behind in some areas.</p>
+
+          <p>As counties report confirmed cases when test results are confirmed positive, some of the increases in counties’ cases in one day could be due to many pending tests being confirmed rather than many people coming down with symptoms in one day.</p>
+          <h3>Credits</h3>
+          <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere & Aaron Mendelson at KPCC.</p>
+        </div>
+      </div><!-- END DATA-NOTES -->
+    </div>
+  </div>
+    
+    <script>
+      var casesFile = 'assets/data/2020-03-27-Kentucky-export.csv';
+      var stateFips = '21';
+      var stateName = 'Kentucky';
+      var dateFormat = "%Y-%m-%d";
+      
+      var include_state_testing = false;
+      
+      var data_level = 'state';
+      var countySelection = '';
+      var countyName = '';
+      
+      var dropdown = d3.select('#county-select');
+      var stateStats = d3.select('#state-stats').append('p');
+      
+      var formatComma = d3.format(","),
+          formatDecimal = d3.format(".1f"),
+          formatNoDecimal = d3.format(".0f"), 
+          formatDecimalComma = d3.format(",.2f"),
+          formatSuffix = d3.format("s"),
+          formatSuffixDecimal1 = d3.format(".1s"),
+          formatSuffixDecimal2 = d3.format(".2s"),
+          formatMoney = function(d) { return "$" + formatDecimalComma(d); },
+          formatPercent = d3.format(",.2%");
+          
+      // Parse the date / time
+      var	parseDate = d3.time.format(dateFormat).parse;
+      
+      
+      
+      //ADD COUNTY DATA
+      d3.csv("assets/data/national-cnty-covid19-risk-analysis.csv", function(fips_error, fips_data) {
+        if (fips_error) {
+          return console.warn(fips_error);
+        }
+        
+        fips_data.forEach(function(d) {
+          //d.date = parseDate(d.date);
+          d.crd_rate = formatNoDecimal(d.crd_rate);
+          d.cvd_rate = formatNoDecimal(d.cvd_rate);
+          d.diabetes_rate = formatNoDecimal(d.diabetes_rate);
+        });
+        
+        //ADD CASE DATA
+        d3.csv(casesFile, function(case_error, case_data) {
+          if (case_error) {
+            return console.warn(case_error);
+          }   
+          
+          case_data.forEach(function(d) {
+            //d.date = parseDate(d.date);
+            d.cases = d.cases.replace(/,/g, '');
+          });
+          
+          //need to remove commas
+          console.log(case_data);
+                      
+          //BEGIN CHART STUFF
+          var elWidth = document.getElementById("cases-chart").offsetWidth;
+          
+          // Set the dimensions of the canvas / graph
+          var	margin = {top: 30, right: 20, bottom: 30, left: 50},
+          	width = elWidth - margin.left - margin.right,
+          	height = 270 - margin.top - margin.bottom;
+           
+           
+          // Set the case ranges
+          var	xCases = d3.time.scale().range([0, width]);
+          var	yCases = d3.scale.linear().range([height, 0]);
+          
+          // Define the case axes
+          var	xCaseAxis = d3.svg.axis().scale(xCases)
+          	.orient("bottom").ticks(5);
+          var	yCaseAxis = d3.svg.axis().scale(yCases)
+          	.orient("left").ticks(5);
+          	
+          // Adds the svg cases
+          var	svgCases = d3.select("#cases-chart")
+          	.append("svg")
+          		.attr("width", width + margin.left + margin.right)
+          		.attr("height", height + margin.top + margin.bottom)
+          	.append("g")
+          		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            
+          // Define the case line
+          var caseValueline = d3.svg.line()
+            	.x(function(d) { return xCases(d.date); })
+            	.y(function(d) { return yCases(parseFloat(d.cases)); });
+          		
+    
+          // Set the death ranges
+          var	xDeaths = d3.time.scale().range([0, width]);
+          var	yDeaths = d3.scale.linear().range([height, 0]);
+          
+          // Define the death axes
+          var	xDeathAxis = d3.svg.axis().scale(xDeaths)
+          	.orient("bottom").ticks(5);
+          var	yDeathAxis = d3.svg.axis().scale(yDeaths)
+          	.orient("left").ticks(5);
+          		
+          // Adds the svg cases
+          var	svgDeaths = d3.select("#deaths-chart")
+          	.append("svg")
+          		.attr("width", width + margin.left + margin.right)
+          		.attr("height", height + margin.top + margin.bottom)
+          	.append("g")
+          		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          		
+            
+          // Define deaths line
+          var	deathValueline = d3.svg.line()
+          	.x(function(d) { return xDeaths(d.date); })
+          	.y(function(d) { return yDeaths(parseFloat(d.deaths)); });
+          		
+            
+          ////////////DATA FORMATING FUNCTIONS///////////////// 	 
+          
+          function formatCaseData(data){
+            var stateDataByDate = d3.nest()
+              .key(function(d) {return d.date;})
+              .rollup(function(d) {
+                return {
+                    cases: d3.sum(d, function(e) { return parseFloat(e.cases); }),
+                    deaths: d3.sum(d, function(e) { return parseFloat(e.deaths); })
+                };
+              })
+              .entries(data);
+              
+            var caseDateLookup = {};
+            for(i=0;i<stateDataByDate.length;i++){
+              dict = {}
+              dict['date'] = parseDate(stateDataByDate[i].key);
+              dict['cases'] = stateDataByDate[i].values.cases;
+              dict['deaths'] = stateDataByDate[i].values.deaths;
+              caseDateLookup[i] = dict;
+            }
+            return Object.values(caseDateLookup);
+          }
+          
+          function updatePopText(region_data){
+            
+            console.log(region_data);
+            
+            var cntyName = region_data['cnty_name'];
+            var pop65plus = region_data['perc_65plus'];
+            
+            var crdRate = region_data['crd_rate']+' out of 100,000';
+            var crdQ = region_data['us_crd_q'];
+            
+            var cvdRate = region_data['cvd_rate']+' out of 100,000';;
+            var cvdQ = region_data['us_cvd_q'];
+            
+            var diaRate = region_data['diabetes_rate'];
+            var diaQ = region_data['us_diabetes_q'];
+            
+            var quarHR = {
+              "1":"This county's rate is <span class='q1'>better than 75%</span> of all U.S. county rates.",
+              "2":"This county's rate is <span class='q2'>better than 50%</span> of all U.S. county rates.",
+              "3":"This county's rate is <span class='q3'>worse than 50%</span> of all U.S. county rates.",
+              "4":"This county's rate is <span class='q4'>worse than 75%</span> of all U.S. county rates."
+            };
+          
+            
+            var popText = "Experts say that some groups are more at risk if they contract COVID-19,"+
+                          "for instance, seniors or people who suffer from diabetes, chronic respiratory"+
+                          " disease or cardiovascular disease. Here’s a breakdown of how many people in "+
+                          cntyName + " are part of these vulnerable groups.";
+                          
+            var ageText = "<p><strong>"+pop65plus+"%</strong> of "+cntyName+"&#39;s residents are 65 or older.</p>";
+            
+            var crdText = "<p>"+cntyName + " has a chronic respiratory disease death rate of <strong>"+crdRate+"</strong>. "+quarHR[crdQ]+
+                          "</p><p>People who suffer from chronic respiratory disease are more vulnerable to a serious"+
+                          " COVID-19 case, because the coronavirus can inflame the lungs.</p>";
+            
+            var cvdText = "<p>"+cntyName + " has a cardiovascular disease death rate of <strong>"+cvdRate+"</strong>. "+quarHR[cvdQ]+
+                          "</p><p>The novel coronavirus especially threatens people with cardiovascular disease. "+
+                          "In patients whose heart is made more vulnerable by pre-existing conditions, "+
+                          "COVID-19 causes complications like embolisms and irregular heartbeats, and that "+
+                          "raises a patient’s risk of death.</p>";
+            
+            var diaText = '<p><strong>'+diaRate+"%</strong> of adults over 20</strong> in "+cntyName+" have diabetes. "+quarHR[diaQ]+
+                          "</p><p>COVID-19 threatens people with diabetes, whose blood sugar isn't stable, because this"+
+                          " pre-existing condition makes their ability to fight off infection unstable too. "+
+                          "Unchecked, the virus can cause complications leading to coma or death.</p>";
+
+            //// Add text to case text block
+            //var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
+            //var totalCaseText = 'There have been '+ formatComma(totalCases) +' confirmed cases of COVID-19 in <strong>'+
+            //                    region_name +'</strong>.';
+            var casesText = d3.select('#cnty-pop')
+              .html('<h2>County vulnerable population information</h2>')
+              .append('p')
+              .html(popText);
+              
+            var ageText = d3.select('#cnty-age')
+              .html(ageText)
+              //.append('p')
+              //.html(ageText);
+              
+            var crdText = d3.select('#cnty-crd .text')
+              .html('<h2>Chronic Respiratory Disease</h2>'+crdText)
+              
+            var crdImg = d3.select('#cnty-crd .img')
+              .html('')
+              .append('img')
+                .attr('src','assets/quartiles/crd-q'+crdQ+'.png')
+                .attr('width',175)
+                .attr('alt','quartile chart');
+          
+            
+            var cvdText = d3.select('#cnty-cvd .text')
+              .html('<h2>Cardiovascular Disease</h2>'+cvdText)
+            
+            var cvdImg = d3.select('#cnty-cvd .img')
+              .html('')
+              .append('img')
+                .attr('src','assets/quartiles/cvd-q'+cvdQ+'.png')
+                .attr('width',175)
+                .attr('alt','quartile chart');
+              
+            var cvdText = d3.select('#cnty-dia .text')
+              .html('<h2>Diabetes</h2>'+diaText)
+            
+            var diaImg = d3.select('#cnty-dia .img')
+              .html('')
+              .append('img')
+                .attr('src','assets/quartiles/dia-q'+diaQ+'.png')
+                .attr('width',175)
+                .attr('alt','quartile chart');
+          }
+          
+          function updateChartText(caseDateLookup,region_name){
+            // Add text to case text block
+            var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
+            var totalCaseText = 'There have been '+ formatComma(totalCases) +' confirmed cases of COVID-19 in <strong>'+
+                                region_name +'</strong>.';
+            var casesText = d3.select('#cases-text')
+              .html('<h2>Positive cases</h2>')
+              .append('p')
+              .html(totalCaseText);
+              
+            // Add text to death text block
+            var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
+            var totalDeathText = 'There have been '+ formatComma(totalDeaths) +
+                                ' reported deaths related to COVID-19 in <strong>'+
+                                region_name + '</strong>.';
+            var deathText = d3.select('#deaths-text')
+              .html('<h2>Deaths</h2>')
+              .append('p')
+              .html(totalDeathText);
+          }
+          
+          function updateCharts(caseDateLookup,region_name) {
+            
+            updateChartText(caseDateLookup,region_name);
+            // First update the cases y-axis domain to match data
+            yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
+
+            svgCases.select(".line")   // change the line
+              .transition()
+              .duration(750)
+              .attr("d", caseValueline(caseDateLookup));
+              
+            svgCases.select(".y.axis") // change the y axis
+              .transition()
+              .duration(750)
+              .call(yCaseAxis);
+              
+
+              
+            // First update the deaths y-axis domain to match data
+            yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
+
+            svgDeaths.select(".line")   // change the line
+              .transition()
+              .duration(750)
+              .attr("d", deathValueline(caseDateLookup));
+              
+            svgDeaths.select(".y.axis") // change the y axis
+              .transition()
+              .duration(750)
+              .call(yDeathAxis);
+          };
+          
+          function createCharts(caseDateLookup,region_name){
+
+            updateChartText(caseDateLookup,region_name);         
+                        
+          	// Scale the range of the case data
+          	xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
+          	yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
+          	       
+          	// Add the valueline path to svgCases.          	
+          	svgCases.append("path")
+          	  .datum(caseDateLookup)
+          		.attr("class", "line")
+          		.attr("stroke", "#8C8C8C")
+          		.attr("stroke-width", 2)
+          		//.attr("fill", "#cccccc")
+          		.attr("fill", "None")
+          		.attr("d", caseValueline(caseDateLookup));
+           
+          	// Add the case X Axis
+          	svgCases.append("g")		
+          		.attr("class", "x axis")
+          		.attr("transform", "translate(0," + height + ")")
+          		.call(xCaseAxis);
+           
+          	// Add the case Y Axis
+          	svgCases.append("g")		
+          		.attr("class", "y axis")
+          		.call(yCaseAxis);
+            
+            	
+            // Scale the range of the death data
+          	xDeaths.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
+          	yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
+          	
+            // Add the valueline path to svgDeaths.
+          	svgDeaths.append("path")	
+          	  .datum(caseDateLookup)
+          		.attr("class", "line")
+          		.attr("stroke", "#730101")
+          		.attr("stroke-width", 2)
+          		//.attr("fill", "#FD6565")
+          		.attr("fill", "None")
+          		.attr("d", deathValueline(caseDateLookup));
+           
+          	// Add the death X Axis
+          	svgDeaths.append("g")		
+          		.attr("class", "x axis")
+          		.attr("transform", "translate(0," + height + ")")
+          		.call(xDeathAxis);
+           
+          	// Add the death Y Axis
+          	svgDeaths.append("g")		
+          		.attr("class", "y axis")
+          		.call(yDeathAxis);
+          }//END getSelectionTotals
+          
+          
+          function filterCntyPop(cntyFips){
+
+            var cntyFilter = cntyData.filter( function(d){
+              return d['cnty_fips'] == cntyFips
+            });
+            return cntyFilter;
+          }
+          
+          function filterCntyCases(cnty_fips){
+            var cntyFilter = case_data.filter( function(d){
+              return d['fips'] == cnty_fips
+            });
+            return cntyFilter;
+          }
+          
+          function filterStateCounties(stateFips){
+            var stateFilter = fips_data.filter( function(d){
+              return d['state_fips'] == stateFips
+            });
+            return stateFilter;
+          }
+          
+          //COUNTY STUFF
+          var cntyData = filterStateCounties(stateFips);
+          dropdown.selectAll('option')
+              .data(cntyData)
+            .enter().append('option')
+              .attr('value', function(d) {
+                return d.cnty_fips;
+              })
+              .text(function(d) {
+                  return d.cnty_name;
+              });
+            dropdown.on('change',function(){
+              dataLevel = 'county';
+              countySelection = d3.select(this).property('value');
+              countyName = d3.select('#county-select option:checked').text();
+              
+              var cntyPopData = filterCntyPop(countySelection);
+              var cntyPop = cntyPopData['population'];
+              updatePopText(cntyPopData[0]);
+              
+              var filtered_cases = filterCntyCases(countySelection);
+              caseDateLookup = formatCaseData(filtered_cases);
+              updateCharts(caseDateLookup,countyName);
+            });
+            
+          var caseDateLookup = formatCaseData(case_data);
+          createCharts(caseDateLookup,stateName);
+          
+        });
+      });
+      
+    </script>
+    <script>
+    </script>
+    
+    <script src="app.js" async></script>
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    //If we're embedding, we don't want to make this a new session so keep this commented out
+    //ga('create', 'UA-5828686-4', 'auto');
+    //
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+  </body>
+</html>
