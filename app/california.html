@@ -103,49 +103,47 @@
 
       <div id="stats" class="row">
 
-        <div id="chart-text" class="row">
-          <div id="cases-text" class="text one-half column"></div>
-          <div id="deaths-text" class="text one-half column"></div>
+        <div id="cases-chart" class="one-half column">
+          <div id="cases-text" class="text"></div>
+          <div id="cases-chart" class="chart one-half column"></div>
         </div>
 
-        <div id="charts" class="row">
-          <div id="cases-chart" class="chart one-half column"></div>
+        <div id="deaths-chart" class="one-half column">
+          <div id="deaths-text" class="text"></div>
           <div id="deaths-chart" class="chart one-half column"></div>
         </div>
-
-        <div id="cnty-demo">
-          <div id="cnty-pop" class="stat-row row"></div>
-          <div id="cnty-age" class="stat-row row"></div>
-          <div id="cnty-crd" class="stat-row row">
-            <div class="img"></div>
-            <div class="text"></div>
-          </div>
-          <div id="cnty-cvd" class="stat-row row">
-            <div class="img"></div>
-            <div class="text"></div>
-          </div>
-          <div id="cnty-dia" class="stat-row row">
-            <div class="img"></div>
-            <div class="text"></div>
-          </div>
-        </div>
-
       </div><!-- END STATS -->
-    </div>
-    <div id="data-notes">
-      <div class="row">
-        <div id="data-disclaimers">
-          <h3>Disclaimer &amp; Data Sources</h3>
-          <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
-          <p>The case data on this dashboard is powered by data from Johns Hopkins University. The data presented here only includes confirmed cases, but it may be lower than the actual number of infected people in a community due to a lack of testing. Depending on when counties report and when data is collected, these numbers may be behind in some areas.</p>
 
-          <p>As counties report confirmed cases when test results are confirmed positive, some of the increases in counties’ cases in one day could be due to many pending tests being confirmed rather than many people coming down with symptoms in one day.</p>
-          <h3>Credits</h3>
-          <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere & Aaron Mendelson at KPCC.</p>
+      <div id="cnty-demo">
+        <div id="cnty-pop" class="stat-row row"></div>
+        <div id="cnty-age" class="stat-row row"></div>
+        <div id="cnty-crd" class="stat-row row">
+          <div class="img"></div>
+          <div class="text"></div>
         </div>
-      </div><!-- END DATA-NOTES -->
-    </div>
-  </div>
+        <div id="cnty-cvd" class="stat-row row">
+          <div class="img"></div>
+          <div class="text"></div>
+        </div>
+        <div id="cnty-dia" class="stat-row row">
+          <div class="img"></div>
+          <div class="text"></div>
+        </div>
+      </div><!-- END CNTY-DEMO -->
+
+    </div><!-- END MAIN-CONTAINER -->
+    
+    <div id="data-notes" class="row">
+      <div id="data-disclaimers">
+        <h3>Disclaimer &amp; Data Sources</h3>
+        <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
+        <p>The case data on this dashboard is powered by data from Johns Hopkins University. The data presented here only includes confirmed cases, but it may be lower than the actual number of infected people in a community due to a lack of testing. Depending on when counties report and when data is collected, these numbers may be behind in some areas.</p>
+
+        <p>As counties report confirmed cases when test results are confirmed positive, some of the increases in counties’ cases in one day could be due to many pending tests being confirmed rather than many people coming down with symptoms in one day.</p>
+        <h3>Credits</h3>
+        <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere & Aaron Mendelson at KPCC.</p>
+      </div>
+    </div><!-- END DATA-NOTES -->
 
     <script>
       var casesFile = 'assets/data/2020-03-27-California-export.csv';
@@ -211,15 +209,16 @@
 
           // Set the dimensions of the canvas / graph
           var	margin = {top: 30, right: 20, bottom: 30, left: 50};
+          var width,height;
           	// width = elWidth - margin.left - margin.right,
           	// height = 270 - margin.top - margin.bottom;
 
           if ($(window).width() < 1150) {
-            var width = 700;
-            var height = 400;
+            width = 700;
+            height = 400;
           } else if ($(window).width() < 800) {
-            var width = 500;
-            var height = 300;
+            width = 500;
+            height = 300;
           } else {
             width = elWidth - margin.left - margin.right;
             height = 270 - margin.top - margin.bottom;
@@ -232,7 +231,7 @@
 
           // Define the case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
-          	.orient("bottom").ticks(5);
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
 
@@ -256,7 +255,7 @@
 
           // Define the death axes
           var	xDeathAxis = d3.svg.axis().scale(xDeaths)
-          	.orient("bottom").ticks(5);
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
           var	yDeathAxis = d3.svg.axis().scale(yDeaths)
           	.orient("left").ticks(5);
 
@@ -482,7 +481,7 @@
           	svgDeaths.append("path")
           	  .datum(caseDateLookup)
           		.attr("class", "line")
-          		.attr("stroke", "#730101")
+          		.attr("stroke", "#CC3333")
           		.attr("stroke-width", 2)
           		//.attr("fill", "#FD6565")
           		.attr("fill", "None")
