@@ -393,8 +393,10 @@
           function updateChartText(caseDateLookup,region_name,pop){
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
+            var perCapita = (totalCases/pop)*100000//per capital per 100,000
             var totalCaseText = 'There have been <strong>'+ formatComma(totalCases) +' cases</strong> of COVID-19 in '+
-                                region_name +'. The population of this region is '+ formatComma(pop) + '.';
+                                region_name +'. The population of this region is '+ formatComma(pop) + '. That&#39;s '+
+                                 formatNoDecimal(perCapita) + ' cases per 100,000 people.';
             var casesText = d3.select('#cases-text')
               .html('<h2>Positive cases</h2>')
               .append('p')
