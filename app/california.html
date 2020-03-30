@@ -84,9 +84,10 @@
       <div id="container-top" class="row">
         <img src="assets/ca-banner.jpg" alt="California COVID-19 Tracker">
         <div class="lead" id="intro">
-          <p>This dashboard provides a localized look at COVID-19-related confirmed cases and deaths in your county, as well as a risk assessment for your county’s population. <span id="update-date"></span></p>
+          <p>This dashboard provides a localized look at COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.</p>
+          <div class='cta' id="update-date"></div>
         </div>
-
+        
         <p class="cta">Use the dropdown below to display more information.</p>
         <div class="dropdown">
           <select id="county-select" class="row">
@@ -132,17 +133,21 @@
       <div id="data-disclaimers">
         <h3>Disclaimer &amp; Data Sources</h3>
         <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
-        <p>The case data on this dashboard is powered by data from Johns Hopkins University. The data presented here only includes confirmed cases, but it may be lower than the actual number of infected people in a community due to a lack of testing. Depending on when counties report and when data is collected, these numbers may be behind in some areas.</p>
+        <p>As of March 23, 2020, case and death data for California counties is collected by hand by reporters for CapRadio, KQED and KPCC from each public health department or county’s individual site each evening. We update the data daily at 7 or 8 p.m, and many jurisdictions post in the late afternoon. Historic data is provided by Big Local News & USA Facts.</p>
+        <p>While Alameda County and the city of Berkeley report their number of cases and deaths separately, we have added Berkeley’s totals into Alameda County’s totals for this data. Additionally, while Sutter and Yuba counties are one combined health jurisdiction, they sometimes report their data jointly, we have reported them separately here.</p>
+        <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing. Not every county updates its numbers daily, so these totals reflect the latest numbers as of our last data collection. Some counties report all people who have tested positive in the county, whether or not the person is a resident of the county.</p> 
+        <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
 
-        <p>As counties report confirmed cases when test results are confirmed positive, some of the increases in counties’ cases in one day could be due to many pending tests being confirmed rather than many people coming down with symptoms in one day.</p>
+        
         <h3>Credits</h3>
-        <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere & Aaron Mendelson at KPCC.</p>
+        <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
       </div>
     </div><!-- END DATA-NOTES -->
 
     <script>
-      var lastUpdated = '03/29/2020';
+      var lastUpdated = 'March 29, 5:52 p.m.';
       var casesFile = 'assets/data/2020-03-29-California-export-v2.csv';
+      
       var stateFips = '06';
       var stateName = 'California';
       var statePop = 39148760;
@@ -327,11 +332,11 @@
 
             var ageText = "<p><strong>"+pop65plus+"%</strong> of "+cntyName+"&#39;s residents are age 65 or older.</p>";
 
-            var crdText = "<p>"+cntyName + " has a chronic respiratory disease death rate of <strong>"+crdRate+"</strong>. "+quarHR[crdQ]+
+            var crdText = "<p>"+cntyName + " has a chronic respiratory disease death rate of <strong>"+crdRate+" out of 100,000</strong>. "+quarHR[crdQ]+
                           "</p><p>People who suffer from chronic respiratory disease are more vulnerable to a serious"+
                           " COVID-19 case, because the coronavirus can inflame the lungs.</p>";
 
-            var cvdText = "<p>"+cntyName + " has a cardiovascular disease death rate of <strong>"+cvdRate+"</strong>. "+quarHR[cvdQ]+
+            var cvdText = "<p>"+cntyName + " has a cardiovascular disease death rate of <strong>"+cvdRate+" out of 100,000</strong>. "+quarHR[cvdQ]+
                           "</p><p>The novel coronavirus especially threatens people with cardiovascular disease. "+
                           "In patients whose heart is made more vulnerable by pre-existing conditions, "+
                           "COVID-19 causes complications like embolisms and irregular heartbeats, and that "+
