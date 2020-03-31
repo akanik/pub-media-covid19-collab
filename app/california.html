@@ -144,8 +144,8 @@
     </div><!-- END DATA-NOTES -->
 
     <script>
-      var lastUpdated = 'March 29, 5:52 p.m.';
-      var casesFile = 'assets/data/2020-03-29-California-export-v2.csv';
+      var lastUpdated = 'March 30, 6:58 p.m.';
+      var casesFile = 'assets/data/2020-03-30-California-export-v2.csv';
       
       var stateFips = '06';
       var stateName = 'California';
@@ -325,23 +325,22 @@
 
 
             var popText = "Experts say that some groups are more at risk if they contract COVID-19, "+
-                          "for instance, seniors or people who suffer from diabetes, chronic respiratory"+
-                          " disease or cardiovascular disease. Here’s a breakdown of how many people in "+
+                          "for instance, seniors or people who suffer from chronic respiratory disease, cardiovascular disease or diabetes. Here’s a breakdown of how many people in "+
                           cntyName + " are part of these vulnerable groups.";
 
-            var ageText = "<p><strong>"+pop65plus+"%</strong> of "+cntyName+"&#39;s residents are age 65 or older.</p>";
+            var ageText = "<p>In 2018, <strong>"+pop65plus+"%</strong> of "+cntyName+"&#39;s residents were age 65 or older.</p>";
 
-            var crdText = "<p>"+cntyName + " has a chronic respiratory disease death rate of <strong>"+crdRate+" out of 100,000</strong>. "+quarHR[crdQ]+
+            var crdText = "<p>In 2014, <strong>" +crdRate+ " residents </strong>in "+cntyName + " died from a chronic respiratory disease. "+quarHR[crdQ]+
                           "</p><p>People who suffer from chronic respiratory disease are more vulnerable to a serious"+
                           " COVID-19 case, because the coronavirus can inflame the lungs.</p>";
 
-            var cvdText = "<p>"+cntyName + " has a cardiovascular disease death rate of <strong>"+cvdRate+" out of 100,000</strong>. "+quarHR[cvdQ]+
+            var cvdText = "<p>In 2014, <strong>"+cvdRate+ " residents</strong> in "+cntyName+" died of a cardiovascular disease. "+quarHR[cvdQ]+
                           "</p><p>The novel coronavirus especially threatens people with cardiovascular disease. "+
                           "In patients whose heart is made more vulnerable by pre-existing conditions, "+
                           "COVID-19 causes complications like embolisms and irregular heartbeats, and that "+
                           "raises a patient’s risk of death.</p>";
 
-            var diaText = '<p><strong>'+diaRate+"%</strong> of adults over age 20</strong> in "+cntyName+" have diabetes. "+quarHR[diaQ]+
+            var diaText = '<p>In 2014, <strong>'+diaRate+"%</strong> of adults over age 20</strong> in "+cntyName+" had diabetes. "+quarHR[diaQ]+
                           "</p><p>COVID-19 threatens people with diabetes, whose blood sugar isn't stable, because this"+
                           " pre-existing condition makes their ability to fight off infection unstable too. "+
                           "Unchecked, the virus can cause complications leading to coma or death.</p>";
