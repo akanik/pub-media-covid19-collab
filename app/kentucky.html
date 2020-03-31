@@ -18,19 +18,19 @@
 
     <!-- BEGIN TWITTER SUMMARY CARD -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Interactive: Coal & Gas Extraction Near WV Water Sources">
+    <meta name="twitter:title" content="Kentucky COVID-19 County Tracker">
     <meta name="twitter:site" content="@OVReSRC">
-    <meta name="twitter:url" content="https://local.wfpl.org/ovr/water-hazards/index.html">
-    <meta name="twitter:image" content="https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png">
-    <meta name="twitter:description" content="EXPLORE: The Ohio Valley ReSource used data on protected water areas to build this tool showing some of the coal mines and gas wells within the watersheds providing West Virginians drinking water.">
+    <meta name="twitter:url" content="https://local.wfpl.org/covid19/kentucky.html">
+    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/ky-cnty-covid.jpg">
+    <meta name="twitter:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Social sharing meta -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Interactive: Coal & Gas Extraction Near WV Water Sources">
+    <meta property="og:title" content="Kentucky COVID-19 County Tracker">
     <meta property="og:site_name" content="Ohio Valley ReSource">
-    <meta property="og:url" content="https://local.wfpl.org/ovr/water-hazards/index.html">
-    <meta property="og:image" content="https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png">
-    <meta property="og:description" content="EXPLORE: The Ohio Valley ReSource used data on protected water areas to build this tool showing some of the coal mines and gas wells within the watersheds providing West Virginians drinking water.">
+    <meta property="og:url" content="https://local.wfpl.org/covid19/kentucky.html">
+    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg">
+    <meta property="og:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Google structured data -->
     <script type="application/ld+json">
@@ -39,25 +39,25 @@
       "@type": "NewsArticle",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://local.wfpl.org/ovr/water-hazards/"
+        "@id": "https://local.wfpl.org/covid19/kentucky.html"
       },
-      "headline": "Interactive: Coal & Gas Extraction Near WV Water Sources",
+      "headline": "Kentucky COVID-19 County Tracker",
       "image": {
         "@type": "ImageObject",
-        "url": "https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png"
+        "url": "https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg"
       },
       "author": {
         "@type": "Person",
-        "name": "NPR Staff"
+        "name": "Alexandra Kanik"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "NPR",
+        "name": "Louisville Public Media",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://local.wfpl.org/ovr/water-hazards/assets/logo.png",
-          "width": 891,
-          "height": 296
+          "url": "https://louisvillepublicmedia.org/wp-content/uploads/2018/08/lpm-logo-big-2018.png",
+          "width": 899,
+          "height": 126
         }
       },
       "description": "EXPLORE: This dashboard provides a localized look at confirmed cases of and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population."
@@ -82,7 +82,7 @@
   <body>
     <div id="main-container" class="container">
       <div id="container-top" class="row">
-        <img src="assets/ca-banner.jpg" alt="California COVID-19 Tracker">
+        <img src="assets/ky-covid-header.jpg" alt="California COVID-19 Tracker">
         <div class="lead" id="intro">
           <p>This dashboard provides a localized look at COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.</p>
           <div class='cta' id="update-date"></div>
@@ -146,8 +146,8 @@
     </div><!-- END DATA-NOTES -->
 
     <script>    
-      var lastUpdated = 'March 29, 6:30 p.m.';
-      var casesFile = 'assets/data/2020-03-29-Kentucky-export.csv';
+      var lastUpdated = 'March 30, 11:30 p.m.';
+      var casesFile = 'assets/data/2020-03-30-Kentucky-export.csv';
       var stateFips = '21';
       var stateName = 'Kentucky';
       var statePop = 4440204;
@@ -539,6 +539,7 @@
 
           //COUNTY STUFF
           var cntyData = filterStateCounties(stateFips);
+          cntyData.unshift({ cnty_name: 'Select a county..', cnty_fips: 'default'});
           dropdown.selectAll('option')
               .data(cntyData)
             .enter().append('option')

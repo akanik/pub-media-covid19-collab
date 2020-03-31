@@ -18,19 +18,18 @@
 
     <!-- BEGIN TWITTER SUMMARY CARD -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Interactive: Coal & Gas Extraction Near WV Water Sources">
-    <meta name="twitter:site" content="@OVReSRC">
+    <meta name="twitter:title" content="California Public Media COVID-19 Tracker">
     <meta name="twitter:url" content="https://local.wfpl.org/ovr/water-hazards/index.html">
-    <meta name="twitter:image" content="https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png">
-    <meta name="twitter:description" content="EXPLORE: The Ohio Valley ReSource used data on protected water areas to build this tool showing some of the coal mines and gas wells within the watersheds providing West Virginians drinking water.">
+    <meta name="twitter:image" content="https://local.wfpl.org/ovr/water-hazards/assets/ca-covid-app-art.jpg">
+    <meta name="twitter:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Social sharing meta -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Interactive: Coal & Gas Extraction Near WV Water Sources">
-    <meta property="og:site_name" content="Ohio Valley ReSource">
+    <meta property="og:title" content="California COVID-19 Tracker">
+    <meta property="og:site_name" content="California Public Media COVID-19 Tracker">
     <meta property="og:url" content="https://local.wfpl.org/ovr/water-hazards/index.html">
-    <meta property="og:image" content="https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png">
-    <meta property="og:description" content="EXPLORE: The Ohio Valley ReSource used data on protected water areas to build this tool showing some of the coal mines and gas wells within the watersheds providing West Virginians drinking water.">
+    <meta property="og:image" content="https://local.wfpl.org/ovr/water-hazards/assets/ca-covid-app-art.jpg">
+    <meta property="og:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Google structured data -->
     <script type="application/ld+json">
@@ -41,18 +40,18 @@
         "@type": "WebPage",
         "@id": "https://local.wfpl.org/ovr/water-hazards/"
       },
-      "headline": "Interactive: Coal & Gas Extraction Near WV Water Sources",
+      "headline": "California COVID-19 Tracker",
       "image": {
         "@type": "ImageObject",
         "url": "https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png"
       },
       "author": {
         "@type": "Person",
-        "name": "NPR Staff"
+        "name": "California Regional News Hub Staff"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "NPR",
+        "name": "California Regional News Hub",
         "logo": {
           "@type": "ImageObject",
           "url": "https://local.wfpl.org/ovr/water-hazards/assets/logo.png",
@@ -82,7 +81,7 @@
   <body>
     <div id="main-container" class="container">
       <div id="container-top" class="row">
-        <img src="assets/ca-banner.jpg" alt="California COVID-19 Tracker">
+        <img src="assets/ca-covid-header.jpg" alt="California COVID-19 Tracker">
         <div class="lead" id="intro">
           <p>This dashboard provides a localized look at COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.</p>
           <div class='cta' id="update-date"></div>
@@ -91,7 +90,7 @@
         <p class="cta">Use the dropdown below to display more information.</p>
         <div class="dropdown">
           <select id="county-select" class="row">
-            <option>Select a county...</option>
+            
           </select>
           <div class="down-arrow"></div>
         </div>
@@ -537,6 +536,7 @@
 
           //COUNTY STUFF
           var cntyData = filterStateCounties(stateFips);
+          cntyData.unshift({ cnty_name: 'Select a county..', cnty_fips: 'default'});
           dropdown.selectAll('option')
               .data(cntyData)
             .enter().append('option')
@@ -546,6 +546,7 @@
               .text(function(d) {
                   return d.cnty_name;
               });
+              
             dropdown.on('change',function(){
               dataLevel = 'county';
               countySelection = d3.select(this).property('value');
