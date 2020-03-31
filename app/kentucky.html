@@ -188,13 +188,13 @@
         if (fips_error) {
           return console.warn(fips_error);
         }
-
         fips_data.forEach(function(d) {
           //d.date = parseDate(d.date);
           d.crd_rate = formatNoDecimal(d.crd_rate);
           d.cvd_rate = formatNoDecimal(d.cvd_rate);
           d.diabetes_rate = formatNoDecimal(d.diabetes_rate);
           d.population = d.population.replace(/,/g, '');
+          d.cnty_name = d.cnty_name.replace(', California','');
         });
 
         //ADD CASE DATA
