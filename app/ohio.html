@@ -18,18 +18,18 @@
 
     <!-- BEGIN TWITTER SUMMARY CARD -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Kentucky COVID-19 County Tracker">
+    <meta name="twitter:title" content="Ohio COVID-19 County Tracker">
     <meta name="twitter:site" content="@OVReSRC">
-    <meta name="twitter:url" content="https://local.wfpl.org/covid19/kentucky.html">
-    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/ky-cnty-covid.jpg">
+    <meta name="twitter:url" content="https://local.wfpl.org/covid19/ohio.html">
+    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/oh-cnty-covid.jpg">
     <meta name="twitter:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Social sharing meta -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Kentucky COVID-19 County Tracker">
+    <meta property="og:title" content="Ohio COVID-19 County Tracker">
     <meta property="og:site_name" content="Ohio Valley ReSource">
-    <meta property="og:url" content="https://local.wfpl.org/covid19/kentucky.html">
-    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg">
+    <meta property="og:url" content="https://local.wfpl.org/covid19/ohio.html">
+    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/oh-covid-app-art.jpg">
     <meta property="og:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Google structured data -->
@@ -39,12 +39,12 @@
       "@type": "NewsArticle",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://local.wfpl.org/covid19/kentucky.html"
+        "@id": "https://local.wfpl.org/covid19/ohio.html"
       },
-      "headline": "Kentucky COVID-19 County Tracker",
+      "headline": "Ohio COVID-19 County Tracker",
       "image": {
         "@type": "ImageObject",
-        "url": "https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg"
+        "url": "https://local.wfpl.org/covid19/assets/oh-covid-app-art.jpg"
       },
       "author": {
         "@type": "Person",
@@ -82,7 +82,7 @@
   <body>
     <div id="main-container" class="container">
       <div id="container-top" class="row">
-        <img src="assets/ky-covid-header.jpg" alt="Kentucky COVID-19 Tracker">
+        <img src="assets/oh-covid-header.jpg" alt="Ohio COVID-19 Tracker">
         <div class="lead" id="intro">
           <p>This dashboard provides a localized look at COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.</p>
           <div class='cta' id="update-date"></div>
@@ -90,7 +90,7 @@
         
         <p class="cta">Use the dropdown below to display more information.</p>
         <div class="dropdown">
-          <select id="county-select">
+          <select id="county-select" class="row">
             <option>Select a county...</option>
           </select>
           <div class="down-arrow"></div>
@@ -99,14 +99,14 @@
 
       <div id="stats" class="row">
 
-        <div id="cases-elements" class="one-half column">
+        <div id="cases-chart" class="one-half column">
           <div id="cases-text" class="text"></div>
-          <div id="cases-chart" class="chart"></div>
+          <div id="cases-chart" class="chart one-half column"></div>
         </div>
 
-        <div id="deaths-elements" class="one-half column">
+        <div id="deaths-chart" class="one-half column">
           <div id="deaths-text" class="text"></div>
-          <div id="deaths-chart" class="chart"></div>
+          <div id="deaths-chart" class="chart one-half column"></div>
         </div>
       </div><!-- END STATS -->
 
@@ -133,12 +133,10 @@
       <div id="data-disclaimers">
         <h3>Disclaimer &amp; Data Sources</h3>
         <p>Age data provided by the 2018 5 year American Community Survey. Disease data are from 2014 and are provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
-        <p>As of March 28, 2020, case and death data for Kentucky counties are compiled from the Kentucky Governor's office daily COVID-19 data releases.</p>
-        <p>Case data are updated nightly after the Governor's 5 p.m. new brief.</p>
-        <p>Historic data are provided by the <a href="https://github.com/nytimes/covid-19-data" target="_blank">New York Times county dataset</a>.</p>
-        <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing.</p> 
+        <p>*Case and death data for Ohio counties are compiled from the <a href="https://coronavirus.ohio.gov/wps/portal/gov/covid-19/home/dashboard" target='_blank'>Ohio Department of Health daily COVID-19 data release</a>. Case data for Ohio are one day behind. Data for yesterday are updated today at 2 p.m. ET on a daily basis.</p>
+        <p>In their data disclaimer, ODH notes: "All data displayed is preliminary and subject to change as more information is reported to ODH. Trends are based on the date of illness onset. If onset date is unknown, the earliest known date associated with the case is used as a substitute for the date of illness onset."</p>
+        <p>Preliminary case data may be lower than the actual number of infected people in a community due to a lack of testing or delayed reporting.</p> 
         <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
-
         
         <h3>Credits</h3>
         <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
@@ -146,13 +144,11 @@
     </div><!-- END DATA-NOTES -->
 
     <script>    
-      var lastUpdated = 'March 30, 11:30 p.m.';
-      var casesFile = 'assets/data/2020-03-30-Kentucky-export.csv';
-      var stateFips = '21';
-      var stateName = 'Kentucky';
-      var statePop = 4440204;
-      //State unknown county and/or unconfirmed cases
-      var stateUKUC = 12;
+      var lastUpdated = 'March 31, 2:00 p.m.*';
+      var casesFile = 'assets/data/2020-03-31-Ohio-export.csv';
+      var stateFips = '39';
+      var stateName = 'Ohio';
+      var statePop = 11641879;
       var dateFormat = "%Y-%m-%d";
 
       var include_state_testing = false;
@@ -163,7 +159,7 @@
       
       // Add update date
       var updateDate = d3.select('#update-date')
-        .html('Data last updated '+lastUpdated+'.');
+        .html('Data last updated '+lastUpdated);
 
       var dropdown = d3.select('#county-select');
       var stateStats = d3.select('#state-stats').append('p');
@@ -194,7 +190,7 @@
           d.cvd_rate = formatNoDecimal(d.cvd_rate);
           d.diabetes_rate = formatNoDecimal(d.diabetes_rate);
           d.population = d.population.replace(/,/g, '');
-          d.cnty_name = d.cnty_name.replace(', Kentucky','');
+          d.cnty_name = d.cnty_name.replace(', '+stateName,'');
         });
 
         //ADD CASE DATA
@@ -216,11 +212,11 @@
 
           // Set the dimensions of the canvas / graph
           var	margin = {top: 30, right: 20, bottom: 30, left: 50};
-          //var width,height;
-          var width = elWidth - margin.left - margin.right;
-          var height = 270 - margin.top - margin.bottom;
+          var width,height;
+          	// width = elWidth - margin.left - margin.right,
+          	// height = 270 - margin.top - margin.bottom;
 
-          /*if ($(window).width() < 1150) {
+          if ($(window).width() < 1150) {
             width = 700;
             height = 400;
           } else if ($(window).width() < 800) {
@@ -229,7 +225,7 @@
           } else {
             width = elWidth - margin.left - margin.right;
             height = 270 - margin.top - margin.bottom;
-          }*/
+          }
 
 
           // Set the case ranges

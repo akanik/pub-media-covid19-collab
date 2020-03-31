@@ -42,12 +42,12 @@
       "@type": "NewsArticle",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://local.wfpl.org/ovr/water-hazards/"
+        "@id": "https://laist.com/projects/2020/coronavirus-tracker/"
       },
       "headline": "California COVID-19 Tracker",
       "image": {
         "@type": "ImageObject",
-        "url": "https://local.wfpl.org/ovr/water-hazards/assets/ovr-water-hazards-cover.png"
+        "url": "https://www.capradio.org/media/12251118/coronatrackertwitter.jpg"
       },
       "author": {
         "@type": "Person",
@@ -93,7 +93,7 @@
         
         <p class="cta">Use the dropdown below to display more information.</p>
         <div class="dropdown">
-          <select id="county-select" class="row">
+          <select id="county-select">
             
           </select>
           <div class="down-arrow"></div>
@@ -102,14 +102,14 @@
 
       <div id="stats" class="row">
 
-        <div id="cases-chart" class="one-half column">
+        <div id="cases-elements" class="one-half column">
           <div id="cases-text" class="text"></div>
-          <div id="cases-chart" class="chart one-half column"></div>
+          <div id="cases-chart" class="chart"></div>
         </div>
 
-        <div id="deaths-chart" class="one-half column">
+        <div id="deaths-elements" class="one-half column">
           <div id="deaths-text" class="text"></div>
-          <div id="deaths-chart" class="chart one-half column"></div>
+          <div id="deaths-chart" class="chart"></div>
         </div>
       </div><!-- END STATS -->
 
@@ -217,11 +217,11 @@
 
           // Set the dimensions of the canvas / graph
           var	margin = {top: 30, right: 20, bottom: 30, left: 50};
-          var width,height;
-          	// width = elWidth - margin.left - margin.right,
-          	// height = 270 - margin.top - margin.bottom;
+          //var width,height;
+          var width = elWidth - margin.left - margin.right;
+          var height = 270 - margin.top - margin.bottom;
 
-          if ($(window).width() < 1150) {
+          /*if ($(window).width() < 1150) {
             width = 700;
             height = 400;
           } else if ($(window).width() < 800) {
@@ -230,7 +230,7 @@
           } else {
             width = elWidth - margin.left - margin.right;
             height = 270 - margin.top - margin.bottom;
-          }
+          }*/
 
 
           // Set the case ranges
