@@ -15,7 +15,7 @@
     <link rel="manifest" href="assets/favicons/site.webmanifest">
     <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#ffffff"> 
+    <meta name="theme-color" content="#ffffff">
     <!-- Safari, you're the worst -->
     <meta name='format-detection' content='telephone=no'>
 
@@ -23,7 +23,7 @@
     <!-- BEGIN TWITTER SUMMARY CARD -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="California Public Media COVID-19 Tracker">
-    <meta name="twitter:url" content="https://laist.com/projects/2020/coronavirus-tracker/">
+    <meta name="twitter:url" content="https://laist.com/projects/2020/coronavirus-tracker/california.html">
     <meta name="twitter:image" content="https://www.capradio.org/media/12251118/coronatrackertwitter.jpg">
     <meta name="twitter:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
@@ -31,7 +31,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="California COVID-19 Tracker">
     <meta property="og:site_name" content="California Public Media COVID-19 Tracker">
-    <meta property="og:url" content="https://laist.com/projects/2020/coronavirus-tracker/">
+    <meta property="og:url" content="https://laist.com/projects/2020/coronavirus-tracker/california.html">
     <meta property="og:image" content="https://www.capradio.org/media/12251118/coronatrackertwitter.jpg">
     <meta property="og:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
@@ -42,7 +42,7 @@
       "@type": "NewsArticle",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://laist.com/projects/2020/coronavirus-tracker/"
+        "@id": "https://laist.com/projects/2020/coronavirus-tracker/california.html"
       },
       "headline": "California COVID-19 Tracker",
       "image": {
@@ -63,7 +63,7 @@
           "height": 296
         }
       },
-      "description": "EXPLORE: This dashboard provides a localized look at confirmed cases of and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population."
+      "description": "EXPLORE: This dashboard provides a localized look at confirmed cases and deaths related to COVID-19 in your county, as well as a risk assessment for your county’s population."
     }
     </script>
     <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/normalize.css">
@@ -90,11 +90,11 @@
           <p>This dashboard provides a localized look at COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.</p>
           <div class='cta' id="update-date"></div>
         </div>
-        
+
         <p class="cta">Use the dropdown below to display more information.</p>
         <div class="dropdown">
           <select id="county-select">
-            
+
           </select>
           <div class="down-arrow"></div>
         </div>
@@ -131,26 +131,27 @@
       </div><!-- END CNTY-DEMO -->
 
     </div><!-- END MAIN-CONTAINER -->
-    
+
     <div id="data-notes">
       <div id="data-disclaimers">
         <h3>Disclaimer &amp; Data Sources</h3>
         <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
         <p>As of March 23, 2020, case and death data for California counties is collected by hand by reporters for CapRadio, KQED and KPCC from each public health department or county’s individual site each evening. We update the data daily at 7 or 8 p.m, and many jurisdictions post in the late afternoon. Historic data is provided by Big Local News & USA Facts.</p>
         <p>While Alameda County and the city of Berkeley report their number of cases and deaths separately, we have added Berkeley’s totals into Alameda County’s totals for this data. Additionally, while Sutter and Yuba counties are one combined health jurisdiction, they sometimes report their data jointly, we have reported them separately here.</p>
-        <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing. Not every county updates its numbers daily, so these totals reflect the latest numbers as of our last data collection. Some counties report all people who have tested positive in the county, whether or not the person is a resident of the county.</p> 
+        <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing. Not every county updates its numbers daily, so these totals reflect the latest numbers as of our last data collection. Some counties report all people who have tested positive in the county, whether or not the person is a resident of the county.</p>
         <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
 
-        
-        <h3>Credits</h3>
+
+        <h3>Credits </h3>
         <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
       </div>
     </div><!-- END DATA-NOTES -->
-
+    <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
     <script>
-      var lastUpdated = 'March 31, 8:57 p.m';
+
+      var lastUpdated = 'March 31, 8:31 p.m';
       var casesFile = 'assets/data/2020-03-31-California-export.csv';
-      
+
       var stateFips = '06';
       var stateName = 'California';
       var statePop = 39148760;
@@ -161,7 +162,7 @@
       var data_level = 'state';
       var countySelection = '';
       var countyName = '';
-      
+
       // Add update date
       var updateDate = d3.select('#update-date')
         .html('Data last updated '+lastUpdated+'.');
@@ -185,7 +186,7 @@
 
 
       //ADD COUNTY DATA
-      d3.csv("app/assets/data/national-cnty-covid19-risk-analysis.csv", function(fips_error, fips_data) {
+      d3.csv("assets/data/national-cnty-covid19-risk-analysis.csv", function(fips_error, fips_data) {
         if (fips_error) {
           return console.warn(fips_error);
         }
@@ -367,7 +368,7 @@
             var crdText = d3.select('#cnty-crd')
               .attr('class','stat-row')
               .select('.text')
-                .html('<h2>Chronic Respiratory Disease</h2>'+crdText)    
+                .html('<h2>Chronic Respiratory Disease</h2>'+crdText)
 
             var crdImg = d3.select('#cnty-crd .img')
               .html('')
@@ -402,14 +403,14 @@
                 .attr('width',175)
                 .attr('alt','quartile chart');
           }// END updatePopText
-          
+
 
           function updateChartText(caseDateLookup,region_name,pop){
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
-            var perCapita = (totalCases/pop)*100000//per capital per 100,000
+            var perCapita = (totalCases/pop)*100000//per capita per 100,000
             var totalCaseText = 'There have been <strong>'+ formatComma(totalCases) +' cases</strong> of COVID-19 in '+
-                                region_name +'. The population of this region is '+ formatComma(pop) + '. That&#39;s '+
+                                region_name +'. The population of this area is '+ formatComma(pop) + '. That&#39;s '+
                                  formatNoDecimal(perCapita) + ' cases per 100,000 people.';
             var casesText = d3.select('#cases-text')
               .html('<h2>Positive cases</h2>')
@@ -430,7 +431,7 @@
           function updateCharts(caseDateLookup,region_name,pop) {
 
             updateChartText(caseDateLookup,region_name,pop);
-            
+
             // First update the cases y-axis domain to match data
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
 
@@ -549,7 +550,7 @@
               .text(function(d) {
                   return d.cnty_name;
               });
-              
+
             dropdown.on('change',function(){
               dataLevel = 'county';
               countySelection = d3.select(this).property('value');
@@ -571,6 +572,8 @@
         });
       });
 
+      var pymChild = new pym.Child;
+      pymChild.sendHeight();
     </script>
 
     <script src="app.js" async></script>
