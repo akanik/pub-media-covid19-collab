@@ -185,7 +185,7 @@
 
 
       //ADD COUNTY DATA
-      d3.csv("assets/data/national-cnty-covid19-risk-analysis.csv", function(fips_error, fips_data) {
+      d3.csv("app/assets/data/national-cnty-covid19-risk-analysis.csv", function(fips_error, fips_data) {
         if (fips_error) {
           return console.warn(fips_error);
         }

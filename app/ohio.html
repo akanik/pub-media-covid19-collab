@@ -18,18 +18,18 @@
 
     <!-- BEGIN TWITTER SUMMARY CARD -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Ohio COVID-19 County Tracker">
+    <meta name="twitter:title" content="Kentucky COVID-19 County Tracker">
     <meta name="twitter:site" content="@OVReSRC">
-    <meta name="twitter:url" content="https://local.wfpl.org/covid19/ohio.html">
-    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/oh-cnty-covid.jpg">
+    <meta name="twitter:url" content="https://local.wfpl.org/covid19/kentucky.html">
+    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/ky-cnty-covid.jpg">
     <meta name="twitter:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Social sharing meta -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Ohio COVID-19 County Tracker">
+    <meta property="og:title" content="Kentucky COVID-19 County Tracker">
     <meta property="og:site_name" content="Ohio Valley ReSource">
-    <meta property="og:url" content="https://local.wfpl.org/covid19/ohio.html">
-    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/oh-covid-app-art.jpg">
+    <meta property="og:url" content="https://local.wfpl.org/covid19/kentucky.html">
+    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg">
     <meta property="og:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Google structured data -->
@@ -39,12 +39,12 @@
       "@type": "NewsArticle",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://local.wfpl.org/covid19/ohio.html"
+        "@id": "https://local.wfpl.org/covid19/kentucky.html"
       },
-      "headline": "Ohio COVID-19 County Tracker",
+      "headline": "Kentucky COVID-19 County Tracker",
       "image": {
         "@type": "ImageObject",
-        "url": "https://local.wfpl.org/covid19/assets/oh-covid-app-art.jpg"
+        "url": "https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg"
       },
       "author": {
         "@type": "Person",
@@ -82,7 +82,7 @@
   <body>
     <div id="main-container" class="container">
       <div id="container-top" class="row">
-        <img src="assets/oh-covid-header.jpg" alt="Ohio COVID-19 Tracker">
+        <img src="assets/oh-covid-header.jpg" alt="COVID-19 Tracker banner image">
         <div class="lead" id="intro">
           <p>This dashboard provides a localized look at COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.</p>
           <div class='cta' id="update-date"></div>
@@ -90,7 +90,7 @@
         
         <p class="cta">Use the dropdown below to display more information.</p>
         <div class="dropdown">
-          <select id="county-select" class="row">
+          <select id="county-select">
             <option>Select a county...</option>
           </select>
           <div class="down-arrow"></div>
@@ -99,14 +99,14 @@
 
       <div id="stats" class="row">
 
-        <div id="cases-chart" class="one-half column">
+        <div id="cases-elements" class="one-half column">
           <div id="cases-text" class="text"></div>
-          <div id="cases-chart" class="chart one-half column"></div>
+          <div id="cases-chart" class="chart"></div>
         </div>
 
-        <div id="deaths-chart" class="one-half column">
+        <div id="deaths-elements" class="one-half column">
           <div id="deaths-text" class="text"></div>
-          <div id="deaths-chart" class="chart one-half column"></div>
+          <div id="deaths-chart" class="chart"></div>
         </div>
       </div><!-- END STATS -->
 
@@ -159,7 +159,7 @@
       
       // Add update date
       var updateDate = d3.select('#update-date')
-        .html('Data last updated '+lastUpdated);
+        .html('Data last updated '+lastUpdated+'.');
 
       var dropdown = d3.select('#county-select');
       var stateStats = d3.select('#state-stats').append('p');
@@ -190,7 +190,7 @@
           d.cvd_rate = formatNoDecimal(d.cvd_rate);
           d.diabetes_rate = formatNoDecimal(d.diabetes_rate);
           d.population = d.population.replace(/,/g, '');
-          d.cnty_name = d.cnty_name.replace(', '+stateName,'');
+          d.cnty_name = d.cnty_name.replace(', Kentucky','');
         });
 
         //ADD CASE DATA
@@ -212,11 +212,11 @@
 
           // Set the dimensions of the canvas / graph
           var	margin = {top: 30, right: 20, bottom: 30, left: 50};
-          var width,height;
-          	// width = elWidth - margin.left - margin.right,
-          	// height = 270 - margin.top - margin.bottom;
+          //var width,height;
+          var width = elWidth - margin.left - margin.right;
+          var height = 270 - margin.top - margin.bottom;
 
-          if ($(window).width() < 1150) {
+          /*if ($(window).width() < 1150) {
             width = 700;
             height = 400;
           } else if ($(window).width() < 800) {
@@ -225,7 +225,7 @@
           } else {
             width = elWidth - margin.left - margin.right;
             height = 270 - margin.top - margin.bottom;
-          }
+          }*/
 
 
           // Set the case ranges
