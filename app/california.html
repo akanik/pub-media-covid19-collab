@@ -457,6 +457,8 @@
               .transition()
               .duration(750)
               .call(yDeathAxis);
+              
+            pymChild.sendHeight();
           };// END updateCharts
 
           function createCharts(caseDateLookup,region_name,pop){
@@ -567,13 +569,11 @@
             });
 
           var caseDateLookup = formatCaseData(case_data);
-          createCharts(caseDateLookup,stateName,statePop);
+          var pymChild = new pym.Child({ renderCallback: createCharts(caseDateLookup,stateName,statePop) });
 
         });
       });
 
-      var pymChild = new pym.Child;
-      pymChild.sendHeight();
     </script>
 
     <script src="app.js" async></script>
