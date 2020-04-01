@@ -190,7 +190,7 @@
           d.cvd_rate = formatNoDecimal(d.cvd_rate);
           d.diabetes_rate = formatNoDecimal(d.diabetes_rate);
           d.population = d.population.replace(/,/g, '');
-          d.cnty_name = d.cnty_name.replace(', Kentucky','');
+          d.cnty_name = d.cnty_name.replace(', '+stateName,'');
         });
 
         //ADD CASE DATA
@@ -204,9 +204,6 @@
             d.cases = d.cases.replace(/,/g, '');
           });
 
-          //need to remove commas
-          console.log(case_data);
-
           //BEGIN CHART STUFF
           var elWidth = document.getElementById("cases-chart").offsetWidth;
 
@@ -215,18 +212,6 @@
           //var width,height;
           var width = elWidth - margin.left - margin.right;
           var height = 270 - margin.top - margin.bottom;
-
-          /*if ($(window).width() < 1150) {
-            width = 700;
-            height = 400;
-          } else if ($(window).width() < 800) {
-            width = 500;
-            height = 300;
-          } else {
-            width = elWidth - margin.left - margin.right;
-            height = 270 - margin.top - margin.bottom;
-          }*/
-
 
           // Set the case ranges
           var	xCases = d3.time.scale().range([0, width]);
