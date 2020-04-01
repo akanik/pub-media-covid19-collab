@@ -144,7 +144,8 @@
         <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
       </div>
     </div><!-- END DATA-NOTES -->
-
+    
+    <script src="https://pym.nprapps.org/pym.v1.min.js" type="text/javascript"></script>
     <script>    
       var lastUpdated = 'March 31, 5:30 p.m.';
       var casesFile = 'assets/data/2020-03-31-Kentucky-export.csv';
@@ -389,7 +390,7 @@
           }// END updatePopText
           
 
-          function updateChartText(caseDateLookup,region_name,pop){
+          function updateChartText(caseDateLookup,region_name,pop){    
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
             var perCapita = (totalCases/pop)*100000//per capital per 100,000
@@ -441,6 +442,8 @@
               .transition()
               .duration(750)
               .call(yDeathAxis);
+              
+            pymChild.sendHeight();
           };// END updateCharts
 
           function createCharts(caseDateLookup,region_name,pop){
@@ -550,8 +553,7 @@
             });
 
           var caseDateLookup = formatCaseData(case_data);
-          createCharts(caseDateLookup,stateName,statePop);
-
+          var pymChild = new pym.Child({ renderCallback: createCharts(caseDateLookup,stateName,statePop) });
         });
       });
 
