@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="COVID-19 County Trackers">
     <meta name="twitter:site" content="@OVReSRC">
     <meta name="twitter:url" content="https://local.wfpl.org/covid19/index.html">
-    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg">
+    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/ovr-covid-app-art.jpg">
     <meta name="twitter:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Social sharing meta -->
@@ -29,7 +29,7 @@
     <meta property="og:title" content="COVID-19 County Tracker">
     <meta property="og:site_name" content="Ohio Valley ReSource">
     <meta property="og:url" content="https://local.wfpl.org/covid19/index.html">
-    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg">
+    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/ovr-covid-app-art.jpg">
     <meta property="og:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Google structured data -->
@@ -44,7 +44,7 @@
       "headline": "COVID-19 County Tracker",
       "image": {
         "@type": "ImageObject",
-        "url": "https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg"
+        "url": "https://local.wfpl.org/covid19/assets/ovr-covid-app-art.jpg"
       },
       "author": {
         "@type": "Person",
@@ -108,10 +108,13 @@
     <div id="data-notes">
       <div id="data-disclaimers">
         <h3>Credits</h3>
-        <p>These dashboard were created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC. They are updated daily.</p>
+        <p>These dashboards were created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC. They are updated daily.</p>
       </div>
     </div><!-- END DATA-NOTES -->
-    
+    <script src="https://pym.nprapps.org/pym.v1.min.js" type="text/javascript"></script>
+    <script>
+      var pymChild = new pym.Child({polling:500});
+    </script>
     
     <!-- Google Analytics -->
     <script>
@@ -121,7 +124,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     //If we're embedding, we don't want to make this a new session so keep this commented out
-    ga('create', 'UA-32037403-12', 'auto');
+    //ga('create', 'UA-32037403-12', 'auto');
     ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->
