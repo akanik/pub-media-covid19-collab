@@ -28,6 +28,7 @@
   max-width:1200px;
   margin:0 auto;
   padding:20px;
+  min-height: 500px;
 }
 
 #container-top {
@@ -35,10 +36,10 @@
   margin:0 auto;
 }
 
-/*.row{
+.row{
   max-width:850px;
   margin:0 auto;
-}*/
+}
 
 .row p{
   margin-top: 0.75em;
