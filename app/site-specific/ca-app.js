@@ -1,5 +1,9 @@
-var _$main_1 = {};
-"use strict";
+var lastUpdated = 'April 2, 9:09 p.m';
+var casesFile = 'assets/data/2020-04-02-California-export.csv';
+var stateFips = '06';
+var stateName = 'California';
+var statePop = 39148760;
+var dateFormat = '%m/%d/%Y';
 
 //Values that will help your tracker look good when people search and share
 var meta_title = 'California COVID-19 County Tracker';
@@ -10,7 +14,7 @@ var meta_description = 'EXPLORE: COVID-19-related cases and deaths in your count
 var meta_author = 'California Regional News Hub';
 var meta_organization = 'California Public Media COVID-19 Tracker';
 var meta_org_logo = 'https://media.npr.org/assets/img/2019/06/17/nprlogo_rgb_whiteborder_custom-7c06f2837fb5d2e65e44de702968d1fdce0ce748-s800-c85.png';
-var embedded = false;
+var embedded = true;
 var ga_id = '';
 
 
@@ -23,10 +27,3 @@ var data_sources = `
         <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing. Not every county updates its numbers daily, so these totals reflect the latest numbers as of our last data collection. Some counties report all people who have tested positive in the county, whether or not the person is a resident of the county.</p>
         <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
       `;
-      
-var lastUpdated = 'April 2, 9:09 p.m';
-var casesFile = 'assets/data/2020-04-02-California-export.csv';
-var stateFips = '06';
-var stateName = 'California';
-var statePop = 39148760;
-var dateFormat = "%m/%d/%Y";  

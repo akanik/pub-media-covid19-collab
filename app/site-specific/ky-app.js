@@ -1,5 +1,9 @@
-var _$main_1 = {};
-"use strict";
+var lastUpdated = 'April 3, 5:30 p.m.';
+var casesFile = 'assets/data/2020-04-03-Kentucky-export.csv';
+var stateFips = '21';
+var stateName = 'Kentucky';
+var statePop = 4440204;
+var dateFormat = '%Y-%m-%d';
 
 //Values that will help your tracker look good when people search and share
 var meta_title = 'Kentucky COVID-19 County Tracker';
@@ -10,7 +14,7 @@ var meta_description = 'EXPLORE: COVID-19-related cases and deaths in your count
 var meta_author = 'Alexandra Kanik';
 var meta_organization = 'Louisville Public Media';
 var meta_org_logo = 'https://louisvillepublicmedia.org/wp-content/uploads/2018/08/lpm-logo-big-2018.png';
-var embedded = false;
+var embedded = true;
 var ga_id = 'UA-32037403-12';
 
 //Content tha tis specific to your state's tracker
@@ -23,10 +27,3 @@ var data_sources = `
       <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing.</p> 
       <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
       `;
-      
-var lastUpdated = 'April 2, 5:30 p.m.';
-var casesFile = 'assets/data/2020-04-02-Kentucky-export.csv';
-var stateFips = '21';
-var stateName = 'Kentucky';
-var statePop = 4440204;
-var dateFormat = "%Y-%m-%d";

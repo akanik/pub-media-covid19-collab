@@ -14,7 +14,7 @@ var meta_description = 'EXPLORE: COVID-19-related cases and deaths in your count
 var meta_author = 'Alexandra Kanik';
 var meta_organization = 'Louisville Public Media';
 var meta_org_logo = 'https://louisvillepublicmedia.org/wp-content/uploads/2018/08/lpm-logo-big-2018.png';
-var embedded = true;
+var embedded = false;
 var ga_id = 'UA-32037403-12';
 
 //Content tha tis specific to your state's tracker
