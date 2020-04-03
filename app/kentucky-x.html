@@ -18,18 +18,18 @@
 
     <!-- BEGIN TWITTER SUMMARY CARD -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="West Virginia COVID-19 County Tracker">
+    <meta name="twitter:title" content="Kentucky COVID-19 County Tracker">
     <meta name="twitter:site" content="@OVReSRC">
-    <meta name="twitter:url" content="https://local.wfpl.org/covid19/west-virginia-x.html">
-    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/wv-covid-app-art.jpg">
+    <meta name="twitter:url" content="https://local.wfpl.org/covid19/kentucky-x.html">
+    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg">
     <meta name="twitter:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Social sharing meta -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="West Virginia COVID-19 County Tracker">
+    <meta property="og:title" content="Kentucky COVID-19 County Tracker">
     <meta property="og:site_name" content="Ohio Valley ReSource">
-    <meta property="og:url" content="https://local.wfpl.org/covid19/west-virginia-x.html">
-    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/wv-covid-app-art.jpg">
+    <meta property="og:url" content="https://local.wfpl.org/covid19/kentucky-x.html">
+    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg">
     <meta property="og:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Google structured data -->
@@ -39,12 +39,12 @@
       "@type": "NewsArticle",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://local.wfpl.org/covid19/west-virginia.html"
+        "@id": "https://local.wfpl.org/covid19/kentucky.html"
       },
-      "headline": "West Virginia COVID-19 County Tracker",
+      "headline": "Kentucky COVID-19 County Tracker",
       "image": {
         "@type": "ImageObject",
-        "url": "https://local.wfpl.org/covid19/assets/wv-covid-app-art.jpg"
+        "url": "https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg"
       },
       "author": {
         "@type": "Person",
@@ -82,7 +82,7 @@
   <body>
     <div id="main-container" class="container">
       <div id="container-top" class="row">
-        <img src="assets/wv-covid-header.jpg" alt="COVID-19 Tracker banner image">
+        <img src="assets/ky-covid-header.jpg" alt="COVID-19 Tracker banner image">
         <div class="lead" id="intro">
           <p>This dashboard provides a localized look at COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.</p>
           <div class='cta' id="update-date"></div>
@@ -133,10 +133,12 @@
       <div id="data-disclaimers">
         <h3>Disclaimer &amp; Data Sources</h3>
         <p>Age data provided by the 2018 5 year American Community Survey. Disease data are from 2014 and are provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
-        <p>As of March 31, 2020, case and death data for West Virginia counties are compiled from the <a href="https://dhhr.wv.gov/COVID-19/Pages/default.aspx" target='_blank'>West Virginia Department of Health and Human Services daily COVID-19 data release</a>.</p>
-        <p>Case/death data for West Virginia are updated every evening by the state. Daily update times may vary.</p>
-        <p>Case data may be lower than the actual number of infected people in a community due to a lack of testing or delayed reporting.</p> 
+        <p>As of March 28, 2020, case and death data for Kentucky counties are compiled from the Kentucky Governor's office daily COVID-19 data releases and from county health departments.</p>
+        <p>Case data are updated daily after the Governor's 5 p.m. new brief.</p>
+        <p>Historic data are provided by the <a href="https://github.com/nytimes/covid-19-data" target="_blank">New York Times county dataset</a>.</p>
+        <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing.</p> 
         <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
+
         
         <h3>Credits</h3>
         <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
@@ -145,11 +147,13 @@
     
     <script src="https://pym.nprapps.org/pym.v1.min.js" type="text/javascript"></script>
     <script>    
-      var lastUpdated = 'April 2, 6:00 p.m.';
-      var casesFile = 'assets/data/2020-04-02-West-Virginia-export.csv';
-      var stateFips = '54';
-      var stateName = 'West Virginia';
-      var statePop = 1829054;
+      var lastUpdated = 'April 2, 5:30 p.m.';
+      var casesFile = 'assets/data/2020-04-02-Kentucky-export.csv';
+      var stateFips = '21';
+      var stateName = 'Kentucky';
+      var statePop = 4440204;
+      //State unknown county and/or unconfirmed cases
+      var stateUKUC = 12;
       var dateFormat = "%Y-%m-%d";
 
       var include_state_testing = false;
@@ -386,7 +390,7 @@
           }// END updatePopText
           
 
-          function updateChartText(caseDateLookup,region_name,pop){
+          function updateChartText(caseDateLookup,region_name,pop){    
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
             var perCapita = (totalCases/pop)*100000//per capital per 100,000
@@ -438,8 +442,8 @@
               .transition()
               .duration(750)
               .call(yDeathAxis);
-            
-            pymChild.sendHeight()
+              
+            pymChild.sendHeight();
           };// END updateCharts
 
           function createCharts(caseDateLookup,region_name,pop){
@@ -550,7 +554,6 @@
 
           var caseDateLookup = formatCaseData(case_data);
           var pymChild = new pym.Child({ renderCallback: createCharts(caseDateLookup,stateName,statePop) });
-
         });
       });
 
@@ -565,8 +568,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     //If we're embedding, we don't want to make this a new session so keep this commented out
-    //ga('create', 'UA-5828686-4', 'auto');
-    //
+    ga('create', 'UA-32037403-12', 'auto');
     ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->

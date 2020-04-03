@@ -18,18 +18,18 @@
 
     <!-- BEGIN TWITTER SUMMARY CARD -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Kentucky COVID-19 County Tracker">
+    <meta name="twitter:title" content="Ohio COVID-19 County Tracker">
     <meta name="twitter:site" content="@OVReSRC">
-    <meta name="twitter:url" content="https://local.wfpl.org/covid19/kentucky.html">
-    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/ky-cnty-covid.jpg">
+    <meta name="twitter:url" content="https://local.wfpl.org/covid19/ohio-x.html">
+    <meta name="twitter:image" content="https://local.wfpl.org/covid19/assets/oh-covid-app-art.jpg">
     <meta name="twitter:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Social sharing meta -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Kentucky COVID-19 County Tracker">
+    <meta property="og:title" content="Ohio COVID-19 County Tracker">
     <meta property="og:site_name" content="Ohio Valley ReSource">
-    <meta property="og:url" content="https://local.wfpl.org/covid19/kentucky.html">
-    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg">
+    <meta property="og:url" content="https://local.wfpl.org/covid19/ohio-x.html">
+    <meta property="og:image" content="https://local.wfpl.org/covid19/assets/oh-covid-app-art.jpg">
     <meta property="og:description" content="EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.">
 
     <!-- Google structured data -->
@@ -39,12 +39,12 @@
       "@type": "NewsArticle",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://local.wfpl.org/covid19/kentucky.html"
+        "@id": "https://local.wfpl.org/covid19/ohio.html"
       },
-      "headline": "Kentucky COVID-19 County Tracker",
+      "headline": "Ohio COVID-19 County Tracker",
       "image": {
         "@type": "ImageObject",
-        "url": "https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg"
+        "url": "https://local.wfpl.org/covid19/assets/oh-covid-app-art.jpg"
       },
       "author": {
         "@type": "Person",
@@ -142,10 +142,10 @@
         <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
       </div>
     </div><!-- END DATA-NOTES -->
-
+    <script src="https://pym.nprapps.org/pym.v1.min.js" type="text/javascript"></script>
     <script>    
-      var lastUpdated = 'March 31, 2:00 p.m.*';
-      var casesFile = 'assets/data/2020-03-31-Ohio-export.csv';
+      var lastUpdated = 'April 2, 2:00 p.m.*';
+      var casesFile = 'assets/data/2020-04-02-Ohio-export.csv';
       var stateFips = '39';
       var stateName = 'Ohio';
       var statePop = 11641879;
@@ -190,7 +190,7 @@
           d.cvd_rate = formatNoDecimal(d.cvd_rate);
           d.diabetes_rate = formatNoDecimal(d.diabetes_rate);
           d.population = d.population.replace(/,/g, '');
-          d.cnty_name = d.cnty_name.replace(', Kentucky','');
+          d.cnty_name = d.cnty_name.replace(', '+stateName,'');
         });
 
         //ADD CASE DATA
@@ -204,9 +204,6 @@
             d.cases = d.cases.replace(/,/g, '');
           });
 
-          //need to remove commas
-          console.log(case_data);
-
           //BEGIN CHART STUFF
           var elWidth = document.getElementById("cases-chart").offsetWidth;
 
@@ -215,18 +212,6 @@
           //var width,height;
           var width = elWidth - margin.left - margin.right;
           var height = 270 - margin.top - margin.bottom;
-
-          /*if ($(window).width() < 1150) {
-            width = 700;
-            height = 400;
-          } else if ($(window).width() < 800) {
-            width = 500;
-            height = 300;
-          } else {
-            width = elWidth - margin.left - margin.right;
-            height = 270 - margin.top - margin.bottom;
-          }*/
-
 
           // Set the case ranges
           var	xCases = d3.time.scale().range([0, width]);
@@ -452,6 +437,8 @@
               .transition()
               .duration(750)
               .call(yDeathAxis);
+              
+            pymChild.sendHeight();
           };// END updateCharts
 
           function createCharts(caseDateLookup,region_name,pop){
@@ -561,8 +548,7 @@
             });
 
           var caseDateLookup = formatCaseData(case_data);
-          createCharts(caseDateLookup,stateName,statePop);
-
+          var pymChild = new pym.Child({ renderCallback: createCharts(caseDateLookup,stateName,statePop) });
         });
       });
 
