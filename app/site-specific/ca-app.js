@@ -13,10 +13,6 @@ var meta_org_logo = 'https://media.npr.org/assets/img/2019/06/17/nprlogo_rgb_whi
 var embedded = false;
 var ga_id = '';
 
-//Three different sizes of favicon for optimal display on devices
-var favicon152 = 'https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-152-precomposed.png';
-var favicon120 = 'https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-120-precomposed.png';
-var favicon76 = 'https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-76-precomposed.png';
 
 //Content tha tis specific to your state's tracker
 var banner_image = 'assets/wv-covid-header.jpg';

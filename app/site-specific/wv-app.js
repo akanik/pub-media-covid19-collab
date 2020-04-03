@@ -13,11 +13,6 @@ var meta_org_logo = 'https://louisvillepublicmedia.org/wp-content/uploads/2018/0
 var embedded = false;
 var ga_id = 'UA-32037403-12';
 
-//Three different sizes of favicon for optimal display on devices
-var favicon152 = 'https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-152-precomposed.png';
-var favicon120 = 'https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-120-precomposed.png';
-var favicon76 = 'https://ohiovalleyresource.org/wp-content/themes/wfpl-v2/res/img/apple-touch-icon-76-precomposed.png';
-
 //Content tha tis specific to your state's tracker
 var banner_image = 'assets/wv-covid-header.jpg';
 var data_sources = `
