@@ -1,5 +1,5 @@
-var lastUpdated = 'April 2, 9:09 p.m';
-var casesFile = 'assets/data/2020-04-02-California-export.csv';
+var lastUpdated = 'April 3, 6:30 p.m';
+var casesFile = 'assets/data/2020-04-03-California-export.csv';
 var stateFips = '06';
 var stateName = 'California';
 var statePop = 39148760;
@@ -14,12 +14,10 @@ var meta_description = 'EXPLORE: COVID-19-related cases and deaths in your count
 var meta_author = 'California Regional News Hub';
 var meta_organization = 'California Public Media COVID-19 Tracker';
 var meta_org_logo = 'https://media.npr.org/assets/img/2019/06/17/nprlogo_rgb_whiteborder_custom-7c06f2837fb5d2e65e44de702968d1fdce0ce748-s800-c85.png';
-var embedded = true;
 var ga_id = '';
 
-
 //Content tha tis specific to your state's tracker
-var banner_image = 'assets/wv-covid-header.jpg';
+var banner_image = 'assets/ca-covid-header.jpg';
 var data_sources = `
       <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
         <p>As of March 23, 2020, case and death data for California counties is collected by hand by reporters for CapRadio, KQED and KPCC from each public health department or county’s individual site each evening. We update the data daily at 7 or 8 p.m, and many jurisdictions post in the late afternoon. Historic data is provided by Big Local News & USA Facts.</p>

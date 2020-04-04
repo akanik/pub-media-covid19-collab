@@ -98,7 +98,8 @@
     <script>    
       var countySelection = '';
       var countyName = '';
-      var embedded = true;
+      //By default, we assume this app will be embedded and therefore no GA code will be added
+      var embedded = false;
       
       var headEl = d3.select('head'); 
         
