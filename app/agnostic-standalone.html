@@ -39,7 +39,7 @@
   <body>
     <div id="main-container" class="container">
       <div id="container-top" class="row">
-        <img src="assets/ky-covid-header.jpg" alt="COVID-19 Tracker banner image">
+        <img alt="COVID-19 Tracker banner image">
         <div class="lead" id="intro">
           <p>This dashboard provides a localized look at COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.</p>
           <div class='cta' id="update-date"></div>
@@ -183,6 +183,9 @@
       // Add data source
       var addDataSource = d3.select('#data-disclaimers')
         .html(data_sources); 
+        
+      var addBanner = d3.select('#container-top img')
+        .attr('src', banner_image);
                 
 
       var dropdown = d3.select('#county-select');
