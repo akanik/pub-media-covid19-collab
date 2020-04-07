@@ -1,5 +1,5 @@
 var lastUpdated = 'April 6, 6:33 p.m';
-var casesFile = 'assets/data/2020-04-06-California-export.csv';
+var casesFile = 'assets/data/2020-04-07-California-Madera-export.csv';
 var stateFips = '06';
 var stateName = 'California';
 var statePop = 39148760;
