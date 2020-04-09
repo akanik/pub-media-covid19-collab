@@ -447,24 +447,41 @@
           function updateChartText(caseDateLookup,region_name,pop){    
             // Add text to case text block
             var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
-            var perCapita = (totalCases/pop)*100000//per capital per 100,000
-            var totalCaseText = 'There have been <strong>'+ formatComma(totalCases) +' cases</strong> of COVID-19 in '+
-                                region_name +'. The population of this region is '+ formatComma(pop) + '. That&#39;s '+
-                                 formatNoDecimal(perCapita) + ' cases per 100,000 people.';
-            var casesText = d3.select('#cases-text')
-              .html('<h2>Positive cases</h2>')
-              .append('p')
-              .html(totalCaseText);
-
-            // Add text to death text block
-            var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
-            var totalDeathText = 'There have been <strong>'+ formatComma(totalDeaths) +
-                                ' reported deaths</strong> related to COVID-19 in '+
+            if(isNaN(totalCases)){
+              var totalCaseText = 'There have been <strong>no reported cases</strong> of COVID-19 in '+
+                                region_name +'. The population of this region is '+ formatComma(pop) + '.';
+              var casesText = d3.select('#cases-text')
+                .html('<h2>Positive cases</h2>')
+                .append('p')
+                .html(totalCaseText);
+                
+              var totalDeathText = 'There have been <strong>no reported deaths</strong> related to COVID-19 in '+
                                 region_name + '.';
-            var deathText = d3.select('#deaths-text')
-              .html('<h2>Deaths</h2>')
-              .append('p')
-              .html(totalDeathText);
+              var deathText = d3.select('#deaths-text')
+                .html('<h2>Deaths</h2>')
+                .append('p')
+                .html(totalDeathText);
+            }else{
+              var perCapita = (totalCases/pop)*100000//per capital per 100,000
+              var totalCaseText = 'There have been <strong>'+ formatComma(totalCases) +' cases</strong> of COVID-19 in '+
+                                  region_name +'. The population of this region is '+ formatComma(pop) + '. That&#39;s '+
+                                   formatNoDecimal(perCapita) + ' cases per 100,000 people.';
+              var casesText = d3.select('#cases-text')
+                .html('<h2>Positive cases</h2>')
+                .append('p')
+                .html(totalCaseText);
+  
+              // Add text to death text block
+              var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
+              var totalDeathText = 'There have been <strong>'+ formatComma(totalDeaths) +
+                                  ' reported deaths</strong> related to COVID-19 in '+
+                                  region_name + '.';
+              var deathText = d3.select('#deaths-text')
+                .html('<h2>Deaths</h2>')
+                .append('p')
+                .html(totalDeathText);
+            }
+            
           }// END updateChartText
 
           function updateCharts(caseDateLookup,region_name,pop) {
