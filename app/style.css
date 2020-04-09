@@ -35,6 +35,19 @@
   margin:0 auto;
 }
 
+#banner{
+  background: url('assets/banner-agnostic.jpg') no-repeat;
+  background-size: cover;
+  color:#ffffff;
+  text-align: center;
+  font-weight: 800;
+  padding:30px;
+}
+
+h1{
+  margin-bottom:0;
+}
+
 .row{
   max-width:850px;
   margin:0 auto;
