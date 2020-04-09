@@ -446,7 +446,13 @@
 
           function updateChartText(caseDateLookup,region_name,pop){    
             // Add text to case text block
-            var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
+            //var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
+            var maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
+            var totalCases = caseDateLookup.filter(function(d) {
+                return d.date == d3.max(caseDateLookup, function(d) {return d.date;})
+            })[0]['cases'];
+            
+            console.log(totalCases);
             if(isNaN(totalCases)){
               var totalCaseText = 'There have been <strong>no reported cases</strong> of COVID-19 in '+
                                 region_name +'. The population of this region is '+ formatComma(pop) + '.';
