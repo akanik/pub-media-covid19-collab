@@ -232,7 +232,6 @@
           //we can use our risk data for counties and just a generic day creator for the days
           //covid_start = date(2020, 1, 21)   # start date
           var start_date = '2020-01-22';
-          
           var getDaysArray = function(start, end) {
             end = end.setDate(end.getDate()+1);
             for(var arr=[],dt=new Date(start); dt<=end; dt.setDate(dt.getDate()+1)){
@@ -241,7 +240,6 @@
             return arr;
           };
                     
-          var days = getDaysArray(new Date(start_date),new Date());
           //fullDateTime = pd.DataFrame(columns=['date','fips','county'])
           //for day in days:
           //    for index, row in cnty_join.iterrows():
@@ -441,9 +439,11 @@
           
 
           function updateChartText(caseDateLookup,region_name,pop){    
-            // Add text to case text block
-            //var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
+            var minDate = d3.min(caseDateLookup, function(d) {return d.date;});
             var maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
+            var days = getDaysArray(new Date(minDate),new Date(maxDate));
+            console.log(days.length);
+            
             var totalCases = caseDateLookup.filter(function(d) {
                 return d.date == d3.max(caseDateLookup, function(d) {return d.date;})
             })[0]['cases'];

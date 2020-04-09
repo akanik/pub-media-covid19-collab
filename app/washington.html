@@ -441,9 +441,11 @@
           
 
           function updateChartText(caseDateLookup,region_name,pop){    
-            // Add text to case text block
-            //var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
+            var minDate = d3.min(caseDateLookup, function(d) {return d.date;});
             var maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
+            var days = getDaysArray(new Date(minDate),new Date(maxDate));
+            console.log(days.length);
+            
             var totalCases = caseDateLookup.filter(function(d) {
                 return d.date == d3.max(caseDateLookup, function(d) {return d.date;})
             })[0]['cases'];
