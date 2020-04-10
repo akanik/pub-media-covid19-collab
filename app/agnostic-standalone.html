@@ -444,10 +444,12 @@
             var days = getDaysArray(new Date(minDate),new Date(maxDate));
             console.log(days.length);
             
-            var totalCases = caseDateLookup.filter(function(d) {
+            var mostRecentRecord = caseDateLookup.filter(function(d) {
                 return d.date == d3.max(caseDateLookup, function(d) {return d.date;})
-            })[0]['cases'];
-            
+            });
+            var totalCases = mostRecentRecord[0]['cases'];
+            var totalDeaths =  mostRecentRecord[0]['deaths'];
+            console.log(mostRecentRecord);
             
             if(isNaN(totalCases)){
               var totalCaseText = 'There have been <strong>no reported cases</strong> of COVID-19 in '+
@@ -457,12 +459,6 @@
                 .append('p')
                 .html(totalCaseText);
                 
-              var totalDeathText = 'There have been <strong>no reported deaths</strong> related to COVID-19 in '+
-                                region_name + '.';
-              var deathText = d3.select('#deaths-text')
-                .html('<h2>Deaths</h2>')
-                .append('p')
-                .html(totalDeathText);
             }else{
               var perCapita = (totalCases/pop)*100000//per capital per 100,000
               var totalCaseText = 'There have been <strong>'+ formatComma(totalCases) +' cases</strong> of COVID-19 in '+
@@ -472,9 +468,17 @@
                 .html('<h2>Positive cases</h2>')
                 .append('p')
                 .html(totalCaseText);
-  
+            }
+            
+            if(isNaN(totalDeaths)){  
+              var totalDeathText = 'There have been <strong>no reported deaths</strong> related to COVID-19 in '+
+                                region_name + '.';
+              var deathText = d3.select('#deaths-text')
+                .html('<h2>Deaths</h2>')
+                .append('p')
+                .html(totalDeathText);
+            }else{
               // Add text to death text block
-              var totalDeaths = d3.max(caseDateLookup, function(d) {return d.deaths;});
               var totalDeathText = 'There have been <strong>'+ formatComma(totalDeaths) +
                                   ' reported deaths</strong> related to COVID-19 in '+
                                   region_name + '.';
