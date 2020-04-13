@@ -1,5 +1,5 @@
-var lastUpdated = 'April 12, 2:00 p.m.*';
-var casesFile = 'assets/data/2020-04-12-Ohio-export.csv';
+var lastUpdated = 'April 13, 2:00 p.m.*';
+var casesFile = 'assets/data/2020-04-13-Ohio-export.csv';
 var stateFips = '39';
 var stateName = 'Ohio';
 var statePop = 11641879;
