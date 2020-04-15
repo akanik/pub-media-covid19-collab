@@ -98,7 +98,7 @@
     <script>    
       var countySelection = '';
       var countyName = '';
-      var includeGA = false;
+      var includeGA = true;
       
       var headEl = d3.select('head'); 
         
@@ -203,9 +203,17 @@
 
       //ADD COUNTY DATA
       d3.csv("../assets/data/national-cnty-covid19-risk-analysis.csv", function(fips_error, fips_data) {
+        
         if (fips_error) {
           return console.warn(fips_error);
         }
+        
+        var stateDemo = fips_data.filter( function(d){
+              return d['cnty_name'] == stateName
+        });
+        var stateFips = stateDemo[0]['cnty_fips'];
+        var statePop = stateDemo[0]['population'];
+        
         fips_data.forEach(function(d) {
           //d.date = parseDate(d.date);
           d.crd_rate = formatNoDecimal(d.crd_rate);
@@ -570,7 +578,6 @@
 
 
           function filterCntyPop(cntyFips){
-
             var cntyFilter = cntyData.filter( function(d){
               return d['cnty_fips'] == cntyFips
             });

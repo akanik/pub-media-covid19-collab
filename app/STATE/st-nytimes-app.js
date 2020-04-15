@@ -1,12 +1,10 @@
 var lastUpdated = '';
 var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
 var dateFormat = '%Y-%m-%d';
-var stateFips = '21';
-var stateName = 'Kentucky';
-var statePop = 4440204;
+var stateName = 'Florida';
 
 //Values that will help your tracker look good when people search and share
-var meta_title = 'Kentucky COVID-19 County Tracker';
+var meta_title = stateName+' COVID-19 County Tracker';
 var meta_twitter = '@OVReSRC';
 var meta_url = 'https://local.wfpl.org/covid19/kentucky-x.html';
 var meta_image = 'https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg';
