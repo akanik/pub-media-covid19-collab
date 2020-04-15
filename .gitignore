@@ -2,3 +2,5 @@
 .ipynb_checkpoints/*
 *.DS_Store
 *.~lock.*
+public-media-covid19-collab/*
+pub-media-covid19-collab/*
