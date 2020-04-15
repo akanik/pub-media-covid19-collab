@@ -36,7 +36,7 @@
 }
 
 #banner{
-  background: url('assets/banner-agnostic.jpg') no-repeat;
+  background: url('../banner-agnostic.jpg') no-repeat;
   background-size: cover;
   color:#ffffff;
   text-align: center;

@@ -1,12 +1,10 @@
 var lastUpdated = 'April 8, 5:30 p.m.';
-var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
-var stateFips = '53';
-var stateName = 'Washington';
-var statePop = 7614893;
+var casesFile = 'data/st-covid-data.csv';
 var dateFormat = '%Y-%m-%d';
+var stateName = 'Kentucky';
 
 //Values that will help your tracker look good when people search and share
-var meta_title = 'Kentucky COVID-19 County Tracker';
+var meta_title = stateName+' COVID-19 County Tracker';
 var meta_twitter = '@OVReSRC';
 var meta_url = 'https://local.wfpl.org/covid19/kentucky-x.html';
 var meta_image = 'https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg';
@@ -17,7 +15,6 @@ var meta_org_logo = 'https://louisvillepublicmedia.org/wp-content/uploads/2018/0
 var ga_id = 'UA-32037403-12';
 
 //Content tha tis specific to your state's tracker
-var banner_image = 'assets/ky-covid-header.jpg';
 var data_sources = `
       <p>Age data provided by the 2018 5 year American Community Survey. Disease data are from 2014 and are provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
       <p>As of March 28, 2020, case and death data for Kentucky counties are compiled from the Kentucky Governor's office daily COVID-19 data releases and from county health departments.</p>

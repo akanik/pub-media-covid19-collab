@@ -20,9 +20,9 @@
     <meta name='format-detection' content='telephone=no'>
 
     </script>
-    <link rel="stylesheet" type="text/css" href="../Skeleton-2.0.4/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../Skeleton-2.0.4/css/skeleton.css">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
 
     <style> /* set the CSS */
       body { font: 12px Arial;}
@@ -93,12 +93,12 @@
       <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
     </div><!-- END DATA-NOTES -->
     
-    <script src="ky-nytimes-app.js" type="text/javascript"></script>
+    <script src="app-custom.js" type="text/javascript"></script>
     <script src="https://pym.nprapps.org/pym.v1.min.js" type="text/javascript"></script>
     <script>    
       var countySelection = '';
       var countyName = '';
-      var includeGA = false;
+      var includeGA = true;
       
       var headEl = d3.select('head'); 
         
@@ -203,9 +203,17 @@
 
       //ADD COUNTY DATA
       d3.csv("../assets/data/national-cnty-covid19-risk-analysis.csv", function(fips_error, fips_data) {
+        
         if (fips_error) {
           return console.warn(fips_error);
         }
+        
+        var stateDemo = fips_data.filter( function(d){
+              return d['cnty_name'] == stateName
+        });
+        var stateFips = stateDemo[0]['cnty_fips'];
+        var statePop = stateDemo[0]['population'];
+        
         fips_data.forEach(function(d) {
           //d.date = parseDate(d.date);
           d.crd_rate = formatNoDecimal(d.crd_rate);
@@ -288,9 +296,12 @@
           ////////////DATA FORMATING FUNCTIONS/////////////////
 
           function formatCaseData(data){
-            data = data.filter(function(d){
-              return d['state'] == stateName
-            });
+            if(data[0]['state']){
+              data = data.filter(function(d){
+                return d['state'] == stateName
+              });
+            }
+      
             var stateDataByDate = d3.nest()
               .key(function(d) {return d.date;})
               .rollup(function(d) {
@@ -300,7 +311,7 @@
                 };
               })
               .entries(data);
-
+            
             var caseDateLookup = {};
             for(i=0;i<stateDataByDate.length;i++){
               dict = {}
@@ -423,7 +434,7 @@
             var minDate = d3.min(caseDateLookup, function(d) {return d.date;});
             var maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
             var days = getDaysArray(new Date(minDate),new Date(maxDate));
-            
+
             var mostRecentRecord = caseDateLookup.filter(function(d) {
                 return d.date == d3.max(caseDateLookup, function(d) {return d.date;})
             });
@@ -570,7 +581,6 @@
 
 
           function filterCntyPop(cntyFips){
-
             var cntyFilter = cntyData.filter( function(d){
               return d['cnty_fips'] == cntyFips
             });
@@ -610,11 +620,11 @@
 
               var cntyPopData = filterCntyPop(countySelection);
               var cntyPop = cntyPopData[0]['population'];
-              console.log(cntyPop);
               updatePopText(cntyPopData[0]);
 
               var filtered_cases = filterCntyCases(countySelection);
               caseDateLookup = formatCaseData(filtered_cases);
+              console.log(caseDateLookup);
               updateCharts(caseDateLookup,countyName,cntyPop);
             });
 

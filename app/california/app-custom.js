@@ -1,12 +1,10 @@
 var lastUpdated = 'April 8, 2020, 6:13 p.m';
-var casesFile = 'assets/data/2020-04-08-California-export.csv';
-var stateFips = '06';
-var stateName = 'California';
-var statePop = 39148760;
+var casesFile = 'data/ca-covid-data.csv';
 var dateFormat = '%m/%d/%Y';
+var stateName = 'California';
 
 //Values that will help your tracker look good when people search and share
-var meta_title = 'California COVID-19 County Tracker';
+var meta_title = stateName+' COVID-19 County Tracker';
 var meta_twitter = '@OVReSRC';
 var meta_url = 'https://laist.com/projects/2020/coronavirus-tracker/california.html';
 var meta_image = 'https://www.capradio.org/media/12251118/coronatrackertwitter.jpg';
@@ -17,7 +15,6 @@ var meta_org_logo = 'https://media.npr.org/assets/img/2019/06/17/nprlogo_rgb_whi
 var ga_id = '';
 
 //Content tha tis specific to your state's tracker
-var banner_image = 'assets/ca-covid-header.jpg';
 var data_sources = `
       <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
         <p>As of March 23, 2020, case and death data for California counties is collected by hand by reporters for CapRadio, KQED and KPCC from each public health department or county’s individual site each evening. We update the data daily at 7 or 8 p.m, and many jurisdictions post in the late afternoon. Historic data is provided by Big Local News & USA Facts.</p>

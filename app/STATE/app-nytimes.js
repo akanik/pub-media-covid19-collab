@@ -15,7 +15,6 @@ var meta_org_logo = 'https://louisvillepublicmedia.org/wp-content/uploads/2018/0
 var ga_id = 'UA-32037403-12';
 
 //Content tha tis specific to your state's tracker
-var banner_image = 'assets/ky-covid-header.jpg';
 var data_sources = `
       <p>Age data provided by the 2018 5 year American Community Survey. Disease data are from 2014 and are provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
       <p>As of March 28, 2020, case and death data for Kentucky counties are compiled from the Kentucky Governor's office daily COVID-19 data releases and from county health departments.</p>
