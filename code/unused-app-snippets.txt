@@ -1,0 +1,24 @@
+//Here's where we put our county-day join
+          //First we need to create all of the counties and days
+          //we can use our risk data for counties and just a generic day creator for the days
+          //covid_start = date(2020, 1, 21)   # start date
+          var start_date = '2020-01-22';
+          var getDaysArray = function(start, end) {
+            end = end.setDate(end.getDate()+1);
+            for(var arr=[],dt=new Date(start); dt<=end; dt.setDate(dt.getDate()+1)){
+                arr.push(new Date(dt));
+            }
+            return arr;
+          };
+                    
+          //fullDateTime = pd.DataFrame(columns=['date','fips','county'])
+          //for day in days:
+          //    for index, row in cnty_join.iterrows():
+          //        fullDateTime = fullDateTime.append({'date': day, 
+          //                                            'fips': row['GEOID'], 
+          //                                            'county': row['NAMELSAD']}, ignore_index=True)
+          //
+          //fullDateTime['date'] = pd.to_datetime(fullDateTime['date'], format='%Y-%m-%d', errors='coerce')
+          //
+          //fullDateTime['date_str'] = fullDateTime['date'].dt.strftime('%Y-%m-%d')
+          //fullDateTime['join_field'] = fullDateTime['date_str'] + '-' + fullDateTime['fips']
