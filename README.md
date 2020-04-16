@@ -26,9 +26,6 @@ If you are using manually updated data, this is where you would put your data fi
 ### `index.html` file
 This is the app codebase. There is only one line in here that you will need to update in order to correctly reference your app's javascript file, either `app-custom.js` or `app-nytimes.js`. This file is meant to be embedded within the hosts website as it does not register a new pageview for your website.
 
-### `index-ga.html` file
-This the same as the `index.html` file except it _does_ register a Google Analytics pageview.
-
 
 ## Other documents
 
