@@ -2,6 +2,36 @@
 
 This is a working document.
 
+## Using the app
+
+All app files are in the `app` directory
+
+Each state gets its own directory.
+
+Example directory is `STATE`.
+
+Here is a description of each file contained within `STATE`, its purpose and how to repurpose it for your own state:
+
+First off, duplicated the `STATE` directory and rename it with your state's name.
+
+### `app-custom.js` file
+This file holds information specific to your newsroom's version of the app. It is an example of using manually updated data.
+
+### `app-nytimes.js` file
+This file holds information specific to your newsroom's version of the app. It is an example of using New York Times updated data.
+
+### `data` directory
+If you are using manually updated data, this is where you would put your data files. If you  keep the name of the current datafile consistent (ex: ca-covid-data.csv), you will not need to update the `app-custom.js` filename reference every time you update the data. There is also an archive directory that can hold the past data files if you choose to save them.
+
+### `index.html` file
+This is the app codebase. There is only one line in here that you will need to update in order to correctly reference your app's javascript file, either `app-custom.js` or `app-nytimes.js`. This file is meant to be embedded within the hosts website as it does not register a new pageview for your website.
+
+### `index-ga.html` file
+This the same as the `index.html` file except it _does_ register a Google Analytics pageview.
+
+
+## Other documents
+
 Helpful documents in this repo:
 
 - [Dashboard rough sketch](graphics/20200318_covid_roughsketch.jpg)
