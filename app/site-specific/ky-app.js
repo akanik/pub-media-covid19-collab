@@ -1,5 +1,5 @@
-var lastUpdated = 'April 15, 5:30 p.m.';
-var casesFile = 'assets/data/2020-04-15-Kentucky-export.csv';
+var lastUpdated = 'April 15, 6:00 p.m.';
+var casesFile = 'assets/data/2020-04-15-Kentucky-export-v2.csv';
 var stateFips = '21';
 var stateName = 'Kentucky';
 var statePop = 4440204;

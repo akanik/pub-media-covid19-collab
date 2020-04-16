@@ -1,5 +1,5 @@
-var lastUpdated = 'April 15, 10:00 a.m.';
-var casesFile = 'assets/data/2020-04-15-West-Virginia-export.csv';
+var lastUpdated = 'April 15, 5:30 p.m.';
+var casesFile = 'assets/data/2020-04-15-West-Virginia-export-v2.csv';
 var stateFips = '54';
 var stateName = 'West Virginia';
 var statePop = 1829054;
