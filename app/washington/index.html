@@ -250,7 +250,7 @@
 
           // Define the case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
-          	.orient("bottom").ticks(d3.time.sunday).tickSize(8, 0);
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
 
@@ -274,7 +274,7 @@
 
           // Define the death axes
           var	xDeathAxis = d3.svg.axis().scale(xDeaths)
-          	.orient("bottom").ticks(d3.time.sunday).tickSize(8, 0);
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
           var	yDeathAxis = d3.svg.axis().scale(yDeaths)
           	.orient("left").ticks(5);
 
