@@ -1,4 +1,4 @@
-var lastUpdated = 'April 20, 2020, 8:15 p.m';
+var lastUpdated = 'April 21, 2020, 10:00 p.m';
 var casesFile = 'data/ca-covid-data.csv';
 var dateFormat = '%m/%d/%Y';
 var stateName = 'California';
@@ -17,8 +17,8 @@ var ga_id = '';
 //Content tha tis specific to your state's tracker
 var data_sources = `
       <p>Age data provided by the 2018 American Community Survey. Disease data provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
-        <p>As of March 23, 2020, case and death data for California counties is collected by hand by reporters for CapRadio, KQED and KPCC from each public health department or county’s individual site each evening. We update the data daily at 7 or 8 p.m, and many jurisdictions post in the late afternoon. Historic data is provided by Big Local News & USA Facts.</p>
+        <p>Current data on confirmed cases of COVID-19 and deaths due to the disease is provided by <a href="https://github.com/datadesk/california-coronavirus-data" target="_blank">the LA Times</a>. Historical data from the beginning of the pandemic through April 20, 2020 collected by Big Local News, USA Facts & staff from CapRadio, KQED and KPCC. This tracker will be updated every morning with the LA Times' data update from the previous night.</p>
         <p>While Alameda County and the city of Berkeley report their number of cases and deaths separately, we have added Berkeley’s totals into Alameda County’s totals for this data. Additionally, while Sutter and Yuba counties are one combined health jurisdiction, they sometimes report their data jointly, we have reported them separately here.</p>
-        <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing. Not every county updates its numbers daily, so these totals reflect the latest numbers as of our last data collection. Some counties report all people who have tested positive in the county, whether or not the person is a resident of the county.</p>
+        <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing. Not every county updates its numbers daily, so these totals reflect the latest numbers as of our last data collection.</p>
         <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
       `;
