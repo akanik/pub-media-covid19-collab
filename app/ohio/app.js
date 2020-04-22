@@ -15,8 +15,7 @@ var meta_org_logo = 'https://louisvillepublicmedia.org/wp-content/uploads/2018/0
 var ga_id = 'UA-32037403-12';
 
 //Content tha tis specific to your state's tracker
- var data_sources = `
-      <p>Age data provided by the 2018 5 year American Community Survey. Disease data are from 2014 and are provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
+ var dataSources = `
       <p>*Case and death data for Ohio counties are compiled from the <a href="https://coronavirus.ohio.gov/wps/portal/gov/covid-19/home/dashboard" target='_blank'>Ohio Department of Health daily COVID-19 data release</a>. Case data for Ohio are one day behind. Data for yesterday are updated today at 2 p.m. ET on a daily basis.</p>
       <p>In their data disclaimer, ODH notes: "All data displayed is preliminary and subject to change as more information is reported to ODH. Trends are based on the date of illness onset. If onset date is unknown, the earliest known date associated with the case is used as a substitute for the date of illness onset."</p>
       <p>Preliminary case data may be lower than the actual number of infected people in a community due to a lack of testing or delayed reporting.</p> 

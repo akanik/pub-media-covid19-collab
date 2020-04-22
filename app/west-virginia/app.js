@@ -15,8 +15,7 @@ var meta_org_logo = 'https://louisvillepublicmedia.org/wp-content/uploads/2018/0
 var ga_id = 'UA-32037403-12';
 
 //Content tha tis specific to your state's tracker
-var data_sources = `
-      <p>Age data provided by the 2018 5 year American Community Survey. Disease data are from 2014 and are provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
+var dataSources = `
       <p>As of March 31, 2020, case and death data for West Virginia counties are compiled from the <a href="https://dhhr.wv.gov/COVID-19/Pages/default.aspx" target='_blank'>West Virginia Department of Health and Human Services daily COVID-19 data release</a>.</p>
       <p>Case/death data for West Virginia are updated every evening by the state. Daily update times may vary.</p>
       <p>Case data may be lower than the actual number of infected people in a community due to a lack of testing or delayed reporting.</p> 
