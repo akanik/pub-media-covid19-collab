@@ -1,14 +1,14 @@
 //Content that is specific to your state's tracker
 
 // If using NYTimes data, comment out the following
-var lastUpdated = 'April 8, 5:30 p.m.';
-var casesFile = 'data/st-covid-data.csv';
-var dateFormat = '%Y-%m-%d';
+//var lastUpdated = 'April 8, 5:30 p.m.';
+//var casesFile = 'data/st-covid-data.csv';
+//var dateFormat = '%Y-%m-%d';
 
 // If using NYTimes data, uncomment the following
-//var lastUpdated = '';
-//var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
-//var dateFormat = '%Y-%m-%d';
+var lastUpdated = '';
+var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
+var dateFormat = '%Y-%m-%d';
 
 var stateName = 'Florida'; 
 var dataSources = `
