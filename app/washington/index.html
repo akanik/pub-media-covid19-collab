@@ -68,19 +68,19 @@
       </div><!-- END STATS -->
 
       <div id="cnty-demo">
-        <div id="cnty-pop" class="row"></div>
-        <div id="cnty-age" class="row"></div>
+        <div id="cnty-pop" class="row demo-item"></div>
+        <div id="cnty-age" class="row demo-item"></div>
         <div id="cnty-crd" class="row">
-          <div class="img"></div>
-          <div class="text"></div>
+          <div class="img demo-item"></div>
+          <div class="text demo-item"></div>
         </div>
         <div id="cnty-cvd" class="row">
-          <div class="img"></div>
-          <div class="text"></div>
+          <div class="img demo-item"></div>
+          <div class="text demo-item"></div>
         </div>
         <div id="cnty-dia" class="row">
-          <div class="img"></div>
-          <div class="text"></div>
+          <div class="img demo-item"></div>
+          <div class="text demo-item"></div>
         </div>
       </div><!-- END CNTY-DEMO -->
 
@@ -88,7 +88,10 @@
     
     <div id="data-notes">
       <h3>Disclaimer &amp; Data Sources</h3>
-      <div id="data-disclaimers"></div>
+      <div id="data-disclaimers">
+        <p>Age data provided by the 2018 5 year American Community Survey. Disease data are from 2014 and are provided by the <a href="http://ghdx.healthdata.org/us-data" target="_blank">Institute for Health Metrics and Evaluation's Global Health Data Exchange</a></p>
+        <div id="additional"></div>
+      </div>
       <h3>Credits</h3>
       <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
     </div><!-- END DATA-NOTES -->
@@ -176,8 +179,8 @@
         
       
       // Add data source
-      var addDataSource = d3.select('#data-disclaimers')
-        .html(data_sources); 
+      var addDataSource = d3.select('#data-disclaimers #additional')
+        .html(dataSources); 
         
       var addBanner = d3.select('#container-top #banner')
         .html('<h1>'+stateName+' COVID-19 Tracker</h1>');
@@ -324,6 +327,8 @@
           }// END formatCaseData
 
           function updatePopText(region_data){
+            
+            console.log('runnying updatePopText');
 
             var cntyName = region_data['cnty_name'];
             var pop65plus = region_data['perc_65plus'];
@@ -372,13 +377,13 @@
             //var totalCaseText = 'There have been '+ formatComma(totalCases) +' confirmed cases of COVID-19 in <strong>'+
             //                    region_name +'</strong>.';
             var casesText = d3.select('#cnty-pop')
-              .attr('class','stat-row')
+              .attr('class','stat-row demo-item')
               .html('<h2>Vulnerable populations in '+ cntyName + '</h2>')
               .append('p')
               .html(popText);
 
             var ageText = d3.select('#cnty-age')
-              .attr('class','stat-row')
+              .attr('class','stat-row demo-item')
               .html(ageText)
 
 
@@ -620,11 +625,16 @@
 
               var cntyPopData = filterCntyPop(countySelection);
               var cntyPop = cntyPopData[0]['population'];
-              updatePopText(cntyPopData[0]);
-
-              var filtered_cases = filterCntyCases(countySelection);
-              caseDateLookup = formatCaseData(filtered_cases);
-              console.log(caseDateLookup);
+              
+              if(countyName == stateName){
+                caseDateLookup = formatCaseData(case_data);
+                var emptyVuln = d3.selectAll('.demo-item')
+                  .html('');
+              }else{
+                updatePopText(cntyPopData[0]);
+                var filtered_cases = filterCntyCases(countySelection);
+                caseDateLookup = formatCaseData(filtered_cases);
+              }
               updateCharts(caseDateLookup,countyName,cntyPop);
             });
 
