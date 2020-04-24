@@ -212,6 +212,7 @@
 
       // Parse the date / time
       var	parseDate = d3.time.format(dateFormat).parse;
+      var formatTime = d3.time.format("%B %d, %Y");
       
       function getNewCases(data){
         var newData = [];
@@ -291,7 +292,7 @@
             d.cases = d.cases.replace(/,/g, '');
           });
                               
-          case_data = case_data.filter( function(d){
+          case_data.filter( function(d){
             return d['state'] == stateName
           });
           
@@ -316,52 +317,46 @@
           var width = elWidth - margin.left - margin.right;
           var height = 270 - margin.top - margin.bottom;
           
-
+          var	x = d3.time.scale().range([0, width]);
+          var	y = d3.scale.linear().range([height, 0]);
           
           /////////////CASES////////////////////
           
           // Set the case ranges
-          var	xCases = d3.time.scale().range([0, width]);
-          var	yCases = d3.scale.linear().range([height, 0]);
-          
-          // Define the case axes
+          var	xCases = x;
+          var	yCases = y;
+          // Define the cum case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
           	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
-
-          // Adds the svg cumulative cases
+          // Adds the cum cases svg
           var	svgCases = d3.select("#cum-case-chart")
           	.append("svg")
           		.attr("width", width + margin.left + margin.right)
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-          // Define the cumulative case line
+          // Define the cum case line
           var caseValueline = d3.svg.line()
             	.x(function(d) { return xCases(d.date); })
             	.y(function(d) { return yCases(parseFloat(d.cases)); });
-  
           
-          // Set the case ranges
-          var	xNewCases = d3.time.scale().range([0, width]);
-          var	yNewCases = d3.scale.linear().range([height, 0]);
-          
-          // Define the axes
+          // Set the newcase ranges
+          var	xNewCases = x;
+          var	yNewCases = y;
+          // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
           	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
-          	
-          // Adds the svg new cases
+          // Adds the new cases svg
           var	svgNewCases = d3.select("#new-case-chart")
           	.append("svg")
           		.attr("width", width + margin.left + margin.right)
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
           // Define the new case line
           var newCaseValueline = d3.svg.line()
             	.x(function(d) { return xNewCases(d.date); })
@@ -370,28 +365,45 @@
 
           /////////////DEATHS////////////////////
           
-          // Set the case ranges
-          var	xDeaths = d3.time.scale().range([0, width]);
-          var	yDeaths = d3.scale.linear().range([height, 0]);
-          
-          // Define the axes
+          // Set the cum death ranges
+          var	xDeaths = x;
+          var	yDeaths = y;
+          // Define the cum death axes
           var	xDeathAxis = d3.svg.axis().scale(xDeaths)
           	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
           var	yDeathAxis = d3.svg.axis().scale(yDeaths)
           	.orient("left").ticks(5);
-          
-          // Adds the svg cases
+          // Adds the cum deaths svg
           var	svgDeaths = d3.select("#cum-death-chart")
           	.append("svg")
           		.attr("width", width + margin.left + margin.right)
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-          // Define deaths line
+          // Define cum deaths line
           var	deathValueline = d3.svg.line()
           	.x(function(d) { return xDeaths(d.date); })
           	.y(function(d) { return yDeaths(parseFloat(d.deaths)); });
+          	
+          // Set the new death ranges
+          var	xNewDeaths = x;
+          var	yNewDeaths = y;
+          // Define the new death axes
+          var	xNewDeathAxis = d3.svg.axis().scale(xNewDeaths)
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
+          var	yNewDeathAxis = d3.svg.axis().scale(yNewDeaths)
+          	.orient("left").ticks(5);
+          // Adds the new deaths svg
+          var	svgNewDeaths = d3.select("#new-death-chart")
+          	.append("svg")
+          		.attr("width", width + margin.left + margin.right)
+          		.attr("height", height + margin.top + margin.bottom)
+          	.append("g")
+          		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          // Define new deaths line
+          var	newDeathValueline = d3.svg.line()
+          	.x(function(d) { return xNewDeaths(d.date); })
+          	.y(function(d) { return yNewDeaths(parseFloat(d.new_deaths)); });
 
 
           ////////////DATA FORMATING FUNCTIONS/////////////////
@@ -412,6 +424,7 @@
               .rollup(function(d) {
                 return {
                     new_cases: d3.sum(d, function(e){return parseFloat(e.new_cases)}),
+                    new_deaths: d3.sum(d, function(e){return parseFloat(e.new_deaths)}),
                     cases: d3.sum(d, function(e){return parseFloat(e.cases)}),
                     deaths: d3.sum(d, function(e){return parseFloat(e.deaths)})
                 };
@@ -432,7 +445,6 @@
           }// END formatCaseData
 
           function updatePopText(region_data){
-            
 
             var cntyName = region_data['cnty_name'];
             var pop65plus = region_data['perc_65plus'];
@@ -454,48 +466,30 @@
             };
 
 
+            //// Add text to case text block
             var popText = "Experts say that some groups are more at risk if they contract COVID-19, "+
                           "for instance, seniors or people who suffer from diabetes, chronic respiratory"+
                           " disease or cardiovascular disease. Here’s a breakdown of how many people in "+
                           cntyName + " are part of these vulnerable groups.";
-
-            var ageText = "<p><strong>"+pop65plus+"%</strong> of "+cntyName+"&#39;s residents are age 65 or older.</p>";
-
-            var crdText = "<p>"+cntyName + " has a chronic respiratory disease death rate of <strong>"+crdRate+"</strong>. "+quarHR[crdQ]+
-                          "</p><p>People who suffer from chronic respiratory disease are more vulnerable to a serious"+
-                          " COVID-19 case, because the coronavirus can inflame the lungs.</p>";
-
-            var cvdText = "<p>"+cntyName + " has a cardiovascular disease death rate of <strong>"+cvdRate+"</strong>. "+quarHR[cvdQ]+
-                          "</p><p>The novel coronavirus especially threatens people with cardiovascular disease. "+
-                          "In patients whose heart is made more vulnerable by pre-existing conditions, "+
-                          "COVID-19 causes complications like embolisms and irregular heartbeats, and that "+
-                          "raises a patient’s risk of death.</p>";
-
-            var diaText = '<p><strong>'+diaRate+"%</strong> of adults over age 20</strong> in "+cntyName+" have diabetes. "+quarHR[diaQ]+
-                          "</p><p>COVID-19 threatens people with diabetes, whose blood sugar isn't stable, because this"+
-                          " pre-existing condition makes their ability to fight off infection unstable too. "+
-                          "Unchecked, the virus can cause complications leading to coma or death.</p>";
-
-            //// Add text to case text block
-            //var totalCases = d3.max(caseDateLookup, function(d) {return d.cases;});
-            //var totalCaseText = 'There have been '+ formatComma(totalCases) +' confirmed cases of COVID-19 in <strong>'+
-            //                    region_name +'</strong>.';
-            var casesText = d3.select('#cnty-pop')
+            popText = d3.select('#cnty-pop')
               .attr('class','stat-row demo-item')
               .html('<h2>Vulnerable populations in '+ cntyName + '</h2>')
               .append('p')
               .html(popText);
-
-            var ageText = d3.select('#cnty-age')
+              
+            var ageText = "<p><strong>"+pop65plus+"%</strong> of "+cntyName+"&#39;s residents are age 65 or older.</p>";
+            ageText = d3.select('#cnty-age')
               .attr('class','stat-row demo-item')
               .html(ageText)
 
 
-            var crdText = d3.select('#cnty-crd')
+            var crdText = "<p>"+cntyName + " has a chronic respiratory disease death rate of <strong>"+crdRate+"</strong>. "+quarHR[crdQ]+
+                          "</p><p>People who suffer from chronic respiratory disease are more vulnerable to a serious"+
+                          " COVID-19 case, because the coronavirus can inflame the lungs.</p>";
+            crdText = d3.select('#cnty-crd')
               .attr('class','stat-row')
               .select('.text')
                 .html('<h2>Chronic Respiratory Disease</h2>'+crdText)    
-
             var crdImg = d3.select('#cnty-crd .img')
               .html('')
               .append('img')
@@ -504,11 +498,15 @@
                 .attr('alt','quartile chart');
 
 
-            var cvdText = d3.select('#cnty-cvd')
+            var cvdText = "<p>"+cntyName + " has a cardiovascular disease death rate of <strong>"+cvdRate+"</strong>. "+quarHR[cvdQ]+
+                          "</p><p>The novel coronavirus especially threatens people with cardiovascular disease. "+
+                          "In patients whose heart is made more vulnerable by pre-existing conditions, "+
+                          "COVID-19 causes complications like embolisms and irregular heartbeats, and that "+
+                          "raises a patient’s risk of death.</p>";
+            cvdText = d3.select('#cnty-cvd')
               .attr('class','stat-row')
               .select('.text')
                 .html('<h2>Cardiovascular Disease</h2>'+cvdText)
-
             var cvdImg = d3.select('#cnty-cvd .img')
               .html('')
               .append('img')
@@ -517,11 +515,14 @@
                 .attr('alt','quartile chart');
 
 
-            var diaText = d3.select('#cnty-dia')
+            var diaText = '<p><strong>'+diaRate+"%</strong> of adults over age 20</strong> in "+cntyName+" have diabetes. "+quarHR[diaQ]+
+                          "</p><p>COVID-19 threatens people with diabetes, whose blood sugar isn't stable, because this"+
+                          " pre-existing condition makes their ability to fight off infection unstable too. "+
+                          "Unchecked, the virus can cause complications leading to coma or death.</p>";
+            diaText = d3.select('#cnty-dia')
               .attr('class','stat-row')
               .select('.text')
                 .html('<h2>Diabetes</h2>'+diaText)
-
             var diaImg = d3.select('#cnty-dia .img')
               .html('')
               .append('img')
@@ -548,6 +549,8 @@
                 return d.date == d3.max(caseDateLookup, function(d) {return d.date;})
             });
             
+            /////////////////CASES////////////////////
+            //Cumulative case text
             if((mostRecentRecord.length == 0)|| isNaN(mostRecentRecord[0]['cases']) ){
               var totalCaseText = 'There have been <strong>no reported cases</strong> of COVID-19 in '+
                                 region_name +'. The population of this region is '+ formatComma(pop) + '.';
@@ -559,11 +562,28 @@
                                    formatNoDecimal(perCapita) + ' cases per 100,000 people.';
             }
             var casesText = d3.select('#cum-case-text')
-                .html('<h2>Positive cases</h2>')
+                .html('<h2>Total cases</h2>')
                 .append('p')
                 .html(totalCaseText);
-                
             
+            //New case text   
+            if((mostRecentRecord.length == 0)|| isNaN(mostRecentRecord[0]['new_cases']) ){
+              var newCaseText = 'There were <strong>no new cases</strong> of COVID-19 reported on '+formatTime(maxDate)+' in '+
+                                region_name +'.';
+            }else{
+              var newCases = mostRecentRecord[0]['new_cases'];
+              var newCaseText = 'There were <strong>'+ formatComma(newCases) +' new cases</strong> of COVID-19 reported'+
+                                  ' on '+formatTime(maxDate)+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
+                                  ' is spreading in a community.';
+            }
+            var newCasesText = d3.select('#new-case-text')
+                .html('<h2>Newly reported cases</h2>')
+                .append('p')
+                .html(newCaseText);
+            
+          
+             /////////////////DEATHS////////////////////  
+            //Cumulative deaths
             if((mostRecentRecord.length == 0) || isNaN(mostRecentRecord[0]['deaths'])){  
               var totalDeathText = 'There have been <strong>no reported deaths</strong> related to COVID-19 in '+
                                 region_name + '.';
@@ -573,60 +593,77 @@
               var totalDeathText = 'There have been <strong>'+ formatComma(totalDeaths) +
                                   ' reported deaths</strong> related to COVID-19 in '+ region_name + '.';
             }
-            var deathText = d3.select('#cum-deaths-text')
-                .html('<h2>Deaths</h2>')
+            var deathText = d3.select('#cum-death-text')
+                .html('<h2>Total deaths</h2>')
                 .append('p')
                 .html(totalDeathText);
+                
+            //New deaths
+            if((mostRecentRecord.length == 0) || isNaN(mostRecentRecord[0]['new_deaths'])){  
+              var newDeathText = 'There have been <strong>no new deaths</strong> related to COVID-19 reported on '+formatTime(maxDate)+
+                                    ' in '+region_name + '.';
+            }else{
+              var newDeaths = mostRecentRecord[0]['new_deaths'];
+              // Add text to death text block
+              var newDeathText = 'There have been <strong>'+ formatComma(newDeaths) +
+                                  ' reported deaths</strong> related to COVID-19 in '+ region_name + '.';
+            }
+            var newDeathText = d3.select('#new-death-text')
+                .html('<h2>Newly reported deaths</h2>')
+                .append('p')
+                .html(newDeathText);
             
           }// END updateChartText
 
           function updateCharts(caseDateLookup,region_name,pop) {
             
-            console.log(caseDateLookup);
-
             updateChartText(caseDateLookup,region_name,pop);
             
-            // Update the cases y-axis domain to match data
+            // Update the cum cases y-axis domain to match data
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
-
             svgCases.select(".line")   // change the line
               .transition()
               .duration(750)
               .attr("d", caseValueline(caseDateLookup));
-
             svgCases.select(".y.axis") // change the y axis
               .transition()
               .duration(750)
               .call(yCaseAxis);
               
-              
             // Update the new cases y-axis domain to match data
             yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
-
             svgNewCases.select(".line")   // change the line
               .transition()
               .duration(750)
               .attr("d", newCaseValueline(caseDateLookup));
-
             svgNewCases.select(".y.axis") // change the y axis
               .transition()
               .duration(750)
               .call(yNewCaseAxis);
               
-
-            // Update the deaths y-axis domain to match data
+            // Update the cum deaths y-axis domain to match data
             yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
-
             svgDeaths.select(".line")   // change the line
               .transition()
               .duration(750)
               .attr("d", deathValueline(caseDateLookup));
-
             svgDeaths.select(".y.axis") // change the y axis
               .transition()
               .duration(750)
               .call(yDeathAxis);
               
+            // Update the new deaths y-axis domain to match data
+            yNewDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.new_deaths;})]);
+            svgNewDeaths.select(".line")   // change the line
+              .transition()
+              .duration(750)
+              .attr("d", newDeathValueline(caseDateLookup));
+            svgNewDeaths.select(".y.axis") // change the y axis
+              .transition()
+              .duration(750)
+              .call(yNewDeathAxis);
+            
+            
             pymChild.sendHeight();
           };// END updateCharts
 
