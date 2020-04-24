@@ -54,18 +54,29 @@
         </div>
       </div><!-- END CONTAINER-TOP -->
 
-      <div id="stats" class="row">
-
-        <div id="cases-elements" class="one-half column">
-          <div id="cases-text" class="text"></div>
-          <div id="cases-chart" class="chart"></div>
+      <div id="case-stats" class="row">
+        <div id="cum-case-elements" class="one-half column">
+          <div id="cum-case-text" class="text"></div>
+          <div id="cum-case-chart" class="chart"></div>
         </div>
 
-        <div id="deaths-elements" class="one-half column">
-          <div id="deaths-text" class="text"></div>
-          <div id="deaths-chart" class="chart"></div>
+        <div id="new-case-elements" class="one-half column">
+          <div id="new-case-text" class="text"></div>
+          <div id="new-case-chart" class="chart"></div>
         </div>
-      </div><!-- END STATS -->
+      </div><!-- END CASE STATS -->
+      
+      <div id="death-stats" class="row">
+        <div id="cum-death-elements" class="one-half column">
+          <div id="cum-death-text" class="text"></div>
+          <div id="cum-death-chart" class="chart"></div>
+        </div>
+
+        <div id="new-death-elements" class="one-half column">
+          <div id="new-death-text" class="text"></div>
+          <div id="new-death-chart" class="chart"></div>
+        </div>
+      </div><!-- END DEATH STATS -->
 
       <div id="cnty-demo">
         <div id="cnty-pop" class="row demo-item"></div>
@@ -201,7 +212,42 @@
 
       // Parse the date / time
       var	parseDate = d3.time.format(dateFormat).parse;
-
+      
+      function getNewCases(data){
+        newData = [];
+        //for each county
+        data.forEach(function(c,i){
+          cntyDates = c['values'];
+          //for each date in the county
+          cntyDates.forEach(function(d,i){
+            cntyDict = {}
+            currCases = d['cases'];
+            currDeaths = d['deaths'];
+            if(i>0){
+              prevIndex = i-1;
+              
+              prevCases = cntyDates[prevIndex]['cases'];
+              newCases = currCases - prevCases;
+              
+              prevDeaths = cntyDates[prevIndex]['deaths'];
+              newDeaths = currDeaths - prevDeaths;
+            }else{
+              newCases = 0;
+              newDeaths = 0;
+            }
+            cntyDict['date'] = d['date'];
+            cntyDict['county'] = d['county'];
+            cntyDict['state'] = d['state'];
+            cntyDict['fips'] = d['fips'];
+            cntyDict['new_cases'] = newCases;
+            cntyDict['new_deaths'] = newDeaths;
+            cntyDict['cases'] = d['cases'];
+            cntyDict['deaths'] = d['deaths'];
+            newData.push(cntyDict);
+          })
+        });
+        return newData
+      };
 
 
       //ADD COUNTY DATA
@@ -233,44 +279,84 @@
           }
 
           case_data.forEach(function(d) {
-            //d.date = parseDate(d.date);
             d.cases = d.cases.replace(/,/g, '');
           });
+                              
+          case_data = case_data.filter( function(d){
+            return d['state'] == stateName
+          });
           
+          case_data.sort(function(x, y){
+             return (d3.ascending(x.fips, y.fips) || d3.ascending(parseDate(x.date), parseDate(y.date)));
+          }); 
+          
+          var cntyDataByDate = d3.nest()
+              .key(function(d) {return d.fips;})
+              .sortValues(function(a,b) { return parseDate(a.date) - parseDate(b.date); } )
+              .entries(case_data)
+              
+          case_data = getNewCases(cntyDataByDate);
+                    
 
           //BEGIN CHART STUFF
-          var elWidth = document.getElementById("cases-chart").offsetWidth;
+          var elWidth = document.getElementById("cum-case-chart").offsetWidth;
 
           // Set the dimensions of the canvas / graph
           var	margin = {top: 30, right: 20, bottom: 30, left: 50};
           //var width,height;
           var width = elWidth - margin.left - margin.right;
           var height = 270 - margin.top - margin.bottom;
-
-          // Set the case ranges
+          
+          /////////////CASES////////////////////
+          // Set the cumulative case ranges
           var	xCases = d3.time.scale().range([0, width]);
           var	yCases = d3.scale.linear().range([height, 0]);
 
-          // Define the case axes
+          // Define the cumulative case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
           	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
 
-          // Adds the svg cases
-          var	svgCases = d3.select("#cases-chart")
+          // Adds the svg cumulative cases
+          var	svgCases = d3.select("#cum-case-chart")
           	.append("svg")
           		.attr("width", width + margin.left + margin.right)
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-          // Define the case line
+          // Define the cumulative case line
           var caseValueline = d3.svg.line()
             	.x(function(d) { return xCases(d.date); })
             	.y(function(d) { return yCases(parseFloat(d.cases)); });
+          
+          
+          // Set the new case ranges
+          var	xNewCases = d3.time.scale().range([0, width]);
+          var	yNewCases = d3.scale.linear().range([height, 0]);
+
+          // Define the new case axes
+          var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
+          var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
+          	.orient("left").ticks(5);
+
+          // Adds the svg new cases
+          var	svgNewCases = d3.select("#new-cases-chart")
+          	.append("svg")
+          		.attr("width", width + margin.left + margin.right)
+          		.attr("height", height + margin.top + margin.bottom)
+          	.append("g")
+          		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+          // Define the new case line
+          var newCaseValueline = d3.svg.line()
+            	.x(function(d) { return xNewCases(d.date); })
+            	.y(function(d) { return yNewCases(parseFloat(d.new_cases)); });
 
 
+          /////////////DEATHS////////////////////
           // Set the death ranges
           var	xDeaths = d3.time.scale().range([0, width]);
           var	yDeaths = d3.scale.linear().range([height, 0]);
@@ -282,13 +368,12 @@
           	.orient("left").ticks(5);
 
           // Adds the svg cases
-          var	svgDeaths = d3.select("#deaths-chart")
+          var	svgDeaths = d3.select("#cum-deaths-chart")
           	.append("svg")
           		.attr("width", width + margin.left + margin.right)
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
 
           // Define deaths line
           var	deathValueline = d3.svg.line()
@@ -328,7 +413,6 @@
 
           function updatePopText(region_data){
             
-            console.log('runnying updatePopText');
 
             var cntyName = region_data['cnty_name'];
             var pop65plus = region_data['perc_65plus'];
@@ -447,40 +531,32 @@
             if((mostRecentRecord.length == 0)|| isNaN(mostRecentRecord[0]['cases']) ){
               var totalCaseText = 'There have been <strong>no reported cases</strong> of COVID-19 in '+
                                 region_name +'. The population of this region is '+ formatComma(pop) + '.';
-              var casesText = d3.select('#cases-text')
-                .html('<h2>Positive cases</h2>')
-                .append('p')
-                .html(totalCaseText);
-                
             }else{
               var totalCases = mostRecentRecord[0]['cases'];
               var perCapita = (totalCases/pop)*100000//per capital per 100,000
               var totalCaseText = 'There have been <strong>'+ formatComma(totalCases) +' cases</strong> of COVID-19 in '+
                                   region_name +'. The population of this region is '+ formatComma(pop) + '. That&#39;s '+
                                    formatNoDecimal(perCapita) + ' cases per 100,000 people.';
-              var casesText = d3.select('#cases-text')
+            }
+            var casesText = d3.select('#cum-case-text')
                 .html('<h2>Positive cases</h2>')
                 .append('p')
                 .html(totalCaseText);
-            }
+                
             
             if((mostRecentRecord.length == 0) || isNaN(mostRecentRecord[0]['deaths'])){  
               var totalDeathText = 'There have been <strong>no reported deaths</strong> related to COVID-19 in '+
                                 region_name + '.';
-              var deathText = d3.select('#deaths-text')
-                .html('<h2>Deaths</h2>')
-                .append('p')
-                .html(totalDeathText);
             }else{
               var totalDeaths = mostRecentRecord[0]['deaths'];
               // Add text to death text block
               var totalDeathText = 'There have been <strong>'+ formatComma(totalDeaths) +
                                   ' reported deaths</strong> related to COVID-19 in '+ region_name + '.';
-              var deathText = d3.select('#deaths-text')
+            }
+            var deathText = d3.select('#cum-deaths-text')
                 .html('<h2>Deaths</h2>')
                 .append('p')
                 .html(totalDeathText);
-            }
             
           }// END updateChartText
 
@@ -488,7 +564,7 @@
 
             updateChartText(caseDateLookup,region_name,pop);
             
-            // First update the cases y-axis domain to match data
+            // Update the cases y-axis domain to match data
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
 
             svgCases.select(".line")   // change the line
@@ -500,8 +576,23 @@
               .transition()
               .duration(750)
               .call(yCaseAxis);
+              
+              
+            // Update the new cases y-axis domain to match data
+            yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
 
-            // First update the deaths y-axis domain to match data
+            svgNewCases.select(".line")   // change the line
+              .transition()
+              .duration(750)
+              .attr("d", caseValueline(caseDateLookup));
+
+            svgNewCases.select(".y.axis") // change the y axis
+              .transition()
+              .duration(750)
+              .call(yNewCaseAxis);
+              
+
+            // Update the deaths y-axis domain to match data
             yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
 
             svgDeaths.select(".line")   // change the line
@@ -556,6 +647,32 @@
           	svgCases.append("g")
           		.attr("class", "y axis")
           		.call(yCaseAxis);
+          		
+          		
+            // Scale the range of the case data
+          	xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
+          	yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
+
+          	// Add the valueline path to svgCases.
+          	svgNewCases.append("path")
+          	  .datum(caseDateLookup)
+          		.attr("class", "line")
+          		.attr("stroke", "#8C8C8C")
+          		.attr("stroke-width", 2)
+          		//.attr("fill", "#cccccc")
+          		.attr("fill", "None")
+          		.attr("d", newCaseValueline(caseDateLookup));
+
+          	// Add the case X Axis
+          	svgNewCases.append("g")
+          		.attr("class", "x axis")
+          		.attr("transform", "translate(0," + height + ")")
+          		.call(xNewCaseAxis);
+
+          	// Add the case Y Axis
+          	svgNewCases.append("g")
+          		.attr("class", "y axis")
+          		.call(yNewCaseAxis);
 
 
             // Scale the range of the death data
