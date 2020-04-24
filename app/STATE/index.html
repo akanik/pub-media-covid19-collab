@@ -402,6 +402,10 @@
                 return d['state'] == stateName
               });
             }
+            
+            data.sort(function(x, y){
+             return d3.ascending(parseDate(x.date), parseDate(y.date));
+            });
       
             var stateDataByDate = d3.nest()
               .key(function(d) {return d.date;})
