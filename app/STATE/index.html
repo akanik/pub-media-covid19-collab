@@ -214,23 +214,32 @@
       var	parseDate = d3.time.format(dateFormat).parse;
       
       function getNewCases(data){
-        newData = [];
+        var newData = [];
         //for each county
         data.forEach(function(c,i){
-          cntyDates = c['values'];
+          var cntyDates = c['values'];
           //for each date in the county
           cntyDates.forEach(function(d,i){
-            cntyDict = {}
-            currCases = d['cases'];
-            currDeaths = d['deaths'];
+            var cntyDict = {};
+            var currCases = d['cases'];
+            var currDeaths = d['deaths'];
+            var prevIndex,prevCases,newCases,prevDeaths,newDeaths;
             if(i>0){
               prevIndex = i-1;
-              
               prevCases = cntyDates[prevIndex]['cases'];
-              newCases = currCases - prevCases;
-              
               prevDeaths = cntyDates[prevIndex]['deaths'];
-              newDeaths = currDeaths - prevDeaths;
+              
+              if(currCases - prevCases >= 0){
+                newCases = currCases - prevCases;
+              }else{
+                newCases = 0;
+              }
+              
+              if(currDeaths - prevDeaths >= 0){
+                newDeaths = currDeaths - prevDeaths;
+              }else{
+                newDeaths = 0;
+              }
             }else{
               newCases = 0;
               newDeaths = 0;
