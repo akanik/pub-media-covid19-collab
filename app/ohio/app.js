@@ -1,5 +1,5 @@
 var lastUpdated = '';
-var casesFile = 'data/oh-covid-data.csv';
+var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
 var dateFormat = '%Y-%m-%d';
 var stateName = 'Ohio';
 
@@ -16,9 +16,8 @@ var ga_id = 'UA-32037403-12';
 
 //Content tha tis specific to your state's tracker
  var dataSources = `
-      <p>*Case and death data for Ohio counties are compiled from the <a href="https://coronavirus.ohio.gov/wps/portal/gov/covid-19/home/dashboard" target='_blank'>Ohio Department of Health daily COVID-19 data release</a>. Case data for Ohio are one day behind. Data for yesterday are updated today at 2 p.m. ET on a daily basis.</p>
-      <p>In their data disclaimer, ODH notes: "All data displayed is preliminary and subject to change as more information is reported to ODH. Trends are based on the date of illness onset. If onset date is unknown, the earliest known date associated with the case is used as a substitute for the date of illness onset."</p>
-      <p>Preliminary case data may be lower than the actual number of infected people in a community due to a lack of testing or delayed reporting.</p> 
+      <p>As of April 27, 2020, case and death data for Ohio counties are provided by the New York Times county dataset. Read more <a href="https://github.com/nytimes/covid-19-data" target="_blank">about the data and potential caveats here</a>.</p>
+      <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing.</p> 
       <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
       `;
   
