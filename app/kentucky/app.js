@@ -1,5 +1,5 @@
 var lastUpdated = '';
-var casesFile = 'data/ky-covid-data.csv';
+var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
 var dateFormat = '%Y-%m-%d';
 var stateName = 'Kentucky';
 
@@ -17,9 +17,7 @@ var ga_id = 'UA-32037403-12';
 //Content tha tis specific to your state's tracker
 var banner_image = 'assets/ky-covid-header.jpg';
 var dataSources = `
-      <p>As of March 28, 2020, case and death data for Kentucky counties are compiled from the Kentucky Governor's office daily COVID-19 data releases and from county health departments.</p>
-      <p>Case data are updated daily after the Governor's 5 p.m. new brief.</p>
-      <p>Historic data are provided by the <a href="https://github.com/nytimes/covid-19-data" target="_blank">New York Times county dataset</a>.</p>
+      <p>As of April 27, 2020, case and death data for Kentucky counties are provided by the New York Times county dataset. Read more <a href="https://github.com/nytimes/covid-19-data" target="_blank">about the data and potential caveats here</a>.</p>
       <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing.</p> 
       <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
       `;

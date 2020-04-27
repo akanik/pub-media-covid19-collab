@@ -291,15 +291,11 @@
           case_data.forEach(function(d) {
             d.cases = d.cases.replace(/,/g, '');
           });
-                              
-          case_data.filter( function(d){
+                                        
+          case_data = case_data.filter( function(d){
             return d['state'] == stateName
           });
-          
-          case_data.sort(function(x, y){
-             return (d3.ascending(x.fips, y.fips) || d3.ascending(parseDate(x.date), parseDate(y.date)));
-          }); 
-          
+                    
           var cntyDataByDate = d3.nest()
               .key(function(d) {return d.fips;})
               .sortValues(function(a,b) { return parseDate(a.date) - parseDate(b.date); } )
@@ -327,7 +323,7 @@
           var	yCases = y;
           // Define the cum case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
-          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
+          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
           // Adds the cum cases svg
@@ -343,11 +339,11 @@
             .y(function(d) { return yCases(parseFloat(d.cases)); });
           
           // Set the newcase ranges
-          var	xNewCases = d3.scale.ordinal().rangeRoundBands([0, width], .05);;
+          var	xNewCases = d3.scale.ordinal().rangeRoundBands([0, width], 0,0);;
           var	yNewCases = y;
           // Define the new casesaxes
-          var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
-          	.orient("bottom");
+          var	xNewCaseAxis = d3.svg.axis().scale(x)
+          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -409,11 +405,11 @@
           ////////////DATA FORMATING FUNCTIONS/////////////////
 
           function formatCaseData(data){
-            if(data[0]['state']){
+            /*if(data[0]['state']){
               data = data.filter(function(d){
                 return d['state'] == stateName
               });
-            }
+            }*/
             
             data.sort(function(x, y){
              return d3.ascending(parseDate(x.date), parseDate(y.date));
@@ -430,7 +426,7 @@
                 };
               })
               .entries(data);
-            
+                          
             var caseDateLookup = {};
             for(i=0;i<stateDataByDate.length;i++){
               dict = {}
@@ -531,19 +527,19 @@
                 .attr('alt','quartile chart');
           }// END updatePopText
           
-          var getDaysArray = function(start, end) {
-            end = end.setDate(end.getDate()+1);
-            for(var arr=[],dt=new Date(start); dt<=end; dt.setDate(dt.getDate()+1)){
-                arr.push(new Date(dt));
-            }
-            return arr;
-          };
+          //var getDaysArray = function(start, end) {
+          //  end = end.setDate(end.getDate()+1);
+          //  for(var arr=[],dt=new Date(start); dt<=end; dt.setDate(dt.getDate()+1)){
+          //      arr.push(new Date(dt));
+          //  }
+          //  return arr;
+          //};
           
 
           function updateChartText(caseDateLookup,region_name,pop){    
             var minDate = d3.min(caseDateLookup, function(d) {return d.date;});
             var maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
-            var days = getDaysArray(new Date(minDate),new Date(maxDate));
+            //var days = getDaysArray(new Date(minDate),new Date(maxDate));
 
             var mostRecentRecord = caseDateLookup.filter(function(d) {
                 return d.date == d3.max(caseDateLookup, function(d) {return d.date;})
@@ -629,18 +625,25 @@
               .transition()
               .duration(750)
               .call(yCaseAxis);
+            
               
             // Update the new cases y-axis domain to match data
             yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
-            svgNewCases.selectAll(".bar")
-              .transition()
-              .duration(750)
-              .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
-              .attr("height", function(d){return height - yNewCases(d.new_cases)});
             svgNewCases.select(".y.axis") // change the y axis
               .transition()
               .duration(750)
               .call(yNewCaseAxis);
+            svgNewCases.selectAll(".bar")
+              .remove()
+                .data(caseDateLookup)
+              .enter().append("rect")
+                .attr("class","bar")
+                .style("fill","grey")
+                .attr("x", function(d) { return xNewCases(d.date); })
+                .attr("width",xNewCases.rangeBand())
+                .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
+                .attr("height", function(d){return height - yNewCases(d.new_cases)});
+            
               
             // Update the cum deaths y-axis domain to match data
             yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
@@ -655,10 +658,11 @@
               
             // Update the new deaths y-axis domain to match data
             yNewDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.new_deaths;})]);
-            svgNewDeaths.select(".line")   // change the line
+            svgNewDeaths.select(".bar")   // change the line
               .transition()
               .duration(750)
-              .attr("d", newDeathValueline(caseDateLookup));
+              .attr("y", function(d) { return yNewCases(parseFloat(d.new_deaths)); })
+              .attr("height", function(d){return height - yNewCases(d.new_deaths)});
             svgNewDeaths.select(".y.axis") // change the y axis
               .transition()
               .duration(750)
@@ -707,15 +711,6 @@
             // Scale the range of the new case data
           	xNewCases.domain(caseDateLookup.map(function(d) { return d.date; }));
           	yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
-          	// Add the valueline path to svgNewCases.
-          	//svgNewCases.append("path")
-          	//  .datum(caseDateLookup)
-          	//	.attr("class", "line")
-          	//	.attr("stroke", "#8C8C8C")
-          	//	.attr("stroke-width", 2)
-          	//	.attr("fill", "None")
-          	//	.attr("d", newCaseValueline(caseDateLookup));
-          	// Add the new case X Axis
           	svgNewCases.append("g")
           		.attr("class", "x axis")
           		.attr("transform", "translate(0," + height + ")")
@@ -724,7 +719,7 @@
           	svgNewCases.append("g")
           		.attr("class", "y axis")
           		.call(yNewCaseAxis);
-            svgNewCases.selectAll("bar")
+            svgNewCases.selectAll(".bar")
                 .data(caseDateLookup)
               .enter().append("rect")
                 .attr("class","bar")
@@ -831,6 +826,7 @@
               var filtered_cases = filterCntyCases(countySelection);
               caseDateLookup = formatCaseData(filtered_cases);
             }
+            console.log(caseDateLookup);
             updateCharts(caseDateLookup,countyName,cntyPop);
           });
 

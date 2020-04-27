@@ -1,5 +1,5 @@
 var lastUpdated = '';
-var casesFile = 'data/wv-covid-data.csv';
+var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
 var dateFormat = '%Y-%m-%d';
 var stateName = 'West Virginia';
 
@@ -16,9 +16,8 @@ var ga_id = 'UA-32037403-12';
 
 //Content tha tis specific to your state's tracker
 var dataSources = `
-      <p>As of March 31, 2020, case and death data for West Virginia counties are compiled from the <a href="https://dhhr.wv.gov/COVID-19/Pages/default.aspx" target='_blank'>West Virginia Department of Health and Human Services daily COVID-19 data release</a>.</p>
-      <p>Case/death data for West Virginia are updated every evening by the state. Daily update times may vary.</p>
-      <p>Case data may be lower than the actual number of infected people in a community due to a lack of testing or delayed reporting.</p> 
+      <p>As of April 27, 2020, case and death data for West Virginia counties are provided by the New York Times county dataset. Read more <a href="https://github.com/nytimes/covid-19-data" target="_blank">about the data and potential caveats here</a>.</p>
+      <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing.</p> 
       <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
       `;
   
