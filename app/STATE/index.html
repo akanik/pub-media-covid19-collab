@@ -339,15 +339,15 @@
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
           // Define the cum case line
           var caseValueline = d3.svg.line()
-            	.x(function(d) { return xCases(d.date); })
-            	.y(function(d) { return yCases(parseFloat(d.cases)); });
+            .x(function(d) { return xCases(d.date); })
+            .y(function(d) { return yCases(parseFloat(d.cases)); });
           
           // Set the newcase ranges
-          var	xNewCases = x;
+          var	xNewCases = d3.scale.ordinal().rangeRoundBands([0, width], .05);;
           var	yNewCases = y;
           // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
-          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%B"));
+          	.orient("bottom");
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -358,9 +358,9 @@
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
           // Define the new case line
-          var newCaseValueline = d3.svg.line()
-            	.x(function(d) { return xNewCases(d.date); })
-            	.y(function(d) { return yNewCases(parseFloat(d.new_cases)); });
+          //var newCaseValueline = d3.svg.line()
+          //  .x(function(d) { return xNewCases(d.date); })
+          //  .y(function(d) { return yNewCases(parseFloat(d.new_cases)); });
 
 
           /////////////DEATHS////////////////////
@@ -632,10 +632,11 @@
               
             // Update the new cases y-axis domain to match data
             yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
-            svgNewCases.select(".line")   // change the line
+            svgNewCases.selectAll(".bar")
               .transition()
               .duration(750)
-              .attr("d", newCaseValueline(caseDateLookup));
+              .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
+              .attr("height", function(d){return height - yNewCases(d.new_cases)});
             svgNewCases.select(".y.axis") // change the y axis
               .transition()
               .duration(750)
@@ -704,16 +705,16 @@
           		.call(yCaseAxis);
           		
             // Scale the range of the new case data
-          	xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
+          	xNewCases.domain(caseDateLookup.map(function(d) { return d.date; }));
           	yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
           	// Add the valueline path to svgNewCases.
-          	svgNewCases.append("path")
-          	  .datum(caseDateLookup)
-          		.attr("class", "line")
-          		.attr("stroke", "#8C8C8C")
-          		.attr("stroke-width", 2)
-          		.attr("fill", "None")
-          		.attr("d", newCaseValueline(caseDateLookup));
+          	//svgNewCases.append("path")
+          	//  .datum(caseDateLookup)
+          	//	.attr("class", "line")
+          	//	.attr("stroke", "#8C8C8C")
+          	//	.attr("stroke-width", 2)
+          	//	.attr("fill", "None")
+          	//	.attr("d", newCaseValueline(caseDateLookup));
           	// Add the new case X Axis
           	svgNewCases.append("g")
           		.attr("class", "x axis")
@@ -723,6 +724,15 @@
           	svgNewCases.append("g")
           		.attr("class", "y axis")
           		.call(yNewCaseAxis);
+            svgNewCases.selectAll("bar")
+                .data(caseDateLookup)
+              .enter().append("rect")
+                .attr("class","bar")
+                .style("fill","grey")
+                .attr("x", function(d) { return xNewCases(d.date); })
+                .attr("width",xNewCases.rangeBand())
+                .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
+                .attr("height", function(d){return height - yNewCases(d.new_cases)});
 
 
             // Scale the range of the death data
