@@ -651,15 +651,16 @@
               .duration(750)
               .call(yNewCaseAxis);
             svgNewCases.selectAll(".bar")
-              .remove()
                 .data(caseDateLookup)
-              .enter().append("rect")
-                .attr("class","bar")
-                .style("fill","#BFBFBF")
-                .attr("x", function(d) { return xNewCases(d.date); })
-                .attr("width",xNewCases.rangeBand())
-                .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
-                .attr("height", function(d){return height - yNewCases(d.new_cases)});
+              .exit().remove()
+                .data(caseDateLookup);
+            svgNewCases.selectAll(".bar")
+              .transition()
+              .duration(750)
+              .attr("x", function(d) { return xNewCases(d.date); })
+              .attr("width",xNewCases.rangeBand())
+              .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
+              .attr("height", function(d){return height - yNewCases(d.new_cases)});
             svgNewCases.select(".line")   // change the line
               .transition()
               .duration(750)
@@ -696,7 +697,6 @@
             
             pymChild.sendHeight();
           };// END updateCharts
-
 
 
           function createCharts(caseDateLookup,region_name,pop){
@@ -756,7 +756,7 @@
                 .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
                 .attr("height", function(d){return height - yNewCases(d.new_cases)});
             svgNewCases.append("path")
-          	  .datum(caseDateLookup)
+          	  //.datum(caseDateLookup)
           		.attr("class", "line")
           		.attr("stroke", "#F25E0D")
           		.attr("stroke-width", 2)
