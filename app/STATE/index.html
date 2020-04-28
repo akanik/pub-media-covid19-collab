@@ -393,6 +393,7 @@
       function updateChartText(caseDateLookup,region_name,pop){    
         var minDate = d3.min(caseDateLookup, function(d) {return d.date;});
         var maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
+        var maxDateStr = formatTime(maxDate);
         //var days = getDaysArray(new Date(minDate),new Date(maxDate));
 
         var mostRecentRecord = caseDateLookup.filter(function(d) {
@@ -418,12 +419,12 @@
         
         //New case text   
         if((mostRecentRecord.length == 0)|| isNaN(mostRecentRecord[0]['new_cases']) ){
-          var newCaseText = 'There were <strong>no new cases</strong> of COVID-19 reported on '+formatTime(maxDate)+' in '+
+          var newCaseText = 'There were <strong>no new cases</strong> of COVID-19 reported on '+maxDateStr+' in '+
                             region_name +'.';
         }else{
           var newCases = mostRecentRecord[0]['new_cases'];
           var newCaseText = 'There were <strong>'+ formatComma(newCases) +' new cases</strong> of COVID-19 reported'+
-                              ' on '+formatTime(maxDate)+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
+                              ' on '+maxDateStr+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
                               ' is spreading in a community.';
         }
         var newCasesText = d3.select('#new-case-text')
@@ -450,13 +451,13 @@
             
         //New deaths
         if((mostRecentRecord.length == 0) || isNaN(mostRecentRecord[0]['new_deaths'])){  
-          var newDeathText = 'There have been <strong>no new deaths</strong> related to COVID-19 reported on '+formatTime(maxDate)+
+          var newDeathText = 'There were <strong>no new deaths</strong> related to COVID-19 reported on '+maxDateStr+
                                 ' in '+region_name + '.';
         }else{
           var newDeaths = mostRecentRecord[0]['new_deaths'];
           // Add text to death text block
-          var newDeathText = 'There have been <strong>'+ formatComma(newDeaths) +
-                              ' reported deaths</strong> related to COVID-19 in '+ region_name + '.';
+          var newDeathText = 'There were <strong>'+ formatComma(newDeaths) +
+                              ' new deaths</strong> related to COVID-19 reported on '+maxDateStr+' in '+ region_name + '.';
         }
         var newDeathText = d3.select('#new-death-text')
             .html('<h2>Newly reported deaths</h2>')
@@ -589,7 +590,7 @@
           var	xNewDeaths = d3.scale.ordinal().rangeRoundBands([0, width], .05);
           var	yNewDeaths = y;
           // Define the new death axes
-          var	xNewDeathAxis = d3.svg.axis().scale(xNewDeaths)
+          var	xNewDeathAxis = d3.svg.axis().scale(x)
           	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewDeathAxis = d3.svg.axis().scale(yNewDeaths)
           	.orient("left").ticks(5);

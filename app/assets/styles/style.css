@@ -149,9 +149,13 @@ h1{
   min-height: 50px;
 }
 
+#death-stats{
+  margin-top:2em;
+}
+
 .text {
   font-size: 1.5rem;
-  
+  padding-left:1em;
 }
 
 .stat-row{
