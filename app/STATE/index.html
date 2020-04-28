@@ -216,6 +216,7 @@
       
       function getNewCases(data){
         var newData = [];
+        var newCaseArray = [];
         //for each county
         data.forEach(function(c,i){
           var cntyDates = c['values'];
@@ -241,15 +242,26 @@
               }else{
                 newDeaths = 0;
               }
+              
+              if(i >= 7){
+                avgCaseArray = newCaseArray.slice(Math.max(newCaseArray.length - 7, 0));
+                avgCaseArraySum = avgCaseArray.reduce(function(a, b){
+                    return a + b;
+                }, 0);
+                avgCases = avgCaseArraySum/7;
+              }
             }else{
               newCases = 0;
+              avgCases = 0;
               newDeaths = 0;
             }
+            newCaseArray.push(newCases);
             cntyDict['date'] = d['date'];
             cntyDict['county'] = d['county'];
             cntyDict['state'] = d['state'];
             cntyDict['fips'] = d['fips'];
             cntyDict['new_cases'] = newCases;
+            cntyDict['avg_cases'] = avgCases;
             cntyDict['new_deaths'] = newDeaths;
             cntyDict['cases'] = d['cases'];
             cntyDict['deaths'] = d['deaths'];
@@ -284,6 +296,7 @@
           .rollup(function(d) {
             return {
                 new_cases: d3.sum(d, function(e){return parseFloat(e.new_cases)}),
+                avg_cases: d3.sum(d, function(e){return parseFloat(e.avg_cases)}),
                 new_deaths: d3.sum(d, function(e){return parseFloat(e.new_deaths)}),
                 cases: d3.sum(d, function(e){return parseFloat(e.cases)}),
                 deaths: d3.sum(d, function(e){return parseFloat(e.deaths)})
@@ -296,6 +309,7 @@
           dict = {}
           dict['date'] = parseDate(stateDataByDate[i].key);
           dict['new_cases'] = stateDataByDate[i].values.new_cases;
+          dict['avg_cases'] = stateDataByDate[i].values.avg_cases;
           dict['new_deaths'] = stateDataByDate[i].values.new_deaths;
           dict['cases'] = stateDataByDate[i].values.cases;
           dict['deaths'] = stateDataByDate[i].values.deaths;
@@ -423,9 +437,10 @@
                             region_name +'.';
         }else{
           var newCases = mostRecentRecord[0]['new_cases'];
+          var avgNewCases = formatNoDecimal(mostRecentRecord[0]['avg_cases']);
           var newCaseText = 'There were <strong>'+ formatComma(newCases) +' new cases</strong> of COVID-19 reported'+
                               ' on '+maxDateStr+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
-                              ' is spreading in a community.';
+                              ' is spreading in a community. 7-day average: '+avgNewCases;
         }
         var newCasesText = d3.select('#new-case-text')
             .html('<h2>Newly reported cases</h2>')
@@ -509,6 +524,8 @@
               .entries(case_data)
               
           case_data = getNewCases(cntyDataByDate);
+          
+          console.log(case_data);
                     
 
           //BEGIN CHART STUFF
