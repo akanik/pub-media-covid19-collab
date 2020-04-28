@@ -433,19 +433,23 @@
         
         //New case text   
         if((mostRecentRecord.length == 0)|| isNaN(mostRecentRecord[0]['new_cases']) ){
-          var newCaseText = 'There were <strong>no new cases</strong> of COVID-19 reported on '+maxDateStr+' in '+
+          var newCaseText = 'There were <strong>no newly reported cases</strong> of COVID-19 on '+maxDateStr+' in '+
                             region_name +'.';
         }else{
           var newCases = mostRecentRecord[0]['new_cases'];
           var avgNewCases = formatNoDecimal(mostRecentRecord[0]['avg_cases']);
-          var newCaseText = 'There were <strong>'+ formatComma(newCases) +' new cases</strong> of COVID-19 reported'+
-                              ' on '+maxDateStr+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
-                              ' is spreading in a community. 7-day average: '+avgNewCases;
+          var newCaseText = 'There were <strong>'+ formatComma(newCases) +' newly reported cases</strong> of COVID-19 on '+
+                              maxDateStr+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
+                              ' is spreading in a community.';
+          var avgCaseText = '<span class="avg-trend">Seven-day average: '+avgNewCases+' newly reported cases.</span>';
         }
         var newCasesText = d3.select('#new-case-text')
             .html('<h2>Newly reported cases</h2>')
             .append('p')
-            .html(newCaseText);
+            .html(newCaseText)
+            .append('p')
+            .attr('class','avg-cases')
+            .html(avgCaseText);
         
       
          /////////////////DEATHS////////////////////  
@@ -579,6 +583,9 @@
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          var avgCaseValueline = d3.svg.line()
+            .x(function(d) { return xCases(d.date); })
+            .y(function(d) { return yCases(parseFloat(d.avg_cases)); });
 
 
           /////////////DEATHS////////////////////
@@ -648,11 +655,15 @@
                 .data(caseDateLookup)
               .enter().append("rect")
                 .attr("class","bar")
-                .style("fill","grey")
+                .style("fill","#BFBFBF")
                 .attr("x", function(d) { return xNewCases(d.date); })
                 .attr("width",xNewCases.rangeBand())
                 .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
                 .attr("height", function(d){return height - yNewCases(d.new_cases)});
+            svgNewCases.select(".line")   // change the line
+              .transition()
+              .duration(750)
+              .attr("d", avgCaseValueline(caseDateLookup));
             
               
             // Update the cum deaths y-axis domain to match data
@@ -739,11 +750,18 @@
                 .data(caseDateLookup)
               .enter().append("rect")
                 .attr("class","bar")
-                .style("fill","grey")
+                .style("fill","#BFBFBF")
                 .attr("x", function(d) { return xNewCases(d.date); })
                 .attr("width",xNewCases.rangeBand())
                 .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
                 .attr("height", function(d){return height - yNewCases(d.new_cases)});
+            svgNewCases.append("path")
+          	  .datum(caseDateLookup)
+          		.attr("class", "line")
+          		.attr("stroke", "#F25E0D")
+          		.attr("stroke-width", 2)
+          		.attr("fill", "None")
+          		.attr("d", avgCaseValueline(caseDateLookup));
 
 
             // Scale the range of the death data
@@ -783,7 +801,7 @@
                 .data(caseDateLookup)
               .enter().append("rect")
                 .attr("class","bar")
-                .style("fill","red")
+                .style("fill","#CC3333")
                 .attr("x", function(d) { return xNewDeaths(d.date); })
                 .attr("width",xNewDeaths.rangeBand())
                 .attr("y", function(d) { return yNewDeaths(parseFloat(d.new_deaths)); })

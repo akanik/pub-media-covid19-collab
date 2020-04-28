@@ -143,10 +143,9 @@ h1{
   border-color: #4d4d4d transparent transparent transparent;
 }
 
-#cases-text p,
-#deaths-text p{
+#cum-case-text p{
   margin-bottom:0;
-  min-height: 50px;
+  min-height: 105px;
 }
 
 #death-stats{
@@ -220,6 +219,16 @@ h3{
 
 #update-date{
   font-style: italic;
+}
+
+.avg-trend{
+  border-bottom:#F25E0D 2px solid;
+}
+
+.avg-cases{
+  font-size: .75em;
+  font-weight: 800;
+  text-transform: capitalize;
 }
 
 
