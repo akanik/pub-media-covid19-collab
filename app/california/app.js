@@ -1,4 +1,4 @@
-var lastUpdated = 'April 26, 2020, 9:00 p.m';
+var lastUpdated = 'April 27, 2020, 9:00 p.m';
 var casesFile = 'data/ca-covid-data.csv';
 var dateFormat = '%m/%d/%Y';
 var stateName = 'California';
