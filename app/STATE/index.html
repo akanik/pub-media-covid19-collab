@@ -692,7 +692,7 @@
             svgDeaths.select(".line")
               .transition()
               .duration(750)
-              .attr("d", caseValueline(caseDateLookup));
+              .attr("d", deathValueline(caseDateLookup));
             // change the y axis
             svgDeaths.select(".x.axis")
               .transition()
