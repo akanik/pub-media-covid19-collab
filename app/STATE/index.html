@@ -261,7 +261,7 @@
             cntyDict['state'] = d['state'];
             cntyDict['fips'] = d['fips'];
             cntyDict['new_cases'] = newCases;
-            cntyDict['avg_cases'] = avgCases;
+            cntyDict['avg_cases'] = formatNoDecimal(avgCases);
             cntyDict['new_deaths'] = newDeaths;
             cntyDict['cases'] = d['cases'];
             cntyDict['deaths'] = d['deaths'];
@@ -533,7 +533,6 @@
                     
 
           //BEGIN CHART STUFF
-          var ticks;
           var elWidth = document.getElementById("cum-case-chart").offsetWidth;
 
           // Set the dimensions of the canvas / graph
@@ -568,11 +567,11 @@
             .y(function(d) { return yCases(parseFloat(d.cases)); });
           
           // Set the newcase ranges
-          var	xNewCases = d3.scale.ordinal().rangeRoundBands([0, width], .05);
+          var	xNewCases = x;//d3.scale.ordinal().rangeRoundBands([0, width], .05);
           var	yNewCases = y;
           // Define the new casesaxes
-          var	xNewCaseAxis = d3.svg.axis().scale(x)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
+          	.orient("bottom");//.ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -650,17 +649,22 @@
               .transition()
               .duration(750)
               .call(yNewCaseAxis);
-            svgNewCases.selectAll(".bar")
+            //svgNewCases.selectAll(".bar")
+            //    .data(caseDateLookup)
+            //  .exit().remove()
+                //.data(caseDateLookup);
+            var bars = svgNewCases.selectAll(".bar")
                 .data(caseDateLookup)
-              .exit().remove()
-                .data(caseDateLookup);
-            svgNewCases.selectAll(".bar")
-              .transition()
-              .duration(750)
+    					.exit().remove()
+    					  .data(caseDateLookup);
+            bars.enter().append("rect")
+              .attr("class","bar")
+              .style("fill","#BFBFBF")
               .attr("x", function(d) { return xNewCases(d.date); })
-              .attr("width",xNewCases.rangeBand())
-              .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
+              .attr("width",5)
+              .attr("y", function(d) { return yNewCases(d.new_cases); })
               .attr("height", function(d){return height - yNewCases(d.new_cases)});
+              
             svgNewCases.select(".line")   // change the line
               .transition()
               .duration(750)
@@ -736,7 +740,8 @@
           		.call(yCaseAxis);
           		
             // Scale the range of the new case data
-          	xNewCases.domain(caseDateLookup.map(function(d) { return d.date; }));
+          	//xNewCases.domain(caseDateLookup.map(function(d) { return d.date; }));
+          	xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
           	yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
           	svgNewCases.append("g")
           		.attr("class", "x axis")
@@ -746,15 +751,17 @@
           	svgNewCases.append("g")
           		.attr("class", "y axis")
           		.call(yNewCaseAxis);
-            svgNewCases.selectAll(".bar")
-                .data(caseDateLookup)
-              .enter().append("rect")
-                .attr("class","bar")
-                .style("fill","#BFBFBF")
-                .attr("x", function(d) { return xNewCases(d.date); })
-                .attr("width",xNewCases.rangeBand())
-                .attr("y", function(d) { return yNewCases(parseFloat(d.new_cases)); })
-                .attr("height", function(d){return height - yNewCases(d.new_cases)});
+            var bars = svgNewCases.selectAll(".bar")
+    					//.remove()
+    					//.exit()
+    					.data(caseDateLookup);	
+            bars.enter().append("rect")
+              .attr("class","bar")
+              .style("fill","#BFBFBF")
+              .attr("x", function(d) { return xNewCases(d.date); })
+              .attr("width",5)
+              .attr("y", function(d) { return yNewCases(d.new_cases); })
+              .attr("height", function(d){return height - yNewCases(d.new_cases)});
             svgNewCases.append("path")
           	  //.datum(caseDateLookup)
           		.attr("class", "line")
@@ -804,13 +811,8 @@
                 .style("fill","#CC3333")
                 .attr("x", function(d) { return xNewDeaths(d.date); })
                 .attr("width",xNewDeaths.rangeBand())
-                .attr("y", function(d) { return yNewDeaths(parseFloat(d.new_deaths)); })
+                .attr("y", function(d) { return yNewDeaths(parseFloat(d.new_deaths));})
                 .attr("height", function(d){return height - yNewDeaths(d.new_deaths)});
-                
-            ticks = d3.selectAll(".new .tick text");
-            ticks.each(function(_,i){
-                if(i%3 !== 0) d3.select(this).remove();
-            });
             
           }//END createCharts
 
@@ -849,7 +851,7 @@
                   return d.cnty_name;
               });
           dropdown.on('change',function(){
-            dataLevel = 'county';
+            //dataLevel = 'county';
             countySelection = d3.select(this).property('value');
             countyName = d3.select('#county-select option:checked').text();
 
