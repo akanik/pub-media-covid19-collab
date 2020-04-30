@@ -1,6 +1,6 @@
-var lastUpdated = 'April 22, 2020, 9:30 p.m';
-var casesFile = 'data/ca-covid-data.csv';
-var dateFormat = '%m/%d/%Y';
+var lastUpdated = '';
+var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
+var dateFormat = '%Y-%m-%d';
 var stateName = 'California';
 
 //Values that will help your tracker look good when people search and share
