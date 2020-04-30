@@ -564,7 +564,7 @@
             .y(function(d) { return yCases(parseFloat(d.cases)); });
           
           // Set the newcase ranges
-          var	xNewCases = x;//d3.scale.ordinal().rangeRoundBands([0, width], .05);
+          var	xNewCases = x;
           var	yNewCases = y;
           // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
@@ -586,35 +586,35 @@
 
           /////////////DEATHS////////////////////
           
-          // Set the cum death ranges
+          // Set the ranges
           var	xDeaths = x;
           var	yDeaths = y;
-          // Define the cum death axes
+          // Define the axes
           var	xDeathAxis = d3.svg.axis().scale(xDeaths)
           	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yDeathAxis = d3.svg.axis().scale(yDeaths)
           	.orient("left").ticks(5);
-          // Adds the cum deaths svg
+          // Adds the svg
           var	svgDeaths = d3.select("#cum-death-chart")
           	.append("svg")
           		.attr("width", width + margin.left + margin.right)
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-          // Define cum deaths line
-          var	deathValueline = d3.svg.line()
-          	.x(function(d) { return xDeaths(d.date); })
-          	.y(function(d) { return yDeaths(parseFloat(d.deaths)); });
-          	
-          // Set the new death ranges
-          var	xNewDeaths = d3.scale.ordinal().rangeRoundBands([0, width], .05);
+          // Define the line
+          var deathValueline = d3.svg.line()
+            .x(function(d) { return xDeaths(d.date); })
+            .y(function(d) { return yDeaths(parseFloat(d.deaths)); });
+          
+          // Set the newcase ranges
+          var	xNewDeaths = x;//d3.scale.ordinal().rangeRoundBands([0, width], .05);
           var	yNewDeaths = y;
-          // Define the new death axes
-          var	xNewDeathAxis = d3.svg.axis().scale(x)
+          // Define the new casesaxes
+          var	xNewDeathAxis = d3.svg.axis().scale(xNewDeaths)
           	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewDeathAxis = d3.svg.axis().scale(yNewDeaths)
           	.orient("left").ticks(5);
-          // Adds the new deaths svg
+          // Adds the new cases svg
           var	svgNewDeaths = d3.select("#new-death-chart")
             .attr('class','new')
           	.append("svg")
@@ -622,75 +622,118 @@
           		.attr("height", height + margin.top + margin.bottom)
           	.append("g")
           		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          //var avgDeathValueline = d3.svg.line()
+          //  .x(function(d) { return xDeaths(d.date); })
+          //  .y(function(d) { return yDeaths(parseFloat(d.avg_deaths)); });
         
 
           function updateCharts(caseDateLookup,region_name,pop) {
             console.log(caseDateLookup);
             updateChartText(caseDateLookup,region_name,pop);
             
-            // Update the cum cases y-axis domain to match data
+            /////////////////// CASES //////////////////////
+            
+            // Update the x and y-axis domain to match data
             xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
-            svgCases.select(".line")   // change the line
+            // change the line
+            svgCases.select(".line")
               .transition()
               .duration(750)
               .attr("d", caseValueline(caseDateLookup));
-            svgCases.select(".x.axis") // change the y axis
+            // change the y axis
+            svgCases.select(".x.axis")
               .transition()
               .duration(750)
               .call(xCaseAxis);
-            svgCases.select(".y.axis") // change the y axis
+            // change the y axis
+            svgCases.select(".y.axis")
               .transition()
               .duration(750)
               .call(yCaseAxis);
-            
               
-            // Update the new cases y-axis domain to match data
+            // Update the y-axis domain to match data
             xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
             yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
+            // Remove old bars
             svgNewCases.selectAll("rect")
               .remove();
+            // Add new bars
     				svgNewCases.selectAll("rect")
     				    .data(caseDateLookup)
     				  .enter().append("rect")
-                //.attr("class","bar")
                 .style("fill","#BFBFBF")
                 .attr("x", function(d) { return xNewCases(d.date); })
                 .attr("width",5)
                 .attr("y", function(d) { return yNewCases(d.new_cases); })
                 .attr("height", function(d){return height - yNewCases(d.new_cases)});
-                
-            //  .transition()
-            //    .duration(750)
-            //  .attr("x", function(d) { return xNewCases(d.date); })
-            //  .attr("width",5)
-            //  .attr("y", function(d) { return yNewCases(d.new_cases); })
-            //  .attr("height", function(d){return height - yNewCases(d.new_cases)});
-              
-            svgNewCases.select(".line")   // change the line
+            // change the line
+            svgNewCases.select(".line")
               .transition()
               .duration(750)
               .attr("d", avgCaseValueline(caseDateLookup));
-            svgNewCases.select(".x.axis") // change the x axis
+            // change the x axis
+            svgNewCases.select(".x.axis")
               .transition()
               .duration(750)
               .call(xNewCaseAxis);
-            svgNewCases.select(".y.axis") // change the y axis
+            // change the y axis
+            svgNewCases.select(".y.axis")
               .transition()
               .duration(750)
               .call(yNewCaseAxis);
             
-              
-            // Update the cum deaths y-axis domain to match data
+            /////////////////// DEATHS //////////////////////
+            
+            // Update the x and y-axis domain to match data
+            xDeaths.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
             yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
-            svgDeaths.select(".line")   // change the line
+            // change the line
+            svgDeaths.select(".line")
               .transition()
               .duration(750)
-              .attr("d", deathValueline(caseDateLookup));
-            svgDeaths.select(".y.axis") // change the y axis
+              .attr("d", caseValueline(caseDateLookup));
+            // change the y axis
+            svgDeaths.select(".x.axis")
+              .transition()
+              .duration(750)
+              .call(xDeathAxis);
+            // change the y axis
+            svgDeaths.select(".y.axis")
               .transition()
               .duration(750)
               .call(yDeathAxis);
+              
+            // Update the y-axis domain to match data
+            xNewDeaths.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
+            yNewDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.new_deaths;})]);
+            // Remove old bars
+            svgNewDeaths.selectAll("rect")
+              .remove();
+            // Add new bars
+    				svgNewDeaths.selectAll("rect")
+    				    .data(caseDateLookup)
+    				  .enter().append("rect")
+                .style("fill","#CC3333")
+                .attr("x", function(d) { return xNewCases(d.date); })
+                .attr("width",5)
+                .attr("y", function(d) { return yNewCases(d.new_deaths); })
+                .attr("height", function(d){return height - yNewCases(d.new_deaths)});
+            // change the line
+            //svgNewDeaths.select(".line")
+            //  .transition()
+            //  .duration(750)
+            //  .attr("d", avgDeathValueline(caseDateLookup));
+            // change the x axis
+            svgNewDeaths.select(".x.axis")
+              .transition()
+              .duration(750)
+              .call(xNewDeathAxis);
+            // change the y axis
+            svgNewDeaths.select(".y.axis")
+              .transition()
+              .duration(750)
+              .call(yNewDeathAxis);
                        
             
             pymChild.sendHeight();
@@ -709,13 +752,16 @@
             }
             var updateDate = d3.select('#update-date')
               .html('Data last updated '+maxDate+'.');
-
+            
+            // Update the chart text
             updateChartText(caseDateLookup,region_name,pop);
             
-          	// Scale the range of the case data
+            /////////////////// CASES //////////////////////
+            
+          	// Scale the range of the data
           	xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
           	yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
-          	// Add the valueline path to svgCases.
+          	// Add the valueline path
           	svgCases.append("path")
           	  .datum(caseDateLookup)
           		.attr("class", "line")
@@ -723,88 +769,97 @@
           		.attr("stroke-width", 2)
           		.attr("fill", "None")
           		.attr("d", caseValueline(caseDateLookup));
-          	// Add the case X Axis
+          	// Add the x Axis
           	svgCases.append("g")
           		.attr("class", "x axis")
           		.attr("transform", "translate(0," + height + ")")
           		.call(xCaseAxis);
-          	// Add the case Y Axis
+          	// Add the y Axis
           	svgCases.append("g")
           		.attr("class", "y axis")
           		.call(yCaseAxis);
           		
-            // Scale the range of the new case data
-          	//xNewCases.domain(caseDateLookup.map(function(d) { return d.date; }));
+            // Scale the range of the data
           	xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
           	yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
+          	// Add bars
             svgNewCases.selectAll("rect")
       					.data(caseDateLookup)	
               .enter().append("rect")
-                //.attr("class","bar")
                 .style("fill","#BFBFBF")
                 .attr("x", function(d) { return xNewCases(d.date); })
                 .attr("width",5)
                 .attr("y", function(d) { return yNewCases(d.new_cases); })
                 .attr("height", function(d){return height - yNewCases(d.new_cases)});
+            // Add trend line
             svgNewCases.append("path")
-          	  //.datum(caseDateLookup)
           		.attr("class", "line")
           		.attr("stroke", "#F25E0D")
           		.attr("stroke-width", 2)
           		.attr("fill", "None")
           		.attr("d", avgCaseValueline(caseDateLookup));
+            // Add x axis
             svgNewCases.append("g")
           		.attr("class", "x axis")
           		.attr("transform", "translate(0," + height + ")")
           		.call(xNewCaseAxis);
-          	// Add the new case Y Axis
+          	// Add the y Axis
           	svgNewCases.append("g")
           		.attr("class", "y axis")
           		.call(yNewCaseAxis);
-
-
-            // Scale the range of the death data
+          		
+            /////////////////// DEATHS //////////////////////
+            
+            // Scale the range of the data
           	xDeaths.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
           	yDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.deaths;})]);
-            // Add the valueline path to svgDeaths.
+          	// Add the valueline path
           	svgDeaths.append("path")
           	  .datum(caseDateLookup)
           		.attr("class", "line")
           		.attr("stroke", "#CC3333")
           		.attr("stroke-width", 2)
-          		//.attr("fill", "#FD6565")
           		.attr("fill", "None")
           		.attr("d", deathValueline(caseDateLookup));
-          	// Add the death X Axis
+          	// Add the x Axis
           	svgDeaths.append("g")
           		.attr("class", "x axis")
           		.attr("transform", "translate(0," + height + ")")
           		.call(xDeathAxis);
-          	// Add the death Y Axis
+          	// Add the y Axis
           	svgDeaths.append("g")
           		.attr("class", "y axis")
           		.call(yDeathAxis);
           		
-            // Scale the range of the new death data
-          	xNewDeaths.domain(caseDateLookup.map(function(d) { return d.date; }));
+            // Scale the range of the data
+          	xNewDeaths.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
           	yNewDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.new_deaths;})]);
-          	svgNewDeaths.append("g")
+          	// Add bars
+            svgNewDeaths.selectAll("rect")
+      					.data(caseDateLookup)	
+              .enter().append("rect")
+                .style("fill","#CC3333")
+                .attr("x", function(d) { return xNewCases(d.date); })
+                .attr("width",5)
+                .attr("y", function(d) { return yNewCases(d.new_deaths); })
+                .attr("height", function(d){return height - yNewCases(d.new_deaths)});
+            // Add trend line
+            //svgNewDeaths.append("path")
+          	//	.attr("class", "line")
+          	//	.attr("stroke", "#F25E0D")
+          	//	.attr("stroke-width", 2)
+          	//	.attr("fill", "None")
+          	//	.attr("d", avgDeathValueline(caseDateLookup));
+            // Add x axis
+            svgNewDeaths.append("g")
           		.attr("class", "x axis")
           		.attr("transform", "translate(0," + height + ")")
           		.call(xNewDeathAxis);
-          	// Add the new death Y Axis
+          	// Add the y Axis
           	svgNewDeaths.append("g")
           		.attr("class", "y axis")
           		.call(yNewDeathAxis);
-            svgNewDeaths.selectAll(".bar")
-                .data(caseDateLookup)
-              .enter().append("rect")
-                .attr("class","bar")
-                .style("fill","#CC3333")
-                .attr("x", function(d) { return xNewDeaths(d.date); })
-                .attr("width",xNewDeaths.rangeBand())
-                .attr("y", function(d) { return yNewDeaths(parseFloat(d.new_deaths));})
-                .attr("height", function(d){return height - yNewDeaths(d.new_deaths)});
+
             
           }//END createCharts
 
