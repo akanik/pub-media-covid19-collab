@@ -212,7 +212,7 @@
 
       // Parse the date / time
       var	parseDate = d3.time.format(dateFormat).parse;
-      var formatTime = d3.time.format("%B %d, %Y");
+      var formatTime = d3.time.format(dateFormat);
       
       function getNewCases(data){
         var newData = [];
@@ -529,9 +529,6 @@
               
           case_data = getNewCases(cntyDataByDate);
           
-          console.log(case_data);
-                    
-
           //BEGIN CHART STUFF
           var elWidth = document.getElementById("cum-case-chart").offsetWidth;
 
@@ -571,7 +568,7 @@
           var	yNewCases = y;
           // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
-          	.orient("bottom");//.ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -628,15 +625,20 @@
         
 
           function updateCharts(caseDateLookup,region_name,pop) {
-                        
+            console.log(caseDateLookup);
             updateChartText(caseDateLookup,region_name,pop);
             
             // Update the cum cases y-axis domain to match data
+            xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
             svgCases.select(".line")   // change the line
               .transition()
               .duration(750)
               .attr("d", caseValueline(caseDateLookup));
+            svgCases.select(".x.axis") // change the y axis
+              .transition()
+              .duration(750)
+              .call(xCaseAxis);
             svgCases.select(".y.axis") // change the y axis
               .transition()
               .duration(750)
@@ -644,31 +646,39 @@
             
               
             // Update the new cases y-axis domain to match data
+            xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
             yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
-            svgNewCases.select(".y.axis") // change the y axis
-              .transition()
-              .duration(750)
-              .call(yNewCaseAxis);
-            //svgNewCases.selectAll(".bar")
-            //    .data(caseDateLookup)
-            //  .exit().remove()
-                //.data(caseDateLookup);
-            var bars = svgNewCases.selectAll(".bar")
-                .data(caseDateLookup)
-    					.exit().remove()
-    					  .data(caseDateLookup);
-            bars.enter().append("rect")
-              .attr("class","bar")
-              .style("fill","#BFBFBF")
-              .attr("x", function(d) { return xNewCases(d.date); })
-              .attr("width",5)
-              .attr("y", function(d) { return yNewCases(d.new_cases); })
-              .attr("height", function(d){return height - yNewCases(d.new_cases)});
+            svgNewCases.selectAll("rect")
+              .remove();
+    				svgNewCases.selectAll("rect")
+    				    .data(caseDateLookup)
+    				  .enter().append("rect")
+                //.attr("class","bar")
+                .style("fill","#BFBFBF")
+                .attr("x", function(d) { return xNewCases(d.date); })
+                .attr("width",5)
+                .attr("y", function(d) { return yNewCases(d.new_cases); })
+                .attr("height", function(d){return height - yNewCases(d.new_cases)});
+                
+            //  .transition()
+            //    .duration(750)
+            //  .attr("x", function(d) { return xNewCases(d.date); })
+            //  .attr("width",5)
+            //  .attr("y", function(d) { return yNewCases(d.new_cases); })
+            //  .attr("height", function(d){return height - yNewCases(d.new_cases)});
               
             svgNewCases.select(".line")   // change the line
               .transition()
               .duration(750)
               .attr("d", avgCaseValueline(caseDateLookup));
+            svgNewCases.select(".x.axis") // change the x axis
+              .transition()
+              .duration(750)
+              .call(xNewCaseAxis);
+            svgNewCases.select(".y.axis") // change the y axis
+              .transition()
+              .duration(750)
+              .call(yNewCaseAxis);
             
               
             // Update the cum deaths y-axis domain to match data
@@ -681,23 +691,7 @@
               .transition()
               .duration(750)
               .call(yDeathAxis);
-              
-            // Update the new cases y-axis domain to match data
-            yNewDeaths.domain([0, d3.max(caseDateLookup, function(d) {return d.new_deaths;})]);
-            svgNewDeaths.select(".y.axis") // change the y axis
-              .transition()
-              .duration(750)
-              .call(yNewDeathAxis);
-            svgNewDeaths.selectAll(".bar")
-              .remove()
-                .data(caseDateLookup)
-              .enter().append("rect")
-                .attr("class","bar")
-                .style("fill","red")
-                .attr("x", function(d) { return xNewDeaths(d.date); })
-                .attr("width",xNewDeaths.rangeBand())
-                .attr("y", function(d) { return yNewDeaths(parseFloat(d.new_deaths)); })
-                .attr("height", function(d){return height - yNewDeaths(d.new_deaths)});            
+                       
             
             pymChild.sendHeight();
           };// END updateCharts
@@ -743,25 +737,15 @@
           	//xNewCases.domain(caseDateLookup.map(function(d) { return d.date; }));
           	xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
           	yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
-          	svgNewCases.append("g")
-          		.attr("class", "x axis")
-          		.attr("transform", "translate(0," + height + ")")
-          		.call(xNewCaseAxis);
-          	// Add the new case Y Axis
-          	svgNewCases.append("g")
-          		.attr("class", "y axis")
-          		.call(yNewCaseAxis);
-            var bars = svgNewCases.selectAll(".bar")
-    					//.remove()
-    					//.exit()
-    					.data(caseDateLookup);	
-            bars.enter().append("rect")
-              .attr("class","bar")
-              .style("fill","#BFBFBF")
-              .attr("x", function(d) { return xNewCases(d.date); })
-              .attr("width",5)
-              .attr("y", function(d) { return yNewCases(d.new_cases); })
-              .attr("height", function(d){return height - yNewCases(d.new_cases)});
+            svgNewCases.selectAll("rect")
+      					.data(caseDateLookup)	
+              .enter().append("rect")
+                //.attr("class","bar")
+                .style("fill","#BFBFBF")
+                .attr("x", function(d) { return xNewCases(d.date); })
+                .attr("width",5)
+                .attr("y", function(d) { return yNewCases(d.new_cases); })
+                .attr("height", function(d){return height - yNewCases(d.new_cases)});
             svgNewCases.append("path")
           	  //.datum(caseDateLookup)
           		.attr("class", "line")
@@ -769,6 +753,14 @@
           		.attr("stroke-width", 2)
           		.attr("fill", "None")
           		.attr("d", avgCaseValueline(caseDateLookup));
+            svgNewCases.append("g")
+          		.attr("class", "x axis")
+          		.attr("transform", "translate(0," + height + ")")
+          		.call(xNewCaseAxis);
+          	// Add the new case Y Axis
+          	svgNewCases.append("g")
+          		.attr("class", "y axis")
+          		.call(yNewCaseAxis);
 
 
             // Scale the range of the death data
@@ -867,7 +859,6 @@
               var filtered_cases = filterCntyCases(countySelection);
               caseDateLookup = formatCaseData(filtered_cases);
             }
-            console.log(caseDateLookup);
             updateCharts(caseDateLookup,countyName,cntyPop);
           });
 
