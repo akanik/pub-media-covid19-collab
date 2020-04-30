@@ -212,7 +212,7 @@
 
       // Parse the date / time
       var	parseDate = d3.time.format(dateFormat).parse;
-      var formatTime = d3.time.format(dateFormat);
+      var formatTime = d3.time.format('%B %d, %Y');
       
       function getNewCases(data){
         var newData = [];
@@ -754,10 +754,10 @@
               maxDate = lastUpdated;
             }else{
               maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
-              maxDate = maxDate.toLocaleDateString("en-US");
+              maxDateStr = formatTime(maxDate);
             }
             var updateDate = d3.select('#update-date')
-              .html('Data last updated '+maxDate+'.');
+              .html('Data last updated '+maxDateStr+'.');
             
             // Update the chart text
             updateChartText(caseDateLookup,region_name,pop);
