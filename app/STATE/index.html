@@ -631,6 +631,7 @@
             console.log(caseDateLookup);
             updateChartText(caseDateLookup,region_name,pop);
             
+            
             /////////////////// CASES //////////////////////
             
             // Update the x and y-axis domain to match data
@@ -656,12 +657,14 @@
             xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
             yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
             // Remove old bars
-            svgNewCases.selectAll("rect")
+            var barCage = svgNewCases.select('#new-case-bars');
+            barCage.selectAll("rect")
               .remove();
             // Add new bars
-    				svgNewCases.selectAll("rect")
-    				    .data(caseDateLookup)
-    				  .enter().append("rect")
+            barCage.selectAll("rect")
+      					.data(caseDateLookup)	
+              .enter()
+              .append("rect")
                 .style("fill","#BFBFBF")
                 .attr("x", function(d) { return xNewCases(d.date); })
                 .attr("width",5)
@@ -783,9 +786,11 @@
           	xNewCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
           	yNewCases.domain([0, d3.max(caseDateLookup, function(d) {return d.new_cases;})]);
           	// Add bars
-            svgNewCases.selectAll("rect")
+          	var barCage = svgNewCases.append("g").attr('id','new-case-bars');
+            barCage.selectAll("rect")
       					.data(caseDateLookup)	
-              .enter().append("rect")
+              .enter()
+              .append("rect")
                 .style("fill","#BFBFBF")
                 .attr("x", function(d) { return xNewCases(d.date); })
                 .attr("width",5)
