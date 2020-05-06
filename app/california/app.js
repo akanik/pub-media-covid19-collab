@@ -1,12 +1,12 @@
 var lastUpdated = '';
-var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
+var casesFile = 'https://raw.githubusercontent.com/datadesk/california-coronavirus-data/master/latimes-county-totals.csv';
 var dateFormat = '%Y-%m-%d';
 var stateName = 'California';
 
 //Values that will help your tracker look good when people search and share
 var meta_title = stateName+' COVID-19 County Tracker';
 var meta_twitter = '@OVReSRC';
-var meta_url = 'https://laist.com/projects/2020/coronavirus-tracker/california.html';
+var meta_url = 'https://laist.com/projects/2020/coronavirus-tracker/california/index.html';
 var meta_image = 'https://www.capradio.org/media/12251118/coronatrackertwitter.jpg';
 var meta_description = 'EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.';
 var meta_author = 'California Regional News Hub';

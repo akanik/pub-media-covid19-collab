@@ -209,6 +209,11 @@
           formatSuffixDecimal2 = d3.format(".2s"),
           formatMoney = function(d) { return "$" + formatDecimalComma(d); },
           formatPercent = d3.format(",.2%");
+          
+      function pz(n, z, s) {
+      	var z= z || 2, s = s || '0';
+      	return (n+'').length <= z ? (['','-'])[+(n<0)] + (s.repeat(z) + Math.abs(n)).slice(-1*z) : n + '';
+      }
 
       // Parse the date / time
       var	parseDate = d3.time.format(dateFormat).parse;
@@ -218,11 +223,11 @@
         var casesText = d3.select('#cum-case-text')
             .html('<h2>Total cases</h2>')
             .append('p')
-            .html('There is no data for '+countyName+'.');
+            .html('There are no reported cases in '+countyName+'.');
         var newCasesText = d3.select('#new-case-text')
             .html('<h2>Newly reported cases</h2>')
             .append('p')
-            .html('There is no data for '+countyName+'.');
+            .html('There are no reported cases in '+countyName+'.');
         var deathText = d3.select('#cum-death-text')
             .html('<h2>Total deaths</h2>')
             .append('p')
@@ -294,23 +299,10 @@
           })
         });
         return newData
-      };
-      
-      //var getDaysArray = function(start, end) {
-      //  end = end.setDate(end.getDate()+1);
-      //  for(var arr=[],dt=new Date(start); dt<=end; dt.setDate(dt.getDate()+1)){
-      //      arr.push(new Date(dt));
-      //  }
-      //  return arr;
-      //};
+      }; // end getNewCases()
       
       ////////////DATA FORMATING FUNCTIONS/////////////////
       function formatCaseData(data){
-        /*if(data[0]['state']){
-          data = data.filter(function(d){
-            return d['state'] == stateName
-          });
-        }*/
         
         data.sort(function(x, y){
          return d3.ascending(parseDate(x.date), parseDate(y.date));
@@ -468,7 +460,7 @@
           var newCaseText = 'There were <strong>'+ formatComma(newCases) +' newly reported cases</strong> of COVID-19 on '+
                               maxDateStr+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
                               ' is spreading in a community.<div class="avg-cases"><span class="avg-trend">'+
-                              'Seven-day average: '+avgNewCases+' newly reported cases.</span></div>';
+                              'Seven-day average: '+formatComma(avgNewCases)+' newly reported cases.</span></div>';
         }
         var newCasesText = d3.select('#new-case-text')
             .html('<h2>Newly reported cases</h2>')
@@ -539,12 +531,15 @@
           }
 
           case_data.forEach(function(d) {
-            d.cases = d.cases.replace(/,/g, '');
+            d.cases = d.confirmed_cases.replace(/,/g, '');
+            d.new_cases = d.new_confirmed_cases.replace(/,/g, '');
+            d.fips = '06' + pz(d.fips, 3);
           });
-                                        
-          case_data = case_data.filter( function(d){
-            return d['state'] == stateName
-          });
+                    
+          //This is not needed for California because they us CA-specific data                            
+          //case_data = case_data.filter( function(d){
+          //  return d['state'] == stateName
+          //});
                     
           var cntyDataByDate = d3.nest()
               .key(function(d) {return d.fips;})
@@ -558,7 +553,6 @@
 
           // Set the dimensions of the canvas / graph
           var	margin = {top: 30, right: 20, bottom: 30, left: 50};
-          //var width,height;
           var width = elWidth - margin.left - margin.right;
           var height = 270 - margin.top - margin.bottom;
           
@@ -886,13 +880,6 @@
                 .attr("width",5)
                 .attr("y", function(d) { return yNewCases(d.new_deaths); })
                 .attr("height", function(d){return height - yNewCases(d.new_deaths)});
-            // Add trend line
-            //svgNewDeaths.append("path")
-          	//	.attr("class", "line")
-          	//	.attr("stroke", "#F25E0D")
-          	//	.attr("stroke-width", 2)
-          	//	.attr("fill", "None")
-          	//	.attr("d", avgDeathValueline(caseDateLookup));
             // Add x axis
             svgNewDeaths.append("g")
           		.attr("class", "x axis")
@@ -941,7 +928,6 @@
                   return d.cnty_name;
               });
           dropdown.on('change',function(){
-            //dataLevel = 'county';
             countySelection = d3.select(this).property('value');
             countyName = d3.select('#county-select option:checked').text();
 
@@ -957,14 +943,18 @@
               var filtered_cases = filterCntyCases(countySelection);
               caseDateLookup = formatCaseData(filtered_cases);
             }
-            if(caseDateLookup.length == 0){
+            
+            var mostRecentRecord = caseDateLookup.filter(function(d) {
+              return d.date == d3.max(caseDateLookup, function(d) {return d.date;})
+            });
+
+            if((caseDateLookup.length == 0) || (mostRecentRecord[0]['cases'] == 0)){
               updateNoInfo(countyName);
             }else{
               updateCharts(caseDateLookup,countyName,cntyPop);
             }
             
           });
-
           var caseDateLookup = formatCaseData(case_data);
           var pymChild = new pym.Child({ renderCallback: createCharts(caseDateLookup,stateName,statePop) });
         });
