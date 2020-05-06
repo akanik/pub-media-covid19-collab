@@ -214,12 +214,36 @@
       var	parseDate = d3.time.format(dateFormat).parse;
       var formatTime = d3.time.format('%B %d, %Y');
       
+      function updateNoInfo(countyName){
+        var casesText = d3.select('#cum-case-text')
+            .html('<h2>Total cases</h2>')
+            .append('p')
+            .html('There is no data for '+countyName+'.');
+        var newCasesText = d3.select('#new-case-text')
+            .html('<h2>Newly reported cases</h2>')
+            .append('p')
+            .html('There is no data for '+countyName+'.');
+        var deathText = d3.select('#cum-death-text')
+            .html('<h2>Total deaths</h2>')
+            .append('p')
+            .html('');
+        var newDeathText = d3.select('#new-death-text')
+            .html('<h2>Newly reported deaths</h2>')
+            .append('p')
+            .html('');
+            
+        var caseChart = d3.select("#cum-case-chart").attr('class','dimmed');
+        var newCaseChart = d3.select("#new-case-chart").attr('class','dimmed');
+        var deathChart = d3.select("#cum-death-chart").attr('class','dimmed');
+        var newDeathChart = d3.select("#new-death-chart").attr('class','dimmed');
+      }
+      
       function getNewCases(data){
         var newData = [];
-        var newCaseArray = [];
-        var avgCaseArray,avgCaseArraySum;
         //for each county
         data.forEach(function(c,i){
+          var newCaseArray = [];
+          var avgCaseArray,avgCaseArraySum;
           var cntyDates = c['values'];
           //for each date in the county
           cntyDates.forEach(function(d,i){
@@ -443,16 +467,13 @@
           var avgNewCases = formatNoDecimal(mostRecentRecord[0]['avg_cases']);
           var newCaseText = 'There were <strong>'+ formatComma(newCases) +' newly reported cases</strong> of COVID-19 on '+
                               maxDateStr+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
-                              ' is spreading in a community.';
-          var avgCaseText = '<span class="avg-trend">Seven-day average: '+avgNewCases+' newly reported cases.</span>';
+                              ' is spreading in a community.<div class="avg-cases"><span class="avg-trend">'+
+                              'Seven-day average: '+avgNewCases+' newly reported cases.</span></div>';
         }
         var newCasesText = d3.select('#new-case-text')
             .html('<h2>Newly reported cases</h2>')
             .append('p')
             .html(newCaseText)
-            .append('p')
-            .attr('class','avg-cases')
-            .html(avgCaseText);
         
       
          /////////////////DEATHS////////////////////  
@@ -551,7 +572,8 @@
           var	yCases = y;
           // Define the cum case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
+          	//.orient("bottom").tickValues([xMin,xMax]).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
           // Adds the cum cases svg
@@ -571,7 +593,8 @@
           var	yNewCases = y;
           // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
+          	//.orient("bottom").tickValues(d3.extent(case_data, function(d) { return d.date; })).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -594,7 +617,7 @@
           var	yDeaths = y;
           // Define the axes
           var	xDeathAxis = d3.svg.axis().scale(xDeaths)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yDeathAxis = d3.svg.axis().scale(yDeaths)
           	.orient("left").ticks(5);
           // Adds the svg
@@ -614,7 +637,8 @@
           var	yNewDeaths = y;
           // Define the new casesaxes
           var	xNewDeathAxis = d3.svg.axis().scale(xNewDeaths)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
+          	//.orient("bottom").tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewDeathAxis = d3.svg.axis().scale(yNewDeaths)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -632,7 +656,16 @@
 
           function updateCharts(caseDateLookup,region_name,pop) {
             console.log(caseDateLookup);
+            
             updateChartText(caseDateLookup,region_name,pop);
+            
+            var caseChart = d3.select("#cum-case-chart").attr('class','');
+            var newCaseChart = d3.select("#new-case-chart").attr('class','');
+            var deathChart = d3.select("#cum-death-chart").attr('class','');
+            var newDeathChart = d3.select("#new-death-chart").attr('class','');
+            
+            //var minDate = d3.min(caseDateLookup, function(d) {return d.date;});
+            //var maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
             
             
             /////////////////// CASES //////////////////////
@@ -640,6 +673,7 @@
             // Update the x and y-axis domain to match data
             xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
+                        
             // change the line
             svgCases.select(".line")
               .transition()
@@ -923,7 +957,12 @@
               var filtered_cases = filterCntyCases(countySelection);
               caseDateLookup = formatCaseData(filtered_cases);
             }
-            updateCharts(caseDateLookup,countyName,cntyPop);
+            if(caseDateLookup.length == 0){
+              updateNoInfo(countyName);
+            }else{
+              updateCharts(caseDateLookup,countyName,cntyPop);
+            }
+            
           });
 
           var caseDateLookup = formatCaseData(case_data);
