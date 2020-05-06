@@ -240,10 +240,10 @@
       
       function getNewCases(data){
         var newData = [];
-        var newCaseArray = [];
-        var avgCaseArray,avgCaseArraySum;
         //for each county
         data.forEach(function(c,i){
+          var newCaseArray = [];
+          var avgCaseArray,avgCaseArraySum;
           var cntyDates = c['values'];
           //for each date in the county
           cntyDates.forEach(function(d,i){
@@ -572,7 +572,7 @@
           var	yCases = y;
           // Define the cum case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           	//.orient("bottom").tickValues([xMin,xMax]).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
@@ -593,8 +593,8 @@
           var	yNewCases = y;
           // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
-          	//.orient("bottom").tickValues([xMin,xMax]).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
+          	//.orient("bottom").tickValues(d3.extent(case_data, function(d) { return d.date; })).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -617,7 +617,7 @@
           var	yDeaths = y;
           // Define the axes
           var	xDeathAxis = d3.svg.axis().scale(xDeaths)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yDeathAxis = d3.svg.axis().scale(yDeaths)
           	.orient("left").ticks(5);
           // Adds the svg
@@ -637,7 +637,7 @@
           var	yNewDeaths = y;
           // Define the new casesaxes
           var	xNewDeathAxis = d3.svg.axis().scale(xNewDeaths)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           	//.orient("bottom").tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewDeathAxis = d3.svg.axis().scale(yNewDeaths)
           	.orient("left").ticks(5);
@@ -664,12 +664,16 @@
             var deathChart = d3.select("#cum-death-chart").attr('class','');
             var newDeathChart = d3.select("#new-death-chart").attr('class','');
             
+            //var minDate = d3.min(caseDateLookup, function(d) {return d.date;});
+            //var maxDate = d3.max(caseDateLookup, function(d) {return d.date;});
+            
             
             /////////////////// CASES //////////////////////
             
             // Update the x and y-axis domain to match data
             xCases.domain(d3.extent(caseDateLookup, function(d) { return d.date; }));
             yCases.domain([0, d3.max(caseDateLookup, function(d) {return d.cases;})]);
+                        
             // change the line
             svgCases.select(".line")
               .transition()
