@@ -10,7 +10,7 @@ var lastUpdated = '';
 var casesFile = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
 var dateFormat = '%Y-%m-%d';
 
-var stateName = 'Kentucky'; 
+var stateName = 'California'; 
 var dataSources = `
       <p>Data are provided by the New York Times county dataset. Read more <a href="https://github.com/nytimes/covid-19-data" target="_blank">about the data and potential caveats here</a>.</p>
       `;

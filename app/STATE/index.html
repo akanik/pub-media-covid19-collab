@@ -592,7 +592,8 @@
           var	yNewCases = y;
           // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	//.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").tickSize(8, 0).tickFormat(d3.time.format("%b%d")).tickValues();
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -635,7 +636,8 @@
           var	yNewDeaths = y;
           // Define the new casesaxes
           var	xNewDeathAxis = d3.svg.axis().scale(xNewDeaths)
-          	.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	//.orient("bottom").ticks(d3.time.weeks).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
           var	yNewDeathAxis = d3.svg.axis().scale(yNewDeaths)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -653,6 +655,8 @@
 
           function updateCharts(caseDateLookup,region_name,pop) {
             console.log(caseDateLookup);
+            var xMin = d3.min(caseDateLookup, function(d) {return d.date;})
+            var xMax = d3.max(caseDateLookup, function(d) {return d.date;})
             
             updateChartText(caseDateLookup,region_name,pop);
             
@@ -676,6 +680,7 @@
             svgCases.select(".x.axis")
               .transition()
               .duration(750)
+              .tickValues([xMin,xMax])
               .call(xCaseAxis);
             // change the y axis
             svgCases.select(".y.axis")
