@@ -218,11 +218,11 @@
         var casesText = d3.select('#cum-case-text')
             .html('<h2>Total cases</h2>')
             .append('p')
-            .html('There is no data for '+countyName+'.');
+            .html('There are no reported cases in '+countyName+'.');
         var newCasesText = d3.select('#new-case-text')
             .html('<h2>Newly reported cases</h2>')
             .append('p')
-            .html('There is no data for '+countyName+'.');
+            .html('There are no reported cases in '+countyName+'.');
         var deathText = d3.select('#cum-death-text')
             .html('<h2>Total deaths</h2>')
             .append('p')
@@ -468,7 +468,7 @@
           var newCaseText = 'There were <strong>'+ formatComma(newCases) +' newly reported cases</strong> of COVID-19 on '+
                               maxDateStr+' in '+region_name +'. Over time, new cases indicate how fast the virus'+
                               ' is spreading in a community.<div class="avg-cases"><span class="avg-trend">'+
-                              'Seven-day average: '+avgNewCases+' newly reported cases.</span></div>';
+                              'Seven-day average: '+formatComma(avgNewCases)+' newly reported cases.</span></div>';
         }
         var newCasesText = d3.select('#new-case-text')
             .html('<h2>Newly reported cases</h2>')
@@ -572,8 +572,7 @@
           var	yCases = y;
           // Define the cum case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
-          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
-          	//.orient("bottom").tickValues([xMin,xMax]).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
           // Adds the cum cases svg
@@ -593,8 +592,7 @@
           var	yNewCases = y;
           // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
-          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
-          	//.orient("bottom").tickValues(d3.extent(case_data, function(d) { return d.date; })).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -617,7 +615,7 @@
           var	yDeaths = y;
           // Define the axes
           var	xDeathAxis = d3.svg.axis().scale(xDeaths)
-          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yDeathAxis = d3.svg.axis().scale(yDeaths)
           	.orient("left").ticks(5);
           // Adds the svg
@@ -637,8 +635,7 @@
           var	yNewDeaths = y;
           // Define the new casesaxes
           var	xNewDeathAxis = d3.svg.axis().scale(xNewDeaths)
-          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
-          	//.orient("bottom").tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yNewDeathAxis = d3.svg.axis().scale(yNewDeaths)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -957,6 +954,7 @@
               var filtered_cases = filterCntyCases(countySelection);
               caseDateLookup = formatCaseData(filtered_cases);
             }
+            console.log(caseDateLookup);
             if(caseDateLookup.length == 0){
               updateNoInfo(countyName);
             }else{

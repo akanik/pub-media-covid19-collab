@@ -572,8 +572,7 @@
           var	yCases = y;
           // Define the cum case axes
           var	xCaseAxis = d3.svg.axis().scale(xCases)
-          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
-          	//.orient("bottom").tickValues([xMin,xMax]).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yCaseAxis = d3.svg.axis().scale(yCases)
           	.orient("left").ticks(5);
           // Adds the cum cases svg
@@ -593,8 +592,7 @@
           var	yNewCases = y;
           // Define the new casesaxes
           var	xNewCaseAxis = d3.svg.axis().scale(xNewCases)
-          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
-          	//.orient("bottom").tickValues(d3.extent(case_data, function(d) { return d.date; })).tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yNewCaseAxis = d3.svg.axis().scale(yNewCases)
           	.orient("left").ticks(5);
           // Adds the new cases svg
@@ -617,7 +615,7 @@
           var	yDeaths = y;
           // Define the axes
           var	xDeathAxis = d3.svg.axis().scale(xDeaths)
-          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yDeathAxis = d3.svg.axis().scale(yDeaths)
           	.orient("left").ticks(5);
           // Adds the svg
@@ -637,8 +635,7 @@
           var	yNewDeaths = y;
           // Define the new casesaxes
           var	xNewDeathAxis = d3.svg.axis().scale(xNewDeaths)
-          	.orient("bottom").ticks(2).tickSize(8, 0).tickFormat(d3.time.format("%b"));
-          	//.orient("bottom").tickSize(8, 0).tickFormat(d3.time.format("%b%d"));
+          	.orient("bottom").ticks(d3.time.months).tickSize(8, 0).tickFormat(d3.time.format("%b"));
           var	yNewDeathAxis = d3.svg.axis().scale(yNewDeaths)
           	.orient("left").ticks(5);
           // Adds the new cases svg
