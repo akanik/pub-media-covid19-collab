@@ -17,11 +17,11 @@ var dataSources = `
 
 //Values that will help your tracker look good when people search and share
 var meta_title = stateName+' COVID-19 County Tracker';
-var meta_twitter = '@OVReSRC';
-var meta_url = 'https://local.wfpl.org/covid19/kentucky-x.html';
-var meta_image = 'https://local.wfpl.org/covid19/assets/ky-covid-app-art.jpg';
+var meta_twitter = '@CapRadioNews';
+var meta_url = 'https://projects.capradio.org/nevada-coronavirus-tracker';
+var meta_image = 'https://www.capradio.org/media/12250452/022820coronavirustest-r.jpg';
 var meta_description = 'EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.';
-var meta_author = 'Alexandra Kanik';
-var meta_organization = 'Louisville Public Media';
-var meta_org_logo = 'https://louisvillepublicmedia.org/wp-content/uploads/2018/08/lpm-logo-big-2018.png';
+var meta_author = 'Emily Zentner';
+var meta_organization = 'CapRadio';
+var meta_org_logo = 'https://www.capradio.org/media/12252041/capradio_logo_horz_rgb.svg';
 var ga_id = 'UA-32037403-12';
