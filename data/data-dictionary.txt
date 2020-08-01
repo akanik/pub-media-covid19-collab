@@ -1,5 +1,7 @@
 **Data dictionary for national-cnty-covid19-risk-analysis.csv**
 
+All data points come from the Institute for Health Metrics and Evaluation's Global Health Data Exchange (http://ghdx.healthdata.org/us-data)
+
 If you have any questions, please contact Alexandra Kanik @act_rational.
 
 geoid - census geoid for county shape
