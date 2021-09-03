@@ -104,7 +104,7 @@
         <div id="additional"></div>
       </div>
       <h3>Credits</h3>
-      <p>This dashboard was created by Allie Kanik at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere at KPCC.</p>
+      <p>This dashboard was created by Allie Kanik, formerly at Louisville Public Media, Lisa Pickoff-White at KQED, Emily Zentner at CapRadio, and Dana Amihere, formerly at KPCC.</p>
     </div><!-- END DATA-NOTES -->
     
     <script src="app.js" type="text/javascript"></script>
@@ -530,10 +530,10 @@
             return console.warn(case_error);
           }
 
-          case_data.forEach(function(d) {
+           case_data.forEach(function(d) {
             d.cases = d.confirmed_cases.replace(/,/g, '');
-            d.new_cases = d.new_confirmed_cases.replace(/,/g, '');
             d.fips = '06' + pz(d.fips, 3);
+            d.deaths = d.reported_deaths.replace(/,/g, '');
           });
                     
           //This is not needed for California because they us CA-specific data                            

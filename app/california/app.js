@@ -1,12 +1,12 @@
 var lastUpdated = '';
-var casesFile = 'https://raw.githubusercontent.com/datadesk/california-coronavirus-data/master/latimes-county-totals.csv';
+var casesFile = 'https://raw.githubusercontent.com/datadesk/california-coronavirus-data/master/cdph-county-cases-deaths.csv';
 var dateFormat = '%Y-%m-%d';
 var stateName = 'California';
 
 //Values that will help your tracker look good when people search and share
 var meta_title = stateName+' COVID-19 County Tracker';
-var meta_twitter = '@OVReSRC';
-var meta_url = 'https://laist.com/projects/2020/coronavirus-tracker/california/index.html';
+var meta_twitter = '@CapRadioNews';
+var meta_url = 'https://capradio.org/projects/2021/coronavirus-tracker/california/index.html';
 var meta_image = 'https://www.capradio.org/media/12251118/coronatrackertwitter.jpg';
 var meta_description = 'EXPLORE: COVID-19-related cases and deaths in your county, as well as a risk assessment for your county’s population.';
 var meta_author = 'California Regional News Hub';
@@ -16,8 +16,8 @@ var ga_id = '';
 
 //Content tha tis specific to your state's tracker
 var dataSources = `
-        <p>Data on confirmed cases of COVID-19 and deaths due to the disease is provided by <a href="https://github.com/datadesk/california-coronavirus-data" target="_blank">the LA Times</a>, and is updated each night.</p>
+        <p>Data on confirmed cases of COVID-19 and deaths due to the disease is provided by <a href="https://github.com/datadesk/california-coronavirus-data" target="_blank">the LA Times</a>, and is updated as the state releases updated data.</p>
         <p>While Alameda County and the city of Berkeley report their number of cases and deaths separately, as do Los Angeles County and the cities of Long Beach and Pomona, we have included the cities' totals in the counties' totals for this data. Additionally, while Sutter and Yuba counties are one combined health jurisdiction, we have reported their data separately here.</p>
-        <p>The data presented here only includes cases in which a person has tested positive for COVID-19, but it may be lower than the actual number of infected people in a community due to a lack of testing. Not every county updates its numbers daily, so these totals reflect the latest numbers as of the LA Times' last data collection.</p>
+        <p>The data presented here includes the total number of people who were confirmed to have COVID-19 as of that date, but it may be lower than the actual number of infected people in a community due to a lack of testing. Not every county updates its numbers daily, so these totals reflect the latest numbers as of the state's last data collection.</p>
         <p>As counties report cases when test results come in, some of the increases in counties’ cases in one day could be due to many pending results coming in rather than many people coming down with symptoms in one day.</p>
       `;
