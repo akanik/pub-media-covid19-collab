@@ -531,7 +531,7 @@
           }
 
            case_data.forEach(function(d) {
-            d.cases = d.confirmed_cases.replace(/,/g, '');
+            d.cases = d.reported_cases.replace(/,/g, '');
             d.fips = '06' + pz(d.fips, 3);
             d.deaths = d.reported_deaths.replace(/,/g, '');
           });
